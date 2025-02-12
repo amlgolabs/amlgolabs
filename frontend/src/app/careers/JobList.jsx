@@ -52,7 +52,8 @@ const jobs = [
     { id: 47, title: "HR Specialist", domain: "Human Resources", location: "San Francisco, USA", type: "Full-Time" },
     { id: 48, title: "Marketing Manager", domain: "Marketing", location: "Sydney, Australia", type: "Remote" },
     { id: 49, title: "IT Security Specialist", domain: "Security", location: "Los Angeles, USA", type: "Full-Time" },
-    { id: 50, title: "Data Privacy Officer", domain: "Legal", location: "London, UK", type: "Remote" }
+    { id: 50, title: "Data Privacy Officer", domain: "Legal", location: "London, UK", type: "Remote" },
+    { id: 51, title: "Data Privacy Officer", domain: "Legal", location: "London, UK", type: "Remote" }
   ];
   
 
