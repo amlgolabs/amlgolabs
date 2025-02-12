@@ -1,0 +1,32 @@
+import React from 'react';
+import styles from "../styles/Components/WhitePaper.module.css";
+import Image from 'next/image';
+
+const WhitePaper = () => {
+  return (
+    <div className={styles.whitePaperContainer}>
+      <div className={styles.content}>
+        <h2 className={styles.subheading}>WHITE PAPER</h2>
+        <h1 className={styles.heading}>
+  <span className={styles.strokeText}>Revolutionizing Enterprises:</span> <br/>Data Solutions Powered by Generative AI
+</h1>
+        <button className={styles.button}>Know More</button>
+      </div>
+      <div className={styles.imageContainer}>
+        <Image
+          src="/whitepaper1.jpeg"
+          width={600}
+          height={600}
+          alt="whitepaper"
+          className={styles.image}
+        />
+      </div>
+
+    </div>
+  );
+};
+
+export default WhitePaper;
+
+
+

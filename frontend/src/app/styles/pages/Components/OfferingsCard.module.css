@@ -1,0 +1,65 @@
+.parentContainer {
+    min-height: 90vh;
+    padding: 40px 20px;
+}
+
+.offeringsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark); 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    place-items: center;
+}
+
+.card {
+    padding: 20px;
+    height: 370px;
+    width: 380px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid gray;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background: linear-gradient(542deg, rgb(210, 248, 253) 30%, rgba(252, 236, 251, 1) 80%);
+}
+
+
+
+
+
+
+
+
+
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+

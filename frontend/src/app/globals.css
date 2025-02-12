@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+/* html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Mulish", serif;
+} */
+
+/* body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+:root{
+  --dark: #333;
+  --light: #fff;
+  --blue: #00e5ff;
+  --gray: #808080;
+  --light-gray: #D3D3D3;
+  --black: #080008;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Mulish", serif;
+
+}
+
+ a {
+  /* color: inherit; */
+  text-decoration: none;
+}
+
+ /* @media (prefers-color-scheme: dark) { 
+  html {
+    color-scheme: dark;
+  }
+}  */

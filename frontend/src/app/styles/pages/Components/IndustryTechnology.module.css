@@ -1,0 +1,120 @@
+.container {
+    min-height: 100vh;
+    /* padding: 40px 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .technologyContainer {
+    display: flex;
+    flex-direction: column; /* Default: row layout */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    gap: 32px; /* Increased gap for better spacing */
+    padding: 40px;
+  }
+  
+  
+  .content h3 {
+    font-size: 2rem; /* Slightly larger for better hierarchy */
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1f2937; /* Neutral dark gray for readability */
+    margin-right: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .technologyGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 0; /* No gap to ensure borders are continuous */
+    width: 100%;
+  }
+  
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc; /* Individual borders for grid items */
+    border-right: none; /* Remove right border to connect with the next item */
+    border-bottom: none; /* Remove bottom border to connect with the item below */
+    aspect-ratio: 1; /* Ensures each grid item maintains a square aspect ratio */
+    width: 100%; /* Ensures the item fills the available space */
+  }
+  
+  /* Add back the right border for the last item in each row */
+  .technologyGrid > .gridItem:nth-child(4n) {
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Add back the bottom border for the last row */
+  .technologyGrid > .gridItem:nth-last-child(-n + 4) {
+    border-bottom: 1px solid #ccc;
+  }
+  .gridItem h4 {
+    font-size: 1.1rem; /* Medium size for readability */
+    font-weight: 600;
+    color: #374151; /* Neutral gray for text */
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .technologyContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .technologyContainer h3 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .technologyGrid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .technologyGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller devices */
+      gap: 16px;
+    }
+  
+    .gridItem {
+      padding: 20px;
+    }
+  
+    .gridItem h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .technologyGrid {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+      gap: 12px;
+    }
+  
+    .technologyContainer h3 {
+      font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+  
+    .gridItem {
+      padding: 16px;
+    }
+  
+    .gridItem h4 {
+      font-size: 0.95rem;
+    }
+  }
+  

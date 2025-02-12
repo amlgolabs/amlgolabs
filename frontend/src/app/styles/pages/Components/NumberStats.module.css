@@ -1,0 +1,164 @@
+/* Main container */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    /* background: radial-gradient(circle, #141e30, #243b55); */
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden; /* Prevent overflow */
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background: url("/TechBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Animated background effects */
+  .mainContainer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 180deg,
+      #0f2027,
+      #203a43,
+      #2c5364,
+      #0f2027
+    );
+    z-index: -1;
+    animation: spin 15s linear infinite;
+    filter: blur(200px);
+    opacity: 0.5;
+  }
+  
+  /* Fix for overflow issue */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Header section */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 30px #00e5ff;
+  }
+  
+  .header p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  
+  /* Stats container */
+  .statsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* Individual stats card */
+  .statsCard {
+    position: relative;
+    /* background: linear-gradient(145deg, #1f2833, #0f2027); */
+    background: url("/darkgradient4.jpg");
+    background-size: cover;
+    /* border-radius: 15px; */
+    border: 2px solid #00e5ff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .statsCard:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 50px rgba(0, 255, 221, 0.6);
+  }
+  
+  /* Icon styling */
+  .icon {
+    margin-bottom: 1.5rem;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .icon svg {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px #00e5ff);
+  }
+  
+  /* Percentage text */
+  .statsCard h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  }
+  
+  /* Description text */
+  .statsCard h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .statsCard p {
+    font-size: 1rem;
+    color: #d1d1d1;
+    opacity: 0.9;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+    .header p {
+      font-size: 1.25rem;
+    }
+    .statsCard {
+      padding: 1.5rem;
+    }
+    .statsCard h2 {
+      font-size: 2.5rem;
+    }
+    .statsCard h3 {
+      font-size: 1.25rem;
+    }
+  }
+  

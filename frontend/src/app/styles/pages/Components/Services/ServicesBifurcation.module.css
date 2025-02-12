@@ -1,0 +1,139 @@
+/* General Container */
+.container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contentContainer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Tab Container */
+  .tabContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    /* padding-bottom: 15px; */
+    border-bottom: 2px solid var(--gray);
+  }
+  
+  /* Tab Styling */
+  .tab {
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--light-gray);
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+    border-radius: 30px;
+    position: relative;
+    text-transform: capitalize;
+  }
+  
+  .tab:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+  }
+  
+  .activeTab {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--dark);
+    padding-bottom: 12px;
+    /* border-bottom: 3px solid #007bff; */
+    transition: all 0.3s ease;
+  }
+  
+  /* Card Grid Layout */
+  .cardGrid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  */
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+    padding-top: 40px;
+  }
+  
+  /* Card Styling */
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Content */
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .cardContent h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .cardContent p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Arrow Icon */
+  .icon {
+    font-size: 24px;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tab {
+      font-size: 1.4rem;
+      padding: 10px 20px;
+    }
+  
+    .cardGrid {
+      gap: 20px;
+    }
+  
+    .card {
+      padding: 18px;
+      height: auto; /* Auto height for content-driven cards */
+    }
+  
+    .cardContent h3 {
+      font-size: 1.4rem;
+    }
+  
+    .cardContent p {
+      font-size: 1.1rem;
+    }
+  }
+  

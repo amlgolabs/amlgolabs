@@ -1,0 +1,114 @@
+/* Main container to center and add spacing */
+.mainContainer {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Case study container with a max-width for large screens */
+.caseStudyContainer {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    /* padding: 40px 20px; */
+    padding-inline: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Content container for titles */
+.contentContainer {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 30px;
+}
+
+.contentContainer h3 {
+    font-size: 1.2rem;
+    color: #3498db; /* Blue color for headings */
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contentContainer h2 {
+    font-size: 2.5rem;
+    color: #333333; /* Darker color for body text */
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Image container for responsiveness */
+.imageContainer {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer img {
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #00e5ff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #00e5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+    color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .caseStudyContainer {
+        flex-direction: column;
+    }
+
+    .contentContainer {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .imageContainer {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 40px 10px;
+    }
+
+    .contentContainer h2 {
+        font-size: 2rem;
+    }
+
+    .contentContainer h3 {
+        font-size: 1rem;
+    }
+}

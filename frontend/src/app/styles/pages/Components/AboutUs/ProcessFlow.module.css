@@ -1,0 +1,142 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .textCenter {
+    margin-bottom: 2rem;
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #222;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .subheading {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .stepsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .stepWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .stepIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .stepCircle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+  }
+  
+  .stepContent {
+    background: #f9f9f9;
+    padding: 1.8rem;
+    margin-left: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .stepContent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cardDescription {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  /* Step Connector */
+  .connector {
+    width: 4px;
+    height: 70px;
+    background-color: #ddd;
+    position: absolute;
+    left: 36px;
+    top: 85px;
+    z-index: 1;
+  }
+  
+  /* Custom Icon Colors */
+  .iconBlue {
+    color: #007bff;
+  }
+  
+  .iconYellow {
+    color: #f4b400;
+  }
+  
+  .iconGreen {
+    color: #34a853;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stepWrapper {
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+    }
+  
+    .stepIndicator {
+      margin-bottom: 1rem;
+    }
+  
+    .stepCircle {
+      width: 65px;
+      height: 65px;
+    }
+  
+    .stepContent {
+      margin-left: 0;
+      padding: 1.5rem;
+    }
+  
+    .connector {
+      left: 50%;
+      width: 3px;
+      height: 50px;
+    }
+  }
+  

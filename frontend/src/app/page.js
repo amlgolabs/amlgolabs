@@ -1,0 +1,58 @@
+import Image from "next/image";
+import styles from "./page.module.css";
+import Hero from "./components/Hero";
+import Clients from "./components/Clients";
+import Partners from "./components/Partners";
+import WhitePaper from "./components/WhitePaper";
+import HomeServices from "./components/HomeServices";
+import Services from "./components/Services";
+import TechStack from "./components/TechStack";
+import Achievements from "./components/Achievements";
+import CTA from "./components/CTA";
+import CaseStudies from "./components/CaseStudies";
+import CTASection from "./components/CTA";
+
+export default function Home() {
+
+  const caseStudiesData = [
+    {
+      id: 1,
+      title: "Generative vs Predictive AI: Core Differences",
+      image: "/CaseStudyHome1.jpeg",
+      description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
+    },
+    {
+      id: 2,
+      title: "Helping Banks with MAS610 Implementation",
+      image: "/CaseStudyHome2.jpeg",
+      description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
+    },
+    {
+      id: 3,
+      title: "AI Use Cases: Transforming the Automotive Industry",
+      image: "/CaseStudyHome3.jpeg",
+      description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
+    },
+  ];
+
+  return (
+    <div>
+      <Hero/>
+      <Clients/>
+       <WhitePaper/>
+      <Partners/>
+      <HomeServices/>
+   
+      <Achievements/>
+      {/* <CaseStudies/> */}
+      <CaseStudies caseStudies={caseStudiesData} />
+      
+      <CTASection
+      heading="Empower Your Business with Data Driven Solution & Generative AI"
+      description="Unlock the power of data and AI to drive innovation, efficiency, and growth."
+      buttonText="Get Started Today"
+      imageSrc="/cta3.png"
+    />
+    </div>
+  );
+}

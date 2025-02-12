@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    height: 100vh; /* Full height */
+    /* background-image: url('/AutomotiveBanner.png'); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+  }
+  
+  .headingContainer {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: left;
+    color: white; /* Adjust text color for better visibility */
+    padding: 20px;
+  }
+
+  .heading{
+    max-width: 600px;
+    margin-top: 135px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .headingContainer h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .headingContainer p {
+    font-size: 1.5rem;
+  }
+  
+  .button{
+    background: none;
+    border: 2px solid var(--blue);
+    color: #fff;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }

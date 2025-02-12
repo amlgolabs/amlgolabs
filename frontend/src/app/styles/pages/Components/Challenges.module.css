@@ -1,0 +1,178 @@
+.container{
+    min-height: 90vh;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    min-height: 90vh;
+    padding-block: 20px;
+}
+
+.upperContainer{
+    text-align: center;
+    width: 100%;
+}
+
+.upperContainer h2{
+    padding-block: 50px;
+    padding-inline: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.lowerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 12px;
+}
+
+.lowerContainer h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.challengesPoint {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+}
+
+.challengeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 16px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+}
+
+
+.challengeCard svg {
+    font-size: 5rem;
+    color: var(--blue); /* Adjust color for modern feel */
+    margin-bottom: 12px;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.challengeCard p {
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .innerContainer {
+        padding-inline: 16px;
+    }
+
+    .upperContainer h2 {
+        font-size: 2.8rem;
+        padding-block: 40px;
+        padding-inline: 16px;
+    }
+
+    .lowerContainer h4 {
+        font-size: 1.8rem;
+    }
+
+    .challengeCard {
+        width: 240px;
+        padding: 12px;
+    }
+
+    .challengeCard svg {
+        font-size: 4rem;
+        padding: 16px;
+    }
+
+    .challengeCard p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+    .innerContainer {
+        flex-direction: column;
+    }
+
+    .upperContainer h2 {
+        font-size: 2.5rem;
+        padding-block: 30px;
+        padding-inline: 12px;
+    }
+
+    .lowerContainer {
+        padding: 16px 12px;
+        gap: 20px;
+    }
+
+    .challengesPoint {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .challengeCard {
+        width: 100%;
+        max-width: 320px;
+        padding: 12px;
+    }
+
+    .challengeCard svg {
+        font-size: 3.5rem;
+        padding: 12px;
+    }
+
+    .challengeCard p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsiveness for extra-small screens */
+@media (max-width: 480px) {
+    .upperContainer h2 {
+        font-size: 2rem;
+        padding-block: 20px;
+        padding-inline: 8px;
+    }
+
+    .lowerContainer {
+        padding: 12px 8px;
+        gap: 16px;
+    }
+
+    .challengeCard {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .challengeCard svg {
+        font-size: 3rem;
+        padding: 8px;
+    }
+
+    .challengeCard p {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,204 @@
+.topCompaniesContainer {
+    text-align: center;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 20px; /* Added padding for better spacing */
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center; /* Centered the text for better alignment */
+    color: #333; /* Updated color for readability */
+  }
+  
+  .heading span {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #0070f3; /* Highlighted with a professional blue color */
+  }
+  
+  .marqueeContainer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 30px; /* Added spacing above the marquee */
+  }
+  
+  .marquee {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10rem;
+    animation: marquee 30s linear infinite; /* Adjusted speed for smoother scrolling */
+    will-change: transform; /* Optimized for better performance */
+  }
+  
+  .company {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Reduced for better responsiveness */
+  }
+  
+  .company img {
+    max-width: 100%; /* Ensure logos adjust to container width */
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%); /* Grayscale effect for a professional touch */
+    transition: filter 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .company img:hover {
+    filter: grayscale(0); /* Restore color on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+  }
+
+  .testimonialContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    justify-content: space-between; /* Ensures equal spacing */
+    gap: 20px; /* Space between cards */
+    padding: 40px;
+    margin-top: 40px;
+  }
+  
+  .testimonial {
+    flex: 1 1 calc(48% - 20px); /* Ensures equal width, with spacing */
+    max-width: calc(48% - 20px); /* Maximum width matches flex property */
+    padding: 30px;
+    background: #ffffff; /* Clean white card background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    position: relative; /* Enables decorative elements */
+    overflow: hidden;
+  }
+  
+  .testimonial::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 112, 243, 0.1); /* Decorative circle */
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  }
+  
+  .testimonial p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555; /* Neutral, modern text color */
+    margin-bottom: 20px;
+    font-style: italic; /* Stylish italic for quotes */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .testimonial p::before {
+    content: "“"; /* Opening quote mark */
+    font-size: 3rem;
+    color: #0070f3; /* Primary blue tone for modern aesthetic */
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: 0;
+    opacity: 0.1; /* Faint for subtlety */
+  }
+  
+  .testimonial h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333; /* Darker text for contrast */
+    text-align: right;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .testimonial {
+      flex: 1 1 calc(100% - 20px); /* Full width for smaller screens */
+      max-width: calc(100% - 20px); /* Match width to container */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonialContainer {
+      padding: 20px; /* Adjust padding */
+    }
+  
+    .testimonial {
+      padding: 20px; /* Reduce padding */
+    }
+  
+    .testimonial p {
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    .testimonial h3 {
+      font-size: 0.9rem; /* Adjust heading size */
+    }
+  }
+  
+  
+  /* Keyframes for continuous scrolling */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .heading {
+      font-size: 1.8rem; /* Adjust font size for tablets */
+    }
+  
+    .marquee {
+      animation: marquee 40s linear infinite; /* Slightly slower for better readability */
+    }
+  
+    .company {
+      width: 150px; /* Adjust logo size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.6rem; /* Further reduce font size for smaller devices */
+    }
+  
+    .company {
+      width: 120px; /* Smaller logo size for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 1.4rem; /* Further adapt font size for narrow devices */
+    }
+  
+    .company {
+      width: 100px; /* Compact logo size for smaller phones */
+      margin-right: 5px; /* Reduce margin for better fit */
+    }
+  
+    .marquee {
+      gap: 10px; /* Reduce gap for compact design */
+    }
+  }
+  

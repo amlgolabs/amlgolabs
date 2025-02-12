@@ -1,0 +1,113 @@
+.offeringsContainer {
+    text-align: center;
+    padding: 50px;
+    background-color: #101010;
+    position: relative;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.scrollDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 1240px;
+    margin-inline: auto;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.offeringContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.offeringText {
+    flex: 1;
+    color: #ffffff;
+    width: 40%;
+    text-align: left;
+}
+
+.offeringText h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.offeringText p {
+    font-size: 1rem;
+    color: #bbbbbb;
+}
+
+.offeringImage {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow Button */
+.arrowButton {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.arrowButton:hover {
+    color: var(--blue);
+}
+
+/* Pagination Dots */
+.paginationDots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #777;
+}
+
+.activeDot {
+    background-color: var(--blue);
+    transform: scale(1.2);
+}

@@ -1,0 +1,133 @@
+.parentContainer {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 40px; 
+    min-height: 100vh; 
+  }
+  
+  .heading h1 {
+    text-align: center;
+    font-size: 3rem; 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    margin-bottom: 40px; 
+    color: #fff;
+    background: linear-gradient(90deg, #121212, #333, #121212);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 0 0 2px #000; */
+  }
+  
+  .cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    position: relative;
+    width: 300px;
+    
+    overflow: hidden;
+    
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+    text-align: left;
+    position: relative;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    cursor: pointer;
+    font-weight: 800;
+  }
+  
+  .cardDescription {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .cardTitle:hover + .cardDescription {
+    max-height: 10rem;
+    opacity: 1;
+  }
+  
+  .cardButton {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: #00e5ff; 
+    background: #000; 
+
+    /* color: #fff; */
+    border: 2px solid #00e5ff; 
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    /* font-weight: 900; */
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    transition: all 0.3s ease-in-out; 
+    outline: none;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .cardButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.1); 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .cardButton:hover {
+    background: #00e5ff; 
+    color: #000; 
+    border-color: #fff; 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .cardButton:hover::before {
+    opacity: 1; 
+  }
+  
+  .cardButton:active {
+    transform: translateY(2px); 
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .cardButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.5); 
+  }
+  
