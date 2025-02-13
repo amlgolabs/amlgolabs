@@ -16,12 +16,14 @@
 
   }
   
-  .overview h1 {
+  .overview h2 {
     font-size: 3rem;
     font-weight: 800;
     color: var(--dark);
+    margin-bottom: 50px;
     text-transform: uppercase;
-    padding-block: 5px;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
   
   .overview p {

@@ -1,92 +1,43 @@
 "use client"
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FaEnvelope, FaUser, FaPhone } from "react-icons/fa";
 import styles from "../styles/pages/Contact-Us/ContactUsForm.module.css";
 
-const ContactSchema = z.object({
-  name: z.string().min(2, "Name is too short"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(3, "Subject is required"),
-  message: z.string().min(10, "Message should be at least 10 characters"),
-});
+export default function ContactForm() {
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-const ContactUsForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm({
-    resolver: zodResolver(ContactSchema),
-  });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const onSubmit = async (data) => {
-    console.log("Form Data:", data);
-    setSubmitted(true);
-
-    // API Call (Uncomment for real submission)
-    // await fetch("/api/contact", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(data),
-    // });
-
-    setTimeout(() => setSubmitted(false), 3000);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form Submitted Successfully!");
   };
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Get in Touch</h2>
-      <p className={styles.subtitle}>We'd love to hear from you!</p>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <h2 className={styles.heading}>Contact Us</h2>
+      <p className={styles.subtext}>Let's get in touch! Fill out the form below.</p>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputGroup}>
-          <input
-            {...register("name")}
-            placeholder="Your Name"
-            className={styles.input}
-          />
-          {errors.name && <p className={styles.error}>{errors.name.message}</p>}
+          <FaUser className={styles.icon} />
+          <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} className={styles.input} />
         </div>
-
         <div className={styles.inputGroup}>
-          <input
-            type="email"
-            {...register("email")}
-            placeholder="Email Address"
-            className={styles.input}
-          />
-          {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+          <FaEnvelope className={styles.icon} />
+          <input type="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange} className={styles.input} />
         </div>
-
         <div className={styles.inputGroup}>
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className={styles.input}
-          />
-          {errors.subject && <p className={styles.error}>{errors.subject.message}</p>}
+          <FaPhone className={styles.icon} />
+          <input type="tel" name="phone" placeholder="Your Phone" value={formData.phone} onChange={handleChange} className={styles.input} />
         </div>
-
         <div className={styles.inputGroup}>
-          <textarea
-            {...register("message")}
-            placeholder="Your Message"
-            rows="4"
-            className={styles.textarea}
-          />
-          {errors.message && <p className={styles.error}>{errors.message.message}</p>}
+          <textarea name="message" placeholder="Your Message" required value={formData.message} onChange={handleChange} className={styles.textarea}></textarea>
         </div>
-
-        <button type="submit" disabled={isSubmitting} className={styles.button}>
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </button>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} type="submit" className={styles.button}>Send Message</motion.button>
       </form>
-
-      {submitted && <p className={styles.success}>Thank you! Your message has been sent.</p>}
     </div>
   );
-};
-
-export default ContactUsForm;
+}

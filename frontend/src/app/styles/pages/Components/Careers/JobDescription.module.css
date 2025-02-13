@@ -1,0 +1,243 @@
+/* Container */
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.descriptionContainer{
+    max-width: 800px;
+    /* width: 100%; */
+    /* flex: 1; */
+}
+
+/* .container:hover {
+    transform: scale(1.02);
+} */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.badgeContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Badge Colors */
+.blueBadge {
+    background-color: var(--black);
+}
+
+.redBadge {
+    color: var(--black);
+    background-color: var(--blue);
+}
+
+.purpleBadge {
+    background-color: var(--black);
+}
+
+/* Apply Button */
+.applyButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--black);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.applyButton:hover {
+    background-color: var(--blue);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
+.disabledButton {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+
+/* Details Section */
+.details {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--blue);
+    padding-left: 10px;
+}
+
+.infoGroup {
+    display: flex;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.label {
+    font-weight: 600;
+    color: #555;
+}
+
+.value {
+    color: #333;
+}
+
+/* Description Section */
+.description {
+    padding-top: 15px;
+    border-bottom: 1px solid var(--light-gray);
+
+}
+
+.descriptionText {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.subTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.responsibilitiesList {
+    padding-left: 20px;
+}
+
+.responsibilitiesList li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* .responsibilitiesList li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+} */
+
+
+.formContainer {
+    width: 100%;
+    flex: 1;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    /* background: #ffffff; */
+    /* border-radius: 10px; */
+    border-left: 1px solid var(--light-gray);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.formContainer h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+}
+
+.form label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 1px;
+    color: #444;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+}
+
+.fileInput {
+    padding: 8px;
+    border: none;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.submitButton:hover {
+    color: var(--black);
+    background-color: var(--blue);
+}

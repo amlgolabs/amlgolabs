@@ -1,0 +1,83 @@
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .mapContainer {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--light-gray);
+  }
+  
+  .contactInfo {
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    /* background: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactInfo:hover {
+    transform: translateY(-5px);
+}
+
+.contactInfo p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactInfo a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.contactInfo a:hover {
+    color: var(--dark);
+}
+
+.socialIcons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.socialIcons a {
+    font-size: 28px;
+    color: var(--blue);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socialIcons a:hover {
+    color: var(--dark);
+    background: var(--blue);
+    transform: scale(1.1);
+}

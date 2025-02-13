@@ -7,6 +7,9 @@ import ProcessFlow from '../components/PagesComponents/AboutUs/ProcessFlow';
 import PeoplePrinciples from '../components/PagesComponents/AboutUs/PeoplePrinciples';
 import NumberStats from '../components/PagesComponents/NumberStats';
 import CompanyStats from '../components/PagesComponents/AboutUs/CompanyStats';
+import CompanyAchievements from '../components/PagesComponents/AboutUs/CompanyAchievements';
+import ImageGallery from '../components/PagesComponents/AboutUs/ImageGallery';
+import PartnersStrip from '../components/PagesComponents/AboutUs/PartnersStrip';
 
 export const metadata = {
   title: "About Us - Amlgo Labs",
@@ -24,10 +27,14 @@ const page = () => {
         <AboutUsHero/>
         <CompanyOverview/>
         <CoreValues/>
+        <ImageGallery/>
+        <CompanyAchievements/>
         {/* <ProcessFlow/> */}
         {/* <NumberStats/> */}
-        <CompanyStats/>
+
         <PeoplePrinciples/>
+        <CompanyStats/>
+
       </div>
     </>
   );

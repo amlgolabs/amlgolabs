@@ -30,7 +30,7 @@ const CompanyOverview = () => {
   return (
     <div id='values' className={styles.container}>
       <div className={styles.overview}>
-        <h1>Overview</h1>
+        <h2>Overview</h2>
         <p>
           We are dedicated to delivering top-tier business solutions that
           enhance our partners' capabilities. Our core values center on trust,

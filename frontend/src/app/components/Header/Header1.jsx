@@ -507,16 +507,52 @@ activeCategory !== 'Solutions' && (
           </div>
 
 
-          <div className={styles.dropdown}>
+          {/* <div className={styles.dropdown}>
             <Link href="/" className={styles.navLink}>
               Careers <ArrowDropDownIcon className={styles.arrowIcon} />
             </Link>
             <div className={styles.dropdownContent}>
-              <Link href="#">Work with Us</Link>
-              <Link href="#">Hear from Team</Link>
-              <Link href="#">Explore Jobs</Link>
+              <div className={styles.subMenuArea}>
+
+
+                <div className={styles.subMenuAreaLinks}>
+                  <Link href="/consumer-goods" className={styles.linkWrapper}>
+                    <div className={styles.iconWrapper}>
+                      <StoreIcon className={styles.icon} />
+                    </div>
+                    <div className={styles.textWrapper}>
+                      <span className={styles.title}>Consumer Goods and Retail</span>
+                      <p className={styles.description}>Elevate retail experiences with smart, connected solutions and insights.</p>
+                    </div>
+                  </Link>
+                  <Link href="/real-estate" className={styles.linkWrapper}>
+                    <div className={styles.iconWrapper}>
+                      <BungalowIcon className={styles.icon} />
+                    </div>
+                    <div className={styles.textWrapper}>
+                      <span className={styles.title}>Real Estate and Infrastructure</span>
+                      <p className={styles.description}>Building the future with smart, sustainable infrastructure solutions. </p>
+                    </div>
+                  </Link>
+                  <Link href="/manufacturing" className={styles.linkWrapper}>
+                    <div className={styles.iconWrapper}>
+                      <PrecisionManufacturingIcon className={styles.icon} />
+                    </div>
+                    <div className={styles.textWrapper}>
+                      <span className={styles.title}>Manufacturing and Industries</span>
+                      <p className={styles.description}>Transforming manufacturing with intelligent, connected industrial solutions.</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className={styles.headerBlogLink}>
+                  <h3>Featured Resource</h3>
+                  <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
+                  <h4>Partnering with Leaders empowering success.</h4>
+                  <Link href="/">Read More</Link>
+                </div>
             </div>
-          </div>
+            </div>
+          </div> */}
 
           <MenuOpenIcon onClick={toggledesktopDrawer(true)} className={styles.desktopMenuIcon} />
         </div>
@@ -581,9 +617,15 @@ activeCategory !== 'Solutions' && (
               </Link>
             </ListItem>
 
+            <ListItem className={styles.desktopListItem}>
+              <Link href="/careers" className={styles.desktopLink}>
+                Careers
+              </Link>
+            </ListItem>
+
             {/* Get in Touch Button */}
             <ListItem className={styles.desktopButtonWrapper}>
-              <Link href="/contact">
+              <Link href="/contact-us">
                 <Button
                   variant="contained"
                   color="primary"

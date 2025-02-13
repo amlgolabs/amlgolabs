@@ -6,7 +6,7 @@ const PeoplePrinciples = () => {
         <div className={styles.mainContainer}>
             <div className={styles.contentContainer}>
                 <div className={styles.heading}>
-                    <h3>Foundations of Amlgo Labs</h3>
+                    <h2>Foundations of Amlgo Labs</h2>
                     <p>The Amlgo Way - A culture where trust runs deep, honesty is unwavering, freedom is honored, and respect is instinctive. Once one of us, always one of us.</p>
                 </div>
 

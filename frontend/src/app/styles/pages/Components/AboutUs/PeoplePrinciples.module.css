@@ -16,11 +16,14 @@
 }
 
 /* Heading Section */
-.heading h3 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #222; /* Slightly darker for better readability */
-    margin-bottom: 15px;
+.heading h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .heading p {

@@ -1,0 +1,52 @@
+.mainContainer {
+    min-height: 70vh;
+    /* background: linear-gradient(135deg, #0f172a, #1e293b); */
+    background: var(--black);
+
+    color: var(--light);
+    padding: 50px 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h2 {
+    font-size: 3rem;
+  font-weight: 800;
+  color: var(--light);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.achievementsBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.achievementCard {
+/* background: rgba(71, 76, 85, .1); */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--light-gray);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievementCard:hover {
+    transform: translateY(-5px);
+}
+
+.achievementCard h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 12px;
+    color: var(--light);
+    text-transform: capitalize;
+}
