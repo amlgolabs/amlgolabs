@@ -70,7 +70,7 @@
 
 .icon {
     font-size: 3rem;
-    color: #00e5ff;  /* Bright cyan color */
+    color: var(--blue);  /* Bright cyan color */
     margin-bottom: 12px;
     transition: all 0.3s ease;
 }

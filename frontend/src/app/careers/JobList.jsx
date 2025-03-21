@@ -171,7 +171,7 @@ const JobList = () => {
   };
 
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} id="jobs">
       <div className={styles.heading}>
         <h2>Current openings at Amlgo Labs</h2>
       </div>
@@ -180,8 +180,8 @@ const JobList = () => {
           <div key={job.id} className={styles.jobCard}>
             <div className={styles.jobInfo}>
               <h3 className={styles.title}>{job.title}</h3>
-              <p className={styles.domain}>{job.domain}</p>
               <p className={styles.location}>{job.location}</p>
+              <p className={styles.domain}>{job.domain}</p>
               <p className={styles.type}>{job.type}</p>
             </div>
             <div className={styles.actions}>
@@ -189,9 +189,9 @@ const JobList = () => {
                 className={styles.detailsBtn}
                 onClick={() => handleViewDetails(job.id)}
               >
-                Details
+                View Details
               </button>
-              <button className={styles.applyBtn}>Apply Now</button>
+              {/* <button className={styles.applyBtn}>Apply Now</button> */}
             </div>
           </div>
         ))}

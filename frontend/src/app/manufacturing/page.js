@@ -8,10 +8,11 @@ import IndustryTechnology from '../components/PagesComponents/IndustryTechnology
 import IndustryCaseStudy1 from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
 
 export const metadata = {
-    title: "Manufacturing - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
-  };
+  title: "AI & Data Solutions for Manufacturing and Industries - Amlgo Labs",
+  description: "Boost efficiency with AI-driven analytics for manufacturing & industries. Optimize production, reduce costs & enhance quality. Learn more at Amlgo Labs.",
+  keywords: "AI in manufacturing, industrial analytics, Amlgo Labs, production optimization, cost reduction, quality enhancement, smart manufacturing, predictive maintenance, AI-driven solutions, industrial automation, process optimization, data-driven manufacturing, Industry 4.0, factory automation",
+};
+
 
 const page = () => {
 
@@ -23,10 +24,10 @@ const page = () => {
   ];
 
   const technologies = [
-    { name: 'Microsoft Azure', image: '/partner1.png' },
-    { name: 'Amazon Web Services', image: '/partner3.png' },
-    { name: 'Google Cloud', image: '/partner5.png' },
-    { name: 'Dell Technologies', image: '/partner6.png' },
+    { name: 'Microsoft Azure', image: '/azure.png' },
+    { name: 'Amazon Web Services', image: '/aws.png' },
+    { name: 'Google Cloud', image: '/googlecloud.png' },
+    { name: 'Dell Technologies', image: '/dell.png' },
     // { name: 'Natural Language Processing', image: '/partner5.png' },
     // { name: 'Knowledge Graph', image: '/partner6.png' },
 
@@ -91,7 +92,7 @@ const sectorsHeadingText = "Our Industry Focus";
 
     <IndustryTechnology heading={manufacturingHeading} technologies={technologies} />
     <IndustryCaseStudy1 caseStudyHeading="IoT-enabled AC temperature controller system (IoT Data,and ML/AI)" 
-                                CaseStudyImageSrc="/CaseStudyHome1.jpeg"/>
+                                CaseStudyImageSrc="/placeholder/1024x1024.png"/>
 
     </>
   )

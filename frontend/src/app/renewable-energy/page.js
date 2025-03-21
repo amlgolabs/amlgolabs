@@ -15,6 +15,14 @@ import {
 import SingleBlog from '../components/PagesComponents/Blogs/SingleBlog';
 
 
+export const metadata = {
+  title: "Renewable Energy & Environmental Science - Amlgo Labs",
+  description: "Explore cutting-edge renewable energy solutions & environmental science innovations at Amlgo Labs. Power a sustainable future with clean energy technology.",
+  keywords: "Renewable energy, environmental science, Amlgo Labs, clean energy technology, sustainability solutions, green energy, solar power, wind energy, climate change solutions, energy optimization, eco-friendly innovations, carbon footprint reduction, smart energy management, environmental data analytics",
+};
+
+
+
 
 const page = () => {
     const servicesData = [

@@ -1,39 +1,27 @@
-import React from 'react'
-import styles from "../../styles/pages/Components/Challenges.module.css"
-import { PersonSearch, Speed, Lightbulb, Shield } from '@mui/icons-material';
+import React from 'react';
+import styles from "../../styles/pages/Components/Challenges.module.css";
 
-const Challenges = () => {
+const Challenges = ({ title, challenges, subtitle }) => {
     return (
         <div className={styles.container}>
             <div className={styles.innerContainer}>
                 <div className={styles.upperContainer}>
-                    <h2>We Drive Transformation and Simplify Solutions with GenAI, Delivering Unmatched Value.</h2>
+                    <h2>{title}</h2>
                 </div>
-
                 <div className={styles.lowerContainer}>
-                    <h4>Challenges</h4>
+                    <h4>{subtitle}</h4>
                     <div className={styles.challengesPoint}>
-                        <div className={styles.challengeCard}>
-                            <PersonSearch />
-                            <p>Customer Immersion</p>
-                        </div>
-                        <div className={styles.challengeCard}>
-                            <Speed />
-                            <p>Enterprise Efficiency</p>
-                        </div>
-                        <div className={styles.challengeCard}>
-                            <Lightbulb />
-                            <p>Technological Innovation</p>
-                        </div>
-                        <div className={styles.challengeCard}>
-                            <Shield />
-                            <p>Risk Management</p>
-                        </div>
+                        {challenges.map((challenge, index) => (
+                            <div key={index} className={styles.challengeCard}>
+                                {React.createElement(challenge.icon)}
+                                <p>{challenge.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Challenges
+export default Challenges;

@@ -37,10 +37,12 @@
   }
   
   .logo {
-    width: 150px;
+    width: 200px;  /* Adjust width */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure responsiveness */
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
-  }
+}
   
   .logo:hover {
     transform: scale(1.1);
@@ -137,5 +139,10 @@
     .socialIcon {
       font-size: 28px;
     }
+
+    .logo {
+      width: 150px; /* Slightly smaller on mobile */
+  }
+
   }
   

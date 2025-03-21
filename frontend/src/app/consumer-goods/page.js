@@ -8,10 +8,11 @@ import IndustryCaseStudy3 from '../components/PagesComponents/CaseStudy/Industry
 import CTASection from '../components/CTA';
 
 export const metadata = {
-    title: "Consumer Goods - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
-  };
+  title: "AI-Powered Retail & Consumer Goods Solutions - Amlgo Labs",
+  description: "Boost sales & optimize operations with Amlgo Labs AI-driven solutions for consumer goods & retail. Enhance demand forecasting & supply chain efficiency.",
+  keywords: "AI-powered retail, consumer goods solutions, Amlgo Labs, demand forecasting, supply chain optimization, retail automation, predictive analytics, inventory management, customer insights, sales optimization, machine learning in retail, AI-driven operations, smart retail solutions",
+};
+
 
 const page = () => {
 

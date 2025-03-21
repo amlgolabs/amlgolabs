@@ -7,10 +7,11 @@ import CaseStudies from '../components/CaseStudies';
 import IndustrySectors2 from '../components/PagesComponents/IndustrySectors/IndustrySectors2';
 
 export const metadata = {
-    title: "Insurance - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
-  };
+  title: "Insurance Analytics - Predict Future Claims – Amlgo Labs",
+  description: "Optimize insurance decisions with Amlgo Labs. Forecast growth, predict claims, and set accurate premiums using AI-driven analytics for better risk management.",
+  keywords: "Insurance analytics, AI in insurance, Amlgo Labs, claims prediction, risk management, premium optimization, insurance automation, predictive analytics, fraud detection, underwriting solutions, data-driven insurance, insurance technology, future claims forecasting, AI-powered risk assessment",
+};
+
 
 const page = () => {
 
@@ -26,20 +27,22 @@ const page = () => {
     {
       id: 1,
       title: "Developing an Insurance Risk & Litigation Propensity Model",
-      image: "/CaseStudyHome1.jpeg",
-      description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
+      image: "/placeholder/1024x1024.png",
+      // description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
     },
     {
       id: 2,
       title: "Reducing Fraud in Insurance: An Anti-Fraud Model",
-      image: "/CaseStudyHome2.jpeg",
-      description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
+      image: "/placeholder/1024x1024.png",
+
+      // description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
     },
     {
       id: 3,
       title: "Are You Maximizing Commercial Combined Cross-Selling Opportunities?",
-      image: "/CaseStudyHome3.jpeg",
-      description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
+      image: "/placeholder/1024x1024.png",
+
+      // description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
     },
   ];
 
@@ -83,9 +86,9 @@ const page = () => {
   <Introduction1 {...IntroductionData} />
 
   <SingleBlog
-      title="Exploring the Potential of Generative AI for CPG and Retail Industries"
-      description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-      imageSrc="/consumer-retail/Blog.png"
+      title="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+      description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+      imageSrc="/placeholder/2048x2048.png"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

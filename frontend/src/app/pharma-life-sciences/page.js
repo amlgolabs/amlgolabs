@@ -17,6 +17,13 @@ import {
 import FeaturedServices from '../components/PagesComponents/Services/FeaturedServices';
 import NumberData2 from '../components/PagesComponents/NumberData2';
 
+export const metadata = {
+  title: "Pharma & Life Sciences Solutions - Amlgo Labs",
+  description: "Boost healthcare innovation with AI & data-driven life sciences solutions. Amlgo Labs empowers pharma with cutting-edge analytics for better patient outcomes.",
+  keywords: "Pharma solutions, life sciences analytics, Amlgo Labs, AI in healthcare, drug discovery, patient outcomes, clinical trials optimization, pharmaceutical data insights, biomedical innovation, healthcare analytics, personalized medicine, AI-driven pharma, biotech solutions, medical research automation",
+};
+
+
 const page = () => {
     const servicesData = [
         { 

@@ -46,7 +46,17 @@ const partners = [
     name: "Dell",
     logo: "/dell.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus dolor magna, eu scelerisque nibh lobortis consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris fringilla, ante sit amet congue auctor, sem nulla lobortis nibh, at finibus metus tellus ac felis. Maecenas vel nisi eget purus fringilla tincidunt. Aliquam erat volutpat. Vestibulum convallis ipsum sed nibh consequat porta. Nulla lobortis accumsan ex, eget pulvinar nunc congue sed.",
+      "Forging a powerful alliance with Dell Technologies, leveraging their premier infrastructure solutions to drive data-centric innovation. Dell's robust hardware and software, combined with Amlgo Labs deep analytical expertise, provides a foundation for unparalleled performance and scalability.We deliver integrated solutions that optimize data center operations and accelerate AI/ML initiatives. This collaboration empowers diverse sectors including manufacturing, healthcare, and finance, ensuring secure and efficient data management across hybrid environments.",
+    details:
+      "We leverage advanced analytics and AI-driven insights to transform your data into actionable intelligence.",
+    link: "#",
+  },
+
+  {
+    name: "Cloudera",
+    logo: "/cloudera.png",
+    description:
+      "An impactful alliance with Cloudera fortifies Amlgo Labs commitment to delivering robust and scalable data solutions. Supported by our team's deep expertise in the Cloudera Data Platform, this partnership provides a unified foundation for enterprise data management.As a dedicated partner, we leverage Cloudera's comprehensive suite of tools to architect tailored data ecosystems that seamlessly integrate across hybrid and multi-cloud environments. This proficiency allows us to serve a wide range of clients, including those in heavily regulated industries, requiring secure and compliant data processing.",
     details:
       "We leverage advanced analytics and AI-driven insights to transform your data into actionable intelligence.",
     link: "#",

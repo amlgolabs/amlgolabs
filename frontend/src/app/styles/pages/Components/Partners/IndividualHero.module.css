@@ -1,0 +1,112 @@
+
+  
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 2rem;
+    background-color: var(--black);
+    color: var(--light);
+    text-align: left;
+  }
+  
+  .heroHeading {
+    max-width: 1200px;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: var(--blue);
+  }
+  
+  .contentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .contentInfo {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .contentInfo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+  }
+  
+  .readMoreButton {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--dark);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .readMoreButton:hover {
+    background-color: #00c5e0;
+    transform: scale(1.05);
+  }
+  
+  .imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contentContainer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .heroHeading {
+      font-size: 2rem;
+    }
+  
+    .contentInfo p {
+      font-size: 1rem;
+    }
+  
+    .imageWrapper {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroHeading {
+      font-size: 1.8rem;
+    }
+  
+    .contentInfo p {
+      font-size: 0.95rem;
+    }
+  
+    .readMoreButton {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+  

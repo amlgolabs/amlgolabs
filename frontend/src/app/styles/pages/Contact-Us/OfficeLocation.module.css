@@ -1,32 +1,43 @@
-
-  .container {
+/* General container styling */
+.container {
+    width: 100%;
     max-width: 1240px;
     margin: 0 auto;
-    text-align: left;
-  }
-  
-  .mapContainer {
-    width: 100%;
-    height: 450px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border: 2px solid var(--light-gray);
-  }
-  
-  .contactInfo {
-    margin-top: 20px;
-    padding: 30px;
-    border-radius: 20px;
-    /* background: rgba(255, 255, 255, 0.2); */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.leftPanel {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: space-between;
+}
+
+/* Map Styling */
+.mapContainer {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light-gray);
+}
+
+/* Contact Info */
+.contactInfo {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    color: var(--dark);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -35,9 +46,8 @@
 }
 
 .contactInfo p {
-    margin: 5px 0;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--blue);
     display: flex;
     align-items: center;
@@ -45,39 +55,102 @@
 }
 
 .contactInfo a {
-    color: var(--dark);
+    color: var(--gray);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
 
 .contactInfo a:hover {
-    color: var(--dark);
+    color: var(--primary);
 }
 
+/* Social Icons */
 .socialIcons {
     margin-top: 20px;
     display: flex;
-    justify-content: flex-start;
     gap: 15px;
 }
 
 .socialIcons a {
-    font-size: 28px;
+    font-size: 22px;
     color: var(--blue);
-    transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .socialIcons a:hover {
-    color: var(--dark);
     background: var(--blue);
+    color: white;
     transform: scale(1.1);
+}
+
+/* Location Section */
+.locationContainer {
+    flex: 1;
+    min-width: 300px;
+}
+
+.heading h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.locationDiv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    /* background: #f9f9f9; */
+    /* border-radius: 12px; */
+    border-bottom: 1px solid var(--light-gray);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.locationDiv:hover {
+    transform: translateY(-3px);
+}
+
+.icon img {
+    width: 45px;
+    height: 45px;
+}
+
+.locationDiv h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.locationDiv p {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftPanel, .locationContainer {
+        width: 100%;
+    }
+
+    .mapContainer {
+        height: 350px;
+    }
 }

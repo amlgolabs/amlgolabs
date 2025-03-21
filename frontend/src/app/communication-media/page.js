@@ -3,6 +3,13 @@ import IndustryHero2 from '../components/PagesComponents/Hero/IndustryHero2'
 import Introduction2 from '../components/PagesComponents/Introduction/Introduction2'
 import IndustrySectors2 from '../components/PagesComponents/IndustrySectors/IndustrySectors2'
 
+export const metadata = {
+    title: "Communication & Media Solutions - Amlgo Labs",
+    description: "Discover innovative communication and media solutions with Amlgo Labs. We connect the world through cutting-edge strategies for digital engagement & growth.",
+    keywords: "Communication solutions, media innovation, Amlgo Labs, digital engagement, content strategy, media analytics, broadcasting solutions, digital transformation, audience insights, personalized media experiences, social media strategies, multimedia solutions, communication technology, media growth strategies",
+  };
+  
+
 const page = () => {
   const sectorsData = [
     {

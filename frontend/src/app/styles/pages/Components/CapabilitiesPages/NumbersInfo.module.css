@@ -1,0 +1,148 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.container h2 {
+    padding-block: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.line {
+    position: absolute;
+    top: 33%; /* Centering the line */
+    transform: translateY(-50%); /* Adjusting for perfect alignment */
+    left: 0;
+    width: 100%;
+    border-top: 2px dashed var(--gray);
+    z-index: -1; /* Keeps it behind the elements */
+}
+
+/* Vertical Line Connector */
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 250px;
+}
+
+.boxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.box {
+    background: var(--black);
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.percentage {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+/* Vertical Line Connector */
+
+
+.descriptionAbove, .descriptionBelow {
+    max-width: 280px;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+    line-height: 1.5;
+    position: relative;
+    text-align: center;
+}
+
+.descriptionAbove {
+    padding-bottom: 50px;
+}
+
+.descriptionBelow {
+    padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .contentWrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .itemContainer {
+        width: 100%;
+    }
+
+    .line {
+        display: none; /* Hide the line in mobile view */
+    }
+
+    .descriptionAbove {
+        padding-bottom: 0;
+    }
+
+    .descriptionBelow {
+        padding-top: 0;
+    }
+
+    .descriptionAbove, .descriptionBelow {
+        order: 2; /* Ensures description comes after the box */
+        text-align: center;
+    }
+
+    .boxContainer {
+        order: 1; /* Ensures the box appears first */
+    }
+}

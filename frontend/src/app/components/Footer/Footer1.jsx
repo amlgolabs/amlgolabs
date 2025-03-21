@@ -4,6 +4,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer1 = () => {
   return (
@@ -11,7 +12,7 @@ const Footer1 = () => {
       <div className={styles.footerWrapper}>
         {/* Column 1: Logo and Social Icons */}
         <div className={styles.footerColumn}>
-          <img className={styles.logo} src="/newlogo7.png" alt="Logo" />
+          <Image height={80} width={200}  className={styles.logo} src="/logo/logoWhite.png" alt="Logo" />
           <div className={styles.socialIcons}>
             <a className={styles.socialIcon} href="https://www.facebook.com/AmlgoLabs/" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />

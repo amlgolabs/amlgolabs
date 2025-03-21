@@ -5,6 +5,7 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import styles from "../styles/pages/Contact-Us/OfficeLocation.module.css";
+import Image from "next/image";
 
 const OfficeLocationMap = () => {
   const mapContainerRef = useRef(null);
@@ -38,6 +39,8 @@ const OfficeLocationMap = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.leftPanel}>
+
       <div ref={mapContainerRef} className={styles.mapContainer} />
 
       {/* Contact Information */}
@@ -64,6 +67,68 @@ const OfficeLocationMap = () => {
           </a>
         </div>
       </div>
+      </div>
+
+          <div className={styles.locationContainer}>
+            <div className={styles.heading}>
+              <h3>Our Locations</h3>
+            </div>
+
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - Gurugram(INDIA) - 1</h4>
+                <p>DLF Forum, WeWork Building, DLF Cyber City, DLF Phase 3, Gurugram, Haryana, 122002</p>
+              </div>
+            </div>
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - Gurugram(INDIA)- 2</h4>
+                <p>813, Level 8, Tower B4, Spaze iTech Park, Sohna Road, Sector-49, Gurugram, Haryana, 122001</p>
+              </div>
+            </div>
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - USA</h4>
+                <p>Amlgo Labs Inc, 16192, Coastal Highway, Lewes, Delaware, 19958</p>
+              </div>
+            </div>
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - United Kingdom</h4>
+                <p>15 Bishopsgate, London EC2N 3AR, UK</p>
+              </div>
+            </div>
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - Singapore</h4>
+                <p>380, Jalan Besar, Singapore 209000</p>
+              </div>
+            </div>
+            <div className={styles.locationDiv}>
+              <div className={styles.icon}>
+                <Image src="/location.png" alt="icon" height={50} width={50}/>
+              </div>
+              <div>
+                <h4>Amlgo Labs - Bengaluru</h4>
+                <p>C-401, ITPL Main Road, Whitefield, Bengaluru, Karnataka, 560037</p>
+              </div>
+            </div>
+          </div>
     </div>
   );
 };

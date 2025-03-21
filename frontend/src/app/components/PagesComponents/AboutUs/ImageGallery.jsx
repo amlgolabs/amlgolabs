@@ -49,18 +49,18 @@ import Link from "next/link";
 
 const ImageGallery = () => {
     const images = [
-        "/imageGallery/5.jpeg",
-        "/imageGallery/1.jpeg",
-        "/imageGallery/6.jpeg",
-        "/imageGallery/9.jpeg",
-        "/imageGallery/10.jpeg",
+        "/imageGallery/5.webp",
+        "/imageGallery/1.webp",
+        "/imageGallery/6.webp",
+        "/imageGallery/9.webp",
+        "/imageGallery/10.webp",
         
-        "/imageGallery/3.jpeg",
-        "/imageGallery/2.jpeg",
-        "/imageGallery/4.jpeg",
-        "/imageGallery/7.jpeg",
+        "/imageGallery/3.webp",
+        "/imageGallery/2.webp",
+        "/imageGallery/4.webp",
+        "/imageGallery/7.webp",
 
-        "/imageGallery/8.jpeg",
+        "/imageGallery/8.webp",
 
 
     ];
@@ -101,7 +101,7 @@ const ImageGallery = () => {
 // height={200}
 //                     />
 
-<img src={src} alt="img"/>
+<img key={index} src={src} alt="img"/>
 
 
                 ))

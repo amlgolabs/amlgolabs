@@ -1,0 +1,95 @@
+.mainContainer {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--black); /* Dark background */
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contentContainer {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.contentContainer h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    color: var(--light); /* Cyan accent */
+}
+
+/* Grid Layout */
+.industryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Industry Card */
+.industryItem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    width: 100%; 
+    max-width: 320px; /* Set max width */
+    height: 250px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/* Add hover effect */
+.industryItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Link styling */
+a.industryItem {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Icon Styling */
+.iconContainer {
+    font-size: 2.5rem; /* Adjust icon size */
+    margin-bottom: 0.8rem;
+    color: #00e5ff; /* Cyan color */
+}
+
+/* Title */
+.industryItem h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Description */
+.industryItem p {
+    font-size: 1rem;
+    opacity: 0.8;
+    padding: 0 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .industryGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .industryGrid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+}

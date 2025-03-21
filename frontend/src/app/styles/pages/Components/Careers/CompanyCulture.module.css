@@ -1,0 +1,134 @@
+/* Main container: full height and centered */
+.mainContainer {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f8fafc; /* Light background */
+}
+
+/* Content container: centers and adds spacing */
+.contentContainer {
+    max-width: 1200px;
+    width: 100%;
+    /* background-color: #fff; */
+    border-radius: 12px; /* Slightly more rounded */
+    padding: 40px;
+    box-sizing: border-box;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); Softer shadow for depth */
+}
+
+/* Heading: centralize and emphasize */
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h2 {
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Tabs container: flex for responsive alignment */
+.tabsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Tab group styles */
+.tabGroup {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabGroup h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--light-gray);
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    background-color: var(--dark);
+    margin: 0;
+}
+
+.tabGroup h3:hover,
+.tabGroup h3.activeTab {
+    /* background-color: #0073e6; */
+    border-left: 5px solid var(--blue);
+    color: var(--light);
+    font-weight: 700;
+}
+
+/* Tab content styling */
+.tabContent {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.tabContent p {
+    font-size: 1.5rem;
+    line-height: 1.75;
+    color: #555;
+    margin: 0;
+    padding: 0;
+}
+
+.tabContent ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.tabContent li {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tabContent li span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.tabContent li p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .tabsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabGroup {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .tabContent {
+        padding-left: 0;
+    }
+
+    .heading h2 {
+        font-size: 2.5rem;
+    }
+}

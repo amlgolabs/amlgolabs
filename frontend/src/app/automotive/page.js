@@ -11,10 +11,11 @@ import IndustryCaseStudy2 from '../components/PagesComponents/CaseStudy/Industry
 import { FaCar, FaPlug, FaRobot, FaCogs, FaTools, FaRegLightbulb, FaTruck, FaTrophy, FaLeaf } from 'react-icons/fa';
 
 export const metadata = {
-    title: "Automotive - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
-};
+    title: "Driving Automotive Innovation - Amlgo Labs",
+    description: "Amlgo Labs delivers intelligent, connected automotive solutions, enhancing efficiency, safety, and performance with AI-driven innovation.",
+    keywords: "Automotive innovation, AI in automotive, Amlgo Labs, smart vehicles, connected cars, vehicle safety, performance optimization, autonomous driving, predictive maintenance, automotive analytics, intelligent transportation, mobility solutions, machine learning in automotive, future of driving",
+  };
+  
 
 const page = () => {
 
@@ -32,10 +33,10 @@ const page = () => {
     ];
 
     const technologies = [
-        { name: 'Microsoft Azure', image: '/partner1.png' },
-        { name: 'Amazon Web Services', image: '/partner3.png' },
-        { name: 'Google Cloud', image: '/partner5.png' },
-        { name: 'Dell Technologies', image: '/partner6.png' },
+        { name: 'Microsoft Azure', image: '/azure.png' },
+        { name: 'Amazon Web Services', image: '/aws.png' },
+        { name: 'Google Cloud', image: '/googlecloud.png' },
+        { name: 'Dell Technologies', image: '/dell.png' },
         // { name: 'Natural Language Processing', image: '/partner5.png' },
         // { name: 'Knowledge Graph', image: '/partner6.png' },
 
@@ -48,15 +49,15 @@ const page = () => {
     const caseStudiesData = [
         {
             id: 1,
-            title: "GenAI based CRM call insights and response management",
-            image: "/CaseStudyHome1.jpeg",
-            description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            image: "/placeholder/300x360.png",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
         },
         {
             id: 2,
-            title: "Document generation with RAG implementation",
-            image: "/CaseStudyHome2.jpeg",
-            description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            image: "/placeholder/300x360.png",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
         },
     ];
 

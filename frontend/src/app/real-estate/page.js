@@ -6,10 +6,11 @@ import SolutionsSteps from '../components/PagesComponents/SolutionsSteps';
 import IndustryCaseStudy2 from '../components/PagesComponents/CaseStudy/IndustryCaseStudy2';
 
 export const metadata = {
-    title: "Real Estate - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
+    title: "Real Estate & Infrastructure Solutions - Amlgo Labs",
+    description: "Boost real estate & infrastructure efficiency with Amlgo Labs AI-driven analytics & automation. Unlock data-driven insights for smarter investments & growth.",
+    keywords: "Real estate solutions, infrastructure analytics, Amlgo Labs, AI-driven real estate, property investment insights, smart infrastructure, data-driven decisions, real estate automation, predictive analytics, urban development, construction technology, smart city solutions, AI for real estate",
   };
+  
 
 const page = () => {
 
@@ -74,13 +75,15 @@ const caseStudiesData = [
   {
       id: 1,
       title: "Generative AI Simplifying Data",
-      image: "/CaseStudyHome1.jpeg",
+      image: "/placeholder/300x360.png",
+
       description: "Explore the power of Generative AI and LLMs in real estate.",
   },
   {
       id: 2,
       title: "Access with LLM-Driven Database Interaction",
-      image: "/CaseStudyHome2.jpeg",
+      image: "/placeholder/300x360.png",
+
       description: "Learn how Amlgo Labs simplified data access for a leading real estate firm, boosting efficiency and decision-making.",
   },
 ];

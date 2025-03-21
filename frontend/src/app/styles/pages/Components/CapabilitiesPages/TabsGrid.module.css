@@ -1,0 +1,145 @@
+/* Modern and Spacious TabsGrid Styles */
+.mainContainer{
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1240px;
+    margin-inline: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .tabButtons {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 3rem;
+    margin-bottom: 30px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    padding: 12px 20px;
+    /* width: 60%; */
+    /* max-width: 800px; */
+    border-radius: 50px;
+    background: rgba(0, 229, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.tabButton {
+    color: var(--gray);
+    padding: 12px 28px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    position: relative;
+    background: transparent;
+    border: 2px solid transparent;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    min-width: 120px;
+}
+
+.tabButton::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: var(--blue);
+    left: 0;
+    top: 0;
+    transition: width 0.4s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.tabButton:hover::before,
+.tabButton.active::before {
+    width: 100%;
+}
+
+.tabButton:hover,
+.tabButton.active {
+    color: var(--black);
+    background-color: var(--blue);
+}
+
+  
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+    padding: 40px;
+    /* background: white; */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .textContent {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .textContent h2 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    color: var(--light);
+  }
+  
+  .textContent p {
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+    }
+  
+    .textContent {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tabButtons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .tabButton {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

@@ -71,14 +71,14 @@
     left: -12px;  /* Slightly deeper positioning */
     width: 6px;  /* Slightly wider for a more striking accent */
     height: 60%;  /* Reduced height to look more balanced */
-    background: #00e5ff;  /* Bright, tech-inspired accent color */
+    background: var(--blue);  /* Bright, tech-inspired accent color */
     transform: translateY(-50%);
     border-radius: 2px;  /* Smooth edges for a more modern appearance */
     transition: left 0.3s ease, width 0.3s ease;  /* Smooth transition for the accent line */
   }
   
   .active:hover {
-    color: #00e5ff;  /* Accent color for hover */
+    color: var(--blue);  /* Accent color for hover */
   }
   
   .active:hover::before {
@@ -150,7 +150,7 @@
   .arrow {
     justify-self: end; 
     font-size: 1.5rem;
-    color: #00e5ff; 
+    color: var(--blue); 
     transition: color 0.2s ease;
   }
   

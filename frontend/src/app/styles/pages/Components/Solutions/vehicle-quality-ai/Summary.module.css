@@ -1,0 +1,116 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 40px 20px;
+}
+
+.contentContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 30px;
+    gap: 40px; /* Added gap for better spacing */
+}
+
+.imageWrapper {
+    flex: 1;
+    max-width: 700px;
+}
+
+.imageWrapper img {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.textWrapper {
+    flex: 1;
+    max-width: 560px;
+}
+
+.textWrapper h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.textWrapper p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 1px;
+}
+
+.textWrapper p span {
+    color: var(--black);
+    font-weight: 800;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-inline: 20px;
+    }
+
+    .textWrapper {
+        max-width: 100%;
+    }
+
+    .textWrapper h2 {
+        font-size: 2rem;
+    }
+
+    .textWrapper p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 30px 15px;
+    }
+
+    .contentContainer {
+        gap: 20px;
+    }
+
+    .textWrapper h2 {
+        font-size: 1.8rem;
+    }
+
+    .textWrapper p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainContainer {
+        padding: 20px 10px;
+    }
+
+    .textWrapper h2 {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+
+    .textWrapper p {
+        font-size: 0.9rem;
+    }
+}

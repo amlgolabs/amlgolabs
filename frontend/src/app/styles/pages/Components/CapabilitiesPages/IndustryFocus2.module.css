@@ -1,0 +1,84 @@
+.mainContainer{
+    background-attachment: fixed;
+    background-image: url("/whitebackground.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contentContainer{
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.contentContainer h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--black);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.industryContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 2rem; /* Space between cards */
+    justify-content: center; /* Center alignment */
+    align-items: center; /* Align items properly */
+    padding: 2rem;
+}
+
+.industryCard{
+    background-color: var(--light);
+    color: var(--black);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 2rem; /* Inner spacing */
+    text-align: left; /* Center text */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    width: 100%; /* Ensure full width of grid cell */
+    height: 270px; /* Large fixed height */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 0.5px solid var(--light-gray);
+    border-radius: 10px;
+}
+
+.image{
+    flex: 1;
+}
+
+.image img{
+    /* width: 100%; */
+    
+    object-fit: cover;
+}
+
+.textWrapper{
+    flex: 1;
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+.textWrapper h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.textWrapper p{
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+}

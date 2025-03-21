@@ -7,12 +7,14 @@ import OfferingsCard from '../components/PagesComponents/OfferingsCard';
 import IndustryTechnology from '../components/PagesComponents/IndustryTechnology';
 import IndustryCaseStudy from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
 import { FaRegBuilding, FaRegCreditCard, FaRegMoneyBillAlt, FaChartLine } from 'react-icons/fa';
+import { PersonSearch, Speed, Lightbulb, Shield } from '@mui/icons-material';
 
 export const metadata = {
-    title: "Banking & Finance - Amlgo Labs",
-    description: "Learn more about Amlgo Labs, our mission, vision, and team.",
-    keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
-};
+    title: "Banking & Finance Solutions - AI & Analytics - Amlgo Labs",
+    description: "Amlgo Labs delivers AI-driven banking & finance solutions, enhancing risk management, fraud detection & customer insights for smarter financial decisions.",
+    keywords: "AI in banking, finance analytics, Amlgo Labs, risk management, fraud detection, customer insights, financial decision-making, predictive analytics, banking automation, fintech solutions, AI-driven finance, digital banking, real-time fraud prevention, financial data analysis",
+  };
+  
 
 const page = () => {
     const financialData = [
@@ -70,6 +72,13 @@ const page = () => {
         },
     ];
 
+    const challengeData = [
+        { icon: PersonSearch, label: "Customer Immersion" },
+        { icon: Speed, label: "Enterprise Efficiency" },
+        { icon: Lightbulb, label: "Technological Innovation" },
+        { icon: Shield, label: "Risk Management" }
+    ];
+
     return (
         <>
             <IndustryHero1
@@ -83,7 +92,11 @@ const page = () => {
       data={financialData}
     />
 
-            <Challenges />
+<Challenges 
+            title="We Drive Transformation and Simplify Solutions with GenAI, Delivering Unmatched Value."
+            subtitle="Challenges"
+            challenges={challengeData}
+        />
 
             <SolutionsSteps
             title="Unlocking Business Potential Through GenAI Solutions"
@@ -97,7 +110,7 @@ const page = () => {
             <IndustryTechnology heading={technologyHeading} technologies={technologies} />
 
             <IndustryCaseStudy caseStudyHeading="Financial Regulatory Reporting" 
-                                CaseStudyImageSrc="/CaseStudyHome1.jpeg"/>
+                                CaseStudyImageSrc="/placeholder/1024x1024.png"/>
 
 
         </>

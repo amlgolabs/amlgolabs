@@ -4,12 +4,13 @@ import Image from "next/image";
 
 const Partners = () => {
   const partners = [
-    { id: 1, src: "/partner1.png", name: "Partner 1" },
-    { id: 2, src: "/partner2.png", name: "Partner 2" },
-    { id: 3, src: "/partner3.png", name: "Partner 3" },
-    { id: 4, src: "/partner4.png", name: "Partner 4" },
-    { id: 5, src: "/partner5.png", name: "Partner 5" },
-    { id: 6, src: "/partner6.png", name: "Partner 6" },
+    { id: 1, src: "/aws.png", name: "Partner 1" },
+    { id: 2, src: "/azure.png", name: "Partner 2" },
+    { id: 3, src: "/databricks.png", name: "Partner 3" },
+    { id: 4, src: "/dell.png", name: "Partner 4" },
+    { id: 5, src: "/googlecloud.png", name: "Partner 5" },
+    { id: 6, src: "/cloudera.png", name: "Partner 6" },
+    // { id: 6, src: "/partner6.png", name: "Partner 6" },
   ];
 
   return (

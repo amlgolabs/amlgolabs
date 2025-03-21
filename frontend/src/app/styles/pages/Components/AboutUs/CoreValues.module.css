@@ -90,7 +90,7 @@
 
     background-color: var(--black);
     /* background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%); */
-    /* background-image: linear-gradient(to left, #00e5ff, #48b2d6, #5882a2, #4f5768, #333333); */
+    /* background-image: linear-gradient(to left, var(--blue), #48b2d6, #5882a2, #4f5768, #333333); */
     padding: 0;
   }
   

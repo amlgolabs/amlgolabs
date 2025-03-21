@@ -55,7 +55,7 @@
 .dropdownContent {
   display: none;
   position: fixed;
-  top: 40px;
+  top: 20px;
   left: 0;
   width: 100%;
   
@@ -436,7 +436,7 @@
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
-  border: 2px solid #00e5ff;
+  border: 2px solid var(--blue);
   border-radius: 50px;
   transition: all 0.3s ease;
   background-color: #333;
@@ -445,7 +445,7 @@
 .headerBlogLink a:hover {
   background-color: var(--blue);
   color: #333;
-  border-color: #00e5ff;
+  border-color: var(--blue);
 }
 
 
@@ -513,7 +513,7 @@
 .icon {
   font-size: 32px;
   /* Adjust icon size */
-  color: #00e5ff;
+  color: var(--blue);
   /* Primary color for the icon */
 }
 
