@@ -13,7 +13,7 @@ const IndustryFocus2 = () => {
                 
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
-                        <Image src="/placeholder/200x200.png" height={200} width={200} quality={100} alt='img'/>
+                        <Image src="/capabilities/gen-ai-agents/Banking.jpg" height={200} width={200} quality={100} alt='img'/>
                     </div>
 
                     <div className={styles.textWrapper}>
@@ -24,7 +24,7 @@ const IndustryFocus2 = () => {
                 </Link>
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
-                    <Image src="/placeholder/200x200.png" height={200} width={200} quality={100} alt='img'/>
+                    <Image src="/capabilities/gen-ai-agents/Automotive.jpg" height={200} width={200} quality={100} alt='img'/>
                        
                     </div>
 
@@ -35,7 +35,7 @@ const IndustryFocus2 = () => {
                 </div>
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
-                    <Image src="/placeholder/200x200.png" height={200} width={200} quality={100} alt='img'/>
+                    <Image src="/capabilities/gen-ai-agents/Manufacturing.jpg" height={200} width={200} quality={100} alt='img'/>
                        
                     </div>
 
@@ -46,7 +46,7 @@ const IndustryFocus2 = () => {
                 </div>
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
-                    <Image src="/placeholder/200x200.png" height={200} width={200} quality={100} alt='img'/>
+                    <Image src="/capabilities/gen-ai-agents/ConsumerGoods.jpg" height={200} width={200} quality={100} alt='img'/>
                         
                     </div>
 

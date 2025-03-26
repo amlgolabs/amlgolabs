@@ -23,28 +23,31 @@ const page = () => {
     {
       id: 1,
       title: "Generative AI vs Predictive AI: Understanding Their Core Differences",
-      image: "/placeholder/2400x800.png",
-      description: "In today’s rapidly evolving landscape of AI for business, companies face a critical choice between AI systems that predict customer behavior and those that create content and responses. This decision highlights an important distinction between generative AI and predictive AI, two technologies that are shaping AI industry trends.",
+      image: "/capabilities/generative-ai/casestudy1.jpg",
+      description: "In today's rapidly evolving landscape of AI for business, companies face a critical choice between AI systems that predict customer behavior and those that create content and responses. This decision highlights an important distinction between generative AI and predictive AI, two technologies that are shaping AI industry trends.",
       link: "/case-study/1",
     },
     {
       id: 2,
       title: "The ROI of Implementing Generative AI: Is It Worth the Investment?",
-      image: "/placeholder/2400x800.png",
+      image: "/capabilities/generative-ai/casestudy2.jpg",
+
       description: "Generative AI, with its ability to produce unique content, ideas, and strategies based on specific inputs, has gained significant traction across various industries. Businesses from healthcare to retail are exploring its capabilities, but with any substantial investment comes an inevitable question: What is the return on investment (ROI)?",
       link: "/case-study/2",
     },
     {
       id: 3,
       title: "Unlocking Business Potential: Integrating Generative AI for Smarter, Faster Workflows",
-      image: "/placeholder/2400x800.png",
-      description: "In today’s tech-driven world, it seems like everywhere you turn, someone is talking about AI. While some people envision sentient robots taking over the world, the more realistic application of AI is already happening in everyday businesses. But how do you take advantage of this powerful technology, specifically Generative AI?",
+      image: "/capabilities/generative-ai/casestudy3.jpg",
+
+      description: "In today's tech-driven world, it seems like everywhere you turn, someone is talking about AI. While some people envision sentient robots taking over the world, the more realistic application of AI is already happening in everyday businesses. But how do you take advantage of this powerful technology, specifically Generative AI?",
       link: "/case-study/3",
     },
     {
       id: 4,
       title: "Generative AI for Layman: What is it, Tools, Models, Applications, and Use Cases",
-      image: "/placeholder/2400x800.png",
+      image: "/capabilities/generative-ai/casestudy4.jpg",
+
       description: "In the ever-evolving landscape of artificial intelligence, one of the most fascinating and transformative branches is Generative AI. This innovative technology has revolutionized the way we approach creativity and problem-solving.",
       link: "/case-study/4",
     },

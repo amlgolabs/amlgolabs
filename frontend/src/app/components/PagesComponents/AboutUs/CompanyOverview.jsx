@@ -11,19 +11,19 @@ const CompanyOverview = () => {
       title: "Our Mission",
       content:
         "We are deeply committed to merge data analytics, business intelligence and technology solutions to help companies make best data-driven decisions, thereby accelerating profitable growth and market value. Amlgo Labs is a team of pioneers and industry veterans. We have been partnering businesses across verticals through world-class advanced analytics and big data services.",
-      image: "/placeholder.png", // Update with actual image path
+      image: "/about-us/mission.png", // Update with actual image path
     },
     {
       title: "Our Values",
       content:
         "Our values are based on the well-defined best out of the best practices in the world to help all our Stakeholders work collaboratively in most effective and fulfilling way. Hence, we strive to build a true global organization and we believe in lead by example – at all levels to support our clients in every situation.",
-      image: "/placeholder.png", // Update with actual image path
+      image: "/about-us/values.png", // Update with actual image path
     },
     {
       title: "Our Philosophy",
       content:
         "Our philosophy is to enable our global customers with top of the line solutions optimized for cost, quality and time, with commitment to precision, efficiency, integrity, customer delight and employee satisfaction.",
-      image: "/placeholder.png", // Update with actual image path
+      image: "/about-us/philosophy.png", // Update with actual image path
     },
   ];
 

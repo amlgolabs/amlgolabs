@@ -76,7 +76,7 @@ const page = () => {
         <SingleBlog
       title="Deploying Language Model Applications to AWS: An Open-Source Approach"
       description="In the ever-evolving landscape of cloud computing, deploying and managing language model (LLM) applications efficiently is crucial for developers and businesses alike. Amazon Web Services (AWS) provides a robust infrastructure for hosting applications."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/capabilities/cloud-services/blog.png"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

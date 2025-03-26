@@ -27,9 +27,9 @@
 
 .heading {
     font-size: 1.5rem;
-    font-weight: 500;  /* Bolder text */
+    font-weight: 500;
     line-height: 1.8;
-    color: #333;  /* Darker text for readability */
+    color: #333;
     text-align: justify;
     letter-spacing: 0.5px;
 }
@@ -50,7 +50,7 @@
     background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -58,45 +58,60 @@
 .numberItem h4 {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #333;  /* Darker text for headings */
+    color: #333;
     margin-top: 15px;
 }
 
 .numberItem:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
-    background-color: #e8f7ff;  /* Soft cyan background on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e8f7ff;
 }
 
 .icon {
     font-size: 3rem;
-    color: var(--blue);  /* Bright cyan color */
+    color: var(--blue);
     margin-bottom: 12px;
     transition: all 0.3s ease;
 }
 
 .icon:hover {
-    color: #00b3cc;  /* Darker cyan shade on hover */
+    color: #00b3cc;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .contentContainer {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        text-align: center;
     }
+    .left {
+        width: 100%;
+        padding-right: 0;
+    }
+    .right {
+        width: 100%;
+    }
+}
 
+@media (max-width: 768px) {
     .numberGrid {
         grid-template-columns: 1fr;
+        grid-gap: 20px;
     }
-
     .heading {
         font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.4;
     }
 }
 
 @media (max-width: 480px) {
     .heading {
         font-size: 1.4rem;
+    }
+    .numberItem {
+        padding: 20px;
     }
 }

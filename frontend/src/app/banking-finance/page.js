@@ -110,7 +110,7 @@ const page = () => {
             <IndustryTechnology heading={technologyHeading} technologies={technologies} />
 
             <IndustryCaseStudy caseStudyHeading="Financial Regulatory Reporting" 
-                                CaseStudyImageSrc="/placeholder/1024x1024.png"/>
+                                CaseStudyImageSrc="/businesses/banking/casestudy.png"/>
 
 
         </>

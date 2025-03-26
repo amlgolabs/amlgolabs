@@ -109,7 +109,8 @@ const page = () => {
 <SingleBlog
       title="From Data Chaos to Clarity: Amlgo Labs Journey with Cloudera"
       description="Discover how Amlgo Labs is transforming industries by turning data chaos into clarity with Cloudera. From unified analytics to actionable insights, Amlgo Labs leverages Cloudera’s powerful data solutions to drive innovation, optimize operations, and deliver measurable results across sectors."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/partners/blogs/Cloudera.jpg"
+
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

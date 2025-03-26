@@ -9,7 +9,7 @@ const Problem = () => {
           
 
             <div className={styles.image}>
-                <Image src="/placeholder/1024x1024.png" height={500} width={500} alt='img'> 
+                <Image src="/solutions/text-sql/problem.png" height={500} width={500} alt='img'> 
 
                 </Image>
             </div>

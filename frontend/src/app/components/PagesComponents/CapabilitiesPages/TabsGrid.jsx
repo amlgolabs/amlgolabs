@@ -9,7 +9,7 @@ const tabs = [
     id: 'devops',
     title: 'DevOps',
     description: 'Amlgo Labs empowers your DevOps journey with cutting-edge automation, seamless CI/CD pipelines, and scalable cloud solutions. We optimize workflows, enhance collaboration, and deliver faster, reliable software for transformative business growth.',
-    image: '/placeholder/500x350.png',
+    image: '/capabilities/data-ops/DevOps.png',
   },
   {
     id: 'dataops',
@@ -17,7 +17,8 @@ const tabs = [
     // description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     description: 'In DataOps, Amlgo Labs enhances data management by automating workflows, ensuring seamless integration, and improving data quality. This empowers businesses to accelerate analytics, optimize decision-making, and maintain operational agility.',
 
-    image: '/placeholder/500x350.png',
+    image: '/capabilities/data-ops/DataOps.png',
+
   },
   {
     id: 'mlops',
@@ -25,7 +26,8 @@ const tabs = [
     // description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     description: ' Amlgo Labs transforms MLOps by automating machine learning workflows, accelerating model deployment, and ensuring scalability. We enable businesses to harness AI-driven insights with efficiency, reliability, and innovation.',
 
-    image: '/placeholder/500x350.png',
+    image: '/capabilities/data-ops/MlOps.png',
+
   },
 ];
 

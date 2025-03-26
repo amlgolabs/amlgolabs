@@ -6,6 +6,7 @@
     width: 100%;
     margin-inline: auto;
     gap: 2rem;
+    padding: 40px 20px;
 }
 
 .keyVerticals {
@@ -120,6 +121,10 @@
 }
 
 @media (max-width: 768px) {
+    .mainContainer{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
     .title {
         font-size: 2rem;
     }

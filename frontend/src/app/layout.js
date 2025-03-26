@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header1 from "./components/Header/Header1";
 import Footer1 from "./components/Footer/Footer1";
+import RebrandingMarquee from "./components/RebrandingMessage";
+import RebrandingMessage from "./components/RebrandingMessage";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,8 +24,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* <RebrandingMarquee/> */}
         <Header1/>
         {children}
+        <RebrandingMessage/>
         <Footer1/>
       </body>
     </html>

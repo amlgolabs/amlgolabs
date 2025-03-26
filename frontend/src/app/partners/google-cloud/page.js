@@ -39,37 +39,44 @@ const page = () => {
         {
           title: "E2E SCAI",
           content: `Drive operational excellence in your supply chain with Amlgo E2E SCAI. This sophisticated End-to-End Supply Chain AI Suite provides real-time intelligence, enabling you to elevate customer service and streamline order fulfillment.`,
-          image: "/images/e2e-scai.jpg",
+          image: "/partners/google-cloud/e2escai.jpg",
+
         },
         {
           title: "Dataform Library",
           content: `Amlgo Labs Dataform libraries provide a robust framework for data transformation and validation. Leveraging this open-source, modern data transformation framework, our libraries empower data analysts to develop, test, version control, and schedule complex SQL transformations within BigQuery, optimizing the ELT (Extract, Load, Transform) process.`,
-          image: "/images/dataform-library.jpg",
+          image: "/partners/google-cloud/dataformlibrary.jpg",
+
         },
         {
           title: "Infra Provisioner",
           content: `Automated deployment delivers substantial benefits, including accelerated implementation cycles, minimized error rates, consistent and repeatable deployments, reduced operational costs, enhanced auditability, and seamless integration with application code deployment for a streamlined and unified release pipeline.`,
-          image: "/images/infra-provisioner.jpg",
+          image: "/partners/google-cloud/infraprovisioning.jpg",
+
         },
         {
           title: "Data Fabric",
           content: `Enable self-service data lake management with this powerful accelerator. It provides end-to-end capabilities for setting up ingestion and transformation pipelines, managing data, and monitoring performance.`,
-          image: "/images/data-fabric.jpg",
+          image: "/partners/google-cloud/datafabric.jpg",
+
         },
         {
           title: "Data Catalog",
           content: `Enhance data quality and governance with this comprehensive metadata management platform. It ingests all metadata types (business, operational, technical) via push and pull, offers robust user management and access controls, provides usage reporting and statistical profiling, integrates with Great Expectations for data quality reports, and is fully customizable.`,
-          image: "/images/data-catalog.jpg",
+          image: "/partners/google-cloud/cloudcatalog.jpg",
+
         },
         {
           title: "Data Onboarder",
           content: `Deliver a frictionless customer experience with this schema-driven decision maker. It streamlines data onboarding, ensuring effortless product/service use. Dynamic schema validation, data preview, and rapid processing enable quick, informed decisions.`,
-          image: "/images/data-onboarder.jpg",
+          image: "/partners/google-cloud/dataonboarder.jpg",
+
         },
         {
           title: "FinOps Toolkit",
           content: `This operational framework enhances financial control and maximizes cloud ROI. By leveraging granular data from Google Cloud's CloudQuery and a robust rules database, it powers a unified semantic layer, a validation engine, and an insightful dashboard equipped with actionable recommendations.`,
-          image: "/images/finops-toolkit.jpg",
+          image: "/partners/google-cloud/finopstoolkit.jpg",
+
         },
       ];
       
@@ -96,7 +103,8 @@ const page = () => {
 <SingleBlog
       title="The Future of Data: Why Google Cloud is the Game-Changer for Every Industry?"
       description="Google Cloud is revolutionizing industries by transforming how businesses handle data. From scalable infrastructure to AI-driven insights, Google Cloud empowers organizations to innovate, optimize operations, and stay ahead in a data-driven world. Explore how this cloud platform is shaping the future of technology across sectors."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/partners/blogs/GoogleCloud.jpg"
+
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

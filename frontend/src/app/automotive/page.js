@@ -50,13 +50,14 @@ const page = () => {
         {
             id: 1,
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            image: "/placeholder/300x360.png",
+            image: "/businesses/automotive/casestudy1.jpg",
+
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
         },
         {
             id: 2,
             title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            image: "/placeholder/300x360.png",
+            image: "/businesses/automotive/casestudy2.jpg",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
         },
     ];

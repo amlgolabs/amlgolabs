@@ -19,33 +19,33 @@
 
 
 
-import React from 'react';
-import styles from "../styles/Components/Hero.module.css";
-import Image from 'next/image';
+// import React from 'react';
+// import styles from "../styles/Components/Hero.module.css";
+// import Image from 'next/image';
 
-const Hero = () => {
-  return (
-    <div className={styles.heroContainer}>
-      <div className={styles.heroContentArea}>
-      <Image
-      height={4000}
-      width={4000}
-          src="/HomeBanner2.png"
-          alt="Overlay"
-          className={styles.heroImage}
-          objectFit="cover"
-          quality={100}
-        />
-        <div className={styles.heroContentAreaText}>
-          <h1>Simplifying Complexity with<br /> Data and Gen-AI</h1>
-          <button>Know More</button>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const Hero = () => {
+//   return (
+//     <div className={styles.heroContainer}>
+//       <div className={styles.heroContentArea}>
+//       <Image
+//       height={4000}
+//       width={4000}
+//           src="/HomeBanner2.png"
+//           alt="Overlay"
+//           className={styles.heroImage}
+//           objectFit="cover"
+//           quality={100}
+//         />
+//         <div className={styles.heroContentAreaText}>
+//           <h1>Simplifying Complexity with<br /> Data and Gen-AI</h1>
+//           <button>Know More</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default Hero;
+// export default Hero;
 
 
 
@@ -156,3 +156,36 @@ export default Hero;
 // };
 
 // export default HeroSection;
+
+
+
+
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import styles from "../styles/Components/Hero.module.css";
+
+
+const Hero = () => {
+  return (
+    <div className={styles.mainContainer}>
+        <div className={styles.contentContainer}>
+            <Link href="/">
+            <div className={styles.imageContainer}>
+                <Image
+                    src="/home/hero2.webp" // Ensure this path is correct
+                    alt="architecture"
+                    width={1400}
+                    height={768}
+                    layout="intrinsic" // Allows responsive resizing based on natural aspect ratio
+                    quality={99} // Optional: Adjusts image quality for optimization
+                    priority // Optional: If this image is critical for above-the-fold content, consider marking it as priority
+                />
+            </div>
+            </Link>
+        </div>
+    </div>
+  )
+}
+
+export default Hero

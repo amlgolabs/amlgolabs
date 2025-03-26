@@ -77,7 +77,7 @@ const page = () => {
       <SingleBlog
       title="Overcome GenAI Fears: Get your Live GEN-AI Agent in days."
       description="Explore how Generative AI drives automation, innovation, and smarter decisions. Overcome challenges in scalability, data quality, and integration to streamline processes and stay ahead in the evolving AI landscape."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/capabilities/gen-ai-agents/blog.png"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

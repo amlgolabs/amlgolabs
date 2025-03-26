@@ -41,47 +41,55 @@ const page = () => {
         {
           title: "AWS CPG",
           content: `AWS empowers CPG businesses to build data-driven solutions in the cloud. Their platform facilitates data insights, model development, and application deployment to solve operational challenges.`,
-          image: "/images/aws-cpg.jpg",
+          image: "/partners/aws/awscpg.jpg",
         },
         {
           title: "AWS Lambda",
           content: `Increase developer productivity with AWS Lambda. This serverless platform removes the burden of server management, enabling developers to focus solely on writing and deploying code.`,
-          image: "/images/aws-lambda.jpg",
+          image: "/partners/aws/awslambda.jpg",
+
         },
         {
           title: "AWS Data and Analytics",
           content: `The AWS Data and Analytics suite provides a cloud-based platform for developing and managing DnA solutions, empowering organizations to efficiently and cost-effectively collect, store, process, analyze, and visualize vast datasets.`,
-          image: "/images/aws-data-analytics.jpg",
+          image: "/partners/aws/awsdataandanalytics.jpg",
+
         },
         {
           title: "Amazon Redshift",
           content: `The exponential growth of application data is impacting business operations. Challenges include inadequate system scalability, the inability to effectively manage both structured and unstructured data, and unsustainable infrastructure and maintenance costs.`,
-          image: "/images/amazon-redshift.jpg",
+          image: "/partners/aws/amazonredshift.jpg",
+
         },
         {
           title: "AWS Generative AI",
           content: `Amlgo Labs Gen-AI offerings and solutions span a broad spectrum of capabilities, encompassing text, vision, speech, and multi-modal functionalities. These advanced technologies enable us to optimize both business processes and data engineering workflows. Furthermore, our dedicated AI engineering practice focuses on LLMOps and LLM governance, ensuring the effective management and responsible deployment of Gen-AI applications built on large language models.`,
-          image: "/images/aws-generative-ai.jpg",
+          image: "/partners/aws/awsgenerativeai.jpg",
+
         },
         {
           title: "AWS Machine Learning",
           content: `Leverage the power of AWS Machine Learning to transform your operations. Their cloud platform provides the tools to extract insights, build models, and deploy applications that solve critical business challenges.`,
-          image: "/images/aws-machine-learning.jpg",
+          image: "/partners/aws/awsmachinelearning.jpg",
+
         },
         {
           title: "AWS Glue",
           content: `In today's data-driven world, businesses rely on data for everything from analytics and machine learning to strategic decision-making. This data, often residing in various sources like data lakes and warehouses, requires processing prior to analysis.`,
-          image: "/images/aws-glue.jpg",
+          image: "/partners/aws/awsglue.jpg",
+
         },
         {
           title: "AWS EMR",
           content: `Traditional data management approaches struggle with the sheer volume of data produced by modern digital touchpoints. A solution capable of processing this data and delivering interactive analytics and machine learning is crucial for extracting actionable insights.`,
-          image: "/images/aws-emr.jpg",
+          image: "/partners/aws/awsemr.jpg",
+
         },
         {
           title: "AWS DevOps",
           content: `AWS DevOps provides a cloud-based platform for developing and managing DevOps solutions. Their service helps businesses monitor the entire development lifecycle — from planning, development, integration and testing, deployment, and operations.`,
-          image: "/images/aws-devops.jpg",
+          image: "/partners/aws/awsdevops.jpg",
+
         },
       ];
       
@@ -109,7 +117,7 @@ const page = () => {
 <SingleBlog
       title="Deploying Language Model Applications to AWS: An Open-Source Approach"
       description="In the ever-evolving landscape of cloud computing, deploying and managing language model (LLM) applications efficiently is crucial for developers and businesses alike. Amazon Web Services (AWS) provides a robust infrastructure for hosting applications, and with the rise of open-source tools."
-      imageSrc="/placeholder/2048x2048.png"
+      imageSrc="/partners/blogs/AWS.jpg"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

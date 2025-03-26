@@ -6,19 +6,21 @@ import styles from '../../../styles/pages/Components/CapabilitiesPages/CaseStudy
 const caseStudies = [
   {
     id: 1,
-    image: '/placeholder/400x400.png',
+    image: '/capabilities/data-engineering/FinanceCaseStudy.jpg',
     title: 'Streamlining Financial Fraud Detection with Advanced Data Engineering',
     link: '/'
   },
   {
     id: 2,
-    image: '/placeholder/400x400.png',
+    image: '/capabilities/data-engineering/HealthCareCaseStudy.jpg',
+
     title: 'Enhancing Healthcare Analytics with Scalable Data Lakehouses',
     link: '/'
   },
   {
     id: 3,
-    image: '/placeholder/400x400.png',
+    image: '/capabilities/data-engineering/RetailCaseStudy.jpg',
+
     title: 'Optimizing Retail Supply Chains with Real-Time Data Pipelines',
     link: '/'
   }

@@ -35,27 +35,31 @@ const page = () => {
         {
           title: "Data Platform Optimization",
           content: `Accelerator for implementing modern data platforms leveraging Dell Technologies infrastructure and software, optimized for performance, scalability, and security. Includes pre-built configurations and best practices for rapid deployment.`,
-          image: "/placeholder.png",
+          image: "/partners/dell-technologies/dataplatformoptimizer.jpg",
         },
         {
           title: "AI/ML Infrastructure",
           content: `This comprehensive solution, built on Dell Technologies PowerEdge servers and NVIDIA GPUs, offers a high-performance infrastructure for AI/ML workloads. Streamlines the development and deployment of AI/ML models.`,
-          image: "/images/ai-ml-infrastructure.jpg",
+          image: "/partners/dell-technologies/aimlinfrastructure.jpg",
+
         },
         {
           title: "Data Security & Compliance Framework",
           content: `Gain complete control over data security and compliance with this flexible, end-to-end solution. Leverages Dell's security features and best practices to protect your valuable data assets.`,
-          image: "/images/data-security-compliance.jpg",
+          image: "/partners/dell-technologies/securitycompliance.jpg",
+
         },
         {
           title: "Infrastructure Monitoring & Management",
           content: `Built on Dell Technologies OpenManage systems management tools, this accelerator streamlines data center operations with consolidated infrastructure monitoring and reporting, enabling proactive management and optimization.`,
-          image: "/images/infrastructure-monitoring.jpg",
+          image: "/partners/dell-technologies/infrastructuremonitoring.jpg",
+
         },
         {
           title: "Edge Data Processing",
           content: `Accelerate edge data processing with this solution optimized for Dell Technologies edge infrastructure. Enables real-time insights and decision-making at the edge, reducing latency and bandwidth requirements.`,
-          image: "/images/edge-data-processing.jpg",
+          image: "/partners/dell-technologies/edgedata.jpg",
+
         },
       ];
       
@@ -83,7 +87,8 @@ const page = () => {
 <SingleBlog
       title="Why Dell is the Go-To Partner for Scalable Data Infrastructure?"
       description="Dell is the trusted partner for building scalable data infrastructure that drives innovation across industries. From robust storage solutions to advanced analytics, Dell empowers businesses to handle growing data demands, optimize operations, and future-proof their infrastructure for tomorrow’s challenges."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/partners/blogs/Dell.jpg"
+
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

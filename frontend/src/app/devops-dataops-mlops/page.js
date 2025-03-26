@@ -48,7 +48,7 @@ const page = () => {
 <SingleBlog
       title="How Generative AI is Disrupting Entire Industries – And How Amlgo Labs is Leading the Charge?"
       description="Generative AI is a subset of artificial intelligence that creates new content like images, music, text, and code. Unlike traditional AI, which recognizes patterns and makes decisions based on existing data, generative AI generates new data by mimicking patterns from its training data."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/capabilities/data-ops/blog.png"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

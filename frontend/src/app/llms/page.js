@@ -173,9 +173,85 @@
 // };
 
 
-"use client";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+// "use client";
+// import React, { useRef } from "react";
+// import { motion, useInView } from "framer-motion";
+// import Hero from "../components/PagesComponents/CapabilitiesPages/Hero";
+// import NumberInfoBox from "../components/PagesComponents/CapabilitiesPages/NumberInfoBox";
+// import BenefitsList from "../components/PagesComponents/CapabilitiesPages/BenefitsList";
+// import IndustryFocus from "../components/PagesComponents/CapabilitiesPages/IndustryFocus";
+// import InformationalStrip from "../components/PagesComponents/CapabilitiesPages/InformationalStrip";
+// import SolutionsGrid from "../components/PagesComponents/CapabilitiesPages/SolutionsGrid";
+
+
+
+// const Page = () => {
+//   return (
+//     <div>
+//       {/* Hero Section - No animation */}
+//       <Hero
+//         videoSrc="/capabilities/herobackground3.mp4"
+//         heading="Embrace the future with transformative power of large language models."
+//         // description="Your business thrives on efficiency, innovation, and insightful decision-making. Large Language Models (LLMs) represent a paradigm shift in how we interact with and leverage data, offering unprecedented opportunities for automation, personalization, and intelligent insights. Amlgo Labs can help you harness the transformative power of LLMs to drive operational excellence, unlock new growth avenues, and achieve a sustainable competitive advantage."
+//       />
+
+//       {/* Animated Sections (Now with no extra white space) */}
+//       <AnimatedSection>
+//         <NumberInfoBox />
+//       </AnimatedSection>
+
+//       <AnimatedSection>
+//         <BenefitsList />
+//       </AnimatedSection>
+
+//       <AnimatedSection>
+//         <SolutionsGrid />
+//       </AnimatedSection>
+
+//       <AnimatedSection>
+//         <InformationalStrip />
+//       </AnimatedSection>
+
+//       <AnimatedSection>
+//         <IndustryFocus />
+//       </AnimatedSection>
+//     </div>
+//   );
+// };
+
+// export default Page;
+
+// /* Utility Component for Scroll Animations */
+// const AnimatedSection = ({ children }) => {
+//   const ref = useRef(null);
+//   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, y: 50, scale: 0.98 }}
+//       animate={{
+//         opacity: isInView ? 1 : 0,
+//         y: isInView ? 0 : 50,
+//         scale: isInView ? 1 : 0.98,
+//       }}
+//       transition={{
+//         duration: 0.6,
+//         ease: "easeOut",
+//       }}
+//       style={{
+//         display: "flex",
+//         flexDirection: "column",
+//         width: "100%", // Ensures full width
+//       }}
+//     >
+//       {children}
+//     </motion.div>
+//   );
+// };
+
+
+import React from "react";
 import Hero from "../components/PagesComponents/CapabilitiesPages/Hero";
 import NumberInfoBox from "../components/PagesComponents/CapabilitiesPages/NumberInfoBox";
 import BenefitsList from "../components/PagesComponents/CapabilitiesPages/BenefitsList";
@@ -183,6 +259,11 @@ import IndustryFocus from "../components/PagesComponents/CapabilitiesPages/Indus
 import InformationalStrip from "../components/PagesComponents/CapabilitiesPages/InformationalStrip";
 import SolutionsGrid from "../components/PagesComponents/CapabilitiesPages/SolutionsGrid";
 
+export const metadata = {
+  title: "Large Language Models (LLMs) for NLP – Amlgo Labs",
+  description: "Explore Large Language Models (LLMs) in NLP—how they process human language, their AI advancements, and their role in transforming text generation.",
+  keywords: "Large Language Models, LLMs, Natural Language Processing, NLP, AI advancements, text generation, language modeling, machine learning, deep learning, AI in NLP, NLP solutions, transformer models, neural networks, AI-powered text processing, automated language understanding",
+};
 
 
 const Page = () => {
@@ -192,60 +273,16 @@ const Page = () => {
       <Hero
         videoSrc="/capabilities/herobackground3.mp4"
         heading="Embrace the future with transformative power of large language models."
-        // description="Your business thrives on efficiency, innovation, and insightful decision-making. Large Language Models (LLMs) represent a paradigm shift in how we interact with and leverage data, offering unprecedented opportunities for automation, personalization, and intelligent insights. Amlgo Labs can help you harness the transformative power of LLMs to drive operational excellence, unlock new growth avenues, and achieve a sustainable competitive advantage."
       />
 
-      {/* Animated Sections (Now with no extra white space) */}
-      <AnimatedSection>
-        <NumberInfoBox />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <BenefitsList />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <SolutionsGrid />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <InformationalStrip />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <IndustryFocus />
-      </AnimatedSection>
+      {/* Static Sections */}
+      <NumberInfoBox />
+      <BenefitsList />
+      <SolutionsGrid />
+      <InformationalStrip />
+      <IndustryFocus />
     </div>
   );
 };
 
 export default Page;
-
-/* Utility Component for Scroll Animations */
-const AnimatedSection = ({ children }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50, scale: 0.98 }}
-      animate={{
-        opacity: isInView ? 1 : 0,
-        y: isInView ? 0 : 50,
-        scale: isInView ? 1 : 0.98,
-      }}
-      transition={{
-        duration: 0.6,
-        ease: "easeOut",
-      }}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "100%", // Ensures full width
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-};

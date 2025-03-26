@@ -98,7 +98,7 @@ const page = () => {
 <SingleBlog
       title="Real-World Applications of AI in Logistics"
       description="AI is transforming logistics by turning supply chains into data-driven ecosystems, optimizing operations, reducing costs, and improving customer satisfaction through automation and predictive analytics."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/capabilities/ml-dl/blog.png"
       blogLink="/" // Update with actual blog route
       insightsLink="/" // Update with actual insights route
     />

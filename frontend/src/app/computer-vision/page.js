@@ -129,7 +129,7 @@ const industryData = [
       />
 
       <IndustryCaseStudy1 caseStudyHeading="Innovation to Automation: How Computer Vision Drives Modern Manufacturing?"
-        CaseStudyImageSrc="/placeholder/2048x2048.png" />
+        CaseStudyImageSrc="/capabilities/computer-vision/blog.jpg" />
 
         <BlackCta heading = "Ready to see the future? Let’s build smarter, vision-driven success together and transform your business with cutting-edge computer vision solutions!"
          buttonText="Get in touch"/>

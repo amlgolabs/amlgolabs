@@ -34,6 +34,7 @@
 // components/CTASection.js
 import Image from "next/image";
 import styles from "../styles/Components/CTA.module.css";
+import Link from "next/link";
 
 const CTASection = ({ heading, description, buttonText, imageSrc }) => {
   return (
@@ -41,7 +42,9 @@ const CTASection = ({ heading, description, buttonText, imageSrc }) => {
       <div className={styles.leftSection}>
         <h3 className={styles.heading}>{heading}</h3>
         <p className={styles.description}>{description}</p>
+        <Link href="/contact-us">
         <button className={styles.ctaButton}>{buttonText}</button>
+        </Link>
       </div>
       <div className={styles.rightSection}>
         <Image

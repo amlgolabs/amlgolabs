@@ -45,7 +45,7 @@ const page = () => {
         {
           title: "Azure OpenAI",
           content: `In today's digital world, data is the lifeblood of business success, a treasure trove of untapped potential. Navigating this data-rich landscape can be overwhelming without the right guidance. Amlgo Labs empowers businesses to confidently unlock the value hidden within their data. Our AI-powered search summarization swiftly extracts critical information from sprawling documents, transforming data complexity into strategic clarity. With Amlgo Labs instant insights, your data seamlessly translates into rapid, strategic decisions, propelling your business to new heights of industry leadership.`,
-          image: "/placeholder.png",
+          image: "/partners/azure/AzureOpenAI.jpg",
 
         },
         {
@@ -77,7 +77,8 @@ const page = () => {
         <SingleBlog
       title="Migration of SQL Server to Azure SQL Managed Instance"
       description="Migration of legacy data warehouse to cloud-native centralized architecture” Problem statement: One of our business partners wanted to harness the power of modern-day problem-solving using the latest technology."
-      imageSrc="/placeholder/2048x2048.png"
+      imageSrc="/partners/blogs/Azure.jpg"
+
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

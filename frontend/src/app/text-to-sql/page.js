@@ -61,7 +61,7 @@ const page = () => {
     "This case study demonstrates the transformative potential of Generative AI and LLM-driven database interaction within the real estate sector. By eliminating data access barriers, Amlgo Labs empowered real estate professionals to make informed decisions faster, improve efficiency, and reduce costs. As the industry continues to embrace data-driven strategies, solutions like these will redefine how professionals interact with information, fostering a more agile and intelligent real estate market."
   ]}
   buttonText="Learn More"
-  imageUrl="/placeholder/500x350.png"
+  imageUrl="/solutions/text-sql/conclusion.jpg"
   imageAlt="AI Quality Control"
 />
     </div>

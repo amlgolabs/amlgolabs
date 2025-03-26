@@ -24,7 +24,7 @@ const AboutUsHero = () => {
         {/* Right Image */}
         <div className={styles.imageWrapper}>
           <Image
-            src="/placeholder.png"
+            src="/about-us/overview.png"
             alt="AI & Data Analytics"
             width={600}
             height={450}

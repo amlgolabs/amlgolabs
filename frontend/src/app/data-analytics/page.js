@@ -50,28 +50,31 @@ const page = () => {
       {
           id: 1,
           title: "PowerBI Box & Whisker Plot",
-          image: "/placeholder/2400x800.png",
+          image: "/capabilities/data-analytics/casestudy1.jpg",
           description: "Power BI's Box & Whisker Plot visually summarizes data distribution, highlighting median, quartiles, and outliers. It’s ideal for comparing datasets, identifying trends, and making data-driven decisions with clarity and precision in analytics workflows.",
           link: "/case-study/1",
       },
       {
           id: 2,
           title: "Mastering Case Study Analysis: Tips for Drawing the Best Conclusion",
-          image: "/placeholder/2400x800.png",
+          image: "/capabilities/data-analytics/casestudy2.jpg",
+
           description: "Mastering case study analysis requires sharp focus on key insights. Analyze data, identify patterns, and align findings with objectives. A strong conclusion synthesizes evidence, offers actionable solutions, and highlights impact, ensuring clarity and value for stakeholders.",
           link: "/case-study/2",
       },
       {
           id: 3,
           title: "Creating Beautiful Maps with Alteryx and Tableau",
-          image: "/placeholder/2400x800.png",
+          image: "/capabilities/data-analytics/casestudy3.jpg",
+
           description: "Transform raw data into stunning visual stories with Alteryx and Tableau. Seamlessly integrate, analyze, and design interactive maps that reveal insights and drive decisions. Elevate your data storytelling with precision and creativity.",
           link: "/case-study/3",
       },
       {
           id: 4,
           title: "AI and Analytics Are Helping to Cure At-Risk Individuals",
-          image: "/placeholder/2400x800.png",
+          image: "/capabilities/data-analytics/casestudy4.jpg",
+
           description: "AI and analytics are revolutionizing healthcare by identifying and curing at-risk individuals. Through predictive models and data-driven insights, these technologies enable early intervention, personalized treatments, and improved outcomes, transforming lives with precision and efficiency.",
           link: "/case-study/4",
       },

@@ -1,3 +1,4 @@
+/* AutomotiveOfferings.module.css */
 .offeringsContainer {
     text-align: center;
     padding: 50px;
@@ -6,7 +7,7 @@
 }
 
 .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 30px;
@@ -20,9 +21,10 @@
     max-width: 1240px;
     margin-inline: auto;
     width: 100%;
-    height: 350px;
+    height: auto;
     border-radius: 15px;
     position: relative;
+    flex-direction: column;
 }
 
 .offeringContent {
@@ -38,12 +40,11 @@
 .offeringText {
     flex: 1;
     color: #ffffff;
-    width: 40%;
     text-align: left;
 }
 
 .offeringText h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -73,31 +74,6 @@
     object-fit: cover;
 }
 
-/* .image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-} */
-
-/* Arrow Button */
-.arrowButton {
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.arrowButton:hover {
-    color: var(--blue);
-}
-
 /* Pagination Dots */
 .paginationDots {
     display: flex;
@@ -122,4 +98,56 @@
 .activeDot {
     background-color: var(--blue);
     transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .offeringContent {
+        flex-direction: column;
+        text-align: center;
+    }
+    .offeringText, .offeringImage {
+        width: 100%;
+    }
+    .offeringText {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+    .offeringText h3 {
+        font-size: 1.2rem;
+    }
+    .offeringText p {
+        font-size: 0.9rem;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offeringsContainer {
+        padding: 30px;
+    }
+    .heading {
+        font-size: 1.8rem;
+    }
+    .offeringText h3 {
+        font-size: 1rem;
+    }
+    .offeringText p {
+        font-size: 0.8rem;
+    }
+    .paginationDots {
+        gap: 5px;
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
 }

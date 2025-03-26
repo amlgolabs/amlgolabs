@@ -19,6 +19,13 @@ const testimonials = [
   },
 
   {
+    name: "Vikas Kumar",
+    text: "As Delivery Head at Amlgo Labs, I'm proud of our team's dedication to delivering cutting-edge AI, machine learning, and data analytics solutions. Our culture of innovation and collaboration drives transformative outcomes and ensures customer satisfaction. It's a privilege to be part of an organization that values excellence and empowers its people to grow.",
+    position: "Delivery Head - Technology",
+    image: "/employees/vikas.jpeg",
+  },
+
+  {
     name: "Shivani Gupta",
     text: "I've had the opportunity to work with a talented team in a supportive and growth-driven environment. The company truly values its people, making every day both challenging and rewarding. I'm proud to be part of this amazing organization!",
     position: "HR Executive",
@@ -29,6 +36,14 @@ const testimonials = [
     text: "Working at Amlgo Labs has been an incredible experience. The company fosters a supportive and collaborative environment where I feel empowered to learn and grow. I've had the opportunity to work on challenging projects and contribute to meaningful solutions.",
     position: "Digital Marketer",
     image: "/employees/tanishq.jpeg",
+
+  },
+
+  {
+    name: "Yogita Negi",
+    text: "Amlgo Labs is one of the fastest-growing organizations, and I'm grateful to be part of this incredible team. It's more than a workplace — it's a family where everyone is valued and supported. Thank you to the leaders and my colleagues for being a vital part of my professional journey.",
+    position: "HR Executive",
+    image: "/employees/yogita.jpg",
 
   },
 

@@ -34,27 +34,31 @@ const page = () => {
         {
           title: "Data Fabric",
           content: `Accelerator for Implementing Modern Lakehouse leveraging Databricks and the underlying cloud in a highly scalable manner with powerful Governance & Automation Capabilities at its core.`,
-          image: "/images/data-fabric.jpg",
+          image: "/partners/databricks/datafabric.jpg",
         },
         {
           title: "MLCore",
           content: `This comprehensive accelerator, built on Databricks Delta Lake, MLflow, and Unity Catalog, offers end-to-end MLOps workflow modules to simplify and accelerate MLOps platform development and model management.`,
-          image: "/images/mlcore.jpg",
+          image: "/partners/databricks/mlcore.jpg",
+
         },
         {
           title: "Data Quality & Profiling Framework",
           content: `Gain complete control over data testing with this flexible, end-to-end solution. It features 50+ rules, custom rule support, and dashboards for analyzing test and profiling results.`,
-          image: "/images/data-quality-profiling.jpg",
+          image: "/partners/databricks/dataqualityandprofilingframework.jpg",
+
         },
         {
           title: "Databricks Operations Monitoring",
           content: `Built on Databricks Overwatch, this accelerator streamlines workspace-level governance with consolidated cost and infrastructure utilization reporting, enabling 360° optimization.`,
-          image: "/images/databricks-operations-monitoring.jpg",
+          image: "/partners/databricks/databricksoperationsmonitoring.jpg",
+
         },
         {
           title: "DataOps Observability",
           content: `Trace your data's journey with this Observability accelerator. It captures operational and runtime metadata, including pipeline details, dataset information, and data quality assertions, delivering end-to-end lineage across cloud services.`,
-          image: "/images/dataops-observability.jpg",
+          image: "/partners/databricks/dataopsobservability.jpg",
+
         },
       ];
       
@@ -79,7 +83,8 @@ const page = () => {
 <SingleBlog
       title="Lake Is The New Address Of Data"
       description="Data has always been an integral part of human life. With the evaluation of the former, the latter has also evolved. Data Lake is like a large container similar to real lakes and rivers."
-      imageSrc="/placeholder/1024x1024.png"
+      imageSrc="/partners/blogs/Databrick.jpg"
+
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

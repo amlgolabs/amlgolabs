@@ -27,20 +27,22 @@ const page = () => {
     {
       id: 1,
       title: "Developing an Insurance Risk & Litigation Propensity Model",
-      image: "/placeholder/1024x1024.png",
+      image: "/businesses/insurance/casestudy1.png",
       // description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
     },
     {
       id: 2,
       title: "Reducing Fraud in Insurance: An Anti-Fraud Model",
-      image: "/placeholder/1024x1024.png",
+      image: "/businesses/insurance/casestudy2.png",
+
 
       // description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
     },
     {
       id: 3,
       title: "Are You Maximizing Commercial Combined Cross-Selling Opportunities?",
-      image: "/placeholder/1024x1024.png",
+      image: "/businesses/insurance/casestudy3.png",
+      
 
       // description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
     },
@@ -86,9 +88,9 @@ const page = () => {
   <Introduction1 {...IntroductionData} />
 
   <SingleBlog
-      title="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-      description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-      imageSrc="/placeholder/2048x2048.png"
+      title="The Role of Big Data in Crafting Hyper-Personalized Insurance Policies"
+      description="Discover how Big Data is transforming the insurance sector by enabling hyper-personalized policies. From analyzing customer behavior to predicting risks, learn how data-driven insights are crafting tailored solutions that enhance customer satisfaction, improve retention, and drive innovation in the evolving world of insurance."
+      imageSrc="/businesses/insurance/Insurance.jpg"
       blogLink="/blog/generative-ai" // Update with actual blog route
       insightsLink="/insights/generative-ai" // Update with actual insights route
     />

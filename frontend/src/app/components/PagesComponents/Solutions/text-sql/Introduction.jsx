@@ -8,7 +8,7 @@ const Introduction = () => {
         <div className={styles.contentContainer}>
             <div className={styles.upperContent}>
                 <div className={styles.upperLeft}>
-                    <Image src="/placeholder/500x300.png" height={300} width={500} alt='img'/>
+                    <Image src="/solutions/text-sql/data.jpg" height={300} width={500} alt='img'/>
                 </div>
                 <div className={styles.upperRight}>
                     <p><span>Data</span> is the cornerstone of the real estate industry, driving decisions on <span>property valuations</span>, <span>market analysis</span>, and <span>client relationship management</span>.</p>
