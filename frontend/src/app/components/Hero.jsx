@@ -173,7 +173,7 @@ const Hero = () => {
             <Link href="/">
             <div className={styles.imageContainer}>
                 <Image
-                    src="/home/hero2.webp" // Ensure this path is correct
+                    src="/Home/hero2.webp" // Ensure this path is correct
                     alt="architecture"
                     width={1400}
                     height={768}
