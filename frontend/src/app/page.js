@@ -19,13 +19,13 @@ export default function Home() {
     {
       id: 1,
       title: "Generative vs Predictive AI: Core Differences",
-      image: "/home/casestudy1.jpg",
+      image: "/Home/casestudy1.jpg",
       description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
     },
     {
       id: 2,
       title: "Helping Banks with MAS610 Implementation",
-      image: "/home/casestudy2.jpg",
+      image: "/Home/casestudy2.jpg",
 
 
       description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
@@ -33,7 +33,7 @@ export default function Home() {
     {
       id: 3,
       title: "AI Use Cases: Transforming the Automotive Industry",
-      image: "/home/casestudy3.jpg",
+      image: "/Home/casestudy3.jpg",
 
 
       description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
