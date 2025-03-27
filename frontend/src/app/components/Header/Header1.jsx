@@ -609,10 +609,10 @@ const solutions = [
         </div>
       )}
     </div>
-
+{/* 
           <Link href="/insights" className={styles.navLink}>
             Insights
-          </Link>
+          </Link> */}
 
           {/* <div className={styles.dropdown}>
             <Link href="/partners" className={styles.navLink}>
@@ -694,9 +694,11 @@ const solutions = [
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave}
     >
+      <Link href="/partners">
       <div onClick={toggleDropdown} className={styles.navLink}>
         Partners <ArrowDropDownIcon className={styles.arrowIcon} />
       </div>
+      </Link>
       {isOpen && (
         <div className={styles.dropdownContent}>
           <div className={styles.subMenuArea}>
@@ -867,6 +869,13 @@ const solutions = [
       </div>
 
       <List>
+      <ListItem className={styles.mobileParentLink}>
+        <Link href="/about-us">
+          <div className={styles.textWithIcon}>
+           About Us
+          </div>
+        </Link>
+        </ListItem>
         {/* NEXTGEN AI LAB - MAIN SECTION */}
         <ListItem className={styles.mobileParentLink} button onClick={() => handleDropdownToggle("NextGen AI Lab")}>
           <div className={styles.textWithIcon}>
@@ -879,60 +888,45 @@ const solutions = [
           <div className={styles.mobileDropdown}>
 
             {/* CATEGORY: Data Science & AI */}
-            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Data Science & AI")}>
+            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Capabilities")}>
               <div className={styles.textWithIcon}>
-                Data Science & AI <ArrowDropDownIcon />
+                Capabilities <ArrowDropDownIcon />
               </div>
             </ListItem>
-            <Collapse in={activeSubDropdown === "Data Science & AI"} timeout="auto" unmountOnExit>
+            <Collapse in={activeSubDropdown === "Capabilities"} timeout="auto" unmountOnExit>
               <div className={styles.subLinks}>
-                <Link href="#">Machine Learning</Link>
-                <Link href="#">Deep Learning</Link>
-                <Link href="#">NLP</Link>
+                <Link href="/generative-ai">Generative-AI</Link>
+                <Link href="/llms">LLMs</Link>
+                <Link href="/genai-agents">GenAI Agents</Link>
+                <Link href="/computer-vision">Computer Vision</Link>
+                <Link href="/ml-dl">Machine Learning and Deep Learning</Link>
+                <Link href="/cloud-services">Cloud-AWS, Azure, GCP</Link>
+                <Link href="/data-analytics">Data Analytics</Link>
+                <Link href="/data-engineering">Data Engineering</Link>
+                <Link href="/devops-dataops-mlops">DataOps, DevOps, MLOps</Link>
+                
               </div>
             </Collapse>
 
             {/* CATEGORY: Generative AI */}
-            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Generative AI")}>
+            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Solutions")}>
               <div className={styles.textWithIcon}>
-                Generative AI <ArrowDropDownIcon />
+                Solutions <ArrowDropDownIcon />
               </div>
             </ListItem>
-            <Collapse in={activeSubDropdown === "Generative AI"} timeout="auto" unmountOnExit>
+            <Collapse in={activeSubDropdown === "Solutions"} timeout="auto" unmountOnExit>
               <div className={styles.subLinks}>
-                <Link href="#">LLMs</Link>
-                <Link href="#">Text Generation</Link>
-                <Link href="#">AI Art</Link>
+                <Link href="/conversational-ai-chatbot">Conversational AI Chatbot</Link>
+                <Link href="/text-to-sql">Text to SQL</Link>
+                <Link href="/vehicle-quality-ai">Vehicle QUality AI</Link>
               </div>
             </Collapse>
 
             {/* CATEGORY: Cloud Engineering */}
-            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Cloud Engineering")}>
-              <div className={styles.textWithIcon}>
-                Cloud Engineering <ArrowDropDownIcon />
-              </div>
-            </ListItem>
-            <Collapse in={activeSubDropdown === "Cloud Engineering"} timeout="auto" unmountOnExit>
-              <div className={styles.subLinks}>
-                <Link href="#">AWS</Link>
-                <Link href="#">Azure</Link>
-                <Link href="#">Google Cloud</Link>
-              </div>
-            </Collapse>
+          
 
             {/* CATEGORY: Data Analytics */}
-            <ListItem button className={styles.subCategory} onClick={() => handleSubDropdownToggle("Data Analytics")}>
-              <div className={styles.textWithIcon}>
-                Data Analytics <ArrowDropDownIcon />
-              </div>
-            </ListItem>
-            <Collapse in={activeSubDropdown === "Data Analytics"} timeout="auto" unmountOnExit>
-              <div className={styles.subLinks}>
-                <Link href="#">Power BI</Link>
-                <Link href="#">Tableau</Link>
-                <Link href="#">Big Data</Link>
-              </div>
-            </Collapse>
+            
           </div>
         </Collapse>
 
@@ -942,9 +936,15 @@ const solutions = [
         </ListItem>
         <Collapse in={activeDropdown === "Businesses"} timeout="auto" unmountOnExit>
           <div className={styles.mobileDropdown}>
-            <Link href="#">Consumer Goods</Link>
-            <Link href="#">Technology</Link>
-            <Link href="#">Manufacturing</Link>
+          <Link  href="/consumer-goods">Consumer Goods</Link>
+              <Link  href="/banking-finance">Banking & Finance</Link>
+              <Link  href="/automotive">Automotive</Link>
+              <Link  href="/real-estate">Real Estate</Link>
+              <Link  href="/insurance">Insurance</Link>
+              <Link  href="/renewable-energy">Renewable Energy</Link>
+              <Link  href="/manufacturing">Manufacturing</Link>
+              <Link  href="/pharma-life-sciences">Pharma and Life Sciences</Link>
+              <Link  href="/communication-media">Communication and Media</Link>
           </div>
         </Collapse>
 
@@ -953,9 +953,12 @@ const solutions = [
         </ListItem>
         <Collapse in={activeDropdown === "Partners"} timeout="auto" unmountOnExit>
           <div className={styles.mobileDropdown}>
-            <Link href="#">Azure</Link>
-            <Link href="#">AWS</Link>
-            <Link href="#">Databricks</Link>
+            <Link href="/partners/azure">Azure</Link>
+            <Link href="/partners/aws">AWS</Link>
+            <Link href="/partners/databricks">Databricks</Link>
+            <Link href="/partners/google-cloud">Google Cloud</Link>
+            <Link href="/partners/dell-technologies">Dell Technologies</Link>
+            <Link href="/partners/cloudera">Cloudera</Link>
           </div>
         </Collapse>
 

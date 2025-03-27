@@ -36,16 +36,16 @@ export const metadata = {
 
 const page = () => {
   const techStackData = [
-    { src: "/TechStack/tensorflow.png", alt: "tensorflow" },
-    { src: "/TechStack/pytorch.png", alt: "pytorch" },
-    { src: "/TechStack/aws.png", alt: "aws" },
-    { src: "/TechStack/azure.png", alt: "microsoft azure" },
-    { src: "/TechStack/googlecloud.png", alt: "google cloud platform" },
-    { src: "/TechStack/python.png", alt: "python" },
-    { src: "/TechStack/nvdia.png", alt: "nvidia" },
-    { src: "/TechStack/postgresql.png", alt: "sql" },
-    { src: "/TechStack/apachespark.png", alt: "apache spark" },
-    { src: "/TechStack/opencv.png", alt: "opencv" },
+    { src: "/techStack/tensorflow.png", alt: "tensorflow" },
+    { src: "/techStack/pytorch.png", alt: "pytorch" },
+    { src: "/techStack/aws.png", alt: "aws" },
+    { src: "/techStack/azure.png", alt: "microsoft azure" },
+    { src: "/techStack/googlecloud.png", alt: "google cloud platform" },
+    { src: "/techStack/python.png", alt: "python" },
+    { src: "/techStack/nvdia.png", alt: "nvidia" },
+    { src: "/techStack/postgresql.png", alt: "sql" },
+    { src: "/techStack/apachespark.png", alt: "apache spark" },
+    { src: "/techStack/opencv.png", alt: "opencv" },
   ];
   
 

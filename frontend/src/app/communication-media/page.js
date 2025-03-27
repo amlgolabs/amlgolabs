@@ -43,7 +43,7 @@ const page = () => {
                 description="Navigate market volatility and boost customer loyalty with AI-powered solutions in Communication & Media."
                 buttonText="Let's Talk"
                 buttonLink="/contact"
-                backgroundImage="/communication/Banner.png" // Provide the correct image path
+                backgroundImage="/communication/banner.png" // Provide the correct image path
             />
 
 <Introduction2 

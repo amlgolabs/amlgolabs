@@ -43,16 +43,16 @@ const page = () => {
     
 
     const techStackData = [
-      { src: "/TechStack/kubernetes.png", alt: "kubernetes" },
-      { src: "/TechStack/jenkins.png", alt: "jenkins" },
-      { src: "/TechStack/awslambda.png", alt: "aws lambda" },
-      { src: "/TechStack/postgresql.png", alt: "postgresql" },
-      { src: "/TechStack/mongodb.png", alt: "mongodb" },
-      { src: "/TechStack/prometheus.png", alt: "prometheus" },
-      { src: "/TechStack/awscloudformation.png", alt: "aws cloudformation" },
-      { src: "/TechStack/firebase.png", alt: "firebase" },
-      { src: "/TechStack/elasticbeanstalk.png", alt: "elastic beanstalk" },
-      { src: "/TechStack/terraform.png", alt: "terraform" },
+      { src: "/techStack/kubernetes.png", alt: "kubernetes" },
+      { src: "/techStack/jenkins.png", alt: "jenkins" },
+      { src: "/techStack/awslambda.png", alt: "aws lambda" },
+      { src: "/techStack/postgresql.png", alt: "postgresql" },
+      { src: "/techStack/mongodb.png", alt: "mongodb" },
+      { src: "/techStack/prometheus.png", alt: "prometheus" },
+      { src: "/techStack/awscloudformation.png", alt: "aws cloudformation" },
+      { src: "/techStack/firebase.png", alt: "firebase" },
+      { src: "/techStack/elasticbeanstalk.png", alt: "elastic beanstalk" },
+      { src: "/techStack/terraform.png", alt: "terraform" },
     ];
     
   return (

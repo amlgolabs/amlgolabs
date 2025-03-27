@@ -83,7 +83,7 @@ const page = () => {
       heading="Talk to One of Our Experts"
       description="Get in touch today to ﬁnd out about how Amlgo Labs can help you improve your processes, making you better, faster and more efﬁcient."
       buttonText="Talk to Us"
-      imageSrc="/cta3.png"
+      imageSrc="/cta.png"
     />
   </>
 

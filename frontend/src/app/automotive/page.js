@@ -49,16 +49,16 @@ const page = () => {
     const caseStudiesData = [
         {
             id: 1,
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+            title: "How AI is Changing the Automotive Industry?",
             image: "/businesses/automotive/casestudy1.jpg",
 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+            description: "AI reshapes cars: designs shift, safety soars, drives learn, build smart. Connected cars rise, output climbs, trips smooth. AI's future drives on.",
         },
         {
             id: 2,
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            title: "Leveraging AI & ML in Automotive Industry",
             image: "/businesses/automotive/casestudy2.jpg",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+            description: "Social media sentiment tracks car buyer joy. Real-time system finds users, spots issues. Big auto firm gets fast feedback, solves problems now.",
         },
     ];
 

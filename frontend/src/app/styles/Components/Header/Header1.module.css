@@ -702,6 +702,10 @@
   display: none;
 }
 
+.mobileMenuIcon svg {
+  display: none;
+}
+
 .headerUnderLine {
   height: 1px;
   background-color: #ddd;
@@ -782,7 +786,7 @@
     display: none;
   }
 
-  .mobileMenuIcon {
+  .mobileMenuIcon, .mobileMenuIcon svg {
     display: block;
   }
 }

@@ -57,7 +57,7 @@ export default function Home() {
       heading="Empower Your Business with Data Driven Solution & Generative AI"
       description="Unlock the power of data and AI to drive innovation, efficiency, and growth."
       buttonText="Get Started Today"
-      imageSrc="/cta3.png"
+      imageSrc="/cta.png"
     />
     </div>
   );

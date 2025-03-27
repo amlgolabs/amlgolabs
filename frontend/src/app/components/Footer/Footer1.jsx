@@ -12,7 +12,7 @@ const Footer1 = () => {
       <div className={styles.footerWrapper}>
         {/* Column 1: Logo and Social Icons */}
         <div className={styles.footerColumn}>
-          <Image height={80} width={200}  className={styles.logo} src="/logo/logoWhite.png" alt="Logo" />
+          <Image height={80} width={200}  className={styles.logo} src="/logo/logowhite.png" alt="Logo" />
           <div className={styles.socialIcons}>
             <a className={styles.socialIcon} href="https://www.facebook.com/AmlgoLabs/" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
@@ -42,7 +42,7 @@ const Footer1 = () => {
         {/* Column 2: About Us */}
         <div className={styles.footerColumn}>
           <h3>About Us</h3>
-          <a className={styles.footerLink} href="/about">Company Info</a>
+          <a className={styles.footerLink} href="/about-us">Company Info</a>
           <a className={styles.footerLink} href="/careers">Careers</a>
           <a className={styles.footerLink} href="/team">Our Team</a>
           <a className={styles.footerLink} href="/news">News & Updates</a>
@@ -52,13 +52,16 @@ const Footer1 = () => {
 
         <div className={styles.footerColumn}>
           <h3>Offerings</h3>
-         <Link className={styles.footerLink} href="#">Data Science & AI</Link>
-              <Link className={styles.footerLink} href="#">Generative AI</Link>
-              <Link className={styles.footerLink} href="#">Cloud Engineering</Link>
-              <Link className={styles.footerLink} href="#">Data Analytics</Link>
-              <Link className={styles.footerLink} href="#">Risk and Regulatory</Link>
-              <Link className={styles.footerLink} href="#">Data Pipelining</Link>
-              <Link className={styles.footerLink} href="#">Cloud & Data OPS</Link>
+         <Link className={styles.footerLink} href="/generative-ai">Genrative AI</Link>
+              <Link className={styles.footerLink} href="/llms">LLMs</Link>
+              <Link className={styles.footerLink} href="/genai-agents">GenAI Agents</Link>
+              <Link className={styles.footerLink} href="/computer-vision">Computer Vision</Link>
+              <Link className={styles.footerLink} href="/banking-finance">Risk and Regulatory</Link>
+              <Link className={styles.footerLink} href="/ml-dl">Machine Learning</Link>
+              <Link className={styles.footerLink} href="/cloud-services">Cloud Services</Link>
+              <Link className={styles.footerLink} href="/data-analytics">Data Analytics</Link>
+              <Link className={styles.footerLink} href="/data-engineering">Data Engineering</Link>
+              <Link className={styles.footerLink} href="/devops-dataops-mlops">DataOps, DevOps, MLOps</Link>
         </div>
         
         {/* Column 3: Industries */}
@@ -68,15 +71,15 @@ const Footer1 = () => {
           <a className={styles.footerLink} href="/finance">Finance</a>
           <a className={styles.footerLink} href="/healthcare">Healthcare</a>
           <a className={styles.footerLink} href="/education">Education</a> */}
-          <Link className={styles.footerLink} href="#">Consumer Goods</Link>
-              <Link className={styles.footerLink} href="#">Technology</Link>
-              <Link className={styles.footerLink} href="#">Manufacturing</Link>
-              <Link className={styles.footerLink} href="#">Insurance</Link>
-              <Link className={styles.footerLink} href="#">Healthcare</Link>
-              <Link className={styles.footerLink} href="#">Banking & Finance</Link>
-              <Link className={styles.footerLink} href="#">Automotive</Link>
-              <Link className={styles.footerLink} href="#">Education</Link>
-              <Link className={styles.footerLink} href="#">Travel</Link>
+          <Link className={styles.footerLink} href="/consumer-goods">Consumer Goods</Link>
+              <Link className={styles.footerLink} href="/banking-finance">Banking & Finance</Link>
+              <Link className={styles.footerLink} href="/automotive">Automotive</Link>
+              <Link className={styles.footerLink} href="/real-estate">Real Estate</Link>
+              <Link className={styles.footerLink} href="/insurance">Insurance</Link>
+              <Link className={styles.footerLink} href="/renewable-energy">Renewable Energy</Link>
+              <Link className={styles.footerLink} href="/manufacturing">Manufacturing</Link>
+              <Link className={styles.footerLink} href="/pharma-life-sciences">Pharma and Life Sciences</Link>
+              <Link className={styles.footerLink} href="/communication-media">Communication and Media</Link>
         </div>
 
         {/* Column 4: Contact Us */}

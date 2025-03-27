@@ -17,16 +17,16 @@ export const metadata = {
 
 const page = () => {
   const techStackData = [
-    { src: "/TechStack/apachespark.png", alt: "apache spark" },
-    { src: "/TechStack/azure.png", alt: "microsoft azure ai" },
-    { src: "/TechStack/pytorch.png", alt: "pytorch" },
-    { src: "/TechStack/huggingface.png", alt: "hugging face transformers" },
-    { src: "/TechStack/nltk.png", alt: "nltk (natural language toolkit)" },
-    { src: "/TechStack/openai.png", alt: "openai" },
-    { src: "/TechStack/rasa.png", alt: "rasa" },
-    { src: "/TechStack/github.png", alt: "github" },
-    { src: "/TechStack/kubernetes.png", alt: "kubernetes" },
-    { src: "/TechStack/fairlearn.png", alt: "fairlearn" },
+    { src: "/techStack/apachespark.png", alt: "apache spark" },
+    { src: "/techStack/azure.png", alt: "microsoft azure ai" },
+    { src: "/techStack/pytorch.png", alt: "pytorch" },
+    { src: "/techStack/huggingface.png", alt: "hugging face transformers" },
+    { src: "/techStack/nltk.png", alt: "nltk (natural language toolkit)" },
+    { src: "/techStack/openai.png", alt: "openai" },
+    { src: "/techStack/rasa.png", alt: "rasa" },
+    { src: "/techStack/github.png", alt: "github" },
+    { src: "/techStack/kubernetes.png", alt: "kubernetes" },
+    { src: "/techStack/fairlearn.png", alt: "fairlearn" },
   ];
   
   const solutionsData = [
@@ -52,7 +52,7 @@ const page = () => {
   return (
     <div>
       <Hero
-        videoSrc="/capabilities/genaiagents.mp4"
+        videoSrc="/capabilities//gen-ai-agents/genaiagents.mp4"
         heading="Creating the Agile and Responsive Enterprise"
         description="Your business demands agility, efficiency, and the ability to anticipate and respond to evolving market dynamics. GenAI Agents represent a paradigm shift in automation, enabling the creation of intelligent, autonomous systems that can reason, learn, and act on your behalf. Amlgo Labs can help you harness the transformative power of GenAI Agents to revolutionize your operations, unlock new levels of productivity, and achieve unprecedented business outcomes."
       />

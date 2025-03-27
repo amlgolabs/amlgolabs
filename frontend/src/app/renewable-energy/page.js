@@ -74,7 +74,7 @@ const page = () => {
     <SingleBlog
       title="What Will Power Tomorrow's Renewable Energy Grid?"
       description="Innovation in energy storage is key to unlocking the full potential of renewable energy. Dive into the latest breakthroughs and discover how these advancements are shaping the future of our energy grid."
-      imageSrc="/renewable-energy/Blog.jpg"
+      imageSrc="/renewable-energy/blog.jpg"
       blogLink="/" // Update with actual blog route
       insightsLink="/" // Update with actual insights route
     />

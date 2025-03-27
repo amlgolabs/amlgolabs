@@ -12,7 +12,7 @@ const IndustrySectors = () => {
         </div>
 
         <div className={styles.industrySectors}>
-  <div className={styles.sector} style={{ backgroundImage: "url('/consumer-retail/consumerGoods.png')" }}>
+  <div className={styles.sector} style={{ backgroundImage: "url('/consumer-retail/consumergoods.png')" }}>
     <h3>Consumer Goods</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit iste, magnam labore quod tempora dolor.</p>
     <button className={styles.readMore}><StartIcon/></button>

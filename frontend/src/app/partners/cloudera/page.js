@@ -41,47 +41,52 @@ const page = () => {
         {
           title: "Cloudera Data Platform (CDP)",
           content: `CDP empowers enterprises to build data-driven solutions across hybrid and multi-cloud environments. Their platform facilitates data integration, analytics, and machine learning to solve complex business challenges.`,
-          image: "/placeholder.png",
+          image: "/partners/cloudera/clouderadataplatform.jpg",
         },
         {
           title: "Cloudera DataFlow (CDF)",
           content: `Enhance data ingestion and real-time processing with Cloudera DataFlow. This platform streamlines data movement and transformation, enabling rapid data integration and analysis.`,
-          image: "/images/cloudera-dataflow.jpg",
+          image: "/partners/cloudera/clouderadataflow.jpg",
+
         },
         {
           title: "Cloudera Machine Learning (CML)",
           content: `The Cloudera Machine Learning suite provides a unified platform for developing and managing machine learning models, empowering organizations to efficiently build, deploy, and monitor AI solutions.`,
-          image: "/images/cloudera-ml.jpg",
+          image: "/partners/cloudera/clouderamachinelearning.jpg",
+
         },
         {
           title: "Cloudera Impala",
           content: `The exponential growth of data is impacting business operations. Challenges include inadequate system scalability, the inability to effectively manage diverse data types, and unsustainable infrastructure and maintenance costs. Cloudera Impala addresses these challenges with its high-performance SQL query engine.`,
-          image: "/images/cloudera-impala.jpg",
+          image: "/partners/cloudera/clouderaimpala.jpg",
+          
         },
         {
           title: "Cloudera GenAI Solutions",
           content: `Amlgo Labs GenAI offerings and solutions span a broad spectrum of capabilities, encompassing text, vision, speech, and multi-modal functionalities within the Cloudera ecosystem. These advanced technologies enable us to optimize data processing and analytics workflows. Furthermore, our dedicated AI engineering practice focuses on MLOps and LLM governance, ensuring the effective management and responsible deployment of GenAI applications on the Cloudera platform.`,
-          image: "/images/cloudera-genai.jpg",
+          image: "/partners/cloudera/clouderagenaisolution.jpg",
+
         },
         {
           title: "Cloudera Data Science Workbench (CDSW)",
           content: `Leverage the power of CDSW to transform your data science operations. This platform provides the tools to extract insights, build models, and deploy applications that solve critical business challenges.`,
-          image: "/images/cloudera-dsw.jpg",
+          image: "/partners/cloudera/clouderadatascienceworkbench.jpg",
+
         },
         {
           title: "Cloudera Data Engineering",
           content: `In today's data-driven world, businesses rely on data for everything from analytics and machine learning to strategic decision-making. This data, often residing in various sources within the Cloudera platform, requires processing prior to analysis.`,
-          image: "/images/cloudera-data-engineering.jpg",
+          image: "/partners/cloudera/clouderadataengineering.jpg",
         },
         {
           title: "Cloudera Spark",
           content: `Traditional data management approaches struggle with the sheer volume of data produced by modern digital touchpoints. Cloudera Spark provides a powerful and scalable solution for processing this data and delivering interactive analytics and machine learning insights.`,
-          image: "/images/cloudera-spark.jpg",
+          image: "/partners/cloudera/clouderaspark.jpg",
         },
         {
           title: "Cloudera DevOps",
           content: `It provides a platform for developing and managing DevOps solutions within the Cloudera ecosystem. Their service helps businesses monitor the entire data lifecycle — from ingestion, processing, and analytics, to deployment and operations.`,
-          image: "/images/cloudera-devops.jpg",
+          image: "/partners/cloudera/clouderadevops.jpg",
         },
       ];
       
