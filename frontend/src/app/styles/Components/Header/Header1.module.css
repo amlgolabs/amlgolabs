@@ -39,6 +39,8 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  padding-block: 20px;
+  padding-inline: 5px;
 }
 
 .arrowIcon {
@@ -56,7 +58,7 @@
 .dropdownContent {
   display: none;
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 0;
   width: 100%;
   
@@ -64,6 +66,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding-block: 20px;
+  padding-inline: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
   margin-top: 40px;
@@ -223,10 +226,7 @@
   align-items: center;
   text-align: center;
   max-width: 320px;
-  /* background: #f9f9f9; */
-  /* padding: 16px; */
-  /* border-radius: 10px; */
-  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06); */
+ 
   transition: transform 0.3s ease-in-out;
   border-left: 1px solid var(--gray);
 }
@@ -381,14 +381,15 @@
 
 
 .dropdown::after {
+  
   content: '';
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  height: 40px;
-  width: 100%;
-  background: transparent;
+  height: 15px;
+  width: 125px;
+  /* background: red; */
   z-index: 1;
   cursor: pointer;
 }
@@ -588,7 +589,7 @@
 
 
 .desktopDrawerContainer {
-  width: 450px;
+  width: 300px;
   background-color: #ffffff;
   /* White background for a clean look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

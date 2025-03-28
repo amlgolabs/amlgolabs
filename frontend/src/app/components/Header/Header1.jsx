@@ -131,16 +131,6 @@ const solutions = [
     setActiveSubDropdown(activeSubDropdown === category ? null : category);
   };
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       closeDropdown();
-  //     }
-  //   };
-
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   return () => document.removeEventListener('mousedown', handleClickOutside);
-  // }, []);
 
   return (
     <div className={styles.navBar}>
@@ -152,122 +142,7 @@ const solutions = [
         </div>
 
         <div className={styles.desktopLinks}>
-         {/* <div className={styles.dropdown}>
-    <Link href="/" className={styles.navLink}>
-        NextGen AI Lab <ArrowDropDownIcon className={styles.arrowIcon} />
-    </Link>
-    <div className={styles.dropdownContent}>
-      
-         <div className={styles.subMenuArea}>
-         <div className={styles.sidebar}>
-      {TABS.map((tab) => (
-        <div
-          key={tab}
-          className={activeTab === tab ? styles.activeTab : styles.tab} // Set active class
-          onClick={() => setActiveTab(tab)}
-        >
-          <p className={styles.tabText}>{tab}</p>
-          <ArrowRightIcon className={styles.arrowIcon} />
-        </div>
-      ))}
-    </div>
-      <div className={styles.contentArea}>
-        {activeTab === "Overview" && (
-          <div className={styles.overview}>
-            <div className={styles.overViewContent}>
-              <h2>Amlgo Labs is dedicated to making a positive impact through technological innovation.</h2>
-              <p>For over seven years, Amlgo Labs has pioneered innovative solutions, helping businesses across diverse sectors achieve greater success.</p>
-             <Link href="/about-us">
-             <Button variant="contained">Learn More</Button>
-             </Link>
-            </div>
-            
-            <div className={styles.headerBlogLink}>
-                  <h3>Featured Resource</h3>
-                  <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
-                  <h4>Partnering with Leaders empowering success.</h4>
-                  <Link href="/partners">Read More</Link>
-                </div>
-          </div>
-        )}
-
-
-
-{activeTab === "Capabilities" && (
-  <div className={styles.capabilitiesGrid}>
-    {capabilities.map(({ name, icon, description, link }) => (
-      <Link href={link} className={styles.linkWrapper} key={name}>
-        <div className={styles.iconWrapper}>
-          {icon && React.cloneElement(icon, { className: styles.icon })}
-        </div>
-        <div className={styles.textWrapper}>
-          <span className={styles.title}>{name}</span>
-          <p className={styles.description}>{description}</p>
-        </div>
-      </Link>
-    ))}
-  </div>
-)}
-
-
-
-        {activeTab === "Solutions" && (
-          <div className={styles.solutions}>
-            <div className={styles.solutionsItem}>
-              {solutions.map(({ name, icon, link }) => (
-                <Link href={link}  key={name}>
-
-                <div 
-  key={name} 
-  className={`${styles.linkWrapper} ${selectedSolution === name ? styles.activeSolution : ""}`} 
-  onClick={() => setSelectedSolution(name)}
->
-  <div className={styles.iconWrapper}>
-    {icon && React.cloneElement(icon, { className: styles.icon })}
-  </div>
-  <div className={styles.textWrapper}>
-    <span className={styles.title}>{name}</span>
-    <p className={styles.description}>
-      Elevate retail experiences with smart, connected solutions and insights.
-    </p>
-  </div>
-</div>
-</Link>
-              ))}
-            </div>
-            {selectedSolution && (
-              
-              <div className={styles.headerBlogLink}>
-                  <h3>Featured Resource</h3>
-                  <Image height={200} width={350} src="/RoboticProcess.png" alt="casestudy" />
-                  <h4>{selectedSolution} - Blog Post</h4>
-                  <Link href="/">Read More</Link>
-                </div>
-            )}
-          </div>
-        )}
-
-        {activeTab === "Research and Innovation" && (
-          <div className={styles.research}>
-            <Image 
-  src="/research.png"
-  width={434} 
-  height={278} 
-  alt="Your Image"
-/>
-<div className={styles.researchContent}>
-
-  <h2>Overcome GenAI Fears: Get your Live GEN-AI Agent in days.</h2>
-  <p>Harnessing the creative potential of Generative AI brings both transformative opportunities and operational challenges. Organizations often struggle with scalability, data quality, and integration issues.
-  This white paper delves into how advanced Generative AI solutions empower businesses to automate content generation, drive innovation, and enhance decision-making. Discover practical insights to streamline processes and overcome common challenges, positioning your organization for success in a rapidly evolving AI landscape.</p>
-            <button variant="contained">Explore More</button>
-</div>
-          </div>
-        )}
-      </div>
-    </div>
-    </div>
-</div> */}
+        
 <div 
       className={styles.dropdown} 
       onMouseEnter={() => { handleMouseEnter(); setActiveTab('Overview'); }} 
@@ -379,122 +254,162 @@ const solutions = [
         </div>
       )}
     </div>
-          {/* <div className={styles.dropdown}>
-            <Link href="/" className={styles.navLink}>
-              Businesses <ArrowDropDownIcon className={styles.arrowIcon} />
-            </Link>
-            <div className={styles.dropdownContent}>
-              <div className={styles.subMenuArea}>
 
 
-                <div className={styles.subMenuAreaLinks}>
-                  <Link href="/consumer-goods" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <StoreIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Consumer Goods and Retail</span>
-                      <p className={styles.description}>Elevate retail experiences with smart, connected solutions and insights.</p>
-                    </div>
-                  </Link>
-                  <Link href="/real-estate" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <BungalowIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Real Estate and Infrastructure</span>
-                      <p className={styles.description}>Building the future with smart, sustainable infrastructure solutions. </p>
-                    </div>
-                  </Link>
-                  <Link href="/manufacturing" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <PrecisionManufacturingIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Manufacturing and Industries</span>
-                      <p className={styles.description}>Transforming manufacturing with intelligent, connected industrial solutions.</p>
-                    </div>
-                  </Link>
+{/* 
+    <div 
+  className={styles.dropdown} 
+  onMouseEnter={() => { handleMouseEnter(); setActiveTab('Overview'); }} 
+  onMouseLeave={handleMouseLeave}
+> 
+  <div onClick={toggleDropdown} className={styles.navLink}>
+    NextGen AI Lab <ArrowDropDownIcon className={styles.arrowIcon} />
+  </div>
+
+  {isOpen && (
+    // <div 
+    //   className={styles.dropdownContent} 
+    //   onMouseEnter={handleMouseEnter} // Keeps dropdown open
+    //   onMouseLeave={handleMouseLeave} // Closes only when leaving the entire dropdown area
+    // >
+    //   <div className={styles.subMenuArea}>
+    //     <div className={styles.sidebar}>
+    //       {TABS.map((tab) => (
+    //         <div
+    //           key={tab}
+    //           className={activeTab === tab ? styles.activeTab : styles.tab}
+    //           onClick={() => setActiveTab(tab)}
+    //         >
+    //           <p className={styles.tabText}>{tab}</p>
+    //           <ArrowRightIcon className={styles.arrowIcon} />
+    //         </div>
+    //       ))}
+    //     </div>
+    //     <div className={styles.contentArea}>
+    //       {activeTab === "Overview" && (
+    //         <div className={styles.overview}>
+    //           <div className={styles.overViewContent}>
+    //             <h2>Amlgo Labs is dedicated to making a positive impact through technological innovation.</h2>
+    //             <p>For over seven years, Amlgo Labs has pioneered innovative solutions, helping businesses across diverse sectors achieve greater success.</p>
+    //             <Link href="/about-us" onClick={closeDropdown}>
+    //               <Button variant="contained">Learn More</Button>
+    //             </Link>
+    //           </div>
+    //           <div className={styles.headerBlogLink}>
+    //             <h3>Featured Resource</h3>
+    //             <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
+    //             <h4>Partnering with Leaders empowering success.</h4>
+    //             <Link href="/partners">Read More</Link>
+    //           </div>
+    //         </div>
+    //       )}
+    //     </div>
+    //   </div>
+    // </div>
+    <div className={styles.dropdownContent}  onMouseEnter={handleMouseEnter} 
+       onMouseLeave={handleMouseLeave} >
+          <div className={styles.subMenuArea}>
+            <div className={styles.sidebar}>
+              {TABS.map((tab) => (
+                <div
+                  key={tab}
+                  className={activeTab === tab ? styles.activeTab : styles.tab}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  <p className={styles.tabText}>{tab}</p>
+                  <ArrowRightIcon className={styles.arrowIcon} />
                 </div>
-
-
-
-
-
-                <div className={styles.subMenuAreaLinks}>
-
-                  <Link href="/banking-finance" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <MonetizationOnIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Banking & Finance</span>
-                      <p className={styles.description}>Secure, agile, and customer-centric financial technology solutions.</p>
-                    </div>
-                  </Link>
-
-
-                  <Link href="/insurance" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <PolicyIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Insurance</span>
-                      <p className={styles.description}>Protecting the future with innovative, data-driven insurance solutions.</p>
-                    </div>
-                  </Link>
-                  <Link href="/pharma-life-sciences" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <LocalHospitalIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Pharma and Life Sciences</span>
-                      <p className={styles.description}>Advancing healthcare with innovative, data-driven life science solutions.</p>
-                    </div>
-                  </Link>
-
-                </div>
-
-
-
-
-
-                <div className={styles.subMenuAreaLinks}>
-                  <Link href="/automotive" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <DirectionsCarIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Automotive</span>
-                      <p className={styles.description}>Driving automotive innovation with intelligent, connected solutions.</p>
-                    </div>
-                  </Link>
-                  <Link href="/renewable-energy" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <SolarPowerIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Renewable Energy and Environmental Science</span>
-                      <p className={styles.description}>Powering a sustainable future with clean energy technology.</p>
-                    </div>
-                  </Link>
-                  <Link href="/communication-media" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <PermCameraMicIcon className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Communication and Media</span>
-                      <p className={styles.description}>Connecting the world with innovative communication and media solutions.</p>
-                    </div>
-                  </Link>
-                </div>
-
-              </div>
-
-
-
+              ))}
             </div>
-          </div> */}
+            <div className={styles.contentArea}>
+              {activeTab === "Overview" && (
+                <div className={styles.overview}>
+                  <div className={styles.overViewContent}>
+                    <h2>Amlgo Labs is dedicated to making a positive impact through technological innovation.</h2>
+                    <p>For over seven years, Amlgo Labs has pioneered innovative solutions, helping businesses across diverse sectors achieve greater success.</p>
+                    <Link href="/about-us" onClick={closeDropdown}>
+                      <Button variant="contained">Learn More</Button>
+                    </Link>
+                  </div>
+                  <div className={styles.headerBlogLink}>
+                    <h3>Featured Resource</h3>
+                    <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
+                    <h4>Partnering with Leaders empowering success.</h4>
+                    <Link href="/partners">Read More</Link>
+                  </div>
+                </div>
+              )}
+              {activeTab === "Capabilities" && (
+                <div className={styles.capabilitiesGrid}>
+                  {capabilities.map(({ name, icon, description, link }) => (
+                    <Link href={link} className={styles.linkWrapper} key={name} onClick={closeDropdown}>
+                      <div className={styles.iconWrapper}>
+                        {icon && React.cloneElement(icon, { className: styles.icon })}
+                      </div>
+                      <div className={styles.textWrapper}>
+                        <span className={styles.title}>{name}</span>
+                        <p className={styles.description}>{description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+              {activeTab === "Solutions" && (
+                <div className={styles.solutions}>
+                  <div className={styles.solutionsItem}>
+                    {solutions.map(({ name, icon, link }) => (
+                      <Link href={link} key={name} onClick={closeDropdown}>
+                        <div 
+                          key={name} 
+                          className={`${styles.linkWrapper} ${selectedSolution === name ? styles.activeSolution : ""}`} 
+                          onClick={() => setSelectedSolution(name)}
+                        >
+                          <div className={styles.iconWrapper}>
+                            {icon && React.cloneElement(icon, { className: styles.icon })}
+                          </div>
+                          <div className={styles.textWrapper}>
+                            <span className={styles.title}>{name}</span>
+                            <p className={styles.description}>
+                              Elevate retail experiences with smart, connected solutions and insights.
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  {selectedSolution && (
+                    <div className={styles.headerBlogLink}>
+                      <h3>Featured Resource</h3>
+                      <Image height={200} width={350} src="/RoboticProcess.png" alt="casestudy" />
+                      <h4>{selectedSolution} - Blog Post</h4>
+                      <Link href="/">Read More</Link>
+                    </div>
+                  )}
+                </div>
+              )}
+              {activeTab === "Research and Innovation" && (
+                <div className={styles.research}>
+                  <Image 
+                    src="/research.png"
+                    width={434} 
+                    height={278} 
+                    alt="Your Image"
+                  />
+                  <div className={styles.researchContent}>
+                    <h2>Overcome GenAI Fears: Get your Live GEN-AI Agent in days.</h2>
+                    <p>Harnessing the creative potential of Generative AI brings both transformative opportunities and operational challenges. Organizations often struggle with scalability, data quality, and integration issues.
+                      This white paper delves into how advanced Generative AI solutions empower businesses to automate content generation, drive innovation, and enhance decision-making. Discover practical insights to streamline processes and overcome common challenges, positioning your organization for success in a rapidly evolving AI landscape.</p>
+                    <button variant="contained">Explore More</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+  )}
+</div> */}
+
+          
            <div 
       className={styles.dropdown} 
       onMouseEnter={handleMouseEnter} 
@@ -609,86 +524,7 @@ const solutions = [
         </div>
       )}
     </div>
-{/* 
-          <Link href="/insights" className={styles.navLink}>
-            Insights
-          </Link> */}
 
-          {/* <div className={styles.dropdown}>
-            <Link href="/partners" className={styles.navLink}>
-              Partners <ArrowDropDownIcon className={styles.arrowIcon} />
-            </Link>
-            <div className={styles.dropdownContent}>
-              <div className={styles.subMenuArea}>
-                <div className={styles.subMenuAreaLinks}>
-                  <Link href="/partners/azure" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <VscAzure className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Azure</span>
-                      <p className={styles.description}>Harness comprehensive capabilities to develop tailored solutions that integrate seamlessly with existing systems</p>
-                    </div>
-                  </Link>
-                  <Link href="/partners/google-cloud" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <SiGooglecloud className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Google Cloud</span>
-                      <p className={styles.description}>Leveraging the immense power of Google Cloud, a comprehensive suite of cloud computing</p>
-                    </div>
-                  </Link>
-                  <Link href="/partners/aws" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <FaAws className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>AWS</span>
-                      <p className={styles.description}>Transformative power of the cloud, fuel innovation, scale seamlessly, and accelerate their journey toward digital mastery</p>
-                    </div>
-                  </Link>
-                </div>
-                <div className={styles.subMenuAreaLinks}>
-                  <Link href="/partners/dell-technologies" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <SiDell className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Dell</span>
-                      <p className={styles.description}>Leverage premier infrastructure solutions to drive data-centric innovation for unparalleled performance and scalability</p>
-                    </div>
-                  </Link>
-                  <Link href="/partners/databricks" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <SiDatabricks className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Databricks</span>
-                      <p className={styles.description}>Ensure your data teams effortlessly process massive datasets, leveraging advanced analytics and AI-driven insights</p>
-                    </div>
-                  </Link>
-
-                  <Link href="/partners/cloudera" className={styles.linkWrapper}>
-                    <div className={styles.iconWrapper}>
-                      <SiCloudera className={styles.icon} />
-                    </div>
-                    <div className={styles.textWrapper}>
-                      <span className={styles.title}>Cloudera</span>
-                      <p className={styles.description}>Comprehensive suite of tools for seamlessly integrate across hybrid and multi-cloud environment</p>
-                    </div>
-                  </Link>
-                 
-                </div>
-                <div className={styles.headerBlogLink}>
-                  <h3>Featured Resource</h3>
-                  <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
-                  <h4>Partnering with Leaders empowering success.</h4>
-                  <Link href="/">Read More</Link>
-                </div>
-              </div>
-            </div>
-          </div> */}
            <div 
       className={styles.dropdown} 
       onMouseEnter={handleMouseEnter} 
@@ -855,7 +691,7 @@ const solutions = [
         </IconButton>
       </div>
 
-      <div className={styles.headerUnderLine}></div>
+      {/* <div className={styles.headerUnderLine}></div> */}
        <Drawer
       anchor="right"
       open={drawerOpen}
@@ -870,7 +706,7 @@ const solutions = [
 
       <List>
       <ListItem className={styles.mobileParentLink}>
-        <Link href="/about-us">
+        <Link href="/about-us" onClick={toggleDrawer(false)}>
           <div className={styles.textWithIcon}>
            About Us
           </div>
@@ -895,15 +731,15 @@ const solutions = [
             </ListItem>
             <Collapse in={activeSubDropdown === "Capabilities"} timeout="auto" unmountOnExit>
               <div className={styles.subLinks}>
-                <Link href="/generative-ai">Generative-AI</Link>
-                <Link href="/llms">LLMs</Link>
-                <Link href="/genai-agents">GenAI Agents</Link>
-                <Link href="/computer-vision">Computer Vision</Link>
-                <Link href="/ml-dl">Machine Learning and Deep Learning</Link>
-                <Link href="/cloud-services">Cloud-AWS, Azure, GCP</Link>
-                <Link href="/data-analytics">Data Analytics</Link>
-                <Link href="/data-engineering">Data Engineering</Link>
-                <Link href="/devops-dataops-mlops">DataOps, DevOps, MLOps</Link>
+                <Link href="/generative-ai" onClick={toggleDrawer(false)}>Generative-AI</Link>
+                <Link href="/llms" onClick={toggleDrawer(false)}>LLMs</Link>
+                <Link href="/genai-agents" onClick={toggleDrawer(false)}>GenAI Agents</Link>
+                <Link href="/computer-vision" onClick={toggleDrawer(false)}>Computer Vision</Link>
+                <Link href="/ml-dl" onClick={toggleDrawer(false)}>Machine Learning and Deep Learning</Link>
+                <Link href="/cloud-services" onClick={toggleDrawer(false)}>Cloud-AWS, Azure, GCP</Link>
+                <Link href="/data-analytics" onClick={toggleDrawer(false)}>Data Analytics</Link>
+                <Link href="/data-engineering"onClick={toggleDrawer(false)}>Data Engineering</Link>
+                <Link href="/devops-dataops-mlops" onClick={toggleDrawer(false)}>DataOps, DevOps, MLOps</Link>
                 
               </div>
             </Collapse>
@@ -916,9 +752,9 @@ const solutions = [
             </ListItem>
             <Collapse in={activeSubDropdown === "Solutions"} timeout="auto" unmountOnExit>
               <div className={styles.subLinks}>
-                <Link href="/conversational-ai-chatbot">Conversational AI Chatbot</Link>
-                <Link href="/text-to-sql">Text to SQL</Link>
-                <Link href="/vehicle-quality-ai">Vehicle QUality AI</Link>
+                <Link href="/conversational-ai-chatbot" onClick={toggleDrawer(false)}>Conversational AI Chatbot</Link>
+                <Link href="/text-to-sql" onClick={toggleDrawer(false)}>Text to SQL</Link>
+                <Link href="/vehicle-quality-ai" onClick={toggleDrawer(false)}>Vehicle QUality AI</Link>
               </div>
             </Collapse>
 
@@ -937,14 +773,14 @@ const solutions = [
         <Collapse in={activeDropdown === "Businesses"} timeout="auto" unmountOnExit>
           <div className={styles.mobileDropdown}>
           <Link  href="/consumer-goods">Consumer Goods</Link>
-              <Link  href="/banking-finance">Banking & Finance</Link>
-              <Link  href="/automotive">Automotive</Link>
-              <Link  href="/real-estate">Real Estate</Link>
-              <Link  href="/insurance">Insurance</Link>
-              <Link  href="/renewable-energy">Renewable Energy</Link>
-              <Link  href="/manufacturing">Manufacturing</Link>
-              <Link  href="/pharma-life-sciences">Pharma and Life Sciences</Link>
-              <Link  href="/communication-media">Communication and Media</Link>
+              <Link  href="/banking-finance" onClick={toggleDrawer(false)}>Banking & Finance</Link>
+              <Link  href="/automotive" onClick={toggleDrawer(false)}>Automotive</Link>
+              <Link  href="/real-estate" onClick={toggleDrawer(false)}>Real Estate</Link>
+              <Link  href="/insurance" onClick={toggleDrawer(false)}>Insurance</Link>
+              <Link  href="/renewable-energy" onClick={toggleDrawer(false)}>Renewable Energy</Link>
+              <Link  href="/manufacturing" onClick={toggleDrawer(false)}>Manufacturing</Link>
+              <Link  href="/pharma-life-sciences" onClick={toggleDrawer(false)}>Pharma and Life Sciences</Link>
+              <Link  href="/communication-media" onClick={toggleDrawer(false)}>Communication and Media</Link>
           </div>
         </Collapse>
 
@@ -953,24 +789,22 @@ const solutions = [
         </ListItem>
         <Collapse in={activeDropdown === "Partners"} timeout="auto" unmountOnExit>
           <div className={styles.mobileDropdown}>
-            <Link href="/partners/azure">Azure</Link>
-            <Link href="/partners/aws">AWS</Link>
-            <Link href="/partners/databricks">Databricks</Link>
-            <Link href="/partners/google-cloud">Google Cloud</Link>
-            <Link href="/partners/dell-technologies">Dell Technologies</Link>
-            <Link href="/partners/cloudera">Cloudera</Link>
+            <Link href="/partners/azure" onClick={toggleDrawer(false)}>Azure</Link>
+            <Link href="/partners/aws" onClick={toggleDrawer(false)}>AWS</Link>
+            <Link href="/partners/databricks" onClick={toggleDrawer(false)}>Databricks</Link>
+            <Link href="/partners/google-cloud" onClick={toggleDrawer(false)}>Google Cloud</Link>
+            <Link href="/partners/dell-technologies" onClick={toggleDrawer(false)}>Dell Technologies</Link>
+            <Link href="/partners/cloudera" onClick={toggleDrawer(false)}>Cloudera</Link>
           </div>
         </Collapse>
 
-        <ListItem className={styles.mobileParentLink} button onClick={() => handleDropdownToggle("Careers")}>
-          <div className={styles.textWithIcon}>Careers <ArrowDropDownIcon /></div>
-        </ListItem>
-        <Collapse in={activeDropdown === "Careers"} timeout="auto" unmountOnExit>
-          <div className={styles.mobileDropdown}>
-            <Link href="#">Work with Us</Link>
-            <Link href="#">Explore Jobs</Link>
+        <ListItem className={styles.mobileParentLink}>
+        <Link href="/career" onClick={toggleDrawer(false)}>
+          <div className={styles.textWithIcon}>
+           Careers
           </div>
-        </Collapse>
+        </Link>
+        </ListItem>
       </List>
     </Drawer>
     </div>

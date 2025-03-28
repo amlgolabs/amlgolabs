@@ -170,7 +170,7 @@ const Hero = () => {
   return (
     <div className={styles.mainContainer}>
         <div className={styles.contentContainer}>
-            <Link href="/">
+            <Link href="/generative-ai">
             <div className={styles.imageContainer}>
                 <Image
                     src="/Home/hero2.webp" // Ensure this path is correct

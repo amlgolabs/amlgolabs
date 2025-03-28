@@ -54,11 +54,11 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
               </button>
               <h2>We have Upgraded!</h2>
               <p>Amlgo Labs is now rebranded for a smarter, sleeker, and more innovative experience.</p>
-              <div className={styles.rebrandingVisuals}>
+              {/* <div className={styles.rebrandingVisuals}>
   <video src="/rebrand.mp4" height={150} width={250} autoPlay loop muted playsInline>
     Your browser does not support the video tag.
   </video>
-</div>
+</div> */}
 
               <motion.button 
                 className={styles.exploreButton}
