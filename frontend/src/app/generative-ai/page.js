@@ -58,7 +58,7 @@ const page = () => {
   
   const techStackData = [
     { src: "/TechStack/pytorch.png", alt: "PyTorch" },
-    { src: "/TechStack/openai.png", alt: "OpenAI" },
+    { src: "/TechStack/openAI.png", alt: "OpenAI" },
     { src: "/TechStack/python.png", alt: "Python" },
     { src: "/TechStack/anthropic.png", alt: "Anthropic" },
     { src: "/TechStack/tensorflow.png", alt: "TensorFlow" },
