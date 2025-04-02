@@ -29,13 +29,18 @@ const page = () => {
       title: "Supply Chain Management Services",
       description: "Achieve sustainable growth and resilience in the automotive industry with our solutions, covering everything from planning to aftersales service.",
       image: "/consumer-retail/featuredService1.png",
-      buttons: ["Explore Service", "View All Services"]
+      buttons: ["Explore Service", "View All Services"],
+      link1: "/",
+      link2: "/"
     },
     {
       title: "Generative AI Services",
       description: "Optimize your consumer goods operations, personalize customer experiences, and drive product innovation with our AI, machine learning, and generative AI solutions.",
       image: "/consumer-retail/featuredService2.png",
-      buttons: ["Learn More", "See All AI Services"]
+      buttons: ["Learn More", "See All AI Services"],
+      link1: "/generative-ai",
+      link2: "/"
+    
     }
   ];
   
@@ -59,7 +64,7 @@ const page = () => {
     title="Innovation in Consumer Goods and Retail"
     description="Stay ahead of evolving consumer needs in the retail and consumer goods industry with smart, integrated operations."
     buttonText="Let's Talk"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
     backgroundImage="/ConsumerGoodsBanner.png" // Provide the correct image path
   />
 
@@ -73,8 +78,10 @@ const page = () => {
       title="Exploring the Potential of Generative AI for CPG and Retail Industries"
       description="Leverage the power of generative AI to revolutionize retail and CPG operations. Our cutting-edge solutions enable businesses to predict consumer trends, automate decision-making, and create personalized experiences that drive measurable results."
       imageSrc="/consumer-retail/Blog.png"
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
 
 <FeaturedServices heading={ServiceHeading} services={serviceData} />

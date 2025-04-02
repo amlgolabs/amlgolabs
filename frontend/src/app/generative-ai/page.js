@@ -25,7 +25,7 @@ const page = () => {
       title: "Generative AI vs Predictive AI: Understanding Their Core Differences",
       image: "/capabilities/generative-ai/casestudy1.jpg",
       description: "In today's rapidly evolving landscape of AI for business, companies face a critical choice between AI systems that predict customer behavior and those that create content and responses. This decision highlights an important distinction between generative AI and predictive AI, two technologies that are shaping AI industry trends.",
-      link: "/case-study/1",
+      link: "/documents/generativeaivspredictiveai.pdf",
     },
     {
       id: 2,
@@ -33,7 +33,8 @@ const page = () => {
       image: "/capabilities/generative-ai/casestudy2.jpg",
 
       description: "Generative AI, with its ability to produce unique content, ideas, and strategies based on specific inputs, has gained significant traction across various industries. Businesses from healthcare to retail are exploring its capabilities, but with any substantial investment comes an inevitable question: What is the return on investment (ROI)?",
-      link: "/case-study/2",
+      link: "/documents/ROI_GenAI.pdf",
+
     },
     {
       id: 3,
@@ -41,7 +42,8 @@ const page = () => {
       image: "/capabilities/generative-ai/casestudy3.jpg",
 
       description: "In today's tech-driven world, it seems like everywhere you turn, someone is talking about AI. While some people envision sentient robots taking over the world, the more realistic application of AI is already happening in everyday businesses. But how do you take advantage of this powerful technology, specifically Generative AI?",
-      link: "/case-study/3",
+      link: "/documents/BusinessPotential_GenAI.pdf",
+
     },
     {
       id: 4,
@@ -49,7 +51,7 @@ const page = () => {
       image: "/capabilities/generative-ai/casestudy4.jpg",
 
       description: "In the ever-evolving landscape of artificial intelligence, one of the most fascinating and transformative branches is Generative AI. This innovative technology has revolutionized the way we approach creativity and problem-solving.",
-      link: "/case-study/4",
+      link: "/documents/GenAI_Layman.pdf",
     },
 ];
 

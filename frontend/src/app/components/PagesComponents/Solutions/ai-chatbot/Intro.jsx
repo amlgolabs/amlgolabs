@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../../../../styles/pages/Components/Solutions/ai-chatbot/Intro.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Intro = () => {
@@ -18,8 +19,10 @@ const Intro = () => {
           Amlgo Labs On-Prem GenAI Bot makes this a reality. It operates entirely within your secure network, ensuring sensitive data never leaves your environment. This is the future of enterprise AI—powerful, private, and risk-free.
           </p>
           <div className={styles.ctaContainer}>
+            <Link href="/contact-us">
             <button className={styles.primaryButton}>Request a Demo</button>
-            <button className={styles.secondaryButton}>Learn More</button>
+            </Link>
+            {/* <button className={styles.secondaryButton}>Learn More</button> */}
           </div>
         </div>
         <div className={styles.rightContent}>

@@ -114,7 +114,7 @@ const industryData = [
         title="See the World Through Data"
         description="Boost efficiency and innovation with Computer Vision. Amlgo Labs helps you leverage image and video analysis to automate processes, enhance customer experiences, and unlock actionable insights for smarter operations."
         buttonText="Let's Talk"
-        buttonLink="/contact"
+        buttonLink="/contact-us"
         backgroundImage="/capabilities/computervisionbanner.png" // Provide the correct image path
       />
       <IconHeadingGrid />

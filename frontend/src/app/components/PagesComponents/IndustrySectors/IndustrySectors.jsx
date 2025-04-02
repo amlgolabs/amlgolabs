@@ -14,13 +14,13 @@ const IndustrySectors = () => {
         <div className={styles.industrySectors}>
   <div className={styles.sector} style={{ backgroundImage: "url('/consumer-retail/consumergoods.png')" }}>
     <h3>Consumer Goods</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit iste, magnam labore quod tempora dolor.</p>
+    <p>Forge stronger consumer relationships with smart operations and data insights.</p>
     <button className={styles.readMore}><StartIcon/></button>
   </div>
 
   <div className={styles.sector} style={{ backgroundImage: "url('/consumer-retail/retail.png')" }}>
     <h3>Retail</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium voluptas ut repudiandae nihil voluptatibus ratione!</p>
+    <p>Revolutionize retail with AI drive omnichannel excellence and operational efficiency.</p>
     <button className={styles.readMore}><StartIcon/></button>
   </div>
 </div>

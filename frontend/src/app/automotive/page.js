@@ -73,7 +73,7 @@ const page = () => {
                 title="Gen-AI & Data-Driven Automotive Innovation"
                 description="From Design to Delivery, we leverage Gen-AI and Data Analytics to create vehicles tailored for the rapidly growing industry."
                 buttonText="Let's Talk"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 backgroundImage="/AutomotiveBanner.png" // Provide the correct image path
             />
             <KeyVerticals

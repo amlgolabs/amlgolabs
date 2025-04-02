@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../../styles/pages/Components/AboutUs/AboutUs.module.css";
+import Link from "next/link";
 
 const AboutUsHero = () => {
   return (
@@ -18,7 +19,9 @@ const AboutUsHero = () => {
             predictive analytics, big data, and cloud-native solutions, we build scalable, secure, and
             high-performance AI models.
           </p>
-          <button className={styles.ctaButton}>Learn More</button>
+          <Link href="/contact-us">
+          <button className={styles.ctaButton}>Get in Touch</button>
+          </Link>
         </div>
 
         {/* Right Image */}

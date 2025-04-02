@@ -103,7 +103,7 @@ const page = () => {
       <CtaDark 
   title="Struggling with your data? Elevate your business with our analytics expert, transforming insights into actions today!" 
   buttonText="Talk to Us" 
-  link="/" 
+  link="/contact-us" 
 />
 
     </div>

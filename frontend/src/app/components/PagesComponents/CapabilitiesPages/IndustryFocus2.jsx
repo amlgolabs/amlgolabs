@@ -22,6 +22,9 @@ const IndustryFocus2 = () => {
                     </div>
                 </div>
                 </Link>
+
+                <Link href="/automotive">
+
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
                     <Image src="/capabilities/gen-ai-agents/Automotive.jpg" height={200} width={200} quality={100} alt='img'/>
@@ -33,6 +36,10 @@ const IndustryFocus2 = () => {
                         <p>Optimize supply chains and enhance vehicle diagnostics through proactive, AI-driven agent systems.</p>
                     </div>
                 </div>
+                </Link>
+
+                <Link href="/manufacturing">
+
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
                     <Image src="/capabilities/gen-ai-agents/Manufacturing.jpg" height={200} width={200} quality={100} alt='img'/>
@@ -44,6 +51,10 @@ const IndustryFocus2 = () => {
                         <p>Streamline production processes and predict equipment failures with intelligent, adaptive agent workflows.</p>
                     </div>
                 </div>
+                </Link>
+
+                <Link href="/consumer-goods">
+
                 <div className={styles.industryCard}>
                     <div className={styles.image}>
                     <Image src="/capabilities/gen-ai-agents/ConsumerGoods.jpg" height={200} width={200} quality={100} alt='img'/>
@@ -55,6 +66,8 @@ const IndustryFocus2 = () => {
                         <p>Personalize customer journeys and optimize inventory management through AI agents that anticipate market trends.</p>
                     </div>
                 </div>
+                </Link>
+
             </div>
         </div>
     </div>

@@ -85,8 +85,10 @@ const page = () => {
       description="Data has always been an integral part of human life. With the evaluation of the former, the latter has also evolved. Data Lake is like a large container similar to real lakes and rivers."
       imageSrc="/partners/blogs/DataBrick.jpg"
 
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/blog/generative-ai" // Update with actual blog route
+      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
     </div>
   )

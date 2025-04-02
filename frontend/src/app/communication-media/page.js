@@ -15,12 +15,12 @@ const page = () => {
     {
         name: "Data & Analytics Services",
         description: "Redefine how you work with artificial intelligence, machine learning, and generative AI.",
-        link: "/"
+        link: "/data-analytics"
     },
     {
         name: "Finance & Accounting",
         description: "Build a future of sustainable growth, agility, and financial resilience.",
-        link: "/"
+        link: "/banking-finance"
     },
     {
         name: "Innovation & R&D Intelligence",
@@ -42,7 +42,7 @@ const page = () => {
                 title="Create value with AI in Communication & Media "
                 description="Navigate market volatility and boost customer loyalty with AI-powered solutions in Communication & Media."
                 buttonText="Let's Talk"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 backgroundImage="/communication/banner.png" // Provide the correct image path
             />
 

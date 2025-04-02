@@ -77,7 +77,7 @@ const page = () => {
                 title="Architecting the Foundation for Data-Driven Success"
           description="Your business thrives on data. Amlgo Labs builds robust data pipelines, transforming accessibility, quality, and speed into actionable insights, unlocking your data's full potential."
                 buttonText="Let's Talk"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 backgroundImage="/capabilities/dataengineeringbanner4.png" // Provide the correct image path
             />
         <NumberData2 
@@ -89,7 +89,7 @@ const page = () => {
   title="How can data engineering transform business efficiency?"
   subtitle="A global retailer improved data accessibility by 78% and decision-making speed by 40% with scalable data pipelines."
   buttonText="Explore Now"
-  buttonLink="/"
+  buttonLink="/consumer-goods"
 />
 
 <SolutionsSteps

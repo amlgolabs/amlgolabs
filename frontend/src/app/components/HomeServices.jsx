@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import styles from "../styles/Components/HomeServices.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HomeServices = () => {
   // State to manage the active case study
@@ -10,27 +11,30 @@ const HomeServices = () => {
   // Array of case studies data
   const caseStudies = [
     {
-      title: 'Generative vs Predictive AI: Core Differences',
-      description: 'Delve into the fundamental technical differences between Generative and Predictive AI models.',
-      imageSrc: '/CaseStudyHome1.jpeg',
+      title: 'Generative AI Agent Development & Integration',
+      description: 'Gen-AI Agents tailored to your unique needs, unlike traditional Predictive AI, which forecasts outcomes based on historical data.',
+      imageSrc: '/Home/service1.jpg',
       partnerAlt: 'casestudy',
-      caseStudyTitle: 'Know the differences'
+      caseStudyTitle: 'Gen AI Agents',
+      link:"/genai-agents"
     },
     {
-      title: 'Helping Banks with MAS610 Implementation',
-      description: 'Empowering banks with seamless MAS610 reporting and compliance through robust solutions.',
-      imageSrc: '/CaseStudyHome2.jpeg',
+      title: 'Streamline AI & Software Delivery with Integrated Ops',
+      description: 'Accelerate your AI and software development lifecycle with our end-to-end DataOps, DevOps, and MLOps solutions.',
+      imageSrc: '/Home/service2.jpg',
       partnerImage: '/partner2.png',
       partnerAlt: 'casestudy2',
-      caseStudyTitle: 'MAS610 Reporting and Compliances'
+      caseStudyTitle: 'Optimize Efficiency & Innovation with Unified AI & DevOps.',
+      link:"/devops-dataops-mlops"
     },
     {
-      title: 'Top 5 AI Use Cases Transforming the Automotive Industry',
-      description: 'Discover how AI is revolutionizing the automotive industry with top use cases in 2024.',
-      imageSrc: '/CaseStudyHome3.jpeg',
+      title: 'Power Intelligent Systems with Cutting-Edge ML & DL',
+      description: 'Leverage our Machine Learning (ML) and Deep Learning (DL) expertise to build high-performance AI models that solve complex business challenges.',
+      imageSrc: '/Home/service3.jpg',
       partnerImage: '/partner3.png',
       partnerAlt: 'casestudy3',
-      caseStudyTitle: 'AI transforms Automotive Industry'
+      caseStudyTitle: 'Power Intelligent Systems with Advanced ML & DL',
+       link:"/ml-dl"
     }
   ];
 
@@ -88,7 +92,9 @@ const HomeServices = () => {
               <h4>{caseStudies[activeCaseStudy].caseStudyTitle}</h4>
               <p>{caseStudies[activeCaseStudy].description}</p>
             </div>
+            <Link href={caseStudies[activeCaseStudy].link}>
             <button>Read</button>
+            </Link>
           </div>
         </div>
       </div>

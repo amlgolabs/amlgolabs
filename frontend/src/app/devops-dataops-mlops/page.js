@@ -19,7 +19,7 @@ export const metadata = {
 const page = () => {
 
   const industryData = [
-          { industryName: 'Banking and Finance', description: 'Secure, scalable data and AI solutions for compliance and innovation.', link: '/banking' , icon: <BiSolidBank/>},
+          { industryName: 'Banking and Finance', description: 'Secure, scalable data and AI solutions for compliance and innovation.', link: '/banking-finance' , icon: <BiSolidBank/>},
           { industryName: 'Automotive', description: 'Streamline production with predictive analytics and automation.', link: '/automotive', icon: <FaCar/> },
           { industryName: 'Manufacturing', description: 'Optimize workflows with real-time data and AI insights.', link: '/manufacturing', icon: <MdOutlinePrecisionManufacturing/> },
           { industryName: 'Consumer-Goods', description: 'Enhance agility with data-driven personalization and efficiency.', link: '/consumer-goods',  icon: <TiShoppingCart/> },
@@ -41,16 +41,18 @@ const page = () => {
 <InformationStripLine
   title="Empower your data, development, and machine learning workflows with seamless automation, collaboration, and scalability."
   subtitle="Amlgo Labs delivers precision-driven solutions to transform complexity into innovation and efficiency into growth."
-  buttonText="Explore Now"
-  buttonLink="/"
+  buttonText="Reach Us Now"
+  buttonLink="/contact-us"
 />
 
 <SingleBlog
       title="How Generative AI is Disrupting Entire Industries – And How Amlgo Labs is Leading the Charge?"
       description="Generative AI is a subset of artificial intelligence that creates new content like images, music, text, and code. Unlike traditional AI, which recognizes patterns and makes decisions based on existing data, generative AI generates new data by mimicking patterns from its training data."
       imageSrc="/capabilities/data-ops/blog.png"
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
 
 <IndustryFocusBlack title="Businesses We Support"

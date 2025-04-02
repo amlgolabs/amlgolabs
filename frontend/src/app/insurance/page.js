@@ -81,7 +81,7 @@ const page = () => {
     title="Insurance"
     description="Future-fit insurance, powered by advanced technology and AI, designed to protect, prevent, and preserve what matters most to people."
     buttonText="Let's Talk"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
     backgroundImage="/InsuranceBanner.png" // Provide the correct image path
   />
 
@@ -91,8 +91,10 @@ const page = () => {
       title="The Role of Big Data in Crafting Hyper-Personalized Insurance Policies"
       description="Discover how Big Data is transforming the insurance sector by enabling hyper-personalized policies. From analyzing customer behavior to predicting risks, learn how data-driven insights are crafting tailored solutions that enhance customer satisfaction, improve retention, and drive innovation in the evolving world of insurance."
       imageSrc="/businesses/insurance/Insurance.jpg"
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
 
     <Partners/>

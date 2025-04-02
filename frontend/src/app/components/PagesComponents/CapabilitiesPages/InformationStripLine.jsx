@@ -9,9 +9,11 @@ const InformationStripLine = ({ title, subtitle, buttonText, buttonLink }) => {
         <h2>
           {title} <span>{subtitle}</span>
         </h2>
-        <Link href={buttonLink} passHref>
-          <button>{buttonText}</button>
-        </Link>
+        {buttonText && buttonLink && (
+          <Link href={buttonLink} passHref>
+            <button>{buttonText}</button>
+          </Link>
+        )}
       </div>
     </div>
   );

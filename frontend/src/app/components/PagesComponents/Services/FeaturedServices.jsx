@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "../../../styles/pages/Components/Services/FeaturedServices.module.css"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const FeaturedServices = ({ heading, services }) => {
     return (
@@ -18,8 +19,12 @@ const FeaturedServices = ({ heading, services }) => {
                             <h2>{service.title}</h2>
                             <p>{service.description}</p>
                             <div className={styles.buttonDiv}>
+                                <Link href={service.link1} >
                                 <button className={styles.button1}>{service.buttons[0]}</button>
+                                </Link>
+                                <Link href={service.link2}>
                                 <button className={styles.button2}>{service.buttons[1]}</button>
+                                </Link>
                             </div>
                         </div>
                         <div className={styles.serviceImage}>

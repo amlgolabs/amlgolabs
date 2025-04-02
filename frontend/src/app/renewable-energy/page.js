@@ -65,7 +65,7 @@ const page = () => {
                 title="Finding Opportunities in the Clean Energy Transition"
                 description="Achieve a cleaner energy future with data-driven insights, Powered by AI, cloud, and renewable energy technologies."
                 buttonText="Let's Talk"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 backgroundImage="/renewable-energy/Banner2.png" // Provide the correct image path
             />
 
@@ -75,8 +75,10 @@ const page = () => {
       title="What Will Power Tomorrow's Renewable Energy Grid?"
       description="Innovation in energy storage is key to unlocking the full potential of renewable energy. Dive into the latest breakthroughs and discover how these advancements are shaping the future of our energy grid."
       imageSrc="/renewable-energy/blog.jpg"
-      blogLink="/" // Update with actual blog route
-      insightsLink="/" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
     </>
   )

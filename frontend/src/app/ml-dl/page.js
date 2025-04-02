@@ -65,7 +65,7 @@ const page = () => {
         title="Engine for a Visually Driven World"
         description="Leverage Machine Learning (ML) and Deep Learning (DL) to optimize operations, automate processes, and drive innovation. Amlgo Labs empowers your business with data-driven insights and intelligent decision-making for enhanced efficiency and personalized experiences."
         buttonText="Let's Talk"
-        buttonLink="/contact"
+        buttonLink="/contact-us"
         backgroundImage="/capabilities/mldlbanner.png" // Provide the correct image path
       />
 
@@ -88,7 +88,7 @@ const page = () => {
 <InformationStripLine
   title="Discover the distinctions between Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) in simple terms."
   subtitle="Learn how these technologies work and their unique roles in innovation."
-  buttonText="Explore Now"
+  // buttonText="Explore Now"
   buttonLink="/"
 />
 
@@ -99,8 +99,10 @@ const page = () => {
       title="Real-World Applications of AI in Logistics"
       description="AI is transforming logistics by turning supply chains into data-driven ecosystems, optimizing operations, reducing costs, and improving customer satisfaction through automation and predictive analytics."
       imageSrc="/capabilities/ml-dl/blog.png"
-      blogLink="/" // Update with actual blog route
-      insightsLink="/" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
 
 <BlackCta heading = "Struggling to stay ahead? Let’s turn your challenges into opportunities with Machine Learning and Deep Learning AI that thinks, learns, and grows with you. Begin today!"

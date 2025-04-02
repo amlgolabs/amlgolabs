@@ -79,8 +79,10 @@ const page = () => {
       description="Migration of legacy data warehouse to cloud-native centralized architecture” Problem statement: One of our business partners wanted to harness the power of modern-day problem-solving using the latest technology."
       imageSrc="/partners/blogs/Azure.jpg"
 
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/blog/generative-ai" // Update with actual blog route
+      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
     </div>
   )

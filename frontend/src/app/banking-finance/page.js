@@ -26,7 +26,7 @@ const page = () => {
 
     // Define the technology data
     const technologies = [
-        { name: 'Gen-AI', image: '/genai.png' },
+        { name: 'Gen-AI', image: '/GenAI.png' },
         { name: 'Robotic Process Automation', image: '/RoboticProcess.png' },
         { name: 'Machine Learning', image: '/MachineLearning.png' },
         { name: 'Forecasting and Process Mapping', image: '/RoboticProcess.png' },

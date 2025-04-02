@@ -102,7 +102,7 @@ const caseStudiesData = [
     title="Securing Your Real Estate Future"
     description="Establish enduring competitive advantage, generate long-term impact, and ensure the future viability of your real estate business."
     buttonText="Let's Talk"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
     backgroundImage="/real-estate/RealEstateBanner.png" // Provide the correct image path
   />
 

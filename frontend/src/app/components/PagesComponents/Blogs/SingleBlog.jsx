@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "../../../styles/pages/Components/Blogs/SingleBlog.module.css";
 import Image from "next/image";
 
-const SingleBlog = ({ title, description, imageSrc, blogLink, insightsLink }) => {
+const SingleBlog = ({ title, description, imageSrc, button1Link, button2Link, button1Text, button2Text }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.blogContainer}>
@@ -13,12 +13,16 @@ const SingleBlog = ({ title, description, imageSrc, blogLink, insightsLink }) =>
           <h2>{title}</h2>
           <p>{description}</p>
           <div className={styles.buttonDiv}>
-            <Link href={blogLink} passHref>
-              <button className={styles.button1}>Read Blog</button>
-            </Link>
-            <Link href={insightsLink} passHref>
-              <button className={styles.button2}>View Insights</button>
-            </Link>
+            {button1Link && (
+              <Link href={button1Link} passHref target="_blank">
+                <button className={styles.button1}>{button1Text}</button>
+              </Link>
+            )}
+            {button2Link && (
+              <Link href={button2Link} passHref>
+                <button className={styles.button2}>{button2Text}</button>
+              </Link>
+            )}
           </div>
         </div>
         <div className={styles.imageContainer}>

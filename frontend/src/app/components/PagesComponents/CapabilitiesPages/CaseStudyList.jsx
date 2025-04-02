@@ -147,11 +147,12 @@ const CaseStudyList = ({ caseStudies }) => {
             />
             <p className={styles.description}>{selectedCase.description}</p>
             <button
-              className={styles.readMore}
-              onClick={() => router.push(selectedCase.link)}
-            >
-              Read More
-            </button>
+  className={styles.readMore}
+  onClick={() => window.open(selectedCase.link, "_blank")}
+>
+  Read Now
+</button>
+
           </div>
         )}
       </div>

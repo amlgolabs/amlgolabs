@@ -62,6 +62,19 @@ const testimonials = [
     image: "/employees/rohit.jpg",
 
   },
+
+  {
+    name: "Manisha Rout",
+    text: "Working as a Senior Axiom Developer at Amlgo Labs has been a rewarding journey. The seamless hiring process, supportive team, and growth-oriented culture make it an exceptional workplace. The team's approachability and commitment to employee success foster a collaborative and enriching environment. I'm grateful to be part of an organization that values and nurtures its people.",
+    position: "Senior Axiom Developer",
+    image: "/employees/manisha.jpg",
+  },
+  {
+    name: "Krishna Singh",
+    text: "I truly enjoy the work culture at Amlgolabs. The positive environment and supportive team make every day more productive and fulfilling. Working alongside such talented individuals creates a seamless experience, and the director's knowledge and kindness make a lasting impact.",
+    position: "Software Engineer",
+    image: "/employees/krishna.png",
+  },
 ];
 
 const EmployeeTestimonials = () => {

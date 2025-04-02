@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../../../styles/pages/Components/Solutions/vehicle-quality-ai/Conclusion.module.css";
+import Link from "next/link";
 
 const Conclusion = ({ title, paragraphs, buttonText, imageUrl, imageAlt }) => {
   return (
@@ -10,7 +11,9 @@ const Conclusion = ({ title, paragraphs, buttonText, imageUrl, imageAlt }) => {
         {paragraphs.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
+        <Link href="/contact-us">
         <button className={styles.ctaButton}>{buttonText}</button>
+        </Link>
       </div>
       <div className={styles.imageWrapper}>
         <Image

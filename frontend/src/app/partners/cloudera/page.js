@@ -116,8 +116,10 @@ const page = () => {
       description="Discover how Amlgo Labs is transforming industries by turning data chaos into clarity with Cloudera. From unified analytics to actionable insights, Amlgo Labs leverages Cloudera’s powerful data solutions to drive innovation, optimize operations, and deliver measurable results across sectors."
       imageSrc="/partners/blogs/Cloudera.jpg"
 
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/blog/generative-ai" // Update with actual blog route
+      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
     
     </div>

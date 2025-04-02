@@ -4,6 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import styles from "../../../styles/pages/Components/IndustryCaseStudy2/IndustryCaseStudy3.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const caseStudies = [
     {
@@ -12,7 +13,8 @@ const caseStudies = [
         title: "Real-World Applications of AI in Logistics",
         description: "Transforming traditional supply chain operations into intelligent, data-driven ecosystems.",
         date: "Jan 10, 2024",
-        parentTitle: "Case Study"
+        parentTitle: "Case Study",
+        link: "/documents/AI_Logistics.pdf"
     },
     {
         id: 2,
@@ -20,7 +22,9 @@ const caseStudies = [
         title: "Generative AI vs Predictive AI",
         description: "Companies face a critical choice between AI systems that predict customer behavior.",
         date: "Feb 15, 2024",
-        parentTitle: "White Paper"
+        parentTitle: "White Paper",
+        link: "/documents/generativeaivspredictiveai.pdf"
+
     },
     {
         id: 3,
@@ -28,7 +32,9 @@ const caseStudies = [
         title: "The ROI of Implementing Generative AI",
         description: "Strategies based on specific inputs have gained significant traction across various industries.",
         date: "Mar 5, 2024",
-        parentTitle: "Blog"
+        parentTitle: "Blog",
+        link: "/documents/ROI_GenAI.pdf"
+
     },
     {
         id: 4,
@@ -36,7 +42,8 @@ const caseStudies = [
         title: "Integrating Generative AI for Smarter, Faster Workflows",
         description: "In today’s tech-driven world, someone is talking about AI.",
         date: "Apr 10, 2024",
-        parentTitle: "Case Study"
+        parentTitle: "Case Study",
+        link:"/"
     },
     {
         id: 5,
@@ -44,7 +51,8 @@ const caseStudies = [
         title: "Generative AI is Disrupting Entire Industries",
         description: "Creates new content like images, music, text, and code.",
         date: "May 15, 2024",
-        parentTitle: "White Paper"
+        parentTitle: "White Paper",
+        link: "/"
     },
     {
         id: 6,
@@ -52,7 +60,8 @@ const caseStudies = [
         title: "AI Factories, Digital Humans, Robots, and Virtual Planets?",
         description: "Nvidia has once again pushed the boundaries of innovation with its latest revelations.",
         date: "Jun 20, 2024",
-        parentTitle: "Case Study"
+        parentTitle: "Case Study",
+        link: "/"
     },
     {
         id: 7,
@@ -60,7 +69,8 @@ const caseStudies = [
         title: "Enhance Financial Forecasts with N-BEATS AI",
         description: "It has always been a cornerstone of effective decision-making in the financial sector.",
         date: "Jul 5, 2024",
-        parentTitle: "Blog"
+        parentTitle: "Blog",
+        link: "/"
     }
 ];
 
@@ -113,6 +123,7 @@ const IndustryCaseStudy3 = () => {
                 transition={{ duration: 0.5 }}
             >
                 {caseStudies.map((study) => (
+                    <Link  key={study.id} href={study.link} target="_blank">
                     <motion.div
                         key={study.id}
                         className={styles.card}
@@ -145,6 +156,7 @@ const IndustryCaseStudy3 = () => {
                         </div>
                         </div>
                     </motion.div>
+                    </Link>
                 ))}
             </motion.div>
         </div>

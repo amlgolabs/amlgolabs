@@ -52,6 +52,25 @@
 .offeringText p {
     font-size: 1rem;
     color: #bbbbbb;
+    margin-bottom: 15px;
+}
+
+.offeringButton{
+    background-color: #00e5ff;
+    color: var(--dark);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.offeringButton:hover{
+    background-color: #00c4e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.4);
 }
 
 .offeringImage {
@@ -61,6 +80,8 @@
     border-radius: 8px;
     overflow: hidden;
 }
+
+
 
 .imageWrapper {
     position: relative;

@@ -245,7 +245,10 @@ const solutions = [
                     <h2>Overcome GenAI Fears: Get your Live GEN-AI Agent in days.</h2>
                     <p>Harnessing the creative potential of Generative AI brings both transformative opportunities and operational challenges. Organizations often struggle with scalability, data quality, and integration issues.
                       This white paper delves into how advanced Generative AI solutions empower businesses to automate content generation, drive innovation, and enhance decision-making. Discover practical insights to streamline processes and overcome common challenges, positioning your organization for success in a rapidly evolving AI landscape.</p>
-                    <button variant="contained">Explore More</button>
+                    {/* <button variant="contained">Explore More</button> */}
+                    <a href="/documents/genaiagent_amlgolabs.pdf" target="_blank" rel="noopener noreferrer">
+  <button className={styles.button}>Explore More</button>
+</a>
                   </div>
                 </div>
               )}
@@ -595,6 +598,12 @@ const solutions = [
       )}
     </div>
 
+    <Link href="/careers">
+      <div className={styles.navLink}>
+        Careers
+      </div>
+      </Link>
+
 
         
           <MenuOpenIcon onClick={toggledesktopDrawer(true)} className={styles.desktopMenuIcon} />
@@ -629,17 +638,17 @@ const solutions = [
             <Collapse style={{ paddingInline: "10px" }} in={aboutOpen} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItem className={styles.desktopSubListItem}>
-                  <Link href="/about-us" className={styles.desktopLink}>
+                  <Link href="/about-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                     Overview
                   </Link>
                 </ListItem>
                 <ListItem className={styles.desktopSubListItem}>
-                <Link href="/about-us#values" className={styles.desktopLink}>
+                <Link href="/about-us#values" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
   Our Values
 </Link>
                 </ListItem>
                 <ListItem className={styles.desktopSubListItem}>
-                  <Link href="/founder-message" className={styles.desktopLink}>
+                  <Link href="/founder-message" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                     Founder Message
                   </Link>
                 </ListItem>
@@ -648,27 +657,27 @@ const solutions = [
 
             {/* Blogs Section */}
             <ListItem className={styles.desktopListItem}>
-              <Link href="/blogs" className={styles.desktopLink}>
+              <Link href="/blogs" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                 Blogs
               </Link>
-            </ListItem>
+             </ListItem>
 
             {/* Contact Section */}
             <ListItem className={styles.desktopListItem}>
-              <Link href="/contact-us" className={styles.desktopLink}>
+              <Link href="/contact-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                 Contact
               </Link>
             </ListItem>
 
-            <ListItem className={styles.desktopListItem}>
-              <Link href="/careers" className={styles.desktopLink}>
+            {/* <ListItem className={styles.desktopListItem}>
+              <Link href="/careers" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                 Careers
               </Link>
-            </ListItem>
+            </ListItem> */}
 
             {/* Get in Touch Button */}
             <ListItem className={styles.desktopButtonWrapper}>
-              <Link href="/contact-us">
+              <Link href="/contact-us" onClick={toggledesktopDrawer(false)}>
                 <Button
                   variant="contained"
                   color="primary"

@@ -22,7 +22,7 @@ export const metadata = {
 
 const page = () => {
     const industryData = [
-        { industryName: 'Banking and Finance', description: 'Secure, scalable cloud solutions for seamless transactions and compliance.', link: '/banking' , icon: <BiSolidBank/>},
+        { industryName: 'Banking and Finance', description: 'Secure, scalable cloud solutions for seamless transactions and compliance.', link: '/banking-finance' , icon: <BiSolidBank/>},
         { industryName: 'Automotive', description: 'Drive innovation with AI-powered analytics and IoT integration.', link: '/automotive', icon: <FaCar/> },
         { industryName: 'Manufacturing', description: 'Optimize production with real-time data and predictive maintenance.', link: '/manufacturing', icon: <MdOutlinePrecisionManufacturing/> },
         { industryName: 'Consumer-Goods', description: 'Enhance customer experiences with personalized insights and agility.', link: '/consumer-goods',  icon: <TiShoppingCart/> },
@@ -63,7 +63,7 @@ const page = () => {
   description="Drive agility, scalability, and innovation with cloud platforms. 
                Amlgo Labs helps you navigate cloud adoption—AWS, Azure, or GCP—
                to optimize operations and architect your digital future."
-  buttonText="Learn More"
+  buttonText="Get in Touch"
   imageSrc="/capabilities/cloudservices.png"
   imageAlt="Cloud Services"
 />
@@ -77,8 +77,10 @@ const page = () => {
       title="Deploying Language Model Applications to AWS: An Open-Source Approach"
       description="In the ever-evolving landscape of cloud computing, deploying and managing language model (LLM) applications efficiently is crucial for developers and businesses alike. Amazon Web Services (AWS) provides a robust infrastructure for hosting applications."
       imageSrc="/capabilities/cloud-services/blog.png"
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
+      button2Link="/" // Update with actual insights route
+      button1Text="Read Now"
+      button2Text="Explore More"
     />
 <SolutionsBoxes 
   title="Our Solutions" 
@@ -88,8 +90,8 @@ const page = () => {
 
 <InformationStripLine
   title="Dream bigger, achieve more! Let the cloud empower your journey with limitless possibilities, seamless growth, and a future built on innovation. Start soaring today. "
-  buttonText="Explore Now"
-  buttonLink="/"
+  buttonText="Let's Talk"
+  buttonLink="/contact-us"
 />
 <TechStack title="Tech Stack We are working on" techStack={techStackData} />
 

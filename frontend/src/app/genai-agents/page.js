@@ -61,8 +61,8 @@ const page = () => {
       <InformationStripLine
   title="Is your enterprise ready for true autonomous intelligence?"
   subtitle="Amlgo Labs builds Gen-AI Agents that go beyond automation, driving proactive decisions and adaptive strategies to make your business dynamic and future-ready."
-  buttonText="Explore Now"
-  buttonLink="/"
+  // buttonText="Explore Now"
+  // buttonLink="/"
 />
 
       {/* <SolutionsBoxes /> */}
@@ -78,9 +78,9 @@ const page = () => {
       title="Overcome GenAI Fears: Get your Live GEN-AI Agent in days."
       description="Explore how Generative AI drives automation, innovation, and smarter decisions. Overcome challenges in scalability, data quality, and integration to streamline processes and stay ahead in the evolving AI landscape."
       imageSrc="/capabilities/gen-ai-agents/blog.png"
-      blogLink="/blog/generative-ai" // Update with actual blog route
-      insightsLink="/insights/generative-ai" // Update with actual insights route
-    />
+      button1Text = "Read Now"
+      button1Link="/documents/genaiagent_amlgolabs.pdf" // Update with actual blog route
+      />
     </div>
   )
 }
