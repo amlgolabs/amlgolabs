@@ -13,7 +13,7 @@ const HomeServices = () => {
     {
       title: 'Generative AI Agent Development & Integration',
       description: 'Gen-AI Agents tailored to your unique needs, unlike traditional Predictive AI, which forecasts outcomes based on historical data.',
-      imageSrc: '/Home/service1.jpg',
+      imageSrc: '/Home/service1.png',
       partnerAlt: 'casestudy',
       caseStudyTitle: 'Gen AI Agents',
       link:"/genai-agents"
@@ -21,7 +21,7 @@ const HomeServices = () => {
     {
       title: 'Streamline AI & Software Delivery with Integrated Ops',
       description: 'Accelerate your AI and software development lifecycle with our end-to-end DataOps, DevOps, and MLOps solutions.',
-      imageSrc: '/Home/service2.jpg',
+      imageSrc: '/Home/service2.png',
       partnerImage: '/partner2.png',
       partnerAlt: 'casestudy2',
       caseStudyTitle: 'Optimize Efficiency & Innovation with Unified AI & DevOps.',
@@ -30,7 +30,7 @@ const HomeServices = () => {
     {
       title: 'Power Intelligent Systems with Cutting-Edge ML & DL',
       description: 'Leverage our Machine Learning (ML) and Deep Learning (DL) expertise to build high-performance AI models that solve complex business challenges.',
-      imageSrc: '/Home/service3.jpg',
+      imageSrc: '/Home/service3.png',
       partnerImage: '/partner3.png',
       partnerAlt: 'casestudy3',
       caseStudyTitle: 'Power Intelligent Systems with Advanced ML & DL',
@@ -93,7 +93,7 @@ const HomeServices = () => {
               <p>{caseStudies[activeCaseStudy].description}</p>
             </div>
             <Link href={caseStudies[activeCaseStudy].link}>
-            <button>Read</button>
+            <button>Know More</button>
             </Link>
           </div>
         </div>

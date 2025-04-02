@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../styles/Components/WhitePaper.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WhitePaper = () => {
   return (
@@ -8,9 +9,11 @@ const WhitePaper = () => {
       <div className={styles.content}>
         <h2 className={styles.subheading}>WHITE PAPER</h2>
         <h1 className={styles.heading}>
-  <span className={styles.strokeText}>Revolutionizing Enterprises:</span> <br/>Data Solutions Powered by Generative AI
+  <span className={styles.strokeText}>Revolutionizing Enterprises:</span> <br/>Integrating Generative AI for Faster Workflows
 </h1>
+        <Link href="/documents/BusinessPotential_GenAI.pdf" target='_blank'>
         <button className={styles.button}>Know More</button>
+        </Link>
       </div>
       <div className={styles.imageContainer}>
         <Image
