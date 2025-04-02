@@ -19,16 +19,16 @@ export const metadata = {
 const page = () => {
 
   const techStackData = [
-    { src: "/techStack/tensorflow.png", alt: "tensorflow" },
-    { src: "/techStack/sagemaker.png", alt: "aws sagemaker" },
-    { src: "/techStack/huggingface.png", alt: "hugging face" },
-    { src: "/techStack/kafka.png", alt: "apache kafka" },
-    { src: "/techStack/powerbi.png", alt: "power bi" },
-    { src: "/techStack/snowflake.png", alt: "snowflake" },
-    { src: "/techStack/pytorch.png", alt: "pytorch" },
-    { src: "/techStack/azureiothub.png", alt: "microsoft azure iot" },
-    { src: "/techStack/databricks.png", alt: "databricks" },
-    { src: "/techStack/googlebigquery.png", alt: "google bigquery" },
+    { src: "/TechStack/tensorflow.png", alt: "tensorflow" },
+    { src: "/TechStack/sagemaker.png", alt: "aws sagemaker" },
+    { src: "/TechStack/huggingface.png", alt: "hugging face" },
+    { src: "/TechStack/kafka.png", alt: "apache kafka" },
+    { src: "/TechStack/powerbi.png", alt: "power bi" },
+    { src: "/TechStack/snowflake.png", alt: "snowflake" },
+    { src: "/TechStack/pytorch.png", alt: "pytorch" },
+    { src: "/TechStack/azureiothub.png", alt: "microsoft azure iot" },
+    { src: "/TechStack/databricks.png", alt: "databricks" },
+    { src: "/TechStack/googlebigquery.png", alt: "google bigquery" },
   ];
   
     const IntroductionData = {

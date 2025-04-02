@@ -57,16 +57,16 @@ const page = () => {
 
   
   const techStackData = [
-    { src: "/techStack/pytorch.png", alt: "PyTorch" },
-    { src: "/techStack/openai.png", alt: "OpenAI" },
-    { src: "/techStack/python.png", alt: "Python" },
-    { src: "/techStack/anthropic.png", alt: "Anthropic" },
-    { src: "/techStack/tensorflow.png", alt: "TensorFlow" },
-    { src: "/techStack/dialogflow.png", alt: "Dialogflow" },
-    { src: "/techStack/aws.png", alt: "AWS" },
-    { src: "/techStack/nvdia.png", alt: "NVIDIA" },
-    { src: "/techStack/snowflake.png", alt: "Snowflake" },
-    { src: "/techStack/stability.png", alt: "Stability AI" },
+    { src: "/TechStack/pytorch.png", alt: "PyTorch" },
+    { src: "/TechStack/openai.png", alt: "OpenAI" },
+    { src: "/TechStack/python.png", alt: "Python" },
+    { src: "/TechStack/anthropic.png", alt: "Anthropic" },
+    { src: "/TechStack/tensorflow.png", alt: "TensorFlow" },
+    { src: "/TechStack/dialogflow.png", alt: "Dialogflow" },
+    { src: "/TechStack/aws.png", alt: "AWS" },
+    { src: "/TechStack/nvdia.png", alt: "NVIDIA" },
+    { src: "/TechStack/snowflake.png", alt: "Snowflake" },
+    { src: "/TechStack/stability.png", alt: "Stability AI" },
   ];
 
   const benefitsList = [

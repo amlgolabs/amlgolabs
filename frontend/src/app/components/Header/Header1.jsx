@@ -236,7 +236,7 @@ const solutions = [
               {activeTab === "Research and Innovation" && (
                 <div className={styles.research}>
                   <Image 
-                    src="/research.png"
+                    src="/Research.png"
                     width={434} 
                     height={278} 
                     alt="Your Image"
