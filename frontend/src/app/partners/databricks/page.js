@@ -67,8 +67,8 @@ const page = () => {
         <IndividualHero
         heading="Lakehouse and Data: The Foundation for Enterprise Transformation"
         content="Amlgo Labs partnership with Databricks unites cutting-edge capabilities to empower enterprises in solving complex problems and accelerating solutions for today's dynamic world and tomorrow's challenges. Harness the power of the Databricks Lakehouse Platform, seamlessly integrated with Amlgo Labs expertise in advanced analytics and AI/ML. Enable real-time processing and analysis of massive datasets with centralized governance. Break down data silos and seamlessly integrate data engineering, data science, and business analytics to maximize performance gains while reducing costs and complexity."
-        buttonText="Read More"
-        buttonLink="/partners/databricks"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/databricks/hero.png"
         imageAlt="Amazon Web Services"
       />

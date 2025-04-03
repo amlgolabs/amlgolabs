@@ -49,7 +49,7 @@ const HomeServices = () => {
     <div className={styles.parentContainer}>
     <div className={styles.headContainer}>
       <h1>Develop and Deploy with confidence</h1>
-      <h4>As a trusted partner to leading AI companies, we bring unparalleled expertise in addressing your data and AI adoption and deployment challenges.</h4>
+      <h4>As a trusted partner to leading AI companies, we bring unparalleled expertise in addressing challenges with your data as well as AI adoption and deployment.</h4>
     </div>
     <div className={styles.CaseStudyContainer}>
       <div className={styles.leftContent}>

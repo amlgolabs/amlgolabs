@@ -42,7 +42,7 @@ const PartnerSolutions = ({ tabs }) => {
             </div>
             <div className={styles.contentWrapper}>
               <p className={styles.content}>{tabs[activeTab].content}</p>
-              <button className={styles.button}>Learn More</button>
+              {/* <button className={styles.button}>Learn More</button> */}
             </div>
           </div>
         </div>

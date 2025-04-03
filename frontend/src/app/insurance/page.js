@@ -60,13 +60,13 @@ const page = () => {
       link: "/"
     },
     {
-      name: "Sustainability for financial services",
+      name: "Sustainability for Financial Services",
    
       description: "Embrace sustainability for growth and leadership. Drive ESG action for improved business performance",
       link: "/"
     },
     {
-      name: "Cloud Claim for financial services",
+      name: "Cloud Claim for Financial Services",
       description: "Our comprehensive solution enables virtual adjustments for property, auto, and contents claims. ",
       link: "/"
     }

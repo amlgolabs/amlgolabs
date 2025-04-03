@@ -12,7 +12,7 @@ const WhitePaper = () => {
   <span className={styles.strokeText}>Revolutionizing Enterprises:</span> <br/>Integrating Generative AI for Faster Workflows
 </h1>
         <Link href="/documents/BusinessPotential_GenAI.pdf" target='_blank'>
-        <button className={styles.button}>Know More</button>
+        <button className={styles.button}>Learn More</button>
         </Link>
       </div>
       <div className={styles.imageContainer}>

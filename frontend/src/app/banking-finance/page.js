@@ -26,10 +26,10 @@ const page = () => {
 
     // Define the technology data
     const technologies = [
-        { name: 'Gen-AI', image: '/GenAI.png' },
+        { name: 'GenAI', image: '/GenAI.png' },
         { name: 'Robotic Process Automation', image: '/RoboticProcess.png' },
         { name: 'Machine Learning', image: '/MachineLearning.png' },
-        { name: 'Forecasting and Process Mapping', image: '/RoboticProcess.png' },
+        { name: 'Forecasting and Process Mapping', image: '/businesses/banking/forecasting.png' },
         { name: 'Natural Language Processing', image: '/NLP.png' },
         { name: 'Knowledge Graph', image: '/KnowledgeGraph.png' },
         { name: 'Agile Operations', image: '/AgileOperations.png' },
@@ -42,7 +42,7 @@ const page = () => {
     const stepsData = [
         {
             id: 1,
-            heading: 'Technological transformation',
+            heading: 'Technological Transformation',
             content:
                 'Harness the power of advanced code generation, seamless translation, and intelligent optimization to drive operational efficiency, scalability, and business growth. Embrace cutting-edge technologies that streamline processes and enhance performance for your organization.',
         },
@@ -60,7 +60,7 @@ const page = () => {
         },
         {
             id: 4,
-            heading: 'Fraud, risk and compliance',
+            heading: 'Fraud, Risk and Compliance',
             content:
                 'We leverage synthetic data generation to address sparse and low-incidence scenarios effectively. An on-demand search platform provides seamless access to evolving banking regulations, ensuring compliance and agility. Together, these solutions empower smarter decision-making and operational efficiency.',
         },

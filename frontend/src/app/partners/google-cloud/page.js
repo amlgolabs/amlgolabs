@@ -87,8 +87,8 @@ const page = () => {
          <IndividualHero
         heading="Building a Better Future Together Amlgo Labs and Google Cloud's Cloud Expertise"
         content="To truly capitalize on digital transformation, organizations must go beyond simply lifting and shifting their IT infrastructure to the cloud. A holistic approach is essential, one that reimagines the entire business and embraces cloud technology as its core foundation. As a trusted Google Cloud partner, Amlgo Labs specializes in guiding businesses to make strategic cloud investments throughout their transformation. This empowers them to drive continuous innovation, remain at the cutting edge of technology, and effectively address their most critical challenges."
-        buttonText="Read More"
-        buttonLink="/partners/google-cloud"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/google-cloud/hero.png"
         imageAlt="Amazon Web Services"
       />
@@ -105,10 +105,8 @@ const page = () => {
       description="Google Cloud is revolutionizing industries by transforming how businesses handle data. From scalable infrastructure to AI-driven insights, Google Cloud empowers organizations to innovate, optimize operations, and stay ahead in a data-driven world. Explore how this cloud platform is shaping the future of technology across sectors."
       imageSrc="/partners/blogs/GoogleCloud.jpg"
 
-      button1Link="/blog/generative-ai" // Update with actual blog route
-      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Link="/" // Update with actual blog route
       button1Text="Read Now"
-      button2Text="Explore More"
     />
     
     </div>

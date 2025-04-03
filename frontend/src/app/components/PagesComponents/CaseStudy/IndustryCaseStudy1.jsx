@@ -11,7 +11,7 @@ const IndustryCaseStudy1 = ({caseStudyHeading, CaseStudyImageSrc}) => {
                     <h3>Case Study</h3>
                     <h2>{caseStudyHeading}</h2>
                     <Link href="/">
-                        <button className={styles.button}>Know More</button>
+                        <button className={styles.button}>Learn More</button>
                     </Link>
                 </div>
                 <div className={styles.imageContainer}>

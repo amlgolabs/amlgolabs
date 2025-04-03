@@ -98,8 +98,8 @@ const page = () => {
          <IndividualHero
         heading="Unified Data Enterprise with Cloudera: Driving Insight and Agility"
         content="Fragmented data silos hinder enterprise agility and limit actionable insights. Amlgo Labs partnership with Cloudera addresses these challenges by establishing a unified data foundation and leveraging robust data management capabilities. With a focus on seamless integration, we prioritize streamlined workflows and implement solutions to minimize disruption, enabling you to build resilience, agility, and true data-driven visibility, one strategic initiative at a time."
-        buttonText="Read More"
-        buttonLink="/partners/cloudera"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/cloudera/hero.png"
         imageAlt="Amazon Web Services"
       />
@@ -117,9 +117,9 @@ const page = () => {
       imageSrc="/partners/blogs/Cloudera.jpg"
 
       button1Link="/blog/generative-ai" // Update with actual blog route
-      button2Link="/insights/generative-ai" // Update with actual insights route
+      
       button1Text="Read Now"
-      button2Text="Explore More"
+    
     />
     
     </div>

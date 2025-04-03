@@ -63,18 +63,7 @@
     padding-top: 40px;
   }
   
-  /* Card Styling */
-  .card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #f0f0f0;
-  }
+
   
   .card:hover {
     transform: translateY(-8px);
@@ -82,11 +71,7 @@
   }
   
   /* Card Content */
-  .cardContent {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+ 
   
   .cardContent h3 {
     margin: 0;
@@ -102,11 +87,35 @@
   }
   
   /* Arrow Icon */
-  .icon {
-    font-size: 24px;
-    color: #007bff;
-    transition: color 0.3s ease;
-  }
+  /* Fixing icon size and alignment */
+.icon {
+  font-size: 24px; /* Ensure all icons are the same size */
+  width: 24px; /* Ensure a fixed width */
+  height: 24px; /* Ensure a fixed height */
+  color: #007bff;
+  transition: color 0.3s ease;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Ensuring consistent spacing in the card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+  gap: 12px; /* Maintain consistent spacing between content and icon */
+  min-height: 200px;
+}
+
+.cardContent {
+  flex: 1; /* Allow content to take up remaining space */
+}
+
   
   .icon:hover {
     color: #0056b3;

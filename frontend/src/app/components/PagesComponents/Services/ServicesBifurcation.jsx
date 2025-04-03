@@ -49,7 +49,7 @@ const ServicesBifurcation = () => {
     { title: "Generative AI Services", description: "Android & iOS applications", link: "/generative-ai" },
     { title: "Finance and Accounting Services", description: "Improve search rankings", link: "/banking-finance" },
     { title: "Sourcing and Procurement Services", description: "Grow your brand online", link: "/" },
-    { title: "Data Analytics Services", description: "Managed cloud services", link: "/cloud-services" },
+    { title: "Cloud Services", description: "Managed cloud services", link: "/cloud-services" },
   ];
 
   return (

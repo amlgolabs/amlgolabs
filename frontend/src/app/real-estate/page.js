@@ -59,7 +59,7 @@ const page = () => {
     },
     {
         id: 8,
-        heading: 'Innovation & R&D Intelligence',
+        heading: 'Innovation and R&D Intelligence',
         content:
             'Drive real estate innovation with actionable insights. As a leading provider of R&D intelligence, we deliver timely strategic insights to keep you ahead of the competition and emerging trends.',
     },

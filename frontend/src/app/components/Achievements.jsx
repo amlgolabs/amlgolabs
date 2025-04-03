@@ -18,7 +18,7 @@ const Achievements = () => {
                         />
                     </div>
                     <h2 className={styles.achievementTitle}>Dell Onboards Amlgo Labs</h2>
-                    <p className={styles.achievementDescription}>Dell Technologies partnering with Amlgo Labs to offer GEN-AI Solutions.</p>
+                    <p className={styles.achievementDescription}>Dell Technologies partnering with Amlgo Labs to offer GenAI Solutions.</p>
                     <h4 className={styles.achievementYear}>2025</h4>
                 </div>
 
@@ -33,8 +33,8 @@ const Achievements = () => {
                             className={styles.achievementImage}
                         />
                     </div>
-                    <h2 className={styles.achievementTitle}>Investment by Maruti Suzuki</h2>
-                    <p className={styles.achievementDescription}>Amlgo Labs has achieved a major milestone with a 6.44% equity investment from Maruti Suzuki</p>
+                    <h2 className={styles.achievementTitle}>Unsolicited Investment by Maruti Suzuki</h2>
+                    <p className={styles.achievementDescription}>Amlgo Labs' value-adding automotive analytics delivery inspired a 6.44% equity investment from Maruti Suzuki</p>
                     <h4 className={styles.achievementYear}>2024</h4>
                 </div>
 
@@ -48,7 +48,9 @@ const Achievements = () => {
                             className={styles.achievementImage}
                         />
                     </div>
-                    <h2 className={styles.achievementTitle}>Top emerginging Analytics Startup</h2>
+                    <h2 className={styles.achievementTitle}>Top emerging Analytics Startup</h2>
+                    <p className={styles.achievementDescription}>Amlgo Labs' selected as impactful startup</p>
+
                     <h4 className={styles.achievementYear}>2020</h4>
                 </div>
 
