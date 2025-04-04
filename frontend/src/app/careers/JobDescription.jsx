@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import axios from "axios"; // Import Axios
 import styles from "../styles/pages/Components/Careers/JobDescription.module.css";
+import toast from "react-hot-toast";
 
 const JobDescription = () => {
     const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const JobDescription = () => {
         coverLetter: "",
         cv: null,
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const fileInputRef = useRef(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,51 +29,73 @@ const JobDescription = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form Submitted", formData);
-        alert("Application Submitted Successfully!");
+        setIsSubmitting(true);
+
+        const submitData = new FormData();
+        submitData.append("name", formData.name);
+        submitData.append("email", formData.email);
+        submitData.append("phone", formData.phone);
+        submitData.append("coverLetter", formData.coverLetter || "");
+        submitData.append("cv", formData.cv);
+
+        try {
+            const response = await axios.post("/api/job-application", submitData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
+            toast.success("Application Submitted Successfully!");
+            setFormData({ name: "", email: "", phone: "", coverLetter: "", cv: null });
+            if (fileInputRef.current) {
+                fileInputRef.current.value = "";
+            }
+        } catch (err) {
+            toast.error("Failed to submit application. Please try again later.");
+            console.error("Error submitting application:", err);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <div className={styles.container}>
-            {/* Job Header */}
+            {/* Job Header and Description - unchanged */}
             <div className={styles.descriptionContainer}>
-            <div className={styles.header}>
-                <div className={styles.titleSection}>
-                    <h1 className={styles.title}>Frontend Developer</h1>
-                    <div className={styles.badgeContainer}>
-                        <span className={`${styles.badge} ${styles.blueBadge}`}>Remote</span>
-                        <span className={`${styles.badge} ${styles.redBadge}`}>Part Time</span>
-                        <span className={`${styles.badge} ${styles.purpleBadge}`}>3+ Years Experience</span>
+                <div className={styles.header}>
+                    <div className={styles.titleSection}>
+                        <h1 className={styles.title}>Frontend Developer</h1>
+                        <div className={styles.badgeContainer}>
+                            <span className={`${styles.badge} ${styles.blueBadge}`}>Remote</span>
+                            <span className={`${styles.badge} ${styles.redBadge}`}>Part Time</span>
+                            <span className={`${styles.badge} ${styles.purpleBadge}`}>3+ Years Experience</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Job Details */}
-            <div className={styles.details}>
-                <h2 className={styles.sectionTitle}>Job Overview</h2>
-                <div className={styles.infoGroup}><span className={styles.label}>Location:</span> <span className={styles.value}>Remote</span></div>
-                <div className={styles.infoGroup}><span className={styles.label}>Job Type:</span> <span className={styles.value}>Part Time</span></div>
-                <div className={styles.infoGroup}><span className={styles.label}>Experience Required:</span> <span className={styles.value}>3+ Years</span></div>
-            </div>
+                <div className={styles.details}>
+                    <h2 className={styles.sectionTitle}>Job Overview</h2>
+                    <div className={styles.infoGroup}><span className={styles.label}>Location:</span> <span className={styles.value}>Remote</span></div>
+                    <div className={styles.infoGroup}><span className={styles.label}>Job Type:</span> <span className={styles.value}>Part Time</span></div>
+                    <div className={styles.infoGroup}><span className={styles.label}>Experience Required:</span> <span className={styles.value}>3+ Years</span></div>
+                </div>
 
-            {/* Job Description */}
-            <div className={styles.description}>
-                <h2 className={styles.sectionTitle}>Job Description</h2>
-                <p className={styles.descriptionText}>
-                    We are looking for a skilled Frontend Developer to join our dynamic team. The ideal candidate
-                    should have experience with modern JavaScript frameworks and a keen eye for design and performance optimization.
-                </p>
-                <h3 className={styles.subTitle}>Roles and Responsibilities:</h3>
-                <ul className={styles.responsibilitiesList}>
-                    <li>Develop and maintain user-facing features using React and Next.js.</li>
-                    <li>Ensure web applications are responsive and optimized for performance.</li>
-                    <li>Work closely with UI/UX designers to translate designs into functional components.</li>
-                    <li>Write clean, maintainable, and scalable code following best practices.</li>
-                    <li>Collaborate with backend developers to integrate APIs and data sources.</li>
-                </ul>
-            </div>
+                <div className={styles.description}>
+                    <h2 className={styles.sectionTitle}>Job Description</h2>
+                    <p className={styles.descriptionText}>
+                        We are looking for a skilled Frontend Developer to join our dynamic team. The ideal candidate
+                        should have experience with modern JavaScript frameworks and a keen eye for design and performance optimization.
+                    </p>
+                    <h3 className={styles.subTitle}>Roles and Responsibilities:</h3>
+                    <ul className={styles.responsibilitiesList}>
+                        <li>Develop and maintain user-facing features using React and Next.js.</li>
+                        <li>Ensure web applications are responsive and optimized for performance.</li>
+                        <li>Work closely with UI/UX designers to translate designs into functional components.</li>
+                        <li>Write clean, maintainable, and scalable code following best practices.</li>
+                        <li>Collaborate with backend developers to integrate APIs and data sources.</li>
+                    </ul>
+                </div>
             </div>
 
             {/* Application Form */}
@@ -86,12 +112,14 @@ const JobDescription = () => {
                     <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className={styles.input} />
 
                     <label className={styles.label}>Cover Letter:</label>
-                    <textarea name="coverLetter" value={formData.coverLetter} onChange={handleChange} required className={styles.textarea}></textarea>
+                    <textarea name="coverLetter" value={formData.coverLetter} onChange={handleChange} className={styles.textarea}></textarea>
 
                     <label className={styles.label}>Upload CV:</label>
-                    <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleFileChange} required className={styles.input} />
+                    <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleFileChange} ref={fileInputRef} required className={styles.input} />
 
-                    <button type="submit" className={styles.submitButton}>Submit Application</button>
+                    <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
+                        {isSubmitting ? "Submitting..." : "Submit Application"}
+                    </button>
                 </form>
             </div>
         </div>
