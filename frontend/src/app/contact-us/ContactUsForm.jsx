@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaUser, FaPhone } from "react-icons/fa";
 import styles from "../styles/pages/Contact-Us/ContactUsForm.module.css";
+import axios from "axios";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -11,9 +12,15 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form Submitted Successfully!");
+    try {
+      const response = await axios.post("/api/contact-us", formData);
+      console.log("Response:", response.data);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
   };
 
   return (
