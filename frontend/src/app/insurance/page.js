@@ -28,13 +28,14 @@ const page = () => {
       id: 1,
       title: "Developing an Insurance Risk & Litigation Propensity Model",
       image: "/businesses/insurance/casestudy1.png",
+      link:"/documents/Risk & Litigation Propensity Model.pdf"
       // description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
     },
     {
       id: 2,
       title: "Reducing Fraud in Insurance: An Anti-Fraud Model",
       image: "/businesses/insurance/casestudy2.png",
-
+      link: "/coming-soon"
 
       // description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
     },
@@ -42,7 +43,7 @@ const page = () => {
       id: 3,
       title: "Are You Maximizing Commercial Combined Cross-Selling Opportunities?",
       image: "/businesses/insurance/casestudy3.png",
-      
+      link: "/coming-soon"
 
       // description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
     },
@@ -91,10 +92,10 @@ const page = () => {
       title="The Role of Big Data in Crafting Hyper-Personalized Insurance Policies"
       description="Discover how Big Data is transforming the insurance sector by enabling hyper-personalized policies. From analyzing customer behavior to predicting risks, learn how data-driven insights are crafting tailored solutions that enhance customer satisfaction, improve retention, and drive innovation in the evolving world of insurance."
       imageSrc="/businesses/insurance/Insurance.jpg"
-      button1Link="/" // Update with actual blog route
-      button2Link="/" // Update with actual insights route
+      button1Link="/coming-soon" // Update with actual blog route
+     
       button1Text="Read Now"
-      button2Text="Explore More"
+    
     />
 
     <Partners/>

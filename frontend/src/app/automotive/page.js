@@ -4,7 +4,7 @@ import KeyVerticals from '../components/PagesComponents/KeyVerticals';
 import IndustryTechnology from '../components/PagesComponents/IndustryTechnology';
 import Challenges2 from '../components/PagesComponents/Challenges2';
 import KeyStats from '../components/PagesComponents/KeyStats';
-import IndustryCaseStudy from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
+
 import NumberStats from '../components/PagesComponents/NumberStats';
 import AutomotiveOfferings from '../components/PagesComponents/AutomotiveOfferings';
 import IndustryCaseStudy2 from '../components/PagesComponents/CaseStudy/IndustryCaseStudy2';
@@ -53,12 +53,14 @@ const page = () => {
             image: "/businesses/automotive/casestudy1.jpg",
 
             description: "AI reshapes cars: designs shift, safety soars, drives learn, build smart. Connected cars rise, output climbs, trips smooth. AI's future drives on.",
+            link:"/documents/automotiveusecases.pdf"
         },
         {
             id: 2,
             title: "Leveraging AI & ML in Automotive Industry",
             image: "/businesses/automotive/casestudy2.jpg",
             description: "Social media sentiment tracks car buyer joy. Real-time system finds users, spots issues. Big auto firm gets fast feedback, solves problems now.",
+            link:"/documents/Leveraging AI & ML in Automotive Industry.pdf"
         },
     ];
 

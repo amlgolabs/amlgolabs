@@ -3,14 +3,14 @@ import styles from "../../../styles/pages/Components/IndustryCaseStudy2/Industry
 import Image from 'next/image'
 import Link from 'next/link'
 
-const IndustryCaseStudy1 = ({caseStudyHeading, CaseStudyImageSrc}) => {
+const IndustryCaseStudy1 = ({caseStudyHeading, CaseStudyImageSrc, link}) => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.caseStudyContainer}>
                 <div className={styles.contentContainer}>
                     <h3>Case Study</h3>
                     <h2>{caseStudyHeading}</h2>
-                    <Link href="/">
+                    <Link href={link} target='_blank'>
                         <button className={styles.button}>Learn More</button>
                     </Link>
                 </div>

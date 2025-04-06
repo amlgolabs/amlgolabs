@@ -18,10 +18,10 @@ export default function Home() {
   const caseStudiesData = [
     {
       id: 1,
-      title: "Generative vs Predictive AI: Core Differences",
+      title: "Disrupting Industries with GenAI : Amlgo Labs at the Helm",
       image: "/Home/casestudy1.jpg",
-      description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
-      link : "/documents/generativeaivspredictiveai.pdf"
+      description: "As Generative AI redefines industries, Amlgo Labs stands at the forefront, helping businesses unlock new levels of innovation and growth.",
+      link : "/documents/how_generative_ai_is_disrupting_entindustries_and_how_amlgo_labs_is_leading_the_charge.pdf"
     },
     {
       id: 2,

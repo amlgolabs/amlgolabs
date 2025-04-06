@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../../../styles/pages/Components/IndustryCaseStudy2/IndustryCaseStudy2.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const IndustryCaseStudy2 = ({ heading, caseStudies }) => {
   return (
@@ -25,7 +26,9 @@ const IndustryCaseStudy2 = ({ heading, caseStudies }) => {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{caseStudy.title}</h2>
                 <p className={styles.cardDescription}>{caseStudy.description}</p>
+                <Link href={caseStudy.link} target='_blank'>
                 <button className={styles.cardButton}>Read More</button>
+                </Link>
               </div>
             </div>
           ))}

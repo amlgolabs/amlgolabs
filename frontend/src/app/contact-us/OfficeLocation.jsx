@@ -3,9 +3,10 @@
 import { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import styles from "../styles/pages/Contact-Us/OfficeLocation.module.css";
 import Image from "next/image";
+import { FaXTwitter } from "react-icons/fa6";
 
 const OfficeLocationMap = () => {
   const mapContainerRef = useRef(null);
@@ -47,7 +48,7 @@ const OfficeLocationMap = () => {
       <div className={styles.contactInfo}>
         <p>
           Email:{" "}
-          <a href="mailto:contact@amlgolabs.com">contact@amlgolabs.com</a>
+          <a href="mailto:contact@amlgolabs.com">info@amlgolabs.com</a>
         </p>
         {/* <p>
           Contact No:{" "}
@@ -56,13 +57,13 @@ const OfficeLocationMap = () => {
 
         {/* Social Icons */}
         <div className={styles.socialIcons}>
-          <a href="https://www.linkedin.com/company/amlgo-labs" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/amlgolabs" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/amlgolabs" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
+          <a href="https://x.com/AmlgoLabs" target="_blank" rel="noopener noreferrer">
+            <FaXTwitter />
           </a>
-          <a href="https://www.facebook.com/amlgolabs" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/AmlgoLabs/" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
         </div>
@@ -76,7 +77,7 @@ const OfficeLocationMap = () => {
 
             <div className={styles.locationDiv}>
               <div className={styles.icon}>
-                <Image src="/location.png" alt="icon" height={50} width={50}/>
+                <Image src="/location.png" alt="icon" height={30} width={30}/>
               </div>
               <div>
                 <h4>Amlgo Labs - Gurugram(INDIA) - 1</h4>

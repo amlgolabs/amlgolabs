@@ -89,7 +89,7 @@ const page = () => {
       description="Dell is the trusted partner for building scalable data infrastructure that drives innovation across industries. From robust storage solutions to advanced analytics, Dell empowers businesses to handle growing data demands, optimize operations, and future-proof their infrastructure for tomorrow’s challenges."
       imageSrc="/partners/blogs/Dell.jpg"
 
-      button1Link="/" // Update with actual blog route
+      button1Link="https://www.dell.com/en-in/blog/2025-dell-technologies-partner-program-driving-collaboration-and-growth/" // Update with actual blog route
      
       button1Text="Read Now"
   

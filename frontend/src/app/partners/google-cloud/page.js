@@ -105,7 +105,7 @@ const page = () => {
       description="Google Cloud is revolutionizing industries by transforming how businesses handle data. From scalable infrastructure to AI-driven insights, Google Cloud empowers organizations to innovate, optimize operations, and stay ahead in a data-driven world. Explore how this cloud platform is shaping the future of technology across sectors."
       imageSrc="/partners/blogs/GoogleCloud.jpg"
 
-      button1Link="/" // Update with actual blog route
+      button1Link="https://cloud.google.com/resources/the-future-of-data" // Update with actual blog route
       button1Text="Read Now"
     />
     

@@ -45,13 +45,28 @@ const ServicesBifurcation = () => {
   ];
 
   const services = [
-    { title: "Supply Chain Management Services", description: "Modern website solutions", link: "/" },
-    { title: "Generative AI Services", description: "Android & iOS applications", link: "/generative-ai" },
-    { title: "Finance and Accounting Services", description: "Improve search rankings", link: "/banking-finance" },
-    { title: "Sourcing and Procurement Services", description: "Grow your brand online", link: "/" },
-    { title: "Cloud Services", description: "Managed cloud services", link: "/cloud-services" },
+    { 
+      title: "Computer Vision Services", 
+      description: "Amlgo Labs provides AI-powered computer vision solutions for image recognition, object detection, and automation. Enhance business intelligence with our cutting-edge models.", 
+      link: "/computer-vision" 
+    },
+    { 
+      title: "Generative AI Services", 
+      description: "Unlock the potential of AI-driven creativity with Amlgo Labs. Our generative AI models enable content generation, personalization, and workflow automation.", 
+      link: "/generative-ai" 
+    },
+    { 
+      title: "Data Analytics Services", 
+      description: "Amlgo Labs transforms raw data into actionable insights using advanced analytics. Improve decision-making with our AI-powered predictive and prescriptive analytics solutions.", 
+      link: "/data-analytics" 
+    },
+    { 
+      title: "Cloud Services", 
+      description: "Amlgo Labs offers end-to-end cloud solutions for seamless migration, management, and optimization. Ensure scalability, security, and efficiency with our managed cloud services.", 
+      link: "/cloud-services" 
+    }
   ];
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -71,21 +86,27 @@ const ServicesBifurcation = () => {
         </div>
 
         <div className={styles.cardGrid}>
-          {(activeTab === "solutions" ? solutions : services)
-            .filter(item => item.link) // Ensure item.link exists
-            .map((item, index) => (
-              <Link key={item.id || index} href={item.link || "#"}> {/* Fallback to "#" */}
-                <div className={styles.card}>
-                  <div className={styles.cardContent}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                  <FaArrowRight className={styles.icon} />
-                </div>
-              </Link>
-            ))}
+  {(activeTab === "solutions" ? solutions : services).map((item, index) => (
+    activeTab === "services" ? (
+      <Link key={index} href={item.link || "#"}>
+        <div className={styles.card}>
+          <div className={styles.cardContent}>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+          <FaArrowRight className={styles.icon} />
         </div>
-
+      </Link>
+    ) : (
+      <div key={index} className={styles.card}>
+        <div className={styles.cardContent}>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      </div>
+    )
+  ))}
+</div>
 
       </div>
     </div>

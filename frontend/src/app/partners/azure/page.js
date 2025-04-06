@@ -79,7 +79,7 @@ const page = () => {
       description="Migration of legacy data warehouse to cloud-native centralized architecture” Problem statement: One of our business partners wanted to harness the power of modern-day problem-solving using the latest technology."
       imageSrc="/partners/blogs/Azure.jpg"
 
-      button1Link="/" // Update with actual blog route
+      button1Link="https://learn.microsoft.com/en-us/data-migration/sql-server/managed-instance/guide" // Update with actual blog route
       button1Text="Read Now"
     />
     </div>

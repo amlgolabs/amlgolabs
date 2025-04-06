@@ -78,6 +78,7 @@ const caseStudiesData = [
       image: "/businesses/real-estate/casestudy1.jpg",
 
       description: "Explore the power of Generative AI and LLMs in real estate.",
+      link:"/documents/BusinessPotential_GenAI.pdf"
   },
   {
       id: 2,
@@ -86,6 +87,8 @@ const caseStudiesData = [
 
 
       description: "Learn how Amlgo Labs simplified data access for a leading real estate firm, boosting efficiency and decision-making.",
+      link:"/text-to-sql"
+
   },
 ];
 

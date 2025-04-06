@@ -1,9 +1,9 @@
-/* Floating Message */
+
 .floatingMessage {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  /* background: rgba(255, 255, 255, 0.1); */
+
   background: var(--light);
   backdrop-filter: blur(20px);
   color: var(--black);
@@ -27,7 +27,7 @@
   box-shadow: 0 12px 35px rgba(0, 255, 255, 0.6);
 }
 
-/* Logos */
+
 .oldLogo, .newLogo {
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@
   object-fit: contain;
 }
 
-/* Overlay */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -64,16 +64,16 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Popup */
+
 .popup {
-  /* background: rgba(255, 255, 255, 0.1); */
+  
   background: var(--light);
   backdrop-filter: blur(20px);
   padding: 40px;
   border-radius: 20px;
   max-width: 90%;
   width: 500px;
-  /* box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5); */
+  
   text-align: center;
   position: relative;
   animation: slideIn 0.4s ease-out;
@@ -96,7 +96,7 @@
   color: var(--gray);
 }
 
-/* Close Button */
+
 .closeButton {
   background: none;
   border: none;
@@ -114,7 +114,7 @@
   transform: scale(1.1);
 }
 
-/* Rebranding Visuals */
+
 .rebrandingVisuals {
   display: flex;
   justify-content: center;
@@ -128,12 +128,12 @@
 .rebrandingVisuals video {
   width: 100%;
   height: auto;
-  max-width: 400px; /* Adjust based on your design */
+  max-width: 400px; 
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
-/* Explore Button */
+
 .exploreButton {
   display: inline-block;
   padding: 16px 32px;
@@ -157,7 +157,46 @@
   background-color: var(--blue);
 }
 
-/* Animations */
+.controlButtons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 1001;
+}
+
+.inButton{
+ background: none;
+ border: none;
+ cursor: pointer;
+}
+
+.inOutButton {
+  background: var(--black);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 207, 255, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.inOutButton:hover {
+  background: #111; /* Slightly lighter black */
+  transform: translateY(-2px);
+}
+
+.inOutButton:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 207, 255, 0.3);
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -168,7 +207,7 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
   .floatingMessage {
     max-width: 90%;

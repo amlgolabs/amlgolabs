@@ -78,7 +78,7 @@ const AutomotiveOfferings = () => {
                         <p>{offerings[currentIndex].description}</p>
                         <Link href={offerings[currentIndex].link}>
                             <button className={styles.offeringButton}>
-                                Know More
+                                Learn More
                             </button>
                         </Link>
                     </div>

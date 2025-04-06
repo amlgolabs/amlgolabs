@@ -45,11 +45,11 @@ const Clients = () => {
           <div className={styles.testimonial}>
             <p>"Amlgo Labs transformed our approach to data with their AI-driven solutions. Their expertise in Generative AI and analytics unlocked actionable insights, driving efficiency and smarter decision-making. A trusted partner for data-driven success!"
             </p>
-            <h3>Automobile Industry Expert</h3>
+            <h3>VP, Strategic Partnerships, Automobile Industry</h3>
           </div>
           <div className={styles.testimonial}>
           <p>"With Amlgo Labs, we harnessed the power of AI and predictive analytics to optimize strategies and boost ROI. Their innovative solutions and focus on data excellence set them apart in the tech landscape."</p>
-          <h3>AI Innovation Center Expert</h3>
+          <h3>Head of a Leading AI Innovation Center</h3>
           </div>
       </div>
     </div>

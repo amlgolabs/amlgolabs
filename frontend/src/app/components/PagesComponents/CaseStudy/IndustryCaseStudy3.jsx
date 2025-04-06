@@ -43,7 +43,7 @@ const caseStudies = [
         description: "In today’s tech-driven world, someone is talking about AI.",
         date: "Apr 10, 2024",
         parentTitle: "Case Study",
-        link:"/"
+        link:"/documents/BusinessPotential_GenAI.pdf"
     },
     {
         id: 5,
@@ -52,7 +52,7 @@ const caseStudies = [
         description: "Creates new content like images, music, text, and code.",
         date: "May 15, 2024",
         parentTitle: "White Paper",
-        link: "/"
+        link: "/documents/how_generative_ai_is_disrupting_entindustries_and_how_amlgo_labs_is_leading_the_charge.pdf"
     },
     {
         id: 6,
@@ -61,7 +61,7 @@ const caseStudies = [
         description: "Nvidia has once again pushed the boundaries of innovation with its latest revelations.",
         date: "Jun 20, 2024",
         parentTitle: "Case Study",
-        link: "/"
+        link: "/documents/nvidias-new-era-ai-robots-and-virtual-worlds.pdf"
     },
     {
         id: 7,
@@ -70,7 +70,7 @@ const caseStudies = [
         description: "It has always been a cornerstone of effective decision-making in the financial sector.",
         date: "Jul 5, 2024",
         parentTitle: "Blog",
-        link: "/"
+        link: "/documents/amlgolabs_com_enhance_financial_forecasting_with_n_beats_ai.pdf"
     }
 ];
 

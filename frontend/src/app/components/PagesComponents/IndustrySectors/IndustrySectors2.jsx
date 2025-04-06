@@ -12,15 +12,15 @@ const IndustrySectors2 = ({ heading, sectors }) => {
         </div>
         <div className={styles.sectorsGrid}>
           {sectors.map((sector, index) => (
-            <Link href={sector.link} key={index}>
-              <div className={styles.sector}>
+            // <Link href={sector.link} key={index}>
+              <div className={styles.sector} key={index}>
                 <div className={styles.sectorName}>
                   <h3>{sector.name}</h3>
                   <p>{sector.description}</p>
                 </div>
-                <StartIcon />
+                {/* <StartIcon /> */}
               </div>
-            </Link>
+            // </Link>
           ))}
         </div>
       </div>

@@ -12,7 +12,7 @@ const HomeServices = () => {
   const caseStudies = [
     {
       title: 'Generative AI Agent Development & Integration',
-      description: 'Gen-AI Agents tailored to your unique needs, unlike traditional Predictive AI, which forecasts outcomes based on historical data.',
+      description: 'GenAI Agents tailored to your unique needs, unlike traditional Predictive AI, which forecasts outcomes based on historical data.',
       imageSrc: '/Home/service1.png',
       partnerAlt: 'casestudy',
       caseStudyTitle: 'Gen AI Agents',
@@ -93,7 +93,7 @@ const HomeServices = () => {
               <p>{caseStudies[activeCaseStudy].description}</p>
             </div>
             <Link href={caseStudies[activeCaseStudy].link}>
-            <button>Know More</button>
+            <button>Learn More</button>
             </Link>
           </div>
         </div>

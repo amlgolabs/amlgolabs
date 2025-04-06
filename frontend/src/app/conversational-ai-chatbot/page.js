@@ -5,6 +5,7 @@ import SolutionsSteps from '../components/PagesComponents/SolutionsSteps'
 import TechnicalArchitecture from '../components/PagesComponents/Solutions/ai-chatbot/TechnicalArchitecture'
 import Benefits from '../components/PagesComponents/Solutions/ai-chatbot/Benefits'
 import Table from '../components/PagesComponents/Solutions/ai-chatbot/Table'
+import DemoVideo from '../components/PagesComponents/Solutions/ai-chatbot/DemoVideo'
 
 export const metadata = {
   title: "Conversational AI Chatbot Solutions - Amlgo Labs",
@@ -57,6 +58,12 @@ const page = () => {
             title="Discover the Functionality You Need"
             steps={stepsData}
         />
+        <DemoVideo 
+  src="/solutions/ai-chatbot/demo.mov"
+  heading="Amlgo Labs’ Custom AI Chatbot"
+  description="Experience the power of Amlgo Labs’ cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
+  poster="/images/video-poster.jpg" // optional
+/>
         <TechnicalArchitecture/>
         <Benefits/>
         <Table/>

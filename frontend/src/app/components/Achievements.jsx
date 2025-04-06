@@ -48,7 +48,7 @@ const Achievements = () => {
                             className={styles.achievementImage}
                         />
                     </div>
-                    <h2 className={styles.achievementTitle}>Top emerging Analytics Startup</h2>
+                    <h2 className={styles.achievementTitle}>Top Emerging Analytics Startup</h2>
                     <p className={styles.achievementDescription}>Amlgo Labs' selected as impactful startup</p>
 
                     <h4 className={styles.achievementYear}>2020</h4>

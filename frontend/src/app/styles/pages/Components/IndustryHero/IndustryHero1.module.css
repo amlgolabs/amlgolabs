@@ -12,7 +12,7 @@
     margin-block: 30px;
     margin-inline: auto;
     width: 100%;
-    min-height: 60vh; /* 90% of the viewport height */
+    min-height: 80vh; /* 90% of the viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
     /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black overlay */
     z-index: 2; /* Sits above hero image, below content */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center; /* Align content to the left */
 }
 
@@ -57,7 +57,7 @@
 
 /* Content */
 .content {
-    width: 65%;
+    width: 53%;
     position: absolute; /* Layered above the overlay */
     color: var(--light); /* Fallback to default color if custom property not defined */
     text-align: left;
@@ -83,6 +83,7 @@ border-radius: 10px;
 
 /* Content paragraph */
 .content h3 {
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.6;
     margin: 0; /* Ensure no unintended spacing */

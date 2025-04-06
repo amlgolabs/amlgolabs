@@ -89,7 +89,7 @@ const Header1 = () => {
     { name: 'GenAI Agents', icon: <SmartToyIcon />, description: 'Intelligent agents powered by generative AI.', link: "/genai-agents" },
     { name: 'Computer Vision', icon: <VisibilityIcon />, description: 'Enabling machines to interpret visual data.', link: "/computer-vision" },
     { name: 'Machine Learning and Deep Learning', icon: <BrainIcon />, description: 'Techniques for data-driven predictions.', link: "/ml-dl" },
-    { name: 'Cloud:AWS, Azure, GCP', icon: <CloudIcon />, description: 'Cloud platforms for scalable solutions.', link: "/cloud-services" },
+    { name: 'Cloud : AWS, Azure, GCP', icon: <CloudIcon />, description: 'Cloud platforms for scalable solutions.', link: "/cloud-services" },
     { name: 'Data Analytics', icon: <BarChartIcon />, description: 'Analyzing data to extract insights.', link: "/data-analytics" },
     { name: 'Data Engineering', icon: <BuildIcon />, description: 'Building systems for data collection and processing.', link: "/data-engineering" },
     { name: 'DataOps, DevOps, MLOps', icon: <SettingsIcon />, description: 'Practices for efficient data and model management.', link: "/devops-dataops-mlops" }
@@ -97,27 +97,55 @@ const Header1 = () => {
 
 
 
+  // const solutions = [
+  //   {
+  //     name: "Conversational AI Chatbot",
+  //     icon: <QuickreplyIcon />,
+  //     description: 'Develop, train, and implement a chatbot to handle Level 1 support requests.',
+  //     link: "/conversational-ai-chatbot"
+  //   },
+  //   {
+  //     name: "Text to SQL",
+  //     icon: <LuDatabaseBackup />,
+  //     description: 'Use Natural Language Processing functionality to translate everyday language into SQL queries.',
+  //     link: "/text-to-sql"
+  //   },
+  //   {
+  //     name: "Vehicle Quality AI",
+  //     icon: <CarCrashIcon />,
+  //     description: 'Use AI and predictive analytics to forecast failures and enhance defect prevention in automotive model development.',
+  //     link: "/vehicle-quality-ai"
+  //   }
+  // ];
+
   const solutions = [
     {
       name: "Conversational AI Chatbot",
       icon: <QuickreplyIcon />,
       description: 'Develop, train, and implement a chatbot to handle Level 1 support requests.',
-      link: "/conversational-ai-chatbot"
+      link: "/conversational-ai-chatbot",
+      image: "/Header/ChatbotBlog.png" , // <-- Add your image path here
+      blogLine: "AI chatbots: Sparking smarter chats, one conversation at a time."
     },
     {
       name: "Text to SQL",
       icon: <LuDatabaseBackup />,
       description: 'Use Natural Language Processing functionality to translate everyday language into SQL queries.',
-      link: "/text-to-sql"
+      link: "/text-to-sql",
+      image: "/Header/TextSQL.png",
+      blogLine: "Speak your query, let AI write perfect SQL statements."
     },
     {
       name: "Vehicle Quality AI",
       icon: <CarCrashIcon />,
       description: 'Use AI and predictive analytics to forecast failures and enhance defect prevention in automotive model development.',
-      link: "/vehicle-quality-ai"
+      link: "/vehicle-quality-ai",
+      image: "/Header/VehicleQualityAI.png" , // <-- Add your image path here
+       blogLine: "Smarter rides ahead: AI models ensuring flawless vehicle performance."
     }
   ];
-
+  
+  const selectedSolutionData = solutions.find((solution) => solution.name === selectedSolution);
 
 
   const handleAboutToggle = () => {
@@ -223,7 +251,7 @@ const Header1 = () => {
                               <div
                                 key={name}
                                 className={`${styles.linkWrapper} ${selectedSolution === name ? styles.activeSolution : ""}`}
-                                onClick={() => setSelectedSolution(name)}
+                                onMouseEnter={() => setSelectedSolution(name)}
                               >
                                 <div className={styles.iconWrapper}>
                                   {icon && React.cloneElement(icon, { className: styles.icon })}
@@ -238,14 +266,19 @@ const Header1 = () => {
                             </Link>
                           ))}
                         </div>
-                        {selectedSolution && (
-                          <div className={styles.headerBlogLink}>
-                            <h3>Featured Resource</h3>
-                            <Image height={200} width={350} src="/RoboticProcess.png" alt="casestudy" />
-                            <h4>{selectedSolution} - Blog Post</h4>
-                            <Link href="/">Read More</Link>
-                          </div>
-                        )}
+                        {selectedSolutionData && (
+  <div className={styles.headerBlogLink}>
+    <h3>Featured Resource</h3>
+    <Image 
+      height={200} 
+      width={350} 
+      src={selectedSolutionData.image}   // <-- Dynamic image
+      alt={selectedSolutionData.name} 
+    />
+    <h4>{selectedSolutionData.blogLine}</h4>
+    <Link href={selectedSolutionData.link}>Read More</Link>  {/* Optional: make link dynamic too */}
+  </div>
+)}
                       </div>
                     )}
                     {activeTab === "Research and Innovation" && (
@@ -606,7 +639,7 @@ const Header1 = () => {
                     <h3>Featured Resource</h3>
                     <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
                     <h4>Partnering with Leaders empowering success.</h4>
-                    <Link href="/">Read More</Link>
+                    <Link href="/partners">Read More</Link>
                   </div>
                 </div>
               </div>
@@ -672,7 +705,7 @@ const Header1 = () => {
 
             {/* Blogs Section */}
             <ListItem className={styles.desktopListItem}>
-              <Link href="/blogs" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+              <Link href="/coming-soon" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                 Blogs
               </Link>
             </ListItem>
@@ -684,11 +717,11 @@ const Header1 = () => {
               </Link>
             </ListItem>
 
-            {/* <ListItem className={styles.desktopListItem}>
+            <ListItem className={styles.desktopListItem}>
               <Link href="/careers" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
                 Careers
               </Link>
-            </ListItem> */}
+            </ListItem>
 
             {/* Get in Touch Button */}
             <ListItem className={styles.desktopButtonWrapper}>

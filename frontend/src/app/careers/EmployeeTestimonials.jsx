@@ -75,6 +75,12 @@ const testimonials = [
     position: "Software Engineer",
     image: "/employees/krishna.png",
   },
+  {
+    name: "Vijay Soni",
+    text: "Working at Amlgo Labs for the past year has been a great experience. The supportive management and employee-friendly policies create a positive work environment. Contributions are valued, and feedback fosters continuous growth. Looking forward to a long-term association!",
+    position: "Assistant Vice President-Identity Platform",
+    image: "/employees/vijay.png",
+  },
 ];
 
 const EmployeeTestimonials = () => {

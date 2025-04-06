@@ -36,9 +36,10 @@
     flex-direction: column;
     gap: 2rem;
     border: 1px solid gray;
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
-    background: linear-gradient(542deg, rgb(210, 248, 253) 30%, rgba(252, 236, 251, 1) 80%);
+    border-radius: 40px;
+    /* background: linear-gradient(542deg, rgb(210, 248, 253) 30%, rgba(252, 236, 251, 1) 80%); */
+    background: linear-gradient(135deg, #fff, #e9ecef);
+
 }
 
 
