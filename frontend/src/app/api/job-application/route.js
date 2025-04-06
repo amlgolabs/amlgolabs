@@ -76,7 +76,7 @@ export async function POST(req) {
         await newApplication.save();
 
         const companyEmailParams = createEmailParams(
-            'admin@amlgolabs.com',
+            'jobs@amlgolabs.com',
             name,
             'jobApplicationToAmlgoLabs',
             'jobs@amlgolabs.com',
