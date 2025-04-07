@@ -1,15 +1,39 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useRef } from 'react'
 import styles from "../../../../styles/pages/Components/Solutions/text-sql/Introduction.module.css"
 import Image from 'next/image'
 
 const Introduction = () => {
+
+    const videoRef = useRef(null);
+    
+      useEffect(() => {
+        if (videoRef.current) {
+          videoRef.current.currentTime = 0;
+          videoRef.current.play();
+        }
+      }, []);
+
+
   return (
     <div className={styles.mainContainer}>
         <div className={styles.contentContainer}>
             <div className={styles.upperContent}>
-                <div className={styles.upperLeft}>
+                {/* <div className={styles.upperLeft}>
                     <Image src="/solutions/text-sql/data.jpg" height={300} width={500} alt='img'/>
-                </div>
+                </div> */}
+                 <div className={styles.videoCard}>
+          <video
+            ref={videoRef}
+            className={styles.video}
+            src="/solutions/text-sql/demo.mov"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+          />
+        </div>
                 <div className={styles.upperRight}>
                     <p><span>Data</span> is the cornerstone of the real estate industry, driving decisions on <span>property valuations</span>, <span>market analysis</span>, and <span>client relationship management</span>.</p>
                 </div>

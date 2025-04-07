@@ -55,12 +55,12 @@ const page = () => {
   description="Amlgo Labs solved the issue by implementing a Generative AI solution powered by Large Language Models (LLMs). These models, trained on vast datasets, understood natural language, converting plain-language queries into structured database commands like SQL." 
   solutions={solutionsData} 
 />
-<DemoVideo 
+{/* <DemoVideo 
   src="/solutions/text-sql/demo.mov"
   heading="Text to SQL Generator"
   description="Experience the power of Amlgo Labs’ cutting-edge Text-to-SQL Generator, designed to transform and simplify your data interactions. Watch this quick demo to see how our intelligent solution delivers real-time query processing, seamless results, and unmatched flexibility."
   poster="/images/video-poster.jpg" // optional
-/>
+/> */}
 <BusinessProblem/>
 
 <Conclusion

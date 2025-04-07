@@ -1,7 +1,7 @@
 // emailTemplates.js
 const templates = {
     contactDetailsToAdmin: {
-        source: "krishna.singh@amlgolabs.com",
+        source: "info@amlgolabs.com",
         subject: "New Contact Form Submission",
         body: (name, email, phone, message) =>
             `Dear Admin,\n\nA new contact form submission has been received:\n\n` +

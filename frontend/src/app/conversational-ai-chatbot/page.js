@@ -54,16 +54,16 @@ const page = () => {
     <div>
         <Intro/>
         <Information/>
-        <SolutionsSteps
-            title="Discover the Functionality You Need"
-            steps={stepsData}
-        />
         <DemoVideo 
   src="/solutions/ai-chatbot/demo.mov"
   heading="Amlgo Labs’ Custom AI Chatbot"
   description="Experience the power of Amlgo Labs’ cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
   poster="/images/video-poster.jpg" // optional
 />
+        <SolutionsSteps
+            title="Discover the Functionality You Need"
+            steps={stepsData}
+        />
         <TechnicalArchitecture/>
         <Benefits/>
         <Table/>

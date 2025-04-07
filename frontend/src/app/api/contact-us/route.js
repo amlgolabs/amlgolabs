@@ -62,7 +62,7 @@ export async function POST(req) {
 
     // Second email: Notification to admin
     const adminParams = createEmailParams(
-      'krishna.singh@amlgolabs.com',    // toEmail (replace with actual admin email)
+      'info@amlgolabs.com',    // toEmail (replace with actual admin email)
       name,                    // name
       'contactDetailsToAdmin', // template
       'noreply@amlgolabs.com', // fromEmail

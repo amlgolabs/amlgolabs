@@ -276,7 +276,7 @@ const Header1 = () => {
       alt={selectedSolutionData.name} 
     />
     <h4>{selectedSolutionData.blogLine}</h4>
-    <Link href={selectedSolutionData.link}>Read More</Link>  {/* Optional: make link dynamic too */}
+    <Link onClick={closeDropdown} href={selectedSolutionData.link}>Read More</Link>  {/* Optional: make link dynamic too */}
   </div>
 )}
                       </div>
@@ -856,7 +856,7 @@ const Header1 = () => {
           </Collapse>
 
           <ListItem className={styles.mobileParentLink}>
-            <Link href="/career" onClick={toggleDrawer(false)}>
+            <Link href="/careers" onClick={toggleDrawer(false)}>
               <div className={styles.textWithIcon}>
                 Careers
               </div>

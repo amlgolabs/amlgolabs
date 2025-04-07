@@ -3,7 +3,7 @@ import axios from "axios"; // Import Axios
 import styles from "../styles/pages/Components/Careers/JobDescription.module.css";
 import toast from "react-hot-toast";
 
-const JobDescription = () => {
+const JobDescription = ({job}) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -65,36 +65,39 @@ const JobDescription = () => {
             <div className={styles.descriptionContainer}>
                 <div className={styles.header}>
                     <div className={styles.titleSection}>
-                        <h1 className={styles.title}>Frontend Developer</h1>
+                        <h1 className={styles.title}>{job.title}</h1>
                         <div className={styles.badgeContainer}>
-                            <span className={`${styles.badge} ${styles.blueBadge}`}>Remote</span>
-                            <span className={`${styles.badge} ${styles.redBadge}`}>Part Time</span>
-                            <span className={`${styles.badge} ${styles.purpleBadge}`}>3+ Years Experience</span>
+                            <span className={`${styles.badge} ${styles.blueBadge}`}>{job.location}</span>
+                            <span className={`${styles.badge} ${styles.redBadge}`}>{job.domain}</span>
+                            <span className={`${styles.badge} ${styles.purpleBadge}`}>{job.experience} Years Experience</span>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.details}>
                     <h2 className={styles.sectionTitle}>Job Overview</h2>
-                    <div className={styles.infoGroup}><span className={styles.label}>Location:</span> <span className={styles.value}>Remote</span></div>
-                    <div className={styles.infoGroup}><span className={styles.label}>Job Type:</span> <span className={styles.value}>Part Time</span></div>
-                    <div className={styles.infoGroup}><span className={styles.label}>Experience Required:</span> <span className={styles.value}>3+ Years</span></div>
+                    <div className={styles.infoGroup}><span className={styles.label}>Job Type :</span><span className={styles.value}>{job.type}</span></div>
+                    <div className={styles.infoGroup}><span className={styles.label}>Skills :</span><span className={styles.value}>{job.skills.join(", ")}</span></div>
                 </div>
 
                 <div className={styles.description}>
                     <h2 className={styles.sectionTitle}>Job Description</h2>
                     <p className={styles.descriptionText}>
-                        We are looking for a skilled Frontend Developer to join our dynamic team. The ideal candidate
-                        should have experience with modern JavaScript frameworks and a keen eye for design and performance optimization.
+                        {job.about}
                     </p>
                     <h3 className={styles.subTitle}>Roles and Responsibilities:</h3>
-                    <ul className={styles.responsibilitiesList}>
+                    {/* <ul className={styles.responsibilitiesList}>
                         <li>Develop and maintain user-facing features using React and Next.js.</li>
                         <li>Ensure web applications are responsive and optimized for performance.</li>
                         <li>Work closely with UI/UX designers to translate designs into functional components.</li>
                         <li>Write clean, maintainable, and scalable code following best practices.</li>
                         <li>Collaborate with backend developers to integrate APIs and data sources.</li>
-                    </ul>
+                    </ul> */}
+                    <ul className={styles.responsibilitiesList}>
+  {job.responsibilities.map((item, index) => (
+    <li key={index}>{item}</li>
+  ))}
+</ul>
                 </div>
             </div>
 
