@@ -77,7 +77,7 @@ const page = () => {
       description="Leverage the power of generative AI to revolutionize retail and CPG operations. Our cutting-edge solutions enable businesses to predict consumer trends, automate decision-making, and create personalized experiences that drive measurable results."
       imageSrc="/consumer-retail/Blog.png"
       button1Link="/contact-us" // Update with actual blog route
-       button1Text="Learn More"
+       button1Text="Let's Talk"
      
     />
 
