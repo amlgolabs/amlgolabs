@@ -1,10 +1,11 @@
-"use client";
-import React, { useRef, useState, useEffect } from 'react';
+"use client"
+import React, { useRef, useState, useEffect } from "react";
 import styles from "../../styles/pages/Components/KeyVerticals.module.css";
+import { FaCaretSquareLeft, FaCaretSquareRight } from "react-icons/fa";
 
 const KeyVerticals = ({ title, keyVerticals }) => {
   const scrollContainerRef = useRef(null);
-  const [progress, setProgress] = useState(30);
+  const [progress, setProgress] = useState(0);
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
@@ -16,14 +17,20 @@ const KeyVerticals = ({ title, keyVerticals }) => {
     }
   };
 
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8; // Scroll by 80% of container width
+      scrollContainerRef.current.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.addEventListener('scroll', handleScroll);
+      scrollContainerRef.current.addEventListener("scroll", handleScroll);
     }
-
     return () => {
       if (scrollContainerRef.current) {
-        scrollContainerRef.current.removeEventListener('scroll', handleScroll);
+        scrollContainerRef.current.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
@@ -43,9 +50,14 @@ const KeyVerticals = ({ title, keyVerticals }) => {
             </div>
           ))}
         </div>
-        {/* Progress Bar Container */}
+
+        {/* Progress Bar with Scroll Icons */}
         <div className={styles.progressBarContainer}>
-          <div className={styles.progressBar} style={{ width: `${progress}%` }} />
+          <FaCaretSquareLeft className={styles.scrollIcon} onClick={() => scroll(-1)} />
+          <div className={styles.progressWrapper}>
+            <div className={styles.progressBar} style={{ width: `${progress}%` }} />
+          </div>
+          <FaCaretSquareRight className={styles.scrollIcon} onClick={() => scroll(1)} />
         </div>
       </section>
     </div>

@@ -22,7 +22,6 @@ const page = () => {
         <PerksandBenefits/>
         <EmployeeTestimonials/>
         <JobList/>
-
     </div>
   )
 }

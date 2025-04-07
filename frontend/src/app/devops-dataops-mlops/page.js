@@ -46,13 +46,11 @@ const page = () => {
 />
 
 <SingleBlog
-      title="How Generative AI is Disrupting Entire Industries – And How Amlgo Labs is Leading the Charge?"
-      description="Generative AI is a subset of artificial intelligence that creates new content like images, music, text, and code. Unlike traditional AI, which recognizes patterns and makes decisions based on existing data, generative AI generates new data by mimicking patterns from its training data."
+      title="Optimizing Machine Learning Workflows Through MLOps"
+      description="Amlgo Labs bridges the gap between machine learning and production with MLOps. Discover how we simplify, automate, and scale your ML workflows."
       imageSrc="/capabilities/data-ops/blog.png"
-      button1Link="/" // Update with actual blog route
-      button2Link="/" // Update with actual insights route
+      button1Link="/documents/Technical MLOps Architecture.pdf" // Update with actual blog route
       button1Text="Read Now"
-      button2Text="Explore More"
     />
 
 <IndustryFocusBlack title="Businesses We Support"

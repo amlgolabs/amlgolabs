@@ -140,18 +140,39 @@
     }
 }
 
-/* Progress bar styling */
 .progressBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 4px;
-    background-color: #e9ecef;
     margin-top: 20px;
+    position: relative;
+    gap: 10px;
+}
+
+.progressWrapper {
+    flex: 1;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
     position: relative;
 }
 
 .progressBar {
     height: 100%;
     background-color: var(--blue);
-    width: 60%; /* Initial width is 0, will be updated by JS */
     transition: width 0.3s ease-in-out;
 }
+
+.scrollIcon {
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scrollIcon:hover {
+    color: var(--blue);
+}
+

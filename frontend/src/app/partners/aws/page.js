@@ -102,8 +102,8 @@ const page = () => {
         <IndividualHero
         heading="Centralized Data Management and Agility with a Data Lakehouse on AWS."
         content="Fragmented data and disjointed systems leave traditional supply chains exposed. Amlgo-SCAI, our Supply Chain Intelligence solution, addresses this vulnerability by establishing a unified data foundation and leveraging targeted AI to generate actionable insights. With a human-centric design, we prioritize user adoption and implement solutions incrementally to minimize disruption, enabling you to build resilience, agility, and true visibility, one strategic use case at a time. "
-        buttonText="Read More"
-        buttonLink="/partners/azure"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/aws/hero2.png"
         imageAlt="Amazon Web Services"
       />

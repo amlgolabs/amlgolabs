@@ -63,8 +63,8 @@ const page = () => {
         <IndividualHero
         heading="Architect your future-proof data landscape on Microsoft Fabric, powered by Amlgo Labs transformative frameworks."
         content="Process your data at lightning speed with cloud platforms strategically located in global data centers, ensuring your users have instant access to critical information. Amlgo Labs partnership with Microsoft Azure provides unparalleled flexibility in service levels, storage locations, and coding languages, empowering you to scale seamlessly to meet your unique needs."
-        buttonText="Read More"
-        buttonLink="/partners/azure"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/azure/hero3.png"
         imageAlt="Microsoft Azure cloud services"
       />
@@ -79,10 +79,8 @@ const page = () => {
       description="Migration of legacy data warehouse to cloud-native centralized architecture” Problem statement: One of our business partners wanted to harness the power of modern-day problem-solving using the latest technology."
       imageSrc="/partners/blogs/Azure.jpg"
 
-      button1Link="/blog/generative-ai" // Update with actual blog route
-      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Link="https://learn.microsoft.com/en-us/data-migration/sql-server/managed-instance/guide" // Update with actual blog route
       button1Text="Read Now"
-      button2Text="Explore More"
     />
     </div>
   )

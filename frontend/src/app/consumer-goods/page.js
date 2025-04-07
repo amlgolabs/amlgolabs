@@ -26,20 +26,18 @@ const page = () => {
 
   const serviceData = [
     {
-      title: "Supply Chain Management Services",
-      description: "Achieve sustainable growth and resilience in the automotive industry with our solutions, covering everything from planning to aftersales service.",
+      title: "Data Analytics Services",
+      description: "Drive sustainable growth and resilience in the automotive industry with our data analytics services, empowering every stage from strategic planning to aftersales support.",
       image: "/consumer-retail/featuredService1.png",
-      buttons: ["Explore Service", "View All Services"],
-      link1: "/",
-      link2: "/"
+      buttons: ["Explore Service"],
+      link1: "/data-analytics#case-studies",
     },
     {
       title: "Generative AI Services",
       description: "Optimize your consumer goods operations, personalize customer experiences, and drive product innovation with our AI, machine learning, and generative AI solutions.",
       image: "/consumer-retail/featuredService2.png",
-      buttons: ["Learn More", "See All AI Services"],
+      buttons: ["Learn More"],
       link1: "/generative-ai",
-      link2: "/"
     
     }
   ];
@@ -78,10 +76,9 @@ const page = () => {
       title="Exploring the Potential of Generative AI for CPG and Retail Industries"
       description="Leverage the power of generative AI to revolutionize retail and CPG operations. Our cutting-edge solutions enable businesses to predict consumer trends, automate decision-making, and create personalized experiences that drive measurable results."
       imageSrc="/consumer-retail/Blog.png"
-      button1Link="/" // Update with actual blog route
-      button2Link="/" // Update with actual insights route
-      button1Text="Read Now"
-      button2Text="Explore More"
+      button1Link="/contact-us" // Update with actual blog route
+       button1Text="Let's Talk"
+     
     />
 
 <FeaturedServices heading={ServiceHeading} services={serviceData} />
@@ -89,7 +86,7 @@ const page = () => {
   <CTASection
       heading="Talk to One of Our Experts"
       description="Get in touch today to ﬁnd out about how Amlgo Labs can help you improve your processes, making you better, faster and more efﬁcient."
-      buttonText="Talk to Us"
+      buttonText="Let's Talk"
       imageSrc="/cta.png"
     />
   </>

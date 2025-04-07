@@ -8,6 +8,7 @@ import IndustryTechnology from '../components/PagesComponents/IndustryTechnology
 import IndustryCaseStudy from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
 import { FaRegBuilding, FaRegCreditCard, FaRegMoneyBillAlt, FaChartLine } from 'react-icons/fa';
 import { PersonSearch, Speed, Lightbulb, Shield } from '@mui/icons-material';
+import SingleBlog from '../components/PagesComponents/Blogs/SingleBlog';
 
 export const metadata = {
     title: "Banking & Finance Solutions - AI & Analytics - Amlgo Labs",
@@ -26,10 +27,10 @@ const page = () => {
 
     // Define the technology data
     const technologies = [
-        { name: 'Gen-AI', image: '/GenAI.png' },
+        { name: 'GenAI', image: '/GenAI.png' },
         { name: 'Robotic Process Automation', image: '/RoboticProcess.png' },
         { name: 'Machine Learning', image: '/MachineLearning.png' },
-        { name: 'Forecasting and Process Mapping', image: '/RoboticProcess.png' },
+        { name: 'Forecasting and Process Mapping', image: '/businesses/banking/forecasting.png' },
         { name: 'Natural Language Processing', image: '/NLP.png' },
         { name: 'Knowledge Graph', image: '/KnowledgeGraph.png' },
         { name: 'Agile Operations', image: '/AgileOperations.png' },
@@ -42,7 +43,7 @@ const page = () => {
     const stepsData = [
         {
             id: 1,
-            heading: 'Technological transformation',
+            heading: 'Technological Transformation',
             content:
                 'Harness the power of advanced code generation, seamless translation, and intelligent optimization to drive operational efficiency, scalability, and business growth. Embrace cutting-edge technologies that streamline processes and enhance performance for your organization.',
         },
@@ -60,7 +61,7 @@ const page = () => {
         },
         {
             id: 4,
-            heading: 'Fraud, risk and compliance',
+            heading: 'Fraud, Risk and Compliance',
             content:
                 'We leverage synthetic data generation to address sparse and low-incidence scenarios effectively. An on-demand search platform provides seamless access to evolving banking regulations, ensuring compliance and agility. Together, these solutions empower smarter decision-making and operational efficiency.',
         },
@@ -85,6 +86,7 @@ const page = () => {
                 imageSrc="/BankingHero3.png"
                 altText="Banking Hero"
                 heading="AI and Data Powerhouse in Banking and Finance"
+                subHeading="Unlock the future of banking with AI-driven insights and data intelligence. Amlgo Labs empowers financial institutions to make smarter, faster, and more secure decisions."
             />
 
 <NumbersData 
@@ -104,13 +106,23 @@ const page = () => {
             steps={stepsData}
         />
 
+        <SingleBlog
+              title="Leveraging AI and Machine Learning to Combat Money Laundering"
+              description="Discover how AI and machine learning are transforming the fight against money laundering. Learn how advanced technologies enhance detection, reduce false positives, and protect the global financial system."
+              imageSrc="/businesses/banking/moneylaundering.png"
+              button1Link="/documents/leveraging_ai_and_machine_learning_to_combat_money_laundering.pdf" // Update with actual blog route
+               button1Text="Learn More"
+             
+            />
+
             <OfferingsCard />
 
             {/* Pass heading and technologies data to IndustryTechnology component */}
             <IndustryTechnology heading={technologyHeading} technologies={technologies} />
 
             <IndustryCaseStudy caseStudyHeading="Financial Regulatory Reporting" 
-                                CaseStudyImageSrc="/businesses/banking/casestudy.png"/>
+                                CaseStudyImageSrc="/businesses/banking/casestudy.png"
+                                link="/documents/mas610casestudy.pdf"/>
 
 
         </>

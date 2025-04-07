@@ -23,7 +23,7 @@ const page = () => {
         link: "/banking-finance"
     },
     {
-        name: "Innovation & R&D Intelligence",
+        name: "Innovation and R&D Intelligence",
         description: "Fuels your R&D, innovation, and ideation with domain-specific AI, accelerating your time to market in the ICT and Media sector.",
         link: "/"
     },

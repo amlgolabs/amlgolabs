@@ -98,8 +98,8 @@ const page = () => {
          <IndividualHero
         heading="Unified Data Enterprise with Cloudera: Driving Insight and Agility"
         content="Fragmented data silos hinder enterprise agility and limit actionable insights. Amlgo Labs partnership with Cloudera addresses these challenges by establishing a unified data foundation and leveraging robust data management capabilities. With a focus on seamless integration, we prioritize streamlined workflows and implement solutions to minimize disruption, enabling you to build resilience, agility, and true data-driven visibility, one strategic initiative at a time."
-        buttonText="Read More"
-        buttonLink="/partners/cloudera"
+        buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/cloudera/hero.png"
         imageAlt="Amazon Web Services"
       />
@@ -112,14 +112,14 @@ const page = () => {
 
 <PartnerSolutions tabs={tabsData} />
 <SingleBlog
-      title="From Data Chaos to Clarity: Amlgo Labs Journey with Cloudera"
-      description="Discover how Amlgo Labs is transforming industries by turning data chaos into clarity with Cloudera. From unified analytics to actionable insights, Amlgo Labs leverages Cloudera’s powerful data solutions to drive innovation, optimize operations, and deliver measurable results across sectors."
+      title="Three Key Elements of a Future-Ready Data and AI Strategy"
+      description="A future-ready data and AI strategy focuses on three key elements: robust data governance, scalable AI infrastructure, and ethical AI practices. By ensuring data quality, investing in flexible technology, and prioritizing responsible AI usage, organizations can drive innovation and stay ahead in the evolving digital landscape."
       imageSrc="/partners/blogs/Cloudera.jpg"
 
-      button1Link="/blog/generative-ai" // Update with actual blog route
-      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Link="https://www.cloudera.com/blog/business/3-elements-of-a-forward-looking-data-and-ai-strategy.html" // Update with actual blog route
+      
       button1Text="Read Now"
-      button2Text="Explore More"
+    
     />
     
     </div>

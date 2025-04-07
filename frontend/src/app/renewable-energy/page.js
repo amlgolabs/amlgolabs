@@ -75,10 +75,8 @@ const page = () => {
       title="What Will Power Tomorrow's Renewable Energy Grid?"
       description="Innovation in energy storage is key to unlocking the full potential of renewable energy. Dive into the latest breakthroughs and discover how these advancements are shaping the future of our energy grid."
       imageSrc="/renewable-energy/blog.jpg"
-      button1Link="/" // Update with actual blog route
-      button2Link="/" // Update with actual insights route
-      button1Text="Read Now"
-      button2Text="Explore More"
+      button1Link="/contact-us" // Update with actual blog route
+      button1Text="Let's Talk"
     />
     </>
   )

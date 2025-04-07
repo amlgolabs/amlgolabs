@@ -71,8 +71,8 @@ const page = () => {
          <IndividualHero
         heading="Dell Technologies and Amlgo Labs: Powering Enterprise Transformation"
         content="Amlgo Labs partnership with Dell Technologies unites cutting-edge infrastructure and expertise to empower enterprises in solving complex problems and accelerating solutions for today's dynamic world and tomorrow's challenges. Harness the power of Dell's robust hardware and software solutions, seamlessly integrated with Amlgo Labs expertise in advanced analytics and AI/ML. Enable high-performance processing and analysis of massive datasets with optimized infrastructure. Streamline data center operations and seamlessly integrate data engineering, data science, and business analytics to maximize performance gains while reducing costs and complexity."
-        buttonText="Read More"
-        buttonLink="/partners/dell-technologies"
+         buttonText="Let's Talk"
+        buttonLink="/contact-us"
         imageSrc="/partners/dell-technologies/hero.png"
         imageAlt="Amazon Web Services"
       />
@@ -89,10 +89,10 @@ const page = () => {
       description="Dell is the trusted partner for building scalable data infrastructure that drives innovation across industries. From robust storage solutions to advanced analytics, Dell empowers businesses to handle growing data demands, optimize operations, and future-proof their infrastructure for tomorrow’s challenges."
       imageSrc="/partners/blogs/Dell.jpg"
 
-      button1Link="/blog/generative-ai" // Update with actual blog route
-      button2Link="/insights/generative-ai" // Update with actual insights route
+      button1Link="https://www.dell.com/en-in/blog/2025-dell-technologies-partner-program-driving-collaboration-and-growth/" // Update with actual blog route
+     
       button1Text="Read Now"
-      button2Text="Explore More"
+  
     />
     
     </div>

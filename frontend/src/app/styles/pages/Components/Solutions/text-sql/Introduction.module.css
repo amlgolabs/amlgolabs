@@ -31,6 +31,22 @@
    justify-content: center;
   }
 
+  .videoCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: #000;
+    flex: 1;
+
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1.5rem;
+  }
   .upperLeft img{
     max-width: 100%;
     height: auto;

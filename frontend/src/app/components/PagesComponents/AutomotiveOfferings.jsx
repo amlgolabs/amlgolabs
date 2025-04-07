@@ -1,91 +1,113 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/Components/AutomotiveOfferings.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const offerings = [
     {
         title: "AI Chatbot for Vendors and Distributors",
-        description: "Transform your automotive vendor and distributor relationships with Amlgo Labs AI chatbot.  Get 24/7 instant support for inquiries on inventory, orders, pricing, and more.  Boost efficiency and free up your team for strategic work.  Our AI-powered solution keeps your partners informed and connected. Contact us to learn how it can revolutionize your automotive supply chain.",
+        description: "Transform your automotive vendor and distributor relationships with Amlgo Labs AI chatbot. Get 24/7 instant support for inquiries on inventory, orders, pricing, and more.",
         image: "/businesses/automotive/chatbot.jpg",
-        link:"/conversational-ai-chatbot"
+        link: "/conversational-ai-chatbot"
     },
     {
         title: "DBConnect - GenAI based text to SQL User Interface",
-        description: "Forget complex SQL queries. just type your questions in plain English to get immediate SQL results. From inventory levels to sales performance, gain rapid access to critical automotive insights. Contact Amlgo Labs today to experience the future of automotive data analysis.",
+        description: "Forget complex SQL queries. Just type your questions in plain English to get immediate SQL results and gain rapid access to critical automotive insights.",
         image: "/businesses/automotive/dbconnect.jpg",
-        link:"/text-to-sql"
-
+        link: "/text-to-sql"
     },
     {
         title: "Vehicle Quality AI - Defect Correlation and Prediction",
-        description: "Improve automotive quality and reduce defects with Amlgo Labs Vehicle Quality AI.  Our solution correlates and predicts defects, enabling proactive identification and resolution of quality issues.  Minimize recalls, optimize production, and enhance customer satisfaction. Contact us to learn how our AI can transform your automotive quality control.",
+        description: "Improve automotive quality and reduce defects with AI-driven insights. Identify and resolve quality issues proactively.",
         image: "/businesses/automotive/vehiclequality.jpg",
-        link:"/vehicle-quality-ai"
-
+        link: "/vehicle-quality-ai"
     },
     {
         title: "Social Media Analytics - People's Voice for Automotive",
-        description: "Understand the voice of your brands customers. Our solution analyses social media conversations to uncover valuable insights about customer sentiment, product feedback, and emerging trends. Gain a deeper understanding of what customers are saying about your brand and the automotive industry as a whole. Use these insights to improve product development, refine marketing strategies, and stay ahead of the competition. Contact us today to learn more.",
+        description: "Analyze social media to understand customer sentiment, product feedback, and emerging trends in the automotive industry.",
         image: "/businesses/automotive/socialmedia.jpg",
-        link:"/communication-media"
-
+        link: "/communication-media"
     }
 ];
 
 const AutomotiveOfferings = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(true);
+
+    const changeSlide = (index) => {
+        setFade(false);
+        setTimeout(() => {
+            setCurrentIndex(index);
+            setFade(true);
+        }, 300);
+    };
 
     const nextOffering = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % offerings.length);
+        changeSlide((currentIndex + 1) % offerings.length);
     };
+
+    const prevOffering = () => {
+        changeSlide((currentIndex - 1 + offerings.length) % offerings.length);
+    };
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === "ArrowRight") {
+                nextOffering();
+            } else if (event.key === "ArrowLeft") {
+                prevOffering();
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [currentIndex]);
 
     return (
         <div className={styles.offeringsContainer}>
             <h2 className={styles.heading}>Amlgo Labs Offerings</h2>
             <div className={styles.scrollDiv}>
-                <div className={styles.offeringContent}>
+                <button className={styles.arrowLeft} onClick={prevOffering}>
+                    <FaArrowLeft />
+                </button>
+
+                <div className={`${styles.offeringContent} ${fade ? styles.fadeIn : styles.fadeOut}`}>
                     <div className={styles.offeringText}>
                         <h3>{offerings[currentIndex].title}</h3>
                         <p>{offerings[currentIndex].description}</p>
                         <Link href={offerings[currentIndex].link}>
                             <button className={styles.offeringButton}>
-                                Know More
+                                Learn More
                             </button>
                         </Link>
                     </div>
                     <div className={styles.offeringImage}>
-  <div className={styles.imageWrapper}>
-    <Image
-      src={offerings[currentIndex].image}
-      alt={offerings[currentIndex].title}
-      fill
-      className={styles.image}
-    />
-  </div>
-</div>
-                    <div>
-
-                    {/* <button className={styles.arrowButton} onClick={nextOffering}>
-                &#8594;
-            </button> */}
+                        <div className={styles.imageWrapper}>
+                            <Image
+                                src={offerings[currentIndex].image}
+                                alt={offerings[currentIndex].title}
+                                fill
+                                className={styles.image}
+                            />
+                        </div>
                     </div>
                 </div>
+
+                <button className={styles.arrowRight} onClick={nextOffering}>
+                    <FaArrowRight />
+                </button>
             </div>
 
-            {/* Pagination Dots */}
             <div className={styles.paginationDots}>
                 {offerings.map((_, index) => (
                     <span
                         key={index}
                         className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ""}`}
-                        onClick={() => setCurrentIndex(index)}
+                        onClick={() => changeSlide(index)}
                     ></span>
                 ))}
             </div>
-
-            
         </div>
     );
 };

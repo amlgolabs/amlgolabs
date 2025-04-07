@@ -59,7 +59,7 @@ const page = () => {
     },
     {
         id: 8,
-        heading: 'Innovation & R&D Intelligence',
+        heading: 'Innovation and R&D Intelligence',
         content:
             'Drive real estate innovation with actionable insights. As a leading provider of R&D intelligence, we deliver timely strategic insights to keep you ahead of the competition and emerging trends.',
     },
@@ -78,6 +78,7 @@ const caseStudiesData = [
       image: "/businesses/real-estate/casestudy1.jpg",
 
       description: "Explore the power of Generative AI and LLMs in real estate.",
+      link:"/documents/BusinessPotential_GenAI.pdf"
   },
   {
       id: 2,
@@ -86,6 +87,8 @@ const caseStudiesData = [
 
 
       description: "Learn how Amlgo Labs simplified data access for a leading real estate firm, boosting efficiency and decision-making.",
+      link:"/text-to-sql"
+
   },
 ];
 

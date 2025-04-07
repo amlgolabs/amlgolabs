@@ -66,18 +66,16 @@ const page = () => {
         {
           title: "Does AI have the answer in regulatory affairs?",
           description: "Forward-thinking regulatory affairs professionals are strategically implementing AI, combined with a human-centered approach, to optimize responses to health authority inquiries and cultivate more productive relationships.",
-          image: "/pharma/blog1.png",
-link1: "/",
-      link2: "/",
-          buttons: ["Read Blog", "View All Blogs"]
+          image: "/pharma/Blog1.png",
+link1: "/contact-us",
+          buttons: ["Let's Talk"]
         },
         {
           title: "How AI and analytics are helping to cure at-risk individuals?",
           description: "Digital health expands access to medical care and mitigates life-threatening risks, offering a potential solution for the challenges facing healthcare systems.",
-          image: "/pharma/blog2.png",
-          buttons: ["Raed More", "See All Blogs"],
-          link1: "/",
-      link2: "/"
+          image: "/pharma/Blog2.png",
+          buttons: ["Let's Talk"],
+          link1: "/contact-us",
         }
       ];
 

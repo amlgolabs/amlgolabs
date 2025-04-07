@@ -2,21 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../styles/pages/Components/Careers/JobList.module.css";
-
-const jobs = [
-  { id: 1, title: "Data Engineer", domain: "AI & Machine Learning", location: "Bangalore", type: "Remote" },
-  { id: 2, title: "Axiom Developer", domain: "Web Development", location: "Bangalore", type: "Remote" },
-  { id: 3, title: "RPA Developer", domain: "Automation", location: "Gurugram", type: "Full-Time" },
-  { id: 4, title: "Full Stack Developer", domain: "Web Development", location: "Remote", type: "Full-Time" },
-  { id: 5, title: "Data Scientist", domain: "AI & Machine Learning", location: "Gurugram", type: "Full-Time" },
-  { id: 6, title: "Axiom Developer", domain: "Web Development", location: "Remote", type: "Full-Time" },
-  { id: 7, title: "RPA Developer", domain: "Automation", location: "Remote", type: "Full-Time" },
-  { id: 8, title: "Full Stack Developer", domain: "Web Development", location: "Bangalore", type: "Remote" },
-  { id: 9, title: "Data Scientist", domain: "AI & Machine Learning", location: "Bangalore", type: "Remote" },
-  { id: 10, title: "Axiom Developer", domain: "Web Development", location: "Gurugram", type: "Full-Time" },
-  { id: 11, title: "RPA Developer", domain: "Automation", location: "Bangalore", type: "Remote" },
-  { id: 12, title: "Data Engineer", domain: "AI & Machine Learning", location: "Gurugram", type: "Full-Time" }
-];
+import { jobs } from "./data/jobs";
 
 
 const JobList = () => {
@@ -27,8 +13,9 @@ const JobList = () => {
     setVisibleJobs((prevVisibleJobs) => prevVisibleJobs + 10);
   };
 
-  const handleViewDetails = (jobId) => {
-    router.push(`/careers/${jobId}`); // Redirects to job details page
+  const handleViewDetails = (job) => {
+    const slug = job.title.toLowerCase().replace(/\s+/g, '-');
+    router.push(`/careers/${slug}`);
   };
 
   return (
@@ -46,13 +33,11 @@ const JobList = () => {
               <p className={styles.type}>{job.type}</p>
             </div>
             <div className={styles.actions}>
-              <button
-                className={styles.detailsBtn}
-                onClick={() => handleViewDetails(job.id)}
-              >
-                View Details
-              </button>
-              {/* <button className={styles.applyBtn}>Apply Now</button> */}
+           
+              <button  className={styles.detailsBtn} onClick={() => handleViewDetails(job)}>
+      View Details
+    </button>
+              
             </div>
           </div>
         ))}

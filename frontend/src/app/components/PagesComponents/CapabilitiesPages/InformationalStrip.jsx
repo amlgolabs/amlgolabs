@@ -19,7 +19,7 @@ const InformationalStrip = () => {
 />
 
             <h2>A case study exploring the ethical considerations of using LLMs, such as bias, misinformation, and job displacement.</h2>
-           <Link href="/">
+           <Link href="/coming-soon">
            <button>Learn More</button>
            </Link> 
           </div>
@@ -28,12 +28,16 @@ const InformationalStrip = () => {
             <div className={styles.rightContent}>
                 <div className={styles.upperRight}>
                     <h3>Deploying Language Model Applications to AWS: An Open-Source Approach</h3>
+                    <Link href="/documents/aws.pdf">
                     <button>Read More</button>
+                    </Link>
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.lowerRight}>
                     <h3>Real-World Applications of AI in Logistics</h3>
+                    <Link href="/documents/Ai_Logistics.pdf">
                     <button>Explore Now</button>
+                    </Link>
                 </div>
             </div>
         </div>

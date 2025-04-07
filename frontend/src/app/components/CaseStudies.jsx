@@ -7,7 +7,7 @@ const CaseStudies = ({ caseStudies }) => {
   return (
     <div className={styles.parentContainer}>
       <div className={styles.heading}>
-        <h1>Case Studies</h1>
+        <h1>Insights</h1>
       </div>
       <div className={styles.cardsContainer}>
         {caseStudies.map((caseStudy) => (

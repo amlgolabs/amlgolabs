@@ -22,10 +22,9 @@ const page = () => {
                 title="Maestro Application On- Premise to AWS"
                 description="An end-to-end cloud migration by Amlgo Labs Background: Our client is one of the top financial services provider firms from Europe having 100+ applications to support day-to-day banking businesses around the globe."
                 imageSrc="/partners/blog.jpg"
-                button1Link="/blog/generative-ai" // Update with actual blog route
-                button2Link="/insights/generative-ai" // Update with actual insights route
+                button1Link="/documents/maestro_application_on_premise_to_aws.pdf" // Update with actual blog route
+                
                 button1Text="Read Now"
-      button2Text="Explore More"
             />
         </div>
     )
