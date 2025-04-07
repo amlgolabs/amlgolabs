@@ -10,9 +10,19 @@ const templates = {
     },
     contactUsThanks: {
         source: "info@amlgolabs.com",
-        subject: "Contact Us Form Submission",
-        body: (name) => `Hi ${name}, thank you for reaching out to us!`,
-    },
+        subject: "Thank You for Contacting Amlgo Labs",
+        body: (name) => `Dear ${name},
+      
+      Thank you for reaching out to Amlgo Labs. We have received your message and appreciate you taking the time to connect with us.
+      
+Our team will review your inquiry and get back to you as soon as possible.
+      
+We look forward to assisting you.
+      
+Best regards,  
+The Amlgo Labs Team`
+    }
+    ,
     jobApplicationToAmlgoLabs: {
         source: "noreply@amlgolabs.com",
         subject: "New Job Application Received",

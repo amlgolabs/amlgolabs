@@ -45,12 +45,12 @@ export async function POST(req) {
 
     // First email: Thank you email to user
     const thankYouParams = createEmailParams(
-      email,              // toEmail
-      name,              // name
-      'contactUsThanks', // template
-      'info@amlgolabs.com', // fromEmail
-      email,             // email
-      phone             // phone
+      email,
+      name,
+      'contactUsThanks',
+      'info@amlgolabs.com',
+      email,
+      phone
     );
 
     await sesClient.send(new SendEmailCommand(thankYouParams));
@@ -60,15 +60,16 @@ export async function POST(req) {
     await newContact.save();
     console.log('Contact information saved:', newContact);
 
-    // Second email: Notification to admin
     const adminParams = createEmailParams(
-      'krishna.singh@amlgolabs.com',    // toEmail (replace with actual admin email)
-      name,                    // name
-      'contactDetailsToAdmin', // template
-      'noreply@amlgolabs.com', // fromEmail
-      email,                   // email
-      message                  // message instead of phone
+      'krishna.singh@amlgolabs.com',
+      name,
+      'contactDetailsToAdmin',
+      null,
+      email,
+      phone,
+      message
     );
+
 
     await sesClient.send(new SendEmailCommand(adminParams));
 
