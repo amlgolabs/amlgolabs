@@ -1,7 +1,7 @@
 /* Container styling */
 .topCompaniesContainer {
   text-align: center;
-  max-width: 1240px;
+  /* max-width: 1240px; */
   width: 100%;
   margin-inline: auto;
   padding: 20px;
@@ -24,6 +24,9 @@
 
 /* Marquee Container */
 .marqueeContainer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -35,9 +38,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  width: 200%; /* Ensures both original and duplicated logos fit */
   animation: marquee 30s linear infinite;
   will-change: transform;
+}
+
+.marquee:hover{
+  animation-play-state: paused;
 }
 
 /* Each Logo Wrapper */
@@ -65,12 +71,18 @@
 }
 
 /* Smooth Marquee Animation */
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+} */
+
+@keyframes marquee {
+  to{
+    transform: translateX(calc(-100% - 30px) );
   }
 }
 

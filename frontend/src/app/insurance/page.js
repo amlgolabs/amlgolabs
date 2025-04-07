@@ -28,7 +28,7 @@ const page = () => {
       id: 1,
       title: "Developing an Insurance Risk & Litigation Propensity Model",
       image: "/businesses/insurance/casestudy1.png",
-      link:"/documents/Risk & Litigation Propensity Model.pdf"
+      link:"/documents/RiskLitigationPropensityModel.pdf"
       // description: "Explore the differences between Generative AI, which creates new content, and Predictive AI, which forecasts future outcomes.",
     },
     {
