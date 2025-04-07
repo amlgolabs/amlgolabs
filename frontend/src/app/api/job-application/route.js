@@ -4,7 +4,6 @@ import { createEmailParams } from '@/app/utils/email/emailParams';
 import { SendEmailCommand } from '@aws-sdk/client-ses';
 import fs from 'fs/promises';
 import path from 'path';
-// import asdad from "../../../../public/uploads"
 
 const connectDB = async () => {
     if (mongoose.connection.readyState >= 1) return;

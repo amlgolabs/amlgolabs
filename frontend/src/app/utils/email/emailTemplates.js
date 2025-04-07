@@ -13,7 +13,7 @@ const templates = {
         subject: "Thank You for Contacting Amlgo Labs",
         body: (name) => `Dear ${name},
       
-      Thank you for reaching out to Amlgo Labs. We have received your message and appreciate you taking the time to connect with us.
+Thank you for reaching out to Amlgo Labs. We have received your message and appreciate you taking the time to connect with us.
       
 Our team will review your inquiry and get back to you as soon as possible.
       
@@ -34,16 +34,17 @@ The Amlgo Labs Team`
     jobApplicationThanks: {
         source: "jobs@amlgolabs.com",
         subject: "Job Application Received",
-        body: (name) => `Dear ${name},      
-    This is to let you know that we have received your submission. We appreciate your interest in Amlgo Labs. If you are selected for an interview, you can expect a phone call from our Human Resources staff shortly.  
+        body: (name) => `Dear ${name},
+
+This is to let you know that we have received your submission. We appreciate your interest in Amlgo Labs. If you are selected for the next process, you can expect a phone call from our HR Team shortly.  
     
-    Thank you, again, for your interest in our company. We do appreciate the time that you invested in this process.  
+Thank you, again, for your interest in our company. We do appreciate the time that you invested in this process.  
     
-    Sincerely,  
-    HR Manager  
-    Amlgo Labs  
+Sincerely,  
+HR Manager  
+Amlgo Labs  
     
-    (Note: This is a system-generated email. Please do not reply.)`
+(Note: This is a system-generated email. Please do not reply.)`
     }
 
 

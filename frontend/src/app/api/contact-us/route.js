@@ -58,7 +58,7 @@ export async function POST(req) {
     // Save to database
     const newContact = new ContactUs({ name, email, message, phone });
     await newContact.save();
-    console.log('Contact information saved:', newContact);
+    // console.log('Contact information saved:', newContact);
 
     const adminParams = createEmailParams(
       'krishna.singh@amlgolabs.com',
