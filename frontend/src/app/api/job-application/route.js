@@ -39,7 +39,9 @@ export async function POST(req) {
         const phone = formData.get('phone');
         const coverLetter = formData.get('coverLetter');
         const cv = formData.get('cv');
-        // console.log("name, email, phone, coverLetter, cv", { name, email, phone, coverLetter, cv });
+        const jobId = formData.get('id');
+        const jobTitle = formData.get('title');
+        // console.log("name, email, phone, coverLetter, cv, id, title", { name, email, phone, coverLetter, cv, jobId, jobTitle });
 
         if (!name || !email || !phone || !cv) {
             return new Response(
@@ -74,15 +76,20 @@ export async function POST(req) {
         });
         await newApplication.save();
 
+        const savedJobId = newApplication._id.toString()
+
+
         const companyEmailParams = createEmailParams(
-            'jobs@amlgolabs.com',
+            'krishna.singh@amlgolabs.com',
             name,
             'jobApplicationToAmlgoLabs',
             'jobs@amlgolabs.com',
             email,
             phone,
             coverLetter,
-            resumeUrl
+            savedJobId,
+            jobId,
+            jobTitle,
         );
         await sesClient.send(new SendEmailCommand(companyEmailParams));
 

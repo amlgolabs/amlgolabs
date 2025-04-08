@@ -25,17 +25,18 @@ The Amlgo Labs Team`
     ,
     jobApplicationToAmlgoLabs: {
         source: "noreply@amlgolabs.com",
-        subject: "New Job Application Received",
-        body: (name, email, phone, coverLetter, resumeUrl) =>
-            `Dear Team,\n\nA new job application has been received:\n\n` +
-            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCover Letter: ${coverLetter}\nResume URL: ${process.env.NEXT_PUBLIC_BASE_URL}${resumeUrl}\n\n` +
+        subject: (name, email, phone, coverLetter, savedJobId, jobId, jobTitle) =>
+            `New application received for the position ${jobTitle} [${jobId}]`,
+        body: (name, email, phone, coverLetter, savedJobId, jobId,
+            jobTitle,) =>
+            `Dear Team,\n\nA new job application has been received :\n\n` +
+            `Job Opening: ${jobTitle} [${jobId}]\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nResume URL: ${process.env.NEXT_PUBLIC_BASE_URL}/api/view-resume/${savedJobId}\nCover Letter: ${coverLetter}\n\n` +
             `Please review the application.\n\nBest regards,\nAmlgo Labs System`,
     },
     jobApplicationThanks: {
         source: "jobs@amlgolabs.com",
         subject: "Job Application Received",
         body: (name) => `Dear ${name},
-
 This is to let you know that we have received your submission. We appreciate your interest in Amlgo Labs. If you are selected for the next process, you can expect a phone call from our HR Team shortly.  
     
 Thank you, again, for your interest in our company. We do appreciate the time that you invested in this process.  
@@ -46,9 +47,8 @@ Amlgo Labs
     
 (Note: This is a system-generated email. Please do not reply.)`
     }
-
-
 };
+
 
 const getEmailTemplate = (templateName, ...args) => {
     const template = templates[templateName];
@@ -57,7 +57,7 @@ const getEmailTemplate = (templateName, ...args) => {
     }
     return {
         source: template.source,
-        subject: template.subject,
+        subject: typeof template.subject === 'function' ? template.subject(...args) : template.subject,
         body: template.body(...args),
     };
 };

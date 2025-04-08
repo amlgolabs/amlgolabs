@@ -10,9 +10,9 @@ import MuiAlert from '@mui/material/Alert';
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [openSnackbar, setOpenSnackbar] = useState(false);
-const [snackbarMessage, setSnackbarMessage] = useState("");
-const [snackbarSeverity, setSnackbarSeverity] = useState("success"); // 'success' | 'error'
-const [isLoading, setIsLoading] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success"); // 'success' | 'error'
+  const [isLoading, setIsLoading] = useState(false);
 
 
   const handleChange = (e) => {
@@ -66,7 +66,7 @@ const [isLoading, setIsLoading] = useState(false);
       setIsLoading(false); // <-- stop loading after submit finishes
     }
   };
-  
+
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>Contact Us</h2>
@@ -89,36 +89,36 @@ const [isLoading, setIsLoading] = useState(false);
         </div>
         {/* <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} type="submit" className={styles.button}>Send Message</motion.button> */}
         <motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  type="submit"
-  className={styles.button}
-  disabled={isLoading}
->
-  {isLoading ? (
-    <div className={styles.loader}></div> // loader spinner
-  ) : (
-    "Send Message"
-  )}
-</motion.button>
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          type="submit"
+          className={styles.button}
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <div className={styles.loader}></div> // loader spinner
+          ) : (
+            "Send Message"
+          )}
+        </motion.button>
       </form>
 
       <Snackbar
-  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-  open={openSnackbar}
-  autoHideDuration={4000}
-  onClose={() => setOpenSnackbar(false)}
->
-  <MuiAlert
-    onClose={() => setOpenSnackbar(false)}
-    severity={snackbarSeverity}
-    sx={{ width: '100%' }}
-    elevation={6}
-    variant="filled"
-  >
-    {snackbarMessage}
-  </MuiAlert>
-</Snackbar>
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        open={openSnackbar}
+        autoHideDuration={4000}
+        onClose={() => setOpenSnackbar(false)}
+      >
+        <MuiAlert
+          onClose={() => setOpenSnackbar(false)}
+          severity={snackbarSeverity}
+          sx={{ width: '100%' }}
+          elevation={6}
+          variant="filled"
+        >
+          {snackbarMessage}
+        </MuiAlert>
+      </Snackbar>
     </div>
   );
 }

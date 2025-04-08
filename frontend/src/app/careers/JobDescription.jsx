@@ -3,13 +3,15 @@ import axios from "axios"; // Import Axios
 import styles from "../styles/pages/Components/Careers/JobDescription.module.css";
 import toast from "react-hot-toast";
 
-const JobDescription = ({job}) => {
+const JobDescription = ({ job }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
         coverLetter: "",
         cv: null,
+        id: job.id,
+        title: job.title,
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const fileInputRef = useRef(null);
@@ -39,6 +41,8 @@ const JobDescription = ({job}) => {
         submitData.append("phone", formData.phone);
         submitData.append("coverLetter", formData.coverLetter || "");
         submitData.append("cv", formData.cv);
+        submitData.append("id", formData.id);
+        submitData.append("title", formData.title);
 
         try {
             const response = await axios.post("/api/job-application", submitData, {
@@ -47,7 +51,15 @@ const JobDescription = ({job}) => {
                 },
             });
             toast.success("Application Submitted Successfully!");
-            setFormData({ name: "", email: "", phone: "", coverLetter: "", cv: null });
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                coverLetter: "",
+                cv: null,
+                id: job.id,
+                title: job.title,
+            });
             if (fileInputRef.current) {
                 fileInputRef.current.value = "";
             }
@@ -87,17 +99,17 @@ const JobDescription = ({job}) => {
                     </p>
                     <h3 className={styles.subTitle}>Roles and Responsibilities:</h3>
                     {/* <ul className={styles.responsibilitiesList}>
-                        <li>Develop and maintain user-facing features using React and Next.js.</li>
-                        <li>Ensure web applications are responsive and optimized for performance.</li>
-                        <li>Work closely with UI/UX designers to translate designs into functional components.</li>
-                        <li>Write clean, maintainable, and scalable code following best practices.</li>
-                        <li>Collaborate with backend developers to integrate APIs and data sources.</li>
-                    </ul> */}
+                            <li>Develop and maintain user-facing features using React and Next.js.</li>
+                            <li>Ensure web applications are responsive and optimized for performance.</li>
+                            <li>Work closely with UI/UX designers to translate designs into functional components.</li>
+                            <li>Write clean, maintainable, and scalable code following best practices.</li>
+                            <li>Collaborate with backend developers to integrate APIs and data sources.</li>
+                        </ul> */}
                     <ul className={styles.responsibilitiesList}>
-  {job.responsibilities.map((item, index) => (
-    <li key={index}>{item}</li>
-  ))}
-</ul>
+                        {job.responsibilities.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
 
