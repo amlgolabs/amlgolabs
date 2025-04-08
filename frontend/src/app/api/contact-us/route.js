@@ -1,76 +1,46 @@
-import mongoose from 'mongoose';
+import dbConnect from '@/app/lib/mongodb';
+import ContactUs from '@/app/models/ContactUs';
 import sesClient from '@/app/config/aws/email/ses';
 import { createEmailParams } from '@/app/utils/email/emailParams';
 import { SendEmailCommand } from '@aws-sdk/client-ses';
 
-// Connect to MongoDB
-const connectDB = async () => {
-  if (mongoose.connection.readyState >= 1) return;
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('MongoDB connected');
-  } catch (error) {
-    console.error('MongoDB connection error:', error);
-  }
-};
-
-// Define the ContactUs schema
-const contactUsSchema = new mongoose.Schema({
-  name: { type: String, required: true, default: '' },
-  email: { type: String, required: true, default: '' },
-  message: { type: String, required: true, default: '' },
-  phone: { type: String, required: false, default: '' },
-  createdAt: { type: Date, default: Date.now },
-});
-
-const ContactUs = mongoose.models.ContactUs || mongoose.model('ContactUs', contactUsSchema);
-
 export async function POST(req) {
-  await connectDB();
+  await dbConnect();
 
   try {
     const { name, email, message, phone } = await req.json();
 
-    console.log({ name, email, message, phone });
-
     if (!name || !email || !message) {
-      return new Response(
-        JSON.stringify({ error: 'All fields are required' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ error: 'All fields are required' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
-    // First email: Thank you email to user
+    // Send thank-you email to the user with CC to info@amlgolabs.com
     const thankYouParams = createEmailParams(
-      email,
-      name,
-      'contactUsThanks',
-      'info@amlgolabs.com',
-      email,
-      phone
+      email,             
+      name,             
+      'contactUsThanks', 
+      'noreply@amlgolabs.com', // Source
+      'info@amlgolabs.com'  // CC
     );
-
     await sesClient.send(new SendEmailCommand(thankYouParams));
 
-    // Save to database
+    // Save contact details to database
     const newContact = new ContactUs({ name, email, message, phone });
     await newContact.save();
-    // console.log('Contact information saved:', newContact);
 
+    // Send contact details to admin (no CC)
     const adminParams = createEmailParams(
-      'info@amlgolabs.com',
-      name,
-      'contactDetailsToAdmin',
-      null,
-      email,
-      phone,
-      message
+      'info@amlgolabs.com', // To: info@amlgolabs.com
+      name,                 // userName
+      'contactDetailsToAdmin', // templateName
+      null,                 // Source (uses template default)
+      email,                // For template
+      phone,                // For template
+      message               // For template
     );
-
-
     await sesClient.send(new SendEmailCommand(adminParams));
 
     return new Response(

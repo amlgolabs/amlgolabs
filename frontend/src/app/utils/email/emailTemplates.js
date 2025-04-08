@@ -2,7 +2,7 @@
 const templates = {
     contactDetailsToAdmin: {
         source: "info@amlgolabs.com",
-        subject: "New Contact Form Submission",
+        subject: "New Contact Form",
         body: (name, email, phone, message) =>
             `Dear Admin,\n\nA new contact form submission has been received:\n\n` +
             `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}\n\n` +
@@ -33,19 +33,21 @@ The Amlgo Labs Team`
             `Job Opening: ${jobTitle} [${jobId}]\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nResume URL: ${process.env.NEXT_PUBLIC_BASE_URL}/api/view-resume/${savedJobId}\nCover Letter: ${coverLetter}\n\n` +
             `Please review the application.\n\nBest regards,\nAmlgo Labs System`,
     },
+
     jobApplicationThanks: {
         source: "jobs@amlgolabs.com",
-        subject: "Job Application Received",
-        body: (name) => `Dear ${name},
-This is to let you know that we have received your submission. We appreciate your interest in Amlgo Labs. If you are selected for the next process, you can expect a phone call from our HR Team shortly.  
-    
-Thank you, again, for your interest in our company. We do appreciate the time that you invested in this process.  
-    
-Sincerely,  
-HR Manager  
-Amlgo Labs  
-    
-(Note: This is a system-generated email. Please do not reply.)`
+        subject: "Thanks for submitting your application for a job at Amlgo Labs",
+        body: (name, jobTitle) => ({
+            Html: {
+                Data: `
+                <p>Dear ${name},</p>
+                <p>This is to let you know that we have received your application. We appreciate your interest in Amlgo Labs and the position of <strong>${jobTitle}</strong> for which you applied. If you are selected for an interview, you can expect a phone call from our Human Resources staff shortly.</p>
+                <p>Thank you, again, for your interest in our company. We do appreciate the time that you invested in this application.</p>
+                <p>Sincerely,<br>HR Manager<br>Amlgo Labs</p>
+            `
+            },
+
+        }),
     }
 };
 

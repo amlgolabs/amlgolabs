@@ -1,13 +1,16 @@
 import mongoose from 'mongoose';
 
 const jobApplicationSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String,
-  coverLetter: String,
-  resumeUrl: String,
-  createdAt: { type: Date, default: Date.now }
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  coverLetter: { type: String, default: '' },
+  resumeUrl: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.models.JobApplication ||
+const JobApplication =
+  mongoose.models.JobApplication ||
   mongoose.model('JobApplication', jobApplicationSchema);
+
+export default JobApplication;
