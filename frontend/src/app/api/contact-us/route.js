@@ -61,7 +61,7 @@ export async function POST(req) {
     // console.log('Contact information saved:', newContact);
 
     const adminParams = createEmailParams(
-      'krishna.singh@amlgolabs.com',
+      'info@amlgolabs.com',
       name,
       'contactDetailsToAdmin',
       null,

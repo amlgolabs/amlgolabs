@@ -80,7 +80,7 @@ export async function POST(req) {
 
 
         const companyEmailParams = createEmailParams(
-            'krishna.singh@amlgolabs.com',
+            'jobs@amlgolabs.com',
             name,
             'jobApplicationToAmlgoLabs',
             'jobs@amlgolabs.com',
