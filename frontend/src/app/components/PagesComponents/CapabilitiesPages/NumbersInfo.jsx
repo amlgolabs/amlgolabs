@@ -14,7 +14,6 @@ const NumbersInfo = () => {
         <div className={styles.container}>
             <h2>Seamless Integrations</h2>
           <div className={styles.contentWrapper}>
-            <div className={styles.line}></div> {/* Keep the line before mapping */}
             {data.map((item, index) => (
               <div key={index} className={styles.itemContainer}>
                 <div className={styles.boxContainer}>

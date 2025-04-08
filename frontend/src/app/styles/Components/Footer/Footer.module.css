@@ -36,16 +36,21 @@
     padding-bottom: 5px;
   }
   
-  .logo {
-    width: 200px;  /* Adjust width */
-    height: auto;  /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure responsiveness */
+  /* .logo {
+    width: 200px;  
+    height: auto;  
+    max-width: 100%; 
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
   
   .logo:hover {
     transform: scale(1.1);
+  } */
+
+  .logo img{
+    height: auto;
+    object-fit: contain;
   }
   
   .socialIcons {
@@ -94,10 +99,13 @@
     font-size: 1rem;
   }
   
-  .footerAddress svg, .footerEmail svg {
+  .footerAddress svg,
+  .footerEmail svg {
     margin-right: 10px;
     color: #00bcd4;
-    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0; /* Prevent icons from shrinking */
   }
   
   .footerAddress p, .footerEmail p {

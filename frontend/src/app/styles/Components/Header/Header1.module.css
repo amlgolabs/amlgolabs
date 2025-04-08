@@ -191,18 +191,7 @@
   line-height: 1.5;
 }
 
-.overViewContent button {
-  background: none;
-  /* background-color: #1976d2; */
-  color: var(--dark);
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  border-radius: 50px;
-  border: 1px solid var(--gray);
-  transition: background-color 0.3s ease;
-}
+
 
 /* .overViewContent button:hover {
   background-color: #125ea6;
@@ -342,7 +331,7 @@
   color: var(--gray); /* Slightly softer text for readability */
 }
 
-.researchContent button {
+/* .researchContent button {
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 500;
@@ -352,14 +341,14 @@
   color: var(--dark);
   background-color: transparent;
   transition: all 0.3s ease-in-out;
-  width: 200px; /* Ensures button only takes necessary width */
+  width: 200px; 
 }
 
 .researchContent button:hover {
   background-color: var(--dark);
   color: white;
-  transform: translateY(-2px); /* Subtle hover effect */
-}
+  transform: translateY(-2px); 
+} */
 
 
 
@@ -432,7 +421,7 @@
   width: 100%;
 }
 
-.headerBlogLink a {
+/* .headerBlogLink a {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
@@ -448,7 +437,7 @@
   background-color: var(--blue);
   color: #333;
   border-color: var(--blue);
-}
+} */
 
 
 .subMenuArea {

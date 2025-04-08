@@ -63,6 +63,9 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.cardItem:last-child{
+    border: none;
+}
 .icon{
     margin-bottom: 20px;
     display: flex;

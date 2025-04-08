@@ -12,7 +12,13 @@ const Footer1 = () => {
       <div className={styles.footerWrapper}>
         {/* Column 1: Logo and Social Icons */}
         <div className={styles.footerColumn}>
-          <Image height={80} width={200}  className={styles.logo} src="/logo/logowhite.png" alt="Logo" />
+          {/* <Image height={80} width={200}  className={styles.logo} src="/logo/logowhite2.png" alt="Logo" /> */}
+          <div className={styles.logo}>
+<Link href="/">
+                      <Image src="/logo/logowhite2.png" alt="Logo" width={200} height={200} />
+</Link>
+          </div>
+          
           <div className={styles.socialIcons}>
             <a className={styles.socialIcon} href="https://www.facebook.com/AmlgoLabs/" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />

@@ -227,7 +227,7 @@ export const jobs = [
 
       {
         "id": 10,
-        "title": "Lead Python + Node.js Developer",
+        "title": "Lead Python Developer",
         "domain": "Software Development",
         "location": "Bangalore",
         "type": "Permanent - Remote",

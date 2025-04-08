@@ -36,7 +36,7 @@ const cardVariants = {
   },
   hover: { 
     scale: 1.1, 
-    rotate: 3,
+    rotate: 0,
     boxShadow: "0px 12px 25px rgba(0, 229, 255, 0.4)", 
     transition: { duration: 0.3 }
   }

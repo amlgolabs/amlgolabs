@@ -44,14 +44,14 @@ const PerksandBenefits = () => {
                         <h3>WFH Allowance</h3>
                     </div>
                 </div>
-                <div className={styles.cardItem}>
+                {/* <div className={styles.cardItem}>
                     <div className={styles.icon}>
                         <Image src="/incentiveSchemes.png" height={50} width={50} alt='perk'/>
                     </div>
                     <div className={styles.textWrapper}>
                         <h3>Incentive Schemes</h3>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

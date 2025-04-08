@@ -42,9 +42,6 @@
   will-change: transform;
 }
 
-.marquee:hover{
-  animation-play-state: paused;
-}
 
 /* Each Logo Wrapper */
 .company {

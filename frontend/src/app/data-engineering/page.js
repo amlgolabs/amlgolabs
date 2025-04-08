@@ -87,7 +87,7 @@ const page = () => {
 <Benefits title="Key Advantages" benefitsData={benefitsList} />      
 <InformationStripLine
   title="How can data engineering transform business efficiency?"
-  subtitle="A global retailer improved data accessibility by 78% and decision-making speed by 40% with scalable data pipelines."
+  subtitle=" Global retailers improved data accessibility by 78% and decision-making speed by 40% with scalable data pipelines."
   buttonText="Explore Now"
   buttonLink="/consumer-goods"
 />

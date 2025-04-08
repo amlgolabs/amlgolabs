@@ -32,7 +32,7 @@ const page = () => {
   ];
   
     const IntroductionData = {
-        title: 'Amlgo Labs transoforming industries through Data Analytics',
+        title: 'Amlgo Labs transforming industries through Data Analytics',
         subtitle: 'Empowering Industries with AI-Driven Data Analytics and Intelligent Technology Solutions',
         content1: "Amlgo Labs is at the forefront of transforming industries by leveraging the transformative power of Data Analytics, advanced Technology, and cutting-edge AI. By converting complex data into actionable insights, Amlgo Labs empowers businesses to make informed decisions, optimize processes, and drive innovation. Their expertise lies in unlocking the hidden potential of data, enabling organizations to stay ahead in today’s competitive landscape.",
         content2:
@@ -60,7 +60,7 @@ const page = () => {
           image: "/capabilities/data-analytics/casestudy2.jpg",
 
           description: "Mastering case study analysis requires sharp focus on key insights. Analyze data, identify patterns, and align findings with objectives. A strong conclusion synthesizes evidence, offers actionable solutions, and highlights impact, ensuring clarity and value for stakeholders.",
-          link: "/documents/mastering_case_study_analysis_tips_for_drawing_the_best_conclusion",
+          link: "/documents/mastering_case_study_analysis_tips_for_drawing_the_best_conclusion.pdf",
       },
       {
           id: 3,

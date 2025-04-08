@@ -22,9 +22,9 @@ const Clients = () => {
           <span className={styles.company}>
             <Image src="/client5.png" height={100} width={256} alt="client 5" />
           </span>
-          <span className={styles.company}>
+          {/* <span className={styles.company}>
             <Image src="/client6.png" height={100} width={256} alt="client 6" />
-          </span>
+          </span> */}
           <span className={styles.company}>
             <Image src="/client7.png" height={100} width={256} alt="client 7" />
           </span>
@@ -40,12 +40,12 @@ const Clients = () => {
           <span className={styles.company}>
             <Image src="/client11.png" height={100} width={256} alt="client 11" />
           </span>
-          <span className={styles.company}>
+          {/* <span className={styles.company}>
             <Image src="/client12.png" height={100} width={256} alt="client 12" />
-          </span>
-          <span className={styles.company}>
+          </span> */}
+          {/* <span className={styles.company}>
             <Image src="/client13.png" height={100} width={256} alt="client 13" />
-          </span>
+          </span> */}
           <span className={styles.company}>
             <Image src="/client14.png" height={100} width={256} alt="client 14" />
           </span>
@@ -70,9 +70,9 @@ const Clients = () => {
           <span className={styles.company}>
             <Image src="/client5.png" height={100} width={256} alt="client 5" />
           </span>
-          <span className={styles.company}>
+          {/* <span className={styles.company}>
             <Image src="/client6.png" height={100} width={256} alt="client 6" />
-          </span>
+          </span> */}
           <span className={styles.company}>
             <Image src="/client7.png" height={100} width={256} alt="client 7" />
           </span>
@@ -88,12 +88,12 @@ const Clients = () => {
           <span className={styles.company}>
             <Image src="/client11.png" height={100} width={256} alt="client 11" />
           </span>
-          <span className={styles.company}>
+          {/* <span className={styles.company}>
             <Image src="/client12.png" height={100} width={256} alt="client 12" />
-          </span>
-          <span className={styles.company}>
+          </span> */}
+          {/* <span className={styles.company}>
             <Image src="/client13.png" height={100} width={256} alt="client 13" />
-          </span>
+          </span> */}
           <span className={styles.company}>
             <Image src="/client14.png" height={100} width={256} alt="client 14" />
           </span>
