@@ -203,7 +203,7 @@ const Header1 = () => {
                       <div
                         key={tab}
                         className={activeTab === tab ? styles.activeTab : styles.tab}
-                        onClick={() => setActiveTab(tab)}
+                        onMouseEnter={() => setActiveTab(tab)}
                       >
                         <p className={styles.tabText}>{tab}</p>
                         <ArrowRightIcon className={styles.arrowIcon} />
@@ -217,14 +217,17 @@ const Header1 = () => {
                           <h2>Amlgo Labs is dedicated to making a positive impact through technological innovation.</h2>
                           <p>For nearly a decade, Amlgo Labs has pioneered innovative solutions, helping businesses across diverse sectors achieve greater success.</p>
                           <Link href="/about-us" onClick={closeDropdown}>
-                            <Button variant="contained">Learn More</Button>
-                          </Link>
+  <button className="globalButton">Learn More</button>
+</Link>
                         </div>
                         <div className={styles.headerBlogLink}>
                           <h3>Featured Resource</h3>
                           <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
                           <h4>Partnering with Leaders empowering success.</h4>
-                          <Link href="/partners">Read More</Link>
+                          {/* <Link href="/partners">Read More</Link> */}
+                          <Link href="/about-us" onClick={closeDropdown}>
+  <button className="globalButton">Learn More</button>
+</Link>
                         </div>
                       </div>
                     )}
@@ -276,7 +279,10 @@ const Header1 = () => {
       alt={selectedSolutionData.name} 
     />
     <h4>{selectedSolutionData.blogLine}</h4>
-    <Link onClick={closeDropdown} href={selectedSolutionData.link}>Read More</Link>  {/* Optional: make link dynamic too */}
+    {/* <Link onClick={closeDropdown} href={selectedSolutionData.link}>Read More</Link>  Optional: make link dynamic too */}
+    <Link href={selectedSolutionData.link} onClick={closeDropdown}>
+  <button className="globalButton">Read More</button>
+</Link>
   </div>
 )}
                       </div>
@@ -294,9 +300,12 @@ const Header1 = () => {
                           <p>Harnessing the creative potential of Generative AI brings both transformative opportunities and operational challenges. Organizations often struggle with scalability, data quality, and integration issues.
                             This white paper delves into how advanced Generative AI solutions empower businesses to automate content generation, drive innovation, and enhance decision-making. Discover practical insights to streamline processes and overcome common challenges, positioning your organization for success in a rapidly evolving AI landscape.</p>
                           {/* <button variant="contained">Explore More</button> */}
-                          <a href="/documents/genaiagent_amlgolabs.pdf" target="_blank" rel="noopener noreferrer">
+                          {/* <a href="/documents/genaiagent_amlgolabs.pdf" target="_blank" rel="noopener noreferrer">
                             <button className={styles.button}>Explore More</button>
-                          </a>
+                          </a> */}
+                          <Link href= "/documents/genaiagent_amlgolabs.pdf" target="_blank" rel="noopener noreferrer" onClick={closeDropdown}>
+  <button className="globalButton">Explore More</button>
+</Link>
                         </div>
                       </div>
                     )}
@@ -639,7 +648,7 @@ const Header1 = () => {
                     <h3>Featured Resource</h3>
                     <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
                     <h4>Partnering with Leaders empowering success.</h4>
-                    <Link href="/partners">Read More</Link>
+                    <Link onClick={closeDropdown} href="/partners">Read More</Link>
                   </div>
                 </div>
               </div>

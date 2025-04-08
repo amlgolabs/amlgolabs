@@ -28,26 +28,18 @@
     letter-spacing: 3px;
 }
 
-.line {
-    position: absolute;
-    top: 33%; /* Centering the line */
-    transform: translateY(-50%); /* Adjusting for perfect alignment */
-    left: 0;
-    width: 100%;
-    border-top: 2px dashed var(--gray);
-    z-index: -1; /* Keeps it behind the elements */
-}
 
 /* Vertical Line Connector */
 
 .contentWrapper {
+    /* background-color: #333; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 20px;
     position: relative;
     width: 90%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .itemContainer {

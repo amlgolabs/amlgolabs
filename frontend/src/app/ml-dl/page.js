@@ -86,8 +86,8 @@ const page = () => {
 />
 <ClientsList/>
 <InformationStripLine
-  title="Discover the distinctions between Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) in simple terms."
-  subtitle="Learn how these technologies work and their unique roles in innovation."
+  title="Explore the differences between Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) in simple, easy-to-understand terms."
+  subtitle="Understand how each technology functions and the unique part they play in driving innovation. Discover how these powerful tools are shaping the future across industries."
   // buttonText="Explore Now"
   buttonLink="/"
 />

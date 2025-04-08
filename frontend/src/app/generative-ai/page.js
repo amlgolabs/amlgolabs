@@ -13,7 +13,7 @@ import PartnersSection from '../components/PagesComponents/CapabilitiesPages/Par
 
 export const metadata = {
   title: "Generative AI - Amlgo Labs",
-  description: "Meta Description :- Amlgo Labs is a leading provider of cloud and data operations services, designed to help companies optimize their data performance and realize the full value of their data assets.",
+  description: "Amlgo Labs is a leading provider of cloud and data operations services, designed to help companies optimize their data performance and realize the full value of their data assets.",
   keywords: "Amlgo Labs, about us, mission, vision, team, data analytics, AI, ML",
 };
 
