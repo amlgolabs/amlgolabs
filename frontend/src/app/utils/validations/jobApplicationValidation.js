@@ -14,9 +14,8 @@ const jobApplicationSchema = Joi.object({
         'string.pattern.base': 'Phone must be a valid phone number (e.g., +1234567890)',
         'any.required': 'Phone is required',
     }),
-    coverLetter: Joi.string().min(5).optional().allow('').messages({
+    coverLetter: Joi.string().optional().allow('').messages({
         'string.base': 'Cover letter must be a string',
-        'string.min': 'Cover letter must be at least 5 characters long if provided',
     }),
     cv: Joi.object().required().custom((value, helpers) => {
         if (!(value instanceof File)) {
