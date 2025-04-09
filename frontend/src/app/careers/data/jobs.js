@@ -111,7 +111,7 @@ export const jobs = [
       },
       {
         "id": 6,
-        "title": "Data Scientist - GenAI",
+        "title": "Data Scientist GenAI",
         "domain": "Artificial Intelligence & Data Science",
         "location": "Gurugram",
         "type": "Hybrid",

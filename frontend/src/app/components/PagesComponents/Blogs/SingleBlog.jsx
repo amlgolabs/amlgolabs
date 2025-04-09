@@ -15,7 +15,7 @@ const SingleBlog = ({ title, description, imageSrc, button1Link, button2Link, bu
           <div className={styles.buttonDiv}>
             {button1Link && (
               <Link href={button1Link} passHref target="_blank">
-                <button className={styles.button1}>{button1Text}</button>
+                <button className="globalButton">{button1Text}</button>
               </Link>
             )}
             {button2Link && (
