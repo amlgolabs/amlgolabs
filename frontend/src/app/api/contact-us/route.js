@@ -3,55 +3,43 @@ import ContactUs from '@/app/models/ContactUs';
 import sesClient from '@/app/config/aws/email/ses';
 import { createEmailParams } from '@/app/utils/email/emailParams';
 import { SendEmailCommand } from '@aws-sdk/client-ses';
+import { contactSchema } from '@/app/utils/validations/contactValidation';
+import asyncHandler from '@/app/utils/asyncHandler/asyncHandler';
 
-export async function POST(req) {
+export const POST = asyncHandler(async (req) => {
   await dbConnect();
 
-  try {
-    const { name, email, message, phone } = await req.json();
+  const { name, email, message, phone } = await req.json();
 
-    if (!name || !email || !message) {
-      return new Response(JSON.stringify({ error: 'All fields are required' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-
-    // Send thank-you email to the user with CC to info@amlgolabs.com
-    const thankYouParams = createEmailParams(
-      email,             
-      name,             
-      'contactUsThanks', 
-      'noreply@amlgolabs.com', // Source
-      'info@amlgolabs.com'  // CC
-    );
-    await sesClient.send(new SendEmailCommand(thankYouParams));
-
-    // Save contact details to database
-    const newContact = new ContactUs({ name, email, message, phone });
-    await newContact.save();
-
-    // Send contact details to admin (no CC)
-    const adminParams = createEmailParams(
-      'info@amlgolabs.com', // To: info@amlgolabs.com
-      name,                 // userName
-      'contactDetailsToAdmin', // templateName
-      null,                 // Source (uses template default)
-      email,                // For template
-      phone,                // For template
-      message               // For template
-    );
-    await sesClient.send(new SendEmailCommand(adminParams));
-
-    return new Response(
-      JSON.stringify({ message: 'Contact information saved successfully' }),
-      { status: 201, headers: { 'Content-Type': 'application/json' } }
-    );
-  } catch (error) {
-    console.error('Error saving contact information:', error);
-    return new Response(
-      JSON.stringify({ error: 'Internal server error' }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
-    );
+  // Validate input data
+  const { error } = contactSchema.validate({ name, email, message, phone }, { abortEarly: false });
+  if (error) {
+    const errorMessages = error.details.map((detail) => detail.message);
+    return {
+      status: 400,
+      body: { error: 'Validation failed', details: errorMessages },
+    };
   }
-}
+
+  // Save contact details to database
+  const newContact = new ContactUs({ name, email, message, phone });
+  await newContact.save();
+
+  // Send contact details to Team(admin)
+  const adminParams = createEmailParams(
+    'info@amlgolabs.com', // To: info@amlgolabs.com
+    name,                 // userName
+    'contactDetailsToAdmin', // templateName
+    null,                    // Source (uses template default)
+    email,                 //     CC
+    email,                // For template
+    phone,                // For template
+    message               // For template
+  );
+  await sesClient.send(new SendEmailCommand(adminParams));
+
+  return {
+    status: 201,
+    body: { message: 'Contact information saved successfully' },
+  };
+});

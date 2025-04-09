@@ -52,7 +52,7 @@ export default function ContactForm() {
     setIsLoading(true);
     try {
       const response = await axios.post("/api/contact-us", formData);
-      console.log("Response:", response.data);
+      // console.log("Response:", response.data);
       setFormData({ name: "", email: "", phone: "", message: "" });
       setSnackbarMessage("Thank you for reaching out. Our team will get back to you shortly.");
       setSnackbarSeverity("success");

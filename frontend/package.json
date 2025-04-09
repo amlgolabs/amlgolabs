@@ -19,6 +19,7 @@
     "axios": "^1.8.4",
     "express": "^5.1.0",
     "framer-motion": "^12.4.7",
+    "joi": "^17.13.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.475.0",
     "mapbox-gl": "^3.9.4",
