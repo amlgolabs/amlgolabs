@@ -62,7 +62,7 @@ export const POST = asyncHandler(async (req) => {
 
     // Send email to company
     const companyEmailParams = createEmailParams(
-        'krishna.singh@amlgolabs.com',
+        'jobs@amlgolabs.com',
         name,
         'jobApplicationToAmlgoLabs',
         'jobs@amlgolabs.com',
