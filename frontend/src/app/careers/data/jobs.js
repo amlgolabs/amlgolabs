@@ -111,7 +111,7 @@ export const jobs = [
       },
       {
         "id": 6,
-        "title": "Data Scientist - GenAI",
+        "title": "Data Scientist GenAI",
         "domain": "Artificial Intelligence & Data Science",
         "location": "Gurugram",
         "type": "Hybrid",
@@ -227,7 +227,7 @@ export const jobs = [
 
       {
         "id": 10,
-        "title": "Lead Python + Node.js Developer",
+        "title": "Lead Python Developer",
         "domain": "Software Development",
         "location": "Bangalore",
         "type": "Permanent - Remote",

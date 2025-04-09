@@ -33,7 +33,7 @@ const HomeServices = () => {
       imageSrc: '/Home/service3.png',
       partnerImage: '/partner3.png',
       partnerAlt: 'casestudy3',
-      caseStudyTitle: 'Power Intelligent Systems with Advanced ML & DL',
+      caseStudyTitle: 'Enhance intelligent systems using state-of-the-art ML and DL solutions.',
        link:"/ml-dl"
     }
   ];
@@ -48,7 +48,7 @@ const HomeServices = () => {
 
     <div className={styles.parentContainer}>
     <div className={styles.headContainer}>
-      <h1>Develop and Deploy with confidence</h1>
+      <h1>Develop and Deploy with Confidence</h1>
       <h4>As a trusted partner to leading AI companies, we bring unparalleled expertise in addressing challenges with your data as well as AI adoption and deployment.</h4>
     </div>
     <div className={styles.CaseStudyContainer}>

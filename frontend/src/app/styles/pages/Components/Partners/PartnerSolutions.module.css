@@ -103,6 +103,7 @@
     max-height: 400px; /* Limit text height */
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top: 20px;
   }
   
   .button {

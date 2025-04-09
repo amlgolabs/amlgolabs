@@ -1,27 +1,127 @@
+// // import React from 'react';
+// // import styles from "../../../styles/pages/Components/Services/ServicesGrid.module.css";
+
+// // const ServicesGrid = ({ services }) => {
+// //   return (
+// //     <div className={styles.container}>
+// //       <h2 className={styles.heading}>Our Services</h2>
+// //       <div className={styles.grid}>
+// //         {services.map((service, index) => (
+// //           <div key={index} className={styles.gridItem}>
+// //             <div className={styles.card}>
+// //               <div className={styles.iconTitleContainer}>
+// //                 {/* Dynamically render the icon */}
+// //                 {service.icon && <service.icon className={styles.icon} />}
+// //                 <h3 className={styles.serviceTitle}>{service.title}</h3>
+// //               </div>
+// //               <div className={styles.cardContent}>
+// //                 <p className={styles.serviceDescription}>{service.description}</p>
+// //               </div>
+// //             </div>
+// //           </div>
+// //         ))}
+// //       </div>
+// //     </div>
+// //   );
+// // };
+
+// // export default ServicesGrid;
+
+
+// // import React from 'react';
+// // import styles from "../../../styles/pages/Components/Services/ServicesGrid.module.css";
+
+// // const ServicesGrid = ({ services }) => {
+// //   return (
+// //     <div className={styles.container}>
+// //       <h2 className={styles.heading}>Our Services</h2>
+// //       <div className={styles.grid}>
+// //         {services.map((service, index) => (
+// //           <div key={index} className={styles.gridItem}>
+// //             <div className={styles.card}>
+// //               <div className={styles.iconTitleContainer}>
+// //                 {service.icon && (
+// //                   <div className={styles.iconWrapper}>
+// //                     <service.icon className={styles.icon} />
+// //                   </div>
+// //                 )}
+// //                 <h3 className={styles.serviceTitle}>{service.title}</h3>
+// //               </div>
+// //               <div className={styles.cardContent}>
+// //                 <p className={styles.serviceDescription}>{service.description}</p>
+// //               </div>
+// //             </div>
+// //           </div>
+// //         ))}
+// //       </div>
+// //     </div>
+// //   );
+// // };
+
+// // export default ServicesGrid;
+
+
+// import React from 'react';
+// import styles from "../../../styles/pages/Components/Services/ServicesGrid.module.css";
+
+// const ServicesGrid = ({ services }) => {
+//   return (
+//     <div className={styles.container}>
+//       <h2 className={styles.heading}>Our Services</h2>
+//       <div className={styles.grid}>
+//         {services.map((service, index) => (
+//           <div key={index} className={styles.gridItem}>
+//             <div className={styles.card}>
+//               <div className={styles.iconTitleContainer}>
+//                 {service.icon && (
+//                   <div className={styles.iconWrapper}>
+//                     <service.icon className={styles.icon} />
+//                   </div>
+//                 )}
+//                 <h3 className={styles.serviceTitle}>{service.title}</h3>
+//               </div>
+//               <div className={styles.cardContent}>
+//                 <p className={styles.serviceDescription}>{service.description}</p>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ServicesGrid;
+
+
+// ServicesGrid.jsx
 import React from 'react';
 import styles from "../../../styles/pages/Components/Services/ServicesGrid.module.css";
 
 const ServicesGrid = ({ services }) => {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.heading}>Our Services</h2>
-      <div className={styles.grid}>
-        {services.map((service, index) => (
-          <div key={index} className={styles.gridItem}>
-            <div className={styles.card}>
-              <div className={styles.iconTitleContainer}>
-                {/* Dynamically render the icon */}
-                {service.icon && <service.icon className={styles.icon} />}
+    <section className={styles.servicesSection}>
+      <div className={styles.container}>
+        <h2 className={styles.heading}>Our Services</h2>
+        <div className={styles.grid}>
+          {services.map((service, index) => (
+            <article key={index} className={styles.serviceCard}>
+              <div className={styles.cardHeader}>
+                {service.icon && (
+                  <div className={styles.iconContainer}>
+                    <service.icon className={styles.icon} />
+                  </div>
+                )}
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
               </div>
-              <div className={styles.cardContent}>
+              <div className={styles.cardBody}>
                 <p className={styles.serviceDescription}>{service.description}</p>
               </div>
-            </div>
-          </div>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

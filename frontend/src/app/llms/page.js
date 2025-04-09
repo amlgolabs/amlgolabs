@@ -273,6 +273,7 @@ const Page = () => {
       <Hero
         videoSrc="/capabilities/herobackground3.mp4"
         heading="Embrace the future with transformative power of large language models."
+        description="Efficiency, innovation, and smart decisions drive your business. Large Language Models (LLMs) offer a transformative leap, enabling automation, personalization, and intelligent insights. Amlgo Labs helps you harness LLMs to boost operations, unlock growth, and gain a lasting competitive edge."
       />
 
       {/* Static Sections */}

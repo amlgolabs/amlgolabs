@@ -15,19 +15,20 @@ const IndustryCaseStudy2 = ({ heading, caseStudies }) => {
             <div className={styles.card} key={caseStudy.id}>
               <div className={styles.cardImageContainer}>
                 <Image
-                  height={300}
-                  width={360}
+                  height={200} // Fixed height for consistency
+                  width={360}  // Matches card width
                   src={caseStudy.image}
                   alt={caseStudy.title}
                   className={styles.cardImage}
+                  objectFit="cover" // Ensures image fills container uniformly
                 />
                 <div className={styles.overlay}></div>
               </div>
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{caseStudy.title}</h2>
                 <p className={styles.cardDescription}>{caseStudy.description}</p>
-                <Link href={caseStudy.link} target='_blank'>
-                <button className={styles.cardButton}>Read More</button>
+                <Link  href={caseStudy.link} target='_blank'>
+                  <button className='globalButton'>Read More</button>
                 </Link>
               </div>
             </div>

@@ -14,7 +14,7 @@ const caseStudies = [
         description: "Transforming traditional supply chain operations into intelligent, data-driven ecosystems.",
         date: "Jan 10, 2024",
         parentTitle: "Case Study",
-        link: "/documents/AI_Logistics.pdf"
+        link: "/documents/Ai_Logistics.pdf"
     },
     {
         id: 2,

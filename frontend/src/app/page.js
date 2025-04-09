@@ -25,9 +25,9 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Helping Banks with MAS610 Implementation",
+      title: "Helping Banks with Regulatory Reporting Solutions",
       image: "/Home/casestudy2.jpg",
-      description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
+      description: "Empowering banks with seamless regulatory reporting and compliance through robust solutions.",
       link : "/documents/mas610casestudy.pdf"
     },
     {
@@ -54,7 +54,7 @@ export default function Home() {
       
       <CTASection
       heading="Empower Your Business with Data Driven Solution & Generative AI"
-      description="Unlock the power of data and AI to drive innovation, efficiency, and growth."
+      description="Transform your business with AI-powered data solutions designed to unlock new opportunities, enhance efficiency, and drive effective, sustainable growth. Partner with us to harness the full potential of innovation and intelligence."
       buttonText="Get Started Today"
       imageSrc="/cta.png"
     />

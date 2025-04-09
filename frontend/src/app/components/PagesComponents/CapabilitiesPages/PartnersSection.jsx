@@ -51,7 +51,7 @@ const PartnersSection = () => {
                 {/* Right Section with Fixed Container */}
                 <div className={styles.imageWrapper}>
                     <div className={styles.logoContainer}>
-                        <Image height={500} width={500} src="/logo.png" alt="Amlgo Labs Logo" className={styles.companyLogo} />
+                        <Image height={500} width={500} src="/logo/logo500x500.png" alt="Amlgo Labs Logo" className={styles.companyLogo} />
                         <Image height={500} width={500} src="/handshake.png" alt="Cross Sign" className={styles.crossSign} />
 
                         {/* Animated Partner Logo */}

@@ -1,127 +1,124 @@
 /* Dark Theme Background */
 .backContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    /* background: radial-gradient(circle, #0f172a 0%, #020617 100%); */
-    background: var(--black);
-  }
-  
-  /* Parent Container */
-  .parentContainer {
-    width: 85%;
-    text-align: center;
-  }
-  
-  .heading h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #e2e8f0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Cards Container */
-  .cardsContainer {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Card Styling */
-  .card {
-    position: relative;
-    width: 360px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    /* backdrop-filter: blur(15px); */
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.2);
-    border: 2px solid rgba(0, 255, 255, 0.3);
-  }
-  
-  /* Image Container */
-  .cardImageContainer {
-    position: relative;
-    width: 100%;
-  }
-  
-  .cardImage {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  
-  .card:hover .cardImage {
-    transform: scale(1.1);
-  }
-  
-  /* Overlay Effect */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  
-  .card:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* Card Content */
-  .cardContent {
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .cardTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #e2e8f0;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-  }
-  
-  .cardDescription {
-    font-size: 1rem;
-    color: #94a3b8;
-    margin-bottom: 15px;
-  }
-  
-  /* Button Styling */
-  .cardButton {
-    cursor: pointer;
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    background: linear-gradient(45deg, #00bcd4, #007bff);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    transition: all 0.4s ease;
-    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
-    margin-top: 10px; /* Adds spacing from the description */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background: var(--black);
 }
 
-.cardButton:hover {
-    background: linear-gradient(45deg, #007bff, #00bcd4);
-    box-shadow: 0px 6px 15px rgba(0, 255, 255, 0.4);
-    transform: scale(1.05);
+/* Parent Container */
+.parentContainer {
+  width: 85%;
+  text-align: center;
 }
+
+.heading h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Cards Container */
+.cardsContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 360px;
+  height: 450px; /* Fixed height for all cards */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Image Container */
+.cardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Fixed height for image container */
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures consistent image scaling */
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.1);
+}
+
+/* Overlay Effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 20px;
+  text-align: left;
+  flex-grow: 1; /* Allows content to take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures button stays at bottom */
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits title to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limits description to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button Styling */

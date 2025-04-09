@@ -5,13 +5,6 @@ import styles from "../styles/pages/Components/Careers/EmployeeTestimonials.modu
 
 const testimonials = [
   {
-    name: "Shallu Shukla",
-    text: "Working as a digital marketer at Amlgo Labs has been incredible. The company fosters a dynamic, innovative environment where creativity meets data-driven strategies. I've worked on impactful AI-powered campaigns, driving engagement and growth, all while learning and collaborating with a supportive team. Amlgo Labs is about more than technology—it's about making a difference through smart marketing and innovation!",
-    position: "Digital Marketer",
-    image: "/employees/shallu.jpeg",
-  },
-
-  {
     name: "Karam Yadav",
     text: "Amlgo Labs is a dream organization to work with. The company's leadership is open to new ideas and feedback to implement new systems. Employees are appreciated and recognized for their dedication and hard work. It is a growing company, that is exploring all growth opportunities for the organization as well as it's employees. You always get to work on new tools and technology and there are a number of learning opportunities as well as new challenges every day.",
     position: "Senior Consultant",
@@ -26,36 +19,6 @@ const testimonials = [
   },
 
   {
-    name: "Shivani Gupta",
-    text: "I've had the opportunity to work with a talented team in a supportive and growth-driven environment. The company truly values its people, making every day both challenging and rewarding. I'm proud to be part of this amazing organization!",
-    position: "HR Executive",
-    image: "/employees/shivani.jpeg",
-  },
-  {
-    name: "Tanishq Singh",
-    text: "Working at Amlgo Labs has been an incredible experience. The company fosters a supportive and collaborative environment where I feel empowered to learn and grow. I've had the opportunity to work on challenging projects and contribute to meaningful solutions.",
-    position: "Digital Marketer",
-    image: "/employees/tanishq.jpeg",
-
-  },
-
-  {
-    name: "Yogita Negi",
-    text: "Amlgo Labs is one of the fastest-growing organizations, and I'm grateful to be part of this incredible team. It's more than a workplace — it's a family where everyone is valued and supported. Thank you to the leaders and my colleagues for being a vital part of my professional journey.",
-    position: "HR Executive",
-    image: "/employees/yogita.jpg",
-
-  },
-
-  {
-    name: "Chirag Bang",
-    text: "Amlgo Labs is a hub of innovation and growth. Working here means collaborating with brilliant minds on cutting-edge projects that challenge and inspire. The supportive culture and focus on learning make it the perfect place to grow professionally and make a real impact.",
-    position: "Software Engineer",
-    image: "/employees/chirag.jpeg",
-
-  },
-
-  {
     name: "Rohit Kainth",
     text: "It was an amazing experience in the tough times of Covid when I onboarded with Amlgo Labs virtually. It was smooth. The higher management is also awesome where they interacted with you and provided you with opportunities to grow. Recommended to every professional who wants to scale horizontally and vertically. Cheers and kudos.",
     position: "Technical Consultant",
@@ -64,23 +27,82 @@ const testimonials = [
   },
 
   {
+    name: "Vijay Soni",
+    text: "Working at Amlgo Labs for the past year has been a great experience. The supportive management and employee-friendly policies create a positive work environment. Contributions are valued, and feedback fosters continuous growth. Looking forward to a long-term association!",
+    position: "Assistant Vice President-Identity Platform",
+    image: "/employees/vijay.png",
+  },
+
+
+  {
     name: "Manisha Rout",
     text: "Working as a Senior Axiom Developer at Amlgo Labs has been a rewarding journey. The seamless hiring process, supportive team, and growth-oriented culture make it an exceptional workplace. The team's approachability and commitment to employee success foster a collaborative and enriching environment. I'm grateful to be part of an organization that values and nurtures its people.",
     position: "Senior Axiom Developer",
     image: "/employees/manisha.jpg",
   },
+
+  {
+    name: "Jyotika Yadav",
+    text: "At Amlgo Labs, I've had the opportunity to be part of a culture that truly values innovation, collaboration, and continuous growth. As a Senior HR Associate, I’ve seen how the company prioritizes not just technical excellence, but also employee well-being and professional development. It's inspiring to work in an environment where ideas are encouraged, contributions are recognized, and every team member feel empowered to grow.",
+    position: "Senior HR Associate",
+    image: "/employees/jyotika.png",
+  },
+
+  {
+    name: "Shallu Shukla",
+    text: "Working as a digital marketer at Amlgo Labs has been incredible. The company fosters a dynamic, innovative environment where creativity meets data-driven strategies. I've worked on impactful AI-powered campaigns, driving engagement and growth, all while learning and collaborating with a supportive team. Amlgo Labs is about more than technology—it's about making a difference through smart marketing and innovation!",
+    position: "Digital Marketer",
+    image: "/employees/shallu.jpeg",
+  },
+
+
+  {
+    name: "Yogita Negi",
+    text: "Amlgo Labs is one of the fastest-growing organizations, and I'm grateful to be part of this incredible team. It's more than a workplace — it's a family where everyone is valued and supported. Thank you to the leaders and my colleagues for being a vital part of my professional journey.",
+    position: "HR Executive",
+    image: "/employees/yogita.jpg",
+  },
+
+
+  {
+    name: "Shivani Gupta",
+    text: "I've had the opportunity to work with a talented team in a supportive and growth-driven environment. The company truly values its people, making every day both challenging and rewarding. I'm proud to be part of this amazing organization!",
+    position: "HR Executive",
+    image: "/employees/shivani.jpeg",
+  },
+
+  {
+    name: "Chirag Bang",
+    text: "Amlgo Labs is a hub of innovation and growth. Working here means collaborating with brilliant minds on cutting-edge projects that challenge and inspire. The supportive culture and focus on learning make it the perfect place to grow professionally and make a real impact.",
+    position: "Software Engineer",
+    image: "/employees/chirag.jpeg",
+  },
+
   {
     name: "Krishna Singh",
     text: "I truly enjoy the work culture at Amlgolabs. The positive environment and supportive team make every day more productive and fulfilling. Working alongside such talented individuals creates a seamless experience, and the director's knowledge and kindness make a lasting impact.",
     position: "Software Engineer",
     image: "/employees/krishna.png",
   },
+
+
   {
-    name: "Vijay Soni",
-    text: "Working at Amlgo Labs for the past year has been a great experience. The supportive management and employee-friendly policies create a positive work environment. Contributions are valued, and feedback fosters continuous growth. Looking forward to a long-term association!",
-    position: "Assistant Vice President-Identity Platform",
-    image: "/employees/vijay.png",
+    name: "Tanishq Singh",
+    text: "Working at Amlgo Labs has been an incredible experience. The company fosters a supportive and collaborative environment where I feel empowered to learn and grow. I've had the opportunity to work on challenging projects and contribute to meaningful solutions.",
+    position: "Digital Marketer",
+    image: "/employees/tanishq.jpeg",
+
   },
+
+
+
+
+
+
+
+
+
+
 ];
 
 const EmployeeTestimonials = () => {

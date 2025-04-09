@@ -72,8 +72,8 @@ const page = () => {
         //   />
         <>
             <IndustryHero2
-                title="Gen-AI & Data-Driven Automotive Innovation"
-                description="From Design to Delivery, we leverage Gen-AI and Data Analytics to create vehicles tailored for the rapidly growing industry."
+                title="GenAI & Data-Driven Automotive Innovation"
+                description="From Design to Delivery, we leverage GenAI and Data Analytics to create vehicles tailored for the rapidly growing industry."
                 buttonText="Let's Talk"
                 buttonLink="/contact-us"
                 backgroundImage="/AutomotiveBanner.png" // Provide the correct image path

@@ -36,8 +36,6 @@ const page = () => {
       title: "Reducing Fraud in Insurance: An Anti-Fraud Model",
       image: "/businesses/insurance/casestudy2.png",
       link: "/coming-soon"
-
-      // description: "Empowering banks with seamless MAS610 reporting and compliance through robust solutions.",
     },
     {
       id: 3,

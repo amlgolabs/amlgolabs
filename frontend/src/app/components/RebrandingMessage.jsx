@@ -260,7 +260,7 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
       {/* Floating Message */}
       <motion.div
         className={styles.floatingMessage}
-        onClick={() => setIsPopupOpen(true)}
+        onMouseEnter={() => setIsPopupOpen(true)}
         animate={{
           x: isFloatingOut ? "150%" : "0%",
           opacity: isFloatingOut ? 0 : 1,
@@ -281,7 +281,7 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
       </motion.div>
 
       {/* Slide In / Out Button */}
-      <div className={styles.controlButtons}>
+      {/* <div className={styles.controlButtons}>
         {!isFloatingOut ? (
           <button
             onClick={() => setIsFloatingOut(true)}
@@ -298,7 +298,27 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
   <Image src="/info.png" height={24} width={24} alt="info" />
 </button>
         )}
-      </div>
+      </div> */}
+
+{/* <div className={styles.controlButtons}>
+  <button
+    onClick={() => setIsFloatingOut(!isFloatingOut)}
+    className={styles.inOutButton}
+  >
+    <Image src="/info.png" height={24} width={24} alt="info" />
+  </button>
+</div> */}
+
+<div className={styles.controlButtons}>
+  {isFloatingOut && (
+    <button
+      onClick={() => setIsFloatingOut(false)}
+      className={styles.inOutButton}
+    >
+      <Image src="/info.png" height={24} width={24} alt="info" />
+    </button>
+  )}
+</div>
 
       {/* Popup Modal */}
       <AnimatePresence>
@@ -317,9 +337,18 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
             >
-              <button className={styles.closeButton} onClick={() => setIsPopupOpen(false)}>
+              {/* <button className={styles.closeButton} onClick={() => setIsPopupOpen(false)}>
                 <IoClose />
-              </button>
+              </button> */}
+              <button
+  className={styles.closeButton}
+  onClick={() => {
+    setIsFloatingOut(true);
+    setIsPopupOpen(false);
+  }}
+>
+  <IoClose />
+</button>
               <h2>We have Upgraded!</h2>
               <p>Amlgo Labs is now rebranded for a smarter, sleeker, and more innovative experience.</p>
             </motion.div>

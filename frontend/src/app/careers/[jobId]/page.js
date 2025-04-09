@@ -25,15 +25,32 @@ import JobDescription from "../JobDescription";
 import { jobs } from "../data/jobs";
 
 const JobDetails = () => {
-  const { jobId } = useParams(); // jobId is actually your slug (like 'data-engineer')
+  // const { jobId } = useParams(); // jobId is actually your slug (like 'data-engineer')
 
+  // // Find the job matching the slug
+  // const job = jobs.find((j) => 
+  //   j.title.toLowerCase().replace(/\s+/g, '-') === jobId
+  // );
+
+  // if (!job) {
+  //   return <div>Job not found!</div>; // Handle if no matching job found
+  // }
+
+
+  const slugify = (str) => 
+    str.toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')       // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')   // Remove all non-word chars
+      .replace(/\-\-+/g, '-');    // Replace multiple - with single -
+  
+  const { jobId } = useParams();
+  
   // Find the job matching the slug
-  const job = jobs.find((j) => 
-    j.title.toLowerCase().replace(/\s+/g, '-') === jobId
-  );
-
+  const job = jobs.find((j) => slugify(j.title) === jobId);
+  
   if (!job) {
-    return <div>Job not found!</div>; // Handle if no matching job found
+    return <div>Job not found!</div>;
   }
 
   return (
