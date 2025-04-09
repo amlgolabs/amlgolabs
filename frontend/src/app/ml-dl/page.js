@@ -99,10 +99,8 @@ const page = () => {
       title="Real-World Applications of AI in Logistics"
       description="AI is transforming logistics by turning supply chains into data-driven ecosystems, optimizing operations, reducing costs, and improving customer satisfaction through automation and predictive analytics."
       imageSrc="/capabilities/ml-dl/blog.png"
-      button1Link="/" // Update with actual blog route
-      button2Link="/" // Update with actual insights route
+      button1Link="/documents/Ai_Logistics.pdf" 
       button1Text="Read Now"
-      button2Text="Explore More"
     />
 
 <BlackCta heading = "Struggling to stay ahead? Let’s turn your challenges into opportunities with Machine Learning and Deep Learning AI that thinks, learns, and grows with you. Begin today!"

@@ -107,7 +107,7 @@
   }
   
   .activeDot {
-    background: #ffcc00;
+    background: var(--blue);
     transform: scale(1.5);
   }
   
