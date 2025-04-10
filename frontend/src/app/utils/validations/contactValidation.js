@@ -15,9 +15,13 @@ const contactSchema = Joi.object({
     'string.min': 'Message must be at least 5 characters long',
     'any.required': 'Message is required',
   }),
-  phone: Joi.string().pattern(/^\+?[1-9]\d{1,14}$/).optional().messages({
-    'string.pattern.base': 'Phone must be a valid phone number (e.g., +1234567890)',
-  }),
+  phone: Joi.string()
+    .pattern(/^(\+?\d{1,15}|0\d{9,14})$/)
+    .required()
+    .messages({
+      'string.pattern.base': 'Phone must be a valid phone number (e.g., +1234567890 or 0123456789)',
+      'any.required': 'Phone is required',
+    }),
 });
 
 module.exports = { contactSchema };

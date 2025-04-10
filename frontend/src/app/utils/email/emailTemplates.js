@@ -1,4 +1,5 @@
 // emailTemplates.js
+import config from "@/app/config/config";
 const templates = {
     contactDetailsToAdmin: {
         source: "noreply@amlgolabs.com",
@@ -21,19 +22,16 @@ We look forward to assisting you.
       
 Best regards,  
 The Amlgo Labs Team`
-    }
-    ,
+    },
     jobApplicationToAmlgoLabs: {
         source: "noreply@amlgolabs.com",
         subject: (name, email, phone, coverLetter, savedJobId, jobId, jobTitle) =>
             `New application received for the position ${jobTitle} [${jobId}]`,
         body: (name, email, phone, coverLetter, savedJobId, jobId,
             jobTitle,) =>
-            `Dear Team,\n\nA new job application has been received :\n\n` +
-            `Job Opening: ${jobTitle} [${jobId}]\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nResume URL: ${process.env.NEXT_PUBLIC_BASE_URL}/api/view-resume/${savedJobId}\nCover Letter: ${coverLetter}\n\n` +
-            `Please review the application.\n\nBest regards,\nAmlgo Labs System`,
-    },
 
+            `Job Opening: ${jobTitle} [${jobId}]\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nResume URL: ${config.endpoint}/api/view-resume/${savedJobId}\nCover Letter: ${coverLetter}\n\n`
+    },
     jobApplicationThanks: {
         source: "jobs@amlgolabs.com",
         subject: "Thanks for submitting your application for a job at Amlgo Labs",
@@ -46,11 +44,9 @@ The Amlgo Labs Team`
                 <p>Sincerely,<br>HR Manager<br>Amlgo Labs</p>
             `
             },
-
         }),
     }
 };
-
 
 const getEmailTemplate = (templateName, ...args) => {
     const template = templates[templateName];
