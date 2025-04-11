@@ -53,6 +53,9 @@ const IndustryHero2 = ({ title, description, buttonText, buttonLink, backgroundI
           <p>{description}</p>
           <Link href={buttonLink} className={styles.buttonLink}>
             <button className={styles.button}>{buttonText}</button>
+          </Link> 
+          <Link href={buttonLink}>
+            <button className="globalButton">{buttonText}</button>
           </Link>
         </div>
       </div>

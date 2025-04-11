@@ -76,6 +76,34 @@ export default function ContactForm() {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post("/api/contact-us", formData);
+  //     console.log("Response:", response.data);
+  //     setFormData({ name: "", email: "", phone: "", message: "" });
+  //   } catch (error) {
+  //     console.error("Error sending message:", error);
+  //   }
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post("/api/contact-us", formData);
+  //     console.log("Response:", response.data);
+  //     setFormData({ name: "", email: "", phone: "", message: "" });
+  //     setSnackbarMessage("Message sent successfully!");
+  //     setSnackbarSeverity("success");
+  //     setOpenSnackbar(true);
+  //   } catch (error) {
+  //     console.error("Error sending message:", error);
+  //     setSnackbarMessage("Failed to send message. Please try again.");
+  //     setSnackbarSeverity("error");
+  //     setOpenSnackbar(true);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
