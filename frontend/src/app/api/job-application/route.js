@@ -9,11 +9,11 @@ import asyncHandler from '@/app/utils/asyncHandler/asyncHandler';
 import uploadFile from '@/app/utils/uploadFile';
 import config from '@/app/config/config';
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 
 export const POST = asyncHandler(async (req) => {
@@ -27,6 +27,9 @@ export const POST = asyncHandler(async (req) => {
   const cv = formData.get('cv');
   const jobId = formData.get('id');
   const jobTitle = formData.get('title');
+
+  console.log('Job ID:', jobId);
+  console.log('Job Title:', jobTitle);
 
   const { error } = jobApplicationSchema.validate(
     { name, email, phone, coverLetter, cv, jobId, jobTitle },

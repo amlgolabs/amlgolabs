@@ -10,6 +10,8 @@ const JobDescription = ({ job }) => {
         phone: "",
         coverLetter: "",
         cv: null,
+        id: job.id,
+        title: job.title,
         agreement: false,
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,7 +24,7 @@ const JobDescription = ({ job }) => {
             [name]: type === "checkbox" ? checked : value,
         }));
     };
-    
+
 
     const handleFileChange = (e) => {
         setFormData((prev) => ({
