@@ -7,12 +7,14 @@ import { createEmailParams } from '@/app/utils/email/emailParams';
 import { jobApplicationSchema } from '@/app/utils/validations/jobApplicationValidation';
 import asyncHandler from '@/app/utils/asyncHandler/asyncHandler';
 import uploadFile from '@/app/utils/uploadFile';
+import config from '@/app/config/config';
 
 export const config = {
   api: {
     bodyParser: false,
   },
 };
+
 
 export const POST = asyncHandler(async (req) => {
   await connectDB();
