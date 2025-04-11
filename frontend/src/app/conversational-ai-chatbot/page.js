@@ -58,7 +58,7 @@ const page = () => {
         <DemoVideo 
   src="/solutions/ai-chatbot/demo.mp4"
   heading="Amlgo Labs' Custom AI Chatbot"
-  description="Experience the power of Amlgo Labs’ cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
+  description="Experience the power of Amlgo Labs' cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
   poster="/images/video-poster.jpg" // optional
 />
         <SolutionsSteps
