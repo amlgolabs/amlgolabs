@@ -9,11 +9,11 @@ import asyncHandler from '@/app/utils/asyncHandler/asyncHandler';
 import uploadFile from '@/app/utils/uploadFile';
 import config from '@/app/config/config';
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 
 export const POST = asyncHandler(async (req) => {
