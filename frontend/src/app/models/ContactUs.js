@@ -1,3 +1,4 @@
+// models/ContactUs.js
 import mongoose from 'mongoose';
 
 const contactUsSchema = new mongoose.Schema({

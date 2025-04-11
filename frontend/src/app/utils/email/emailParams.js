@@ -1,4 +1,4 @@
-// emailParams.js
+// utils/email/emailParams.js
 const { getEmailTemplate } = require("./emailTemplates");
 
 const createEmailParams = (userEmail, userName, templateName = "confirmation", customSource = null, cc = null, ...templateArgs) => {

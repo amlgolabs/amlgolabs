@@ -1,3 +1,4 @@
+// utils/validations/jobApplicationValidation.js
 const Joi = require('joi');
 
 const jobApplicationSchema = Joi.object({

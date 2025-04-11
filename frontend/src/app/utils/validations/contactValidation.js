@@ -1,3 +1,4 @@
+// utils/validations/contactValidation.js
 const Joi = require('joi');
 
 const contactSchema = Joi.object({
@@ -17,10 +18,9 @@ const contactSchema = Joi.object({
   }),
   phone: Joi.string()
     .pattern(/^(\+?\d{1,15}|0\d{9,14})$/)
-    .required()
+    .optional()
     .messages({
       'string.pattern.base': 'Phone must be a valid phone number (e.g., +1234567890 or 0123456789)',
-      'any.required': 'Phone is required',
     }),
 });
 

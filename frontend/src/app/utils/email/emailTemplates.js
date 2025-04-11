@@ -1,13 +1,18 @@
-// emailTemplates.js
+// utils/email/emailTemplates.js
 import config from "@/app/config/config";
 const templates = {
     contactDetailsToAdmin: {
         source: "noreply@amlgolabs.com",
-        subject: "New Contact Form",
+        subject: "New Contact Form Submission",
         body: (name, email, phone, message) =>
-            `Dear Team,\n\nA new contact form submission has been received:\n\n` +
+            `Dear ${name},\n\n` +
+            `Thank you for reaching out to Amlgo Labs.\n\n` +
+            `Your query has been submitted successfully. Our team will review the details and get back to you shortly. ` +
+            `In the meantime, if you have any additional information to share, feel free to email us at info@amlgolabs.com.\n\n` +
+            `Here are the details you provided:\n\n` +
             `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}\n\n` +
-            `Please review and respond accordingly.\n\nBest regards,\nAmlgo Labs System`
+            `We appreciate you contacting us and will be in touch soon.\n\n` +
+            `Best regards,\nAmlgo Labs Team`
     },
     contactUsThanks: {
         source: "info@amlgolabs.com",

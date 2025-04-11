@@ -1,3 +1,4 @@
+// api/contact-use.js
 import dbConnect from '@/app/lib/mongodb';
 import ContactUs from '@/app/models/ContactUs';
 import sesClient from '@/app/config/aws/email/ses';
@@ -27,11 +28,11 @@ export const POST = asyncHandler(async (req) => {
 
   // Send contact details to Team(admin)
   const adminParams = createEmailParams(
-    'info@amlgolabs.com', // To: info@amlgolabs.com
-    name,                 // userName
+    email,                   // To
+    name,                    // userName
     'contactDetailsToAdmin', // templateName
     null,                    // Source (uses template default)
-    email,                 //     CC
+    'info@amlgolabs.com',                 //     CC
     email,                // For template
     phone,                // For template
     message               // For template

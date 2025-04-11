@@ -1,3 +1,4 @@
+// JobApplication.js
 import mongoose from 'mongoose';
 
 const jobApplicationSchema = new mongoose.Schema({
