@@ -3,24 +3,26 @@ import axios from "axios"; // Import Axios
 import styles from "../styles/pages/Components/Careers/JobDescription.module.css";
 import toast from "react-hot-toast";
 
-const JobDescription = ({job}) => {
+const JobDescription = ({ job }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
         coverLetter: "",
         cv: null,
+        agreement: false,
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const fileInputRef = useRef(null);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, type, checked } = e.target;
         setFormData((prev) => ({
             ...prev,
-            [name]: value,
+            [name]: type === "checkbox" ? checked : value,
         }));
     };
+    
 
     const handleFileChange = (e) => {
         setFormData((prev) => ({
@@ -94,10 +96,10 @@ const JobDescription = ({job}) => {
                         <li>Collaborate with backend developers to integrate APIs and data sources.</li>
                     </ul> */}
                     <ul className={styles.responsibilitiesList}>
-  {job.responsibilities.map((item, index) => (
-    <li key={index}>{item}</li>
-  ))}
-</ul>
+                        {job.responsibilities.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
 
@@ -119,6 +121,20 @@ const JobDescription = ({job}) => {
 
                     <label className={styles.label}>Upload CV:</label>
                     <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleFileChange} ref={fileInputRef} required className={styles.input} />
+
+                    <div className={styles.checkboxContainer}>
+                        <input
+                            type="checkbox"
+                            name="agreement"
+                            checked={formData.agreement}
+                            onChange={handleChange}
+                            required
+                            className={styles.checkbox}
+                        />
+                        <label className={styles.checkboxLabel}>
+                            By using this form you agree with the storage and handling of your data by this website.
+                        </label>
+                    </div>
 
                     <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                         {isSubmitting ? "Submitting..." : "Submit Application"}

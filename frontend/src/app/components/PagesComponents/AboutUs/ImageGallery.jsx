@@ -77,7 +77,7 @@ const ImageGallery = () => {
                     <li>Thrives in a supportive and forward-thinking team</li>
                 </ul>
                 <Link href="/careers">
-                <button className={styles.joinButton}>Join Now</button>
+                <button className="globalButton">Join Now</button>
                 </Link>
             </div>
             {/* <div className={styles.masonryGrid}>

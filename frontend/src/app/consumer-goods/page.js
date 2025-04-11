@@ -17,10 +17,10 @@ export const metadata = {
 const page = () => {
 
   const impactData = [
-    { percentage: "40%", description: "Improved working capital through supply chain modernization." },
+    { percentage: "40%", description: "Improvement in working capital through supply chain modernization." },
     { percentage: "15%", description: "Higher profit margins achieved with revenue management tools." },
-    { percentage: "62%", description: "Boost customer satisfaction and loyalty through proactive support." },
-    { percentage: "91%", description: "Strategic Projects Delivered throughout the years." },
+    { percentage: "62%", description: "Boost in customer satisfaction and loyalty through proactive support." },
+    { percentage: "91%", description: "Increase in Strategic Projects Delivered throughout the years." },
   ];
 
 
@@ -69,7 +69,7 @@ const page = () => {
   <IndustrySectors/>
 
   <NumberData2 
-      title="We create meaningful impact by combining cutting-edge technology with unparalleled industry expertise." 
+      title="We create meaningful impact for our clients by combining cutting-edge technology with unparalled industry expertise." 
       data={impactData} 
     />
    <SingleBlog

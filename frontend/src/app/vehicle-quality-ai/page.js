@@ -7,11 +7,18 @@ import ImplementationFramework from '../components/PagesComponents/Solutions/veh
 import KeyResultsMetrics from '../components/PagesComponents/Solutions/vehicle-quality/KeyResultsMetrics'
 import Conclusion from '../components/PagesComponents/Solutions/vehicle-quality/Conclusion'
 
+// export const metadata = {
+//   title: "AI-Powered Vehicle Quality Inspection - Amlgo Labs",
+//   description: "Enhance vehicle quality with AI-powered inspection solutions by Amlgo Labs. Automate defect detection, improve accuracy, and optimize production efficiency.",
+//   keywords: "AI-powered vehicle inspection, Amlgo Labs, defect detection, quality control, automotive AI, vehicle quality assurance, automated inspection, production efficiency, machine learning, computer vision, smart manufacturing, automotive innovation, AI-driven quality checks",
+// };
+
 export const metadata = {
   title: "AI-Powered Vehicle Quality Inspection - Amlgo Labs",
   description: "Enhance vehicle quality with AI-powered inspection solutions by Amlgo Labs. Automate defect detection, improve accuracy, and optimize production efficiency.",
-  keywords: "AI-powered vehicle inspection, Amlgo Labs, defect detection, quality control, automotive AI, vehicle quality assurance, automated inspection, production efficiency, machine learning, computer vision, smart manufacturing, automotive innovation, AI-driven quality checks",
+  keywords: "ai prediction, ai learning, ai analysis, data analysis ai, ai system, ai data analytics, ai for data analytics, ai quality inspection, ai and machine learning, ai for data analysis, analysis ai, advanced ai, ai and data analytics, ai machine learning, predictive ai, ai and ml, ai for quality assurance, ai for data, data analytics and ai, ai deep learning, learning about ai, machine learning for data analysis, ai qa testing, ai & machine learning, ai data insights, ai driven data analytics, ai predictive modeling, predictive analysis ai, ml learning, data analytics with ai, ai usage, learning with ai, data analysis and ai, ai for learning, ai for qa testing, ai based data analytics, ai for data quality, ai for data collection, ai management, ai and data analysis, qa and ai, ai powered data analytics, ai and deep learning, learning nlp, data engineering for machine learning, predictive ai models, data analytics & ai, ai models for prediction, ai for machine learning, cloud for ai, cloud services for machine learning, ai ml predictive analytics, analytics with ai, ai in quality management, ai and learning, ai with machine learning, ai predictive, ai of ai, ai and data quality, data analysis for machine learning, machine learning with ai, machine learning in data analysis, ai and manufacturing industry, data analytics in ai, data analysis with machine learning, ai learning process, ai in manufacturing process, ai powered system, data analysis in ai, ai vendor, ai with deep learning, ai & data analytics, advanced ai algorithms, quality assurance machine learning, ml data analysis, ai solutions in manufacturing, deep learning in data analytics, ai learning data, ai in reporting, deep learning data analytics, ai analyze, predictive analytics using ai, data analytics deep learning, deep learning for data analytics"
 };
+
 
 const page = () => {
     const solutionsData = [
@@ -44,9 +51,10 @@ const page = () => {
   return (
     <div>
         <CaseStudy/>
-        <Summary/>
+        <Summary />
         <ProblemStatement/>
         <SolutionsBoxes 
+        
   title="Our Solutions" 
   description="To address these challenges, Amlgo Labs developed a cloud-based AI solution that seamlessly integrates QA datasets and delivers predictive analytics to enhance defect prevention. This comprehensive system includes: " 
   solutions={solutionsData} 

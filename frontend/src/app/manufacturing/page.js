@@ -17,10 +17,10 @@ export const metadata = {
 const page = () => {
 
   const impactData = [
-    { percentage: "15%", description: "Estimated savings through assembly line diagnostics " },
+    { percentage: "15%", description: "Increase in estimated savings through assembly line diagnostics " },
     { percentage: "25%", description: "Reduction of the stockout index rate " },
     { percentage: "58%", description: "Increase in the speed of decision-making " },
-    { percentage: "96%", description: "Strategic Projects Delivered throughout the years" },
+    { percentage: "96%", description: "Increase in Strategic Projects Delivered throughout the years" },
   ];
 
   const technologies = [

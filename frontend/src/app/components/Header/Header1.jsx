@@ -222,7 +222,7 @@ const Header1 = () => {
                         </div>
                         <div className={styles.headerBlogLink}>
                           <h3>Featured Resource</h3>
-                          <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
+                          <Image height={200} width={350} src="/header/headerPartner.png" alt="casestudy" />
                           <h4>Partnering with Leaders empowering success.</h4>
                           {/* <Link href="/partners">Read More</Link> */}
                           <Link href="/about-us" onClick={closeDropdown}>
@@ -646,9 +646,11 @@ const Header1 = () => {
                   </div>
                   <div className={styles.headerBlogLink}>
                     <h3>Featured Resource</h3>
-                    <Image height={200} width={350} src="/HeaderPartner.jpeg" alt="casestudy" />
+                    <Image height={200} width={350} src="/Header/headerPartner.png" alt="casestudy" />
                     <h4>Partnering with Leaders empowering success.</h4>
-                    <Link onClick={closeDropdown} href="/partners">Read More</Link>
+                    <Link onClick={closeDropdown} href="/partners">
+                    <button className="globalButton">Learn More</button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -834,7 +836,7 @@ const Header1 = () => {
 
           {/* OTHER SECTIONS (Businesses, Partners, Careers) */}
           <ListItem className={styles.mobileParentLink} button onClick={() => handleDropdownToggle("Businesses")}>
-            <div className={styles.textWithIcon}>Businesses <ArrowDropDownIcon /></div>
+            <div className={styles.textWithIcon}>Industries <ArrowDropDownIcon /></div>
           </ListItem>
           <Collapse in={activeDropdown === "Businesses"} timeout="auto" unmountOnExit>
             <div className={styles.mobileDropdown}>

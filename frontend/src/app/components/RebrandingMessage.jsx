@@ -276,7 +276,7 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
           <p>is now</p>
         </div>
         <div className={styles.newLogo}>
-          <Image src="/logo/logo21march.png" height={80} width={80} alt="New Brand" />
+          <Image src="/logo/logo21march.png" height={200} width={200} alt="New Brand" />
         </div>
       </motion.div>
 

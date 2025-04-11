@@ -65,21 +65,7 @@
     height: auto;
 }
 
-.innerLeft button {
-    background-color: var(--light);
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 50px;
-}
 
-.innerLeft button:hover {
-    background-color: var(--blue);
-
-}
 
 
 /* Reset skew for inner text */
@@ -116,24 +102,8 @@
 }
 
 /* Buttons */
-.rightContent button {
-    transform: skewX(10deg);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    background: var(--light);
-    color: #333;
-    font-weight: bold;
-}
 
-.rightContent button:hover {
-    background: var(--blue);
-    color: #fff;
-    /* transform: scale(1.05); */
-}
+
 
 .line{
     width: 100%;

@@ -22,7 +22,7 @@
     font-weight: 800;
     letter-spacing: 2px;
 }
-.contentContainer button {
+/* .contentContainer button {
     background-color: #00e5ff;
     color: var(--dark);
     border: none;
@@ -38,7 +38,7 @@
     background-color: #00c4e0;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 229, 255, 0.4);
-}
+} */
 
 @media (max-width: 768px) {
     .mainContainer {

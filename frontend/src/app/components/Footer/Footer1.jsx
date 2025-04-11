@@ -50,6 +50,8 @@ const Footer1 = () => {
           <h3>About Us</h3>
           <a className={styles.footerLink} href="/about-us">Company Info</a>
           <a className={styles.footerLink} href="/careers">Careers</a>
+          <a className={styles.footerLink} href="/contact-us">Contact Us</a>
+
           {/* <a className={styles.footerLink} href="/team">Our Team</a> */}
           {/* <a className={styles.footerLink} href="/news">News & Updates</a> */}
         <Link className={styles.footerLink} href="/privacy-policy">Privacy Policy</Link>
@@ -58,7 +60,7 @@ const Footer1 = () => {
 
         <div className={styles.footerColumn}>
           <h3>Offerings</h3>
-         <Link className={styles.footerLink} href="/generative-ai">Genrative AI</Link>
+         <Link className={styles.footerLink} href="/generative-ai">Generative AI</Link>
               <Link className={styles.footerLink} href="/llms">LLMs</Link>
               <Link className={styles.footerLink} href="/genai-agents">GenAI Agents</Link>
               <Link className={styles.footerLink} href="/computer-vision">Computer Vision</Link>

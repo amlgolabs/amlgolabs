@@ -81,8 +81,8 @@ link1: "/contact-us",
 
 
       const impactData = [
-        { percentage: "1.5x", description: "Health execs predict rise in home and virtual care " },
-        { percentage: "87%", description: "projects delivered on pharma & life sciences" },
+        { percentage: "1.5x", description: "Increase in Healthcare execs who predict rise in home and virtual care " },
+        { percentage: "87%", description: "Increase in Projects delivered on Pharma & Life Sciences" },
         { percentage: "96%", description: "Biopharma executives recognize the competitive edge gained through data transparency " },
        
       ];

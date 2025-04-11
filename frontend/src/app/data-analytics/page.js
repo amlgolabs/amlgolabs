@@ -10,10 +10,11 @@ import CaseStudyList from '../components/PagesComponents/CapabilitiesPages/CaseS
 import CtaDark from '../components/PagesComponents/CapabilitiesPages/CtaDark';
 
 export const metadata = {
-  title: "Data Analytics - Amlgo Labs",
-  description: "Boost business growth with Amlgo Labs data analytics solutions. Leverage AI, machine learning, & big data insights for smarter, data-driven decisions.",
-  keywords: "Amlgo Labs, data analytics, AI solutions, machine learning, big data, business intelligence, data-driven decisions, predictive analytics, cloud data services, data engineering, digital transformation, AI consulting, data science, enterprise AI, automated insights, data strategy",
+  title: "AI & Data Analytics Solutions – Amlgo Labs",
+  description: "Drive smarter decisions with AI-driven Data Analytics by Amlgo Labs. Leverage Power BI, predictive analytics, and advanced AI tools to transform your business data into actionable insights.",
+  keywords: "ai data analytics, ai for data analytics, data analysis ai, ai and data analytics, business data analytics, ai driven data analytics, data analytics for business, ai for data analysis, data analytics and ai, data analytics power bi, about data analytics, business and data analytics, data analytics with power bi, data analytics with ai, ai data insights, ai for data, power bi for data analytics, advanced data analytics, data analysis solutions, power bi for data analysis, as data analytics, data analysis and ai, business with data analytics, data analytics & ai, ai for predictive maintenance, ai and data analysis, business analytics and data analytics, ai data analytics tools, data informed decision making, data analytics using power bi, business in data analytics, power bi ai, data analysis power bi, power bi and data analytics, data analytics and power bi, data analytics using tableau, data analysis with power bi, data analytics and business, business data analytics courses, machine learning for data analysis, ai based data analytics, data analytics in ai, latest technology in data analytics, data analytics in power bi, data and data analytics, data analytics in energy sector, analytics with ai, business & data analytics, ai & data analytics, cloud for data analytics, best data analytics, make data analysis, data analytics path, power bi and ai, transform data into actionable insights, data analysis in ai, prerequisites for data analytics, data analytics business analytics, tools data analytics, ai predictive, predictive analytics using ai, ai & data, data analytics in decision making, microsoft azure for data analytics, power bi and predictive analytics, data analysis operations, data analytix, data of business, business of data, advanced analytics ai, devops for data analytics, data analysis advanced, data analysis in it, new data analytics technology, business case data analytics."
 };
+
 
 
 const page = () => {
@@ -72,10 +73,10 @@ const page = () => {
       },
       {
           id: 4,
-          title: "AI and Analytics Are Helping to Cure At-Risk Individuals",
-          image: "/capabilities/data-analytics/casestudy4.jpg",
+          title: "5 Top Open-Source BI Tools to Empower Your Analytics Journey",
+          image: "/capabilities/data-analytics/casestudy4.png",
 
-          description: "AI and analytics are revolutionizing healthcare by identifying and curing at-risk individuals. Through predictive models and data-driven insights, these technologies enable early intervention, personalized treatments, and improved outcomes, transforming lives with precision and efficiency.",
+          description: "In today's data-driven world, businesses are constantly seeking innovative ways to harness the power of their data for strategic decision-making. Business Intelligence (BI) tools play a pivotal role in this endeavor, providing organizations with the means to visualize, analyze, and derive insights from their vast troves of data.",
           link: "/coming-soon",
       },
   ];

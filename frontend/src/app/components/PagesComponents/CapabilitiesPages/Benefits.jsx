@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion"; // Import useReducedMotion
 import styles from "../../../styles/pages/Components/CapabilitiesPages/Benefits.module.css";
 
 // Floating animation (up and down)
@@ -11,9 +11,9 @@ const floatingAnimation = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 // Card entrance animation (staggered)
@@ -21,30 +21,35 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2, delayChildren: 0.1 }
-  }
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+  },
 };
 
 // Individual card animation (entry + hover)
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.9 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" },
   },
-  hover: { 
-    scale: 1.1, 
+  hover: {
+    scale: 1.1,
     rotate: 0,
-    boxShadow: "0px 12px 25px rgba(0, 229, 255, 0.4)", 
-    transition: { duration: 0.3 }
-  }
+    boxShadow: "0px 12px 25px rgba(0, 229, 255, 0.4)",
+    transition: { duration: 0.3 },
+  },
 };
 
 const Benefits = ({ title, benefitsData }) => {
+  const shouldReduceMotion = useReducedMotion(); // Check for reduced motion preference
+
+  // Conditionally apply floating animation based on reduced motion preference
+  const appliedFloatingAnimation = shouldReduceMotion ? {} : floatingAnimation;
+
   return (
-    <motion.div 
+    <motion.div
       className={styles.container}
       initial="hidden"
       whileInView="visible"
@@ -58,11 +63,11 @@ const Benefits = ({ title, benefitsData }) => {
             key={index}
             className={styles.card}
             variants={cardVariants}
-            whileHover="hover"
+            whileHover={shouldReduceMotion ? {} : "hover"} // Disable hover animation if reduced motion
           >
-            <motion.div 
-              className={styles.iconWrapper} 
-              variants={floatingAnimation}
+            <motion.div
+              className={styles.iconWrapper}
+              {...appliedFloatingAnimation} // Apply floating animation conditionally
             >
               <FaCheckCircle className={styles.icon} />
             </motion.div>

@@ -81,7 +81,7 @@ const page = () => {
                 backgroundImage="/capabilities/dataengineeringbanner4.png" // Provide the correct image path
             />
         <NumberData2 
-      title="Transform Your Data into Actionable Insights with Seamless Access" 
+      title="Amlgo Labs Helps You Transform Your Data Into Actionable Insights with Seamless Access Resulting in Improvements in the Following" 
       data={impactData} 
     />
 <Benefits title="Key Advantages" benefitsData={benefitsList} />      

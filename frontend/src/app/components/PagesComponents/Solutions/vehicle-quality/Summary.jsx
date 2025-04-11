@@ -4,7 +4,7 @@ import styles from '../../../../styles/pages/Components/Solutions/vehicle-qualit
 
 const Summary = () => {
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} id = "market-analysis">
       <div className={styles.contentContainer}>
         <div className={styles.imageWrapper}>
           <Image 

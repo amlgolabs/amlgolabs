@@ -419,6 +419,8 @@
   border-radius: 8px;
   margin-bottom: 20px;
   width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* .headerBlogLink a {

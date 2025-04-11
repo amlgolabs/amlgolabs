@@ -97,5 +97,11 @@
     .numberItem {
         min-width: 160px; /* Further adjustment for smaller screens */
         padding: 15px;
+        border-left: none;
+        border-bottom: 1px solid black;
+    }
+
+    .numberItem:first-child{
+        border-bottom: 1px solid black;
     }
 }

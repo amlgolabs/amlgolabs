@@ -14,7 +14,7 @@ const CareerBanner = () => {
       <div className={styles.contentContainer}>
         <h1>Join Amlgo Labs</h1>
         <p>Amlgo Labs, with teams in the USA, Bangalore, and Gurugram, specializes in solving complex data analytics challenges. Driven by innovation and a passion for success, we push boundaries to shape the future. Join us!</p>
-        <button onClick={handleClick}>Explore Jobs</button>
+        <button className="globalButton" onClick={handleClick}>Explore Jobs</button>
       </div>
     </div>
   )

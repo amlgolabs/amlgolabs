@@ -8,7 +8,7 @@ const BlackCta = ({heading, buttonText}) => {
         <div className={styles.contentContainer}>
             <h3>{heading}</h3>
             <Link href="/contact-us">
-            <button>{buttonText}</button>
+            <button className='globalButtonBlack'>{buttonText}</button>
             </Link>
         </div>
     </div>

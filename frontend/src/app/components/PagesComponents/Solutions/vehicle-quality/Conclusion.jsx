@@ -12,15 +12,15 @@ const Conclusion = ({ title, paragraphs, buttonText, imageUrl, imageAlt }) => {
           <p key={index}>{paragraph}</p>
         ))}
         <Link href="/contact-us">
-        <button className={styles.ctaButton}>{buttonText}</button>
+          <button className={styles.ctaButton}>{buttonText}</button>
         </Link>
       </div>
       <div className={styles.imageWrapper}>
         <Image
           src={imageUrl}
           alt={imageAlt}
-          width={500}
-          height={350}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className={styles.image}
         />
       </div>

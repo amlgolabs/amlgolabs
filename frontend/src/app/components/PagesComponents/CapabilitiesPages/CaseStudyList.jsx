@@ -147,7 +147,7 @@ const CaseStudyList = ({ caseStudies }) => {
             />
             <p className={styles.description}>{selectedCase.description}</p>
             <button
-  className={styles.readMore}
+  className="globalButton"
   onClick={() => window.open(selectedCase.link, "_blank")}
 >
   Read Now

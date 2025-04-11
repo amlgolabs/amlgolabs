@@ -51,6 +51,34 @@
 // export default Capabilities;
 
 
+// import React from "react";
+// import styles from "../../styles/pages/Components/Partners/Capabilities.module.css";
+
+// const Capabilities = ({ data, title, description }) => {
+//   return (
+//     <div className={styles.mainContainer}>
+//       <div className={styles.headingContainer}>
+//         <h2 className={styles.heading}>{title}</h2>
+//         <p className={styles.subheading}>{description}</p>
+//       </div>
+
+//       <div className={styles.gridContainer}>
+//         {data.map((capability, index) => (
+//           <div key={index} className={styles.card}>
+//             <div className={styles.cardContent}>
+//               <h3 className={styles.cardTitle}>{capability.title}</h3>
+//               <p className={styles.cardDescription}>{capability.description}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Capabilities;
+
+
 import React from "react";
 import styles from "../../styles/pages/Components/Partners/Capabilities.module.css";
 
