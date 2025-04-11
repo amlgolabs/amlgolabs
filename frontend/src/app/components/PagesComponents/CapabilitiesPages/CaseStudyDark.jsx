@@ -7,22 +7,22 @@ const caseStudies = [
   {
     id: 1,
     image: '/capabilities/data-engineering/FinanceCaseStudy.jpg',
-    title: 'Streamlining Financial Fraud Detection with Advanced Data Engineering',
-    link: '/coming-soon'
+    title: 'Big Data Engineering Massive Parallel Processing',
+    link: '/documents/Big Data Engineering  Massive Parallel Processing.pdf'
   },
   {
     id: 2,
     image: '/capabilities/data-engineering/HealthCareCaseStudy.jpg',
 
-    title: 'Enhancing Healthcare Analytics with Scalable Data Lakehouses',
-    link: '/coming-soon'
+    title: 'Lake is the New Address of Data',
+    link: '/documents/lake-is-the-new-address-of-data.pdf'
   },
   {
     id: 3,
     image: '/capabilities/data-engineering/RetailCaseStudy.jpg',
 
     title: 'Optimizing Retail Supply Chains with Real-Time Data Pipelines',
-    link: '/coming-soon'
+    link: '/documents/Optimizing Retail Supply Chains with Real-Time Data Pipelines.pdf'
   }
 ];
 

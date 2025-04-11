@@ -101,7 +101,7 @@ const DemoVideo = ({ src, heading, description, poster }) => {
   }, []);
 
   return (
-    <section className={styles.demoVideoSection}>
+    <section className={styles.demoVideoSection} id="demo">
       <div className={styles.container}>
         <div className={styles.videoCard}>
           <video

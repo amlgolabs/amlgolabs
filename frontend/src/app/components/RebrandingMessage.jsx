@@ -324,12 +324,15 @@ const RebrandingMessage = ({ message = "Welcome to our new identity!" }) => {
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
-            className={styles.overlay}
-            onClick={() => setIsPopupOpen(false)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+          className={styles.overlay}
+          onClick={() => {
+            setIsPopupOpen(false);
+            setIsFloatingOut(true); // Add this to make floating message disappear
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
             <motion.div
               className={styles.popup}
               onClick={(e) => e.stopPropagation()}

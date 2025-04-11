@@ -227,12 +227,13 @@ export default function ContactForm() {
           <div className={styles.clientsSection}>
             <h2>Trusted by leading firms</h2>
             <div className={styles.clientLogos}>
-              <Image src="/clients/maruti.png" height={100} width={256} alt="logo"/>
+            <Image src="/clients/wolterskluwer.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/macquarie.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/dell.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/godaddy.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/gyansys.png" height={100} width={256} alt="logo"/>
-              <Image src="/clients/minda.png" height={100} width={256} alt="logo"/>
+              <Image src="/clients/maruti.png" height={100} width={256} alt="logo"/>
+
             </div>
           </div>
         </div>

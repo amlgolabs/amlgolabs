@@ -38,6 +38,10 @@ const Footer1 = () => {
               <MdLocationOn size={20} />
               <p>Amlgo Labs Inc, 16192, Delaware, 19958</p>
             </div>
+            <div className={styles.footerAddress}>
+              <MdLocationOn size={20} />
+              <p>Amlgo Labs Inc, Gurugram, India, 122001</p>
+            </div>
             <div className={styles.footerEmail}>
               <MdEmail size={20} />
               <p>info@amlgolabs.com</p>
