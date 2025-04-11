@@ -60,7 +60,7 @@ const page = () => {
             title: "Leveraging AI & ML in Automotive Industry",
             image: "/businesses/automotive/casestudy2.jpg",
             description: "Social media sentiment tracks car buyer joy. Real-time system finds users, spots issues. Big auto firm gets fast feedback, solves problems now.",
-            link:"/documents/leveraging-ai-ml-automotive-industry.pdf"
+            link:"/documents/Leveraging AI & ML in Automotive Industry.pdf"
         },
     ];
 

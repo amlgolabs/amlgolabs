@@ -1,107 +1,122 @@
+/* NumberData2.module.css */
 .mainContainer {
-    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    
-}
-
-
-
-.contentContainer {
-    max-width: 1240px;
+    padding: 1rem 2rem;
+    /* background-color: var(--gray); */
+  }
+  
+  .contentContainer {
+    max-width: 1280px;
     width: 100%;
-    margin-inline: auto;
-    padding: 40px 20px;
-}
-
-.contentContainer h3 {
-    font-size: 2rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 600;
-    /* padding-block: 40px; */
+    color: var(--black);
+    line-height: 1.4;
+    margin-bottom: 2rem;
     text-align: left;
-    color: #333; /* Dark text for better readability */
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.numbersDiv {
+  }
+  
+  .numbersDiv {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    margin-top: 2rem;
-}
-
-.numberItem {
+    flex-wrap: wrap;
+  }
+  
+  .numberItem {
     flex: 1;
-    min-width: 220px; /* Ensures that items don't get too small */
-    padding: 20px;
+    min-width: 200px;
+    padding: 1.5rem;
     text-align: left;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-    border-left: 1px solid gray;
-    height: 250px;
-}
-
-.numberItem:first-child{
-    border: none;
-}
-
-.numberItem h2 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--dark); /* Green color for numbers */
-    margin-bottom: 10px;
-}
-
-.numberItem p {
-    font-size: 1.5rem;
-    color: #666; /* Subtle color for descriptions */
-    line-height: 1.5;
-}
-
-
-
-@media (max-width: 768px) {
-    .contentContainer h3 {
-        font-size: 1.2rem;
-        padding-block: 20px;
+    border-left: 2px solid var(--light-gray);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .numberItem:first-child {
+    border-left: none;
+  }
+  
+  /* .numberItem:hover {
+    transform: translateY(-4px);
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .number {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--gray);
+    line-height: 1.6;
+  }
+  
+  /* Tablet and below */
+  @media (max-width: 768px) {
+    .title {
+      font-size: clamp(1.25rem, 3.5vw, 1.5rem);
     }
-
+  
     .numbersDiv {
-        gap: 1.5rem;
-        justify-content: center; /* Center content on smaller screens */
+      gap: 1.5rem;
+      justify-content: center;
     }
-
+  
     .numberItem {
-        min-width: 180px; /* Adjust item width for mobile */
+      min-width: 180px;
+      border-left: none;
+      border-bottom: 2px solid var(--light-gray);
     }
-}
-
-@media (max-width: 480px) {
+  
+    .numberItem:first-child {
+      border-bottom: 2px solid var(--light-gray);
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .mainContainer {
+      padding: 1rem;
+    }
+  
     .contentContainer {
-        padding: 20px;
+      padding: 1rem;
     }
-
-    .contentContainer h3 {
-        font-size: 1rem;
-        padding-block: 15px;
+  
+    .title {
+      font-size: clamp(1rem, 3vw, 1.25rem);
     }
-
+  
     .numbersDiv {
-        gap: 1rem;
+      gap: 1rem;
     }
-
+  
     .numberItem {
-        min-width: 160px; /* Further adjustment for smaller screens */
-        padding: 15px;
-        border-left: none;
-        border-bottom: 1px solid black;
+      min-width: 100%;
+      padding: 1rem;
+      border-bottom: 1px solid var(--light-gray);
     }
-
-    .numberItem:first-child{
-        border-bottom: 1px solid black;
+  
+    .numberItem:first-child {
+      border-bottom: 1px solid var(--light-gray);
     }
-}
+  
+    .number {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+  
+    .description {
+      font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+  }

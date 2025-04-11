@@ -77,7 +77,7 @@ const page = () => {
           image: "/capabilities/data-analytics/casestudy4.png",
 
           description: "In today's data-driven world, businesses are constantly seeking innovative ways to harness the power of their data for strategic decision-making. Business Intelligence (BI) tools play a pivotal role in this endeavor, providing organizations with the means to visualize, analyze, and derive insights from their vast troves of data.",
-          link: "/coming-soon",
+          link: "/documents/5 top open source bi tools to empower your analytics journey.pdf",
       },
   ];
 

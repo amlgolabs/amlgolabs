@@ -19,8 +19,8 @@ const Intro = () => {
           Amlgo Labs On-Prem GenAI Bot makes this a reality. It operates entirely within your secure network, ensuring sensitive data never leaves your environment. This is the future of enterprise AI—powerful, private, and risk-free.
           </p>
           <div className={styles.ctaContainer}>
-            <Link href="/contact-us">
-            <button className="globalButtonBlack">Request a Demo</button>
+            <Link href="/conversational-ai-chatbot#demo">
+            <button className="globalButtonBlack">Learn More</button>
             </Link>
             {/* <button className={styles.secondaryButton}>Learn More</button> */}
           </div>
