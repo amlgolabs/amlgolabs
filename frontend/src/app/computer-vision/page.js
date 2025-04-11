@@ -30,8 +30,9 @@ import {
 export const metadata = {
   title: "Computer Vision Solutions - Amlgo Labs",
   description: "Enhance business efficiency with AI-powered Computer Vision solutions by Amlgo Labs. Automate visual tasks, detect patterns, and drive intelligent insights.",
-  keywords: "Computer Vision, AI-powered solutions, Amlgo Labs, visual automation, pattern detection, intelligent insights, machine learning, image recognition, object detection, deep learning, computer vision applications, AI in business, automated visual analysis, real-time processing",
+  keywords: "Computer Vision, AI-powered solutions, Amlgo Labs, visual automation, pattern detection, intelligent insights, machine learning, image recognition, object detection, deep learning, computer vision applications, AI in business, automated visual analysis, real-time processing, using ai, generative ai, ai analysis, ai generative, ai for computer, visual inspection ai, data analysis ai, analysis ai, ai data analysis, ai for data analysis, ai app, predictive ai, ai learning, ai for image, ai data insights, ai prediction, data analytics and ai, generative ai for images, image generative ai, generative image ai, ai for data, ai with images, create an image using ai, ai an image, data analysis and ai, data analytics with ai, ai and data analysis, ai generative image, ai how to use, through ai, management ai, video analysis computer vision, security for ai, images by ai, ai powered data analytics, ai quality inspection, inventory management using ai, image using ai, data analytics & ai, ai analyze, ai predictive, ai in it security, ai customer, images using ai, analytics with ai, by using ai, ai real time applications, generative images ai, business using ai, security with ai, data analytics in ai, process optimization ai, data analysis in ai, predictive analytics using ai, the generative ai, create image through ai, utilize ai, ai learning data, image through ai, ai analytical, ai for services, ai predicting, data platform for ai, machine learning and real estate",
 };
+
 
 
 const page = () => {

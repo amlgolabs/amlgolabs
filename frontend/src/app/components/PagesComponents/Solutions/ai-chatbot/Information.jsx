@@ -10,7 +10,7 @@ const Information = () => {
         </div>
         <div className={styles.content}>
           <p>
-            Amlgo Labs Gen-AI is an on-prem AI chatbot with pre-trained knowledge ensuring secure and private 
+            Amlgo Labs GenAI is an on-prem AI chatbot with pre-trained knowledge ensuring secure and private 
             interactions without relying on external services. It processes internal documents by extracting, 
             cleaning, and structuring data to train and fine-tune a custom AI model. Once trained, the chatbot 
             is deployed locally, allowing users to interact through a web interface, command-line tool, or 

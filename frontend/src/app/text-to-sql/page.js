@@ -9,10 +9,11 @@ import DemoVideo from '../components/PagesComponents/Solutions/ai-chatbot/DemoVi
 
 
 export const metadata = {
-  title: "Text to SQL Converter - AI-Powered Query Generator - Amlgo Labs",
-  description: "Convert natural language into SQL queries with AI-powered Text-to-SQL by Amlgo Labs. Simplify database queries, boost efficiency, and speed up data analysis.",
-  keywords: "Text to SQL, AI-powered query generator, Amlgo Labs, natural language to SQL, database automation, SQL query generation, data analysis, AI-driven database queries, query optimization, data insights, automated SQL generation, natural language processing, NLP for databases",
+  title: "Text to SQL Convertor - AI-powered Query Generator - Amlgo Labs",
+  description: "Leverage AI to simplify SQL and accelerate data analysis with Amlgo Labs. Our AI-powered tools transform natural language into SQL queries, optimize database management, and drive actionable data insights across industries.",
+  keywords: "ai for sql, data analysts, sql for data analysis, ai for data analysis, sql for data analytics, data analysis ai, ai data analysis, ai for data analytics, ai for data, data analysis generator, ai and data analytics, ai data insights, sql for data analysts, ai for database, data analysis using sql, real estate data management, ai and data analysis, data analysis and ai, ai for data analysts, query from sql, ai powered data analytics, sql for analysts, ai & data, data analysis in ai, industry data analysis, ai & data analytics, text to sql, ai-powered query generator, natural language to sql, automated sql generation"
 };
+
 
 
 const page = () => {

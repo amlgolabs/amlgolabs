@@ -7,7 +7,7 @@ const CaseStudy = () => {
   return (
 <div className={styles.mainContainer}>
         <div className={styles.contentContainer}>
-            <Link href="/">
+            <Link href="/vehicle-quality-ai#market-analysis">
             <div className={styles.imageContainer}>
                 <Image
                     src="/solutions/vehicle-quality-ai/caseStudy.png" // Ensure this path is correct

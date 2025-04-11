@@ -5,7 +5,7 @@ const NumberInfoBox = () => {
   return (
     <div className={styles.mainContainer}>
         <div className={styles.contentContainer}>
-            <h3>Amlgo Labs: Transforming Businesses with LLMs and Data Intelligence</h3>
+            <h3>AMLGO LABS: TRANSFORMING BUSINESSES WITH LLMS AND DATA INTELLIGENCE RESULTS IN THE FOLLOWING ENHANCEMENTS</h3>
             <div className={styles.boxContainer}>
                 <div className={styles.boxItem}>
                 <div className={styles.percent}>

@@ -87,6 +87,8 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
 import styles from '../../../../styles/pages/Components/Solutions/ai-chatbot/DemoVideo.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const DemoVideo = ({ src, heading, description, poster }) => {
   const videoRef = useRef(null);
@@ -113,10 +115,23 @@ const DemoVideo = ({ src, heading, description, poster }) => {
             poster={poster}
             controls
           />
+
+{/* <Image 
+        src={src} 
+        alt="chatbot" 
+        width={512} 
+        height={384} 
+        unoptimized 
+      /> */}
         </div>
         <div className={styles.content}>
           <h2 className={styles.heading}>{heading}</h2>
           <p className={styles.description}>{description}</p>
+          <Link href="/contact-us">
+            <button className="globalButton">
+              Request a Demo
+            </button>
+          </Link>
         </div>
       </div>
     </section>

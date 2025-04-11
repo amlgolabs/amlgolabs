@@ -27,21 +27,19 @@ const PartnerSolutions = ({ tabs }) => {
         <div className={styles.card}>
           <div className={styles.grid}>
             <div className={styles.imageWrapper}>
-              {/* <img
+              <Image
                 src={tabs[activeTab].image}
                 alt={tabs[activeTab].title}
                 className={styles.image}
-              /> */}
-
-              <Image src={tabs[activeTab].image}
-                alt={tabs[activeTab].title}
-                className={styles.image}
-                height={1000}
-                width={1000}/>
-
+                width={600}
+                height={400}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                priority={activeTab === 0} // Optimize first tab image
+              />
             </div>
             <div className={styles.contentWrapper}>
               <p className={styles.content}>{tabs[activeTab].content}</p>
+              {/* Uncomment if needed */}
               {/* <button className={styles.button}>Learn More</button> */}
             </div>
           </div>

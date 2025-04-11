@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from "../../../../styles/pages/Components/Solutions/text-sql/Introduction.module.css"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Introduction = () => {
 
@@ -26,7 +27,7 @@ const Introduction = () => {
           <video
             ref={videoRef}
             className={styles.video}
-            src="/solutions/text-sql/demo.mov"
+            src="/solutions/text-sql/demo.mp4"
             autoPlay
             muted
             loop
@@ -36,6 +37,11 @@ const Introduction = () => {
         </div>
                 <div className={styles.upperRight}>
                     <p><span>Data</span> is the cornerstone of the real estate industry, driving decisions on <span>property valuations</span>, <span>market analysis</span>, and <span>client relationship management</span>.</p>
+                    <Link href="/contact-us">
+                    <button className="globalButton">
+                      Request a Demo
+                    </button>
+                    </Link>
                 </div>
             </div>
             <div className={styles.lowerContent}>

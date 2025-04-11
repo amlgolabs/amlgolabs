@@ -11,7 +11,7 @@ const HeroSection = ({ title, description, buttonText, imageSrc, imageAlt }) => 
           <h1>{title}</h1>
           <p>{description}</p>
           <Link href="/contact-us">
-          <button className={styles.learnMoreBtn}>{buttonText}</button>
+          <button className='globalButton'>{buttonText}</button>
           </Link>
         </div>
         <div className={styles.rightContent}>

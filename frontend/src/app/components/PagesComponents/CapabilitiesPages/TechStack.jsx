@@ -1,8 +1,23 @@
-import React from 'react';
+"use client";
+import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import styles from "../../../styles/pages/Components/CapabilitiesPages/TechStack.module.css";
-import Image from 'next/image';
+import Image from "next/image";
 
 const TechStack = ({ title, techStack }) => {
+  const shouldReduceMotion = useReducedMotion();
+
+  // Image hover animation
+  const imageVariants = {
+    hover: shouldReduceMotion
+      ? {}
+      : {
+          scale: 1.1,
+          boxShadow: "0 4px 8px rgba(83, 216, 242, 0.3)",
+          transition: { duration: 0.3, ease: "easeInOut" },
+        },
+  };
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.techStackContainer}>
@@ -12,7 +27,21 @@ const TechStack = ({ title, techStack }) => {
 
         <div className={styles.techStackGrid}>
           {techStack.map((tech, index) => (
-            <Image key={index} src={tech.src} height={100} width={100} alt={tech.alt} />
+            <motion.div
+              key={index}
+              variants={imageVariants}
+              whileHover="hover"
+              className={styles.techStackImageWrapper}
+            >
+              <Image
+                src={tech.src}
+                height={100}
+                width={100}
+                alt={tech.alt}
+                quality={90}
+                sizes="(max-width: 767px) 45vw, 20vw" // Adjusted for 2 columns on mobile, 5 on larger
+              />
+            </motion.div>
           ))}
         </div>
       </div>

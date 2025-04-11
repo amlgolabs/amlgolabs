@@ -1,0 +1,129 @@
+.mainContainer {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: #f8fafc;
+}
+
+.contentContainer {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+
+
+.locationsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.locationCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.locationCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapper {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    /* background: #f1f5f9; */
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.locationImage {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.locationCard:hover .locationImage {
+    transform: scale(1.1);
+}
+
+.addressWrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addressWrapper h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.addressWrapper p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .locationsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .locationCard {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .imageWrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .addressWrapper h3 {
+        font-size: 1.1rem;
+    }
+
+    .addressWrapper p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .locationCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imageWrapper {
+        margin-bottom: 1rem;
+    }
+}

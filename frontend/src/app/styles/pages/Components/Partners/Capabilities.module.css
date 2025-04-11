@@ -1,81 +1,190 @@
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    /* background-color: #f9fafb;  */
-    padding: 2rem 1rem;
-  }
-  
-  .headingContainer {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .heading {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 10px;
-  }
-  
-  .subheading {
-    font-size: 1.3rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .gridContainer {
-    display: grid;
-    /* column-count: 3; */
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 1240px;
-    width: 100%;
-  }
-  
-  @media (min-width: 640px) {
-    .gridContainer {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .card {
-    background: linear-gradient(135deg, #fff, #e9ecef);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: clamp(1rem, 5vw, 2rem) clamp(0.5rem, 3vw, 1rem);
+  width: 100%;
 
-    border: 1px solid #e5e7eb;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.headingContainer {
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  max-width: 90%;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.75rem, 3vw, 1.25rem);
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.card {
+  background: linear-gradient(135deg, #fff, #e9ecef);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.cardTitle {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  color: #333;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--blue);
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+  .mainContainer {
+    padding: 1rem 0.5rem;
+    min-height: auto;
   }
-  
+
+  .headingContainer {
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .subheading {
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    max-width: 90%;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+
+  .cardDescription {
+    font-size: clamp(0.6875rem, 2vw, 0.75rem);
+  }
+
+  /* Disable hover effects on touch devices */
   .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+}
+
+/* Tablet (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .mainContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .heading {
+    font-size: clamp(2rem, 5vw, 2.25rem);
+  }
+
+  .subheading {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+
+  .cardDescription {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+}
+
+/* Desktop (above 1024px) */
+@media (min-width: 1025px) {
+  .mainContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .heading {
+    font-size: clamp(2.25rem, 4vw, 2.5rem);
+  }
+
+  .subheading {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    max-width: 800px;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
   .cardContent {
     padding: 1.5rem;
   }
-  
+
   .cardTitle {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    /* font-weight: bold; */
-    color: #333;
-    margin-bottom: 0.75rem;
-    padding-block: 5px;
-    border-bottom: 2px solid var(--blue);
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   }
-  
+
   .cardDescription {
-    font-size: 1rem;
-    color: #666;
-    line-height: 2;
+    font-size: clamp(0.875rem, 2vw, 1rem);
   }
-  
+}

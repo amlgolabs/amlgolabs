@@ -43,7 +43,7 @@ const CaseStudyDark = () => {
               />
               <h3 className={styles.title}>{title}</h3>
               <Link href={link} className={styles.link}>
-                <button className={styles.button}>Read</button>
+                <button className="globalButtonBlack">Read</button>
               </Link>
             </div>
           ))}

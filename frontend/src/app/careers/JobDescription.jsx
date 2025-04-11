@@ -10,19 +10,19 @@ const JobDescription = ({ job }) => {
         phone: "",
         coverLetter: "",
         cv: null,
-        id: job.id,
-        title: job.title,
+        agreement: false,
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const fileInputRef = useRef(null);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, type, checked } = e.target;
         setFormData((prev) => ({
             ...prev,
-            [name]: value,
+            [name]: type === "checkbox" ? checked : value,
         }));
     };
+    
 
     const handleFileChange = (e) => {
         setFormData((prev) => ({
@@ -131,6 +131,20 @@ const JobDescription = ({ job }) => {
 
                     <label className={styles.label}>Upload CV:</label>
                     <input type="file" name="cv" accept=".pdf,.doc,.docx" onChange={handleFileChange} ref={fileInputRef} required className={styles.input} />
+
+                    <div className={styles.checkboxContainer}>
+                        <input
+                            type="checkbox"
+                            name="agreement"
+                            checked={formData.agreement}
+                            onChange={handleChange}
+                            required
+                            className={styles.checkbox}
+                        />
+                        <label className={styles.checkboxLabel}>
+                            By using this form you agree with the storage and handling of your data by this website.
+                        </label>
+                    </div>
 
                     <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
                         {isSubmitting ? "Submitting..." : "Submit Application"}

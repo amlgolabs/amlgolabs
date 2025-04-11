@@ -13,10 +13,9 @@ import BlackCta from '../components/BlackCta';
 
 export const metadata = {
   title: "Machine Learning & Deep Learning Solutions - Amlgo Labs",
-  description: "Discover cutting-edge Machine Learning & Deep Learning solutions at Amlgo Labs. Drive innovation with AI-powered insights, automation & predictive analytics.",
-  keywords: "Machine Learning, Deep Learning, AI solutions, Amlgo Labs, predictive analytics, automation, AI-powered insights, neural networks, data-driven decisions, artificial intelligence, model development, intelligent automation, advanced analytics, business transformation",
+  description: "Discover cutting-edge Machine Learning & Deep Learning solutions at Amlgo Labs. Drive innovation with AI-powered insights, automation, predictive analytics, and business transformation using advanced AI and data analytics technologies.",
+  keywords: "Machine Learning, Deep Learning, AI solutions, Amlgo Labs, predictive analytics, automation, AI-powered insights, neural networks, data-driven decisions, artificial intelligence, model development, intelligent automation, advanced analytics, business transformation, ai learning, deep learning ai, ai deep learning, machine learning ai, ai and machine learning, learning artificial intelligence, ml learning, machine learning and artificial intelligence, artificial intelligence machine learning, using ai, ai and ml, about artificial intelligence, machine learning for data analysis, ai and deep learning, machine learning how to, learn ai ml, artificial intelligence and deep learning, ai training, learning with ai, using artificial intelligence, cloud services for machine learning, ai for learning, artificial intelligence data analytics, ml ai, learn ml, artificial intelligence and data analytics, microsoft azure machine learning, ai for machine learning, artificial intelligence in data analytics, artificial intelligence for data analytics, ai with machine learning, artificial intelligence automation, machine learning with ai, ai learning machine, ai and learning, ai with deep learning, learning nlp, data engineering for machine learning, ai driven data analytics, artificial intelligence & deep learning, artificial intelligence for data analysis, data analysis and artificial intelligence, about artificial intelligence and machine learning, data analysis for machine learning, ai ml predictive analytics, predictive maintenance and machine learning, machine learning in data analysis, microsoft azure for machine learning, artificial intelligence how to use, about ai and machine learning, artificial intelligence for predictive maintenance, automated sentiment analysis, data analysis with machine learning, ai and machine learning for business, using artificial intelligence in business, machine learning artificial intelligence and deep learning, ml & ai, artificial intelligence use in business, ai learning process, be in artificial intelligence, about ai artificial intelligence, artificial intelligence opportunities, deep learning in data analytics, machine learning is ai, deep learning data analytics, ai ml machine learning, process optimization using machine learning, ai algorithms machine learning, machine learning and deep learning courses, artificial intelligence machine learning and data science, data analytics deep learning"
 };
-
 
 
 const page = () => {
@@ -75,7 +74,7 @@ const page = () => {
     />
 
 <NumberData2 
-      title="Smarter Decisions with Machine Learning Insights and Data-Driven Precision" 
+      title="Smarter Decisons with Machine Learning Insights and Data-Driven Precision Have Resulted in Increases in the Following" 
       data={impactData} 
     />
 

@@ -20,7 +20,7 @@ const AboutUsHero = () => {
             high-performance AI models.
           </p>
           <Link href="/contact-us">
-          <button className={styles.ctaButton}>Get in Touch</button>
+          <button className="globalButton">Get in Touch</button>
           </Link>
         </div>
 

@@ -28,7 +28,7 @@ const offerings = [
         title: "Social Media Analytics - People's Voice for Automotive",
         description: "Analyze social media to understand customer sentiment, product feedback, and emerging trends in the automotive industry.",
         image: "/businesses/automotive/socialmedia.jpg",
-        link: "/communication-media"
+        link: "/documents/Social Media Analytics - Amlgo Labs Solution.pdf"
     }
 ];
 
@@ -77,7 +77,7 @@ const AutomotiveOfferings = () => {
                         <h3>{offerings[currentIndex].title}</h3>
                         <p>{offerings[currentIndex].description}</p>
                         <Link href={offerings[currentIndex].link}>
-                            <button className={styles.offeringButton}>
+                            <button className="globalButtonBlack">
                                 Learn More
                             </button>
                         </Link>

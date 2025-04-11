@@ -20,7 +20,7 @@ const Intro = () => {
           </p>
           <div className={styles.ctaContainer}>
             <Link href="/contact-us">
-            <button className={styles.primaryButton}>Request a Demo</button>
+            <button className="globalButtonBlack">Request a Demo</button>
             </Link>
             {/* <button className={styles.secondaryButton}>Learn More</button> */}
           </div>

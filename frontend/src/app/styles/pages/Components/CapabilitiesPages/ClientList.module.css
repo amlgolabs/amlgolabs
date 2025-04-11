@@ -1,61 +1,124 @@
 .mainContainer {
     background-color: var(--black);
-    padding: 60px 20px;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contentContainer {
-    max-width: 1200px;
+  }
+  
+  .contentContainer {
+    max-width: 1400px; /* Slightly increased for larger screens */
     width: 100%;
-    padding: 2rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
     text-align: center;
-}
-
-.heading {
+  }
+  
+  .heading {
     color: var(--light);
-    font-size: 1.4rem;
-    margin-bottom: 40px;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.2vw, 2px);
     font-weight: 500;
-}
-
-.logoContainer {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
+    line-height: 1.4;
+  }
+  
+  .logoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    justify-items: center;
     align-items: center;
-    gap: 2rem;
     width: 100%;
-}
-
-.logoWrapper {
+  }
+  
+  .logoWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: clamp(0.5rem, 1vw, 0.75rem);
     transition: transform 0.3s ease-in-out;
-}
-
-.logoWrapper:hover {
+    width: 100%;
+    max-width: 200px; /* Prevent logos from becoming too large */
+  }
+  
+  .logoWrapper:hover {
     transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
+  }
+  
+  .logoWrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Cap logo height */
+    object-fit: contain; /* Ensure logos aren't distorted */
+  }
+  
+  /* Media Queries for Fine-Tuning */
+  @media (max-width: 1024px) {
     .logoContainer {
-        flex-wrap: wrap;
-        justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: clamp(0.75rem, 1.5vw, 1rem);
     }
-
+  
     .logoWrapper {
-        flex-basis: 45%;
+      max-width: 150px;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 768px) {
+    .logoContainer {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  
     .logoWrapper {
-        flex-basis: 100%;
+      max-width: 120px;
     }
-}
+  
+    .heading {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContainer {
+      padding: clamp(1.5rem, 4vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+    }
+  
+    .contentContainer {
+      padding: clamp(1rem, 3vw, 1.5rem);
+    }
+  
+    .logoContainer {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: clamp(0.5rem, 1vw, 0.75rem);
+    }
+  
+    .logoWrapper {
+      max-width: 100px;
+    }
+  
+    .heading {
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    }
+  }
+  
+  /* For Ultra-Wide Screens */
+  @media (min-width: 1920px) {
+    .contentContainer {
+      max-width: 1600px;
+    }
+  
+    .logoContainer {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: clamp(1.5rem, 2vw, 2rem);
+    }
+  
+    .logoWrapper {
+      max-width: 250px;
+    }
+  
+    .heading {
+      font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+  }

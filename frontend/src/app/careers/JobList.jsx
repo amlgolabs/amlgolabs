@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import styles from "../styles/pages/Components/Careers/JobList.module.css";
 import { jobs } from "./data/jobs";
 
-
 const JobList = () => {
   const [visibleJobs, setVisibleJobs] = useState(10);
   const router = useRouter();
@@ -14,7 +13,7 @@ const JobList = () => {
   };
 
   const handleViewDetails = (job) => {
-    const slug = job.title.toLowerCase().replace(/\s+/g, '-');
+    const slug = job.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/careers/${slug}`);
   };
 
@@ -33,18 +32,19 @@ const JobList = () => {
               <p className={styles.type}>{job.type}</p>
             </div>
             <div className={styles.actions}>
-           
-              <button  className={styles.detailsBtn} onClick={() => handleViewDetails(job)}>
-      View Details
-    </button>
-              
+              <button
+                className="globalButton"
+                onClick={() => handleViewDetails(job)}
+              >
+                View Details
+              </button>
             </div>
           </div>
         ))}
       </div>
       {visibleJobs < jobs.length && (
         <div className={styles.loadMoreContainer}>
-          <button onClick={loadMoreJobs} className={styles.loadMoreBtn}>
+          <button onClick={loadMoreJobs} className="globalButton">
             Load More
           </button>
         </div>

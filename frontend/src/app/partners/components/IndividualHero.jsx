@@ -17,7 +17,7 @@ const IndividualHero = ({
       <div className={styles.contentContainer}>
         <div className={styles.contentInfo}>
           <p>{content}</p>
-          <a href={buttonLink} className={styles.readMoreButton} aria-label={`Let's Talk: ${buttonText}`}>
+          <a href={buttonLink} className="globalButtonBlack" aria-label={`Let's Talk: ${buttonText}`}>
             {buttonText}
           </a>
         </div>

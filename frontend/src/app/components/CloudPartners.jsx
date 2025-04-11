@@ -110,7 +110,7 @@ const CloudPartners = () => {
         <p className={styles.partnerDescription}>{activePartner.description}</p>
         {/* <p className={styles.partnerDetailsText}>{activePartner.details}</p> */}
         <a href={activePartner.link} className={styles.knowMore}>
-          Know More →
+          Learn More
         </a>
         </div>
       </motion.div>

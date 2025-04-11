@@ -35,13 +35,13 @@ const page = () => {
       id: 2,
       title: "Reducing Fraud in Insurance: An Anti-Fraud Model",
       image: "/businesses/insurance/casestudy2.png",
-      link: "/coming-soon"
+      link: "/documents/Anti-Fraud Model for Third-Party Bodily Injury Claims.pdf"
     },
     {
       id: 3,
       title: "Are You Maximizing Commercial Combined Cross-Selling Opportunities?",
       image: "/businesses/insurance/casestudy3.png",
-      link: "/coming-soon"
+      link: "/documents/Cross-Sell Optimization for Commercial Combined Insurance.pdf"
 
       // description: "Discover how AI is revolutionizing the automotive industry with top use cases in 2024.",
     },

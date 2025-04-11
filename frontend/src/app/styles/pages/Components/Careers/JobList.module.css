@@ -3,130 +3,229 @@
     width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
-}
-
-.heading {
-    /* padding: 20px; */
+  }
+  
+  .heading {
     text-align: center;
-}
-
-.heading h2 {
+  }
+  
+  .heading h2 {
     font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--black);
+    color: #000000;
     margin-bottom: 2rem;
-}
-
-.jobListContainer {
+  }
+  
+  .jobListContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
     justify-content: center;
-}
-
-.jobCard {
-    /* background: #ffffff; */
-    /* border-radius: 12px; */
+  }
+  
+  .jobCard {
+    background: #ffffff;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     transition: transform 0.3s ease-in-out;
-    /* width: 100%; */
     height: 250px;
-    /* border: 1px solid var(--black); */
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.jobCard:hover {
+  }
+  
+  .jobCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.jobInfo {
+  }
+  
+  .jobInfo {
     margin-bottom: 15px;
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 24px;
     font-weight: 800;
     color: #333;
-}
-
-.domain,
-.location,
-.type {
+  }
+  
+  .domain,
+  .location,
+  .type {
     font-size: 16px;
     color: #666;
     margin: 8px 0;
-}
-
-.location{
+  }
+  
+  .location {
     font-weight: 800;
-}
-
-.actions {
+  }
+  
+  .actions {
     display: flex;
-    gap: 10px;
-    margin-left: auto;
-}
-
-.detailsBtn,
-.applyBtn {
-    /* flex: 1; */
-    padding: 12px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  .viewButton {
+    padding: 12px 24px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.detailsBtn {
-    background: var(--black);
-    color: var(--light);
-}
-
-.detailsBtn:hover {
-    background: #e0e0e0;
-    color: var(--black);
-}
-
-.applyBtn {
-    background: var(--black);
-    color: #fff;
-}
-
-.applyBtn:hover {
-    background: var(--blue);
-    color: var(--black);
-}
-
-.loadMoreContainer {
+    background-color: #0056b3;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .viewButton:hover {
+    background-color: #004085;
+  }
+  
+  .loadMoreContainer {
     text-align: center;
     margin-top: 20px;
   }
   
-  .loadMoreBtn {
+  .loadMoreButton {
     padding: 10px 20px;
     background-color: #0056b3;
-    color: white;
+    color: #ffffff;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .loadMoreBtn:hover {
+  .loadMoreButton:hover {
     background-color: #004085;
   }
-
-@media (max-width: 768px) {
-    .jobListContainer {
-        grid-template-columns: 1fr;
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .mainContainer {
+      padding: 30px 15px;
     }
-}
+  
+    .heading h2 {
+      font-size: 1.75rem;
+    }
+  
+    .jobListContainer {
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .jobCard {
+      padding: 30px;
+      height: 220px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .domain,
+    .location,
+    .type {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+  
+    .viewButton {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .jobListContainer {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  
+    .jobCard {
+      padding: 25px;
+      height: auto;
+      min-height: 200px;
+    }
+  
+    .title {
+      font-size: 18px;
+    }
+  
+    .domain,
+    .location,
+    .type {
+      font-size: 13px;
+    }
+  
+    .actions {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  
+    .viewButton {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .loadMoreButton {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContainer {
+      padding: 20px 10px;
+    }
+  
+    .heading h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .jobListContainer {
+      gap: 12px;
+      padding: 8px;
+    }
+  
+    .jobCard {
+      padding: 20px;
+      min-height: 180px;
+    }
+  
+    .title {
+      font-size: 16px;
+    }
+  
+    .domain,
+    .location,
+    .type {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  
+    .actions {
+      margin-top: 12px;
+    }
+  
+    .viewButton {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .loadMoreContainer {
+      margin-top: 15px;
+    }
+  
+    .loadMoreButton {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+  }

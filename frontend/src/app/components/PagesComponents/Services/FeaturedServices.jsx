@@ -23,7 +23,7 @@ const FeaturedServices = ({ heading, services }) => {
                                 <div className={styles.buttonDiv}>
                                     {service.buttons?.[0] && service.link1 && (
                                         <Link href={service.link1}>
-                                            <button className={styles.button1}>
+                                            <button className="globalButton">
                                                 {service.buttons[0]}
                                             </button>
                                         </Link>

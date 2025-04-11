@@ -8,7 +8,7 @@
 
 .contentContainer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     max-width: 1240px;
     width: 100%;

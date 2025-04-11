@@ -93,7 +93,7 @@ const HomeServices = () => {
               <p>{caseStudies[activeCaseStudy].description}</p>
             </div>
             <Link href={caseStudies[activeCaseStudy].link}>
-            <button>Learn More</button>
+            <button className='globalButtonBlack'>Learn More</button>
             </Link>
           </div>
         </div>

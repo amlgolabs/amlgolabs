@@ -84,12 +84,13 @@
 .description {
     max-width: 720px;
     margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 1rem;
     color: #444;
     line-height: 1.6;
 }
 
-.readMore {
+/* .readMore {
     font-weight: 600;
     font-size: 1rem;
     margin-top: 20px;
@@ -100,7 +101,7 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .readMore:hover {
     background-color: var(--blue);

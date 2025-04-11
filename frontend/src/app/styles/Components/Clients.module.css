@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  animation: marquee 30s linear infinite;
+  animation: marquee 45s linear infinite;
   will-change: transform;
 }
 

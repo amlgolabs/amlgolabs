@@ -224,6 +224,30 @@
     border: none;
 }
 
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start; /* align top of checkbox and text */
+  gap: 0.5rem;
+   /* spacing between checkbox and label */
+}
+
+.checkbox {
+  margin-top: 0.3rem; /* slight vertical adjustment to align nicely with text */
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+
+}
+
+.checkboxLabel {
+  font-size: 0.875rem; /* slightly smaller text */
+  color: #555; /* soft gray color */
+  line-height: 1.4;
+  cursor: pointer;
+
+  user-select: none; /* prevent accidental text selection */
+}
+
 .submitButton {
     width: 100%;
     padding: 12px;

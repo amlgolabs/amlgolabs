@@ -11,7 +11,7 @@ import SingleBlog from '../components/PagesComponents/Blogs/SingleBlog'
 export const metadata = {
   title: "Gen AI Agent – Amlgo Labs",
   description: "Amlgo Labs - Gen AI Agent—automate tasks, enhance decision-making, and drive innovation. Experience the future of Gen AI-powered business solutions today.",
-  keywords: "Gen AI Agent, Amlgo Labs, AI automation, decision intelligence, business innovation, artificial intelligence, machine learning, AI-powered solutions, task automation, digital transformation, intelligent agents, enterprise AI, AI-driven insights, future of AI",
+  keywords: "Gen AI Agent, Amlgo Labs, AI automation, decision intelligence, business innovation, artificial intelligence, machine learning, AI-powered solutions, task automation, digital transformation, intelligent agents, enterprise AI, AI-driven insights, future of AI, gen ai, ai automation, ai intelligence, customer support ai, generative ai, ai help, data analysis ai, ai in customer support, ai learning, ai data analysis, ai for data analysis, using ai to analyze data, ai management, ai systems, predict ai, ai for data analytics, ai generative, ai analysis, ai solutions for business, automation with ai, ai predict, ai for data, generate with ai, ai and data analytics, business with ai, ai customer, ai for recommendations, analysis ai, ai data insights, business and ai, data analysis and ai, through ai, ai and data analysis, operations ai, ai in management, ai it operations, business in ai, ai of ai, ai in automation industry, ai for management, ai and management, ai manage, analytics with ai, ai in it industry, management and ai, ai solutions in manufacturing, ai on business, ready for ai, ai analyze, ai for services, data analysis in ai, inventory management using ai, ai solutions in business, ai learning data, ai & data analytics, automated intelligence systems",
 };
 
 
@@ -60,7 +60,7 @@ const page = () => {
       {/* <InformationStripLine /> */}
       <InformationStripLine
   title="Is your enterprise ready for true autonomous intelligence?"
-  subtitle="Amlgo Labs builds Gen-AI Agents that go beyond automation, driving proactive decisions and adaptive strategies to make your business dynamic and future-ready."
+  subtitle="Amlgo Labs builds GenAI Agents that go beyond automation, driving proactive decisions and adaptive strategies to make your business dynamic and future-ready."
   // buttonText="Explore Now"
   // buttonLink="/"
 />
@@ -75,7 +75,7 @@ const page = () => {
       <TechStack title="Tech Stack We are working on" techStack={techStackData} />
 
       <SingleBlog
-      title="Overcome GenAI Fears: Get your Live GEN-AI Agent in days."
+      title="Overcome GenAI Fears: Get your Live GenAI Agent in days."
       description="Explore how Generative AI drives automation, innovation, and smarter decisions. Overcome challenges in scalability, data quality, and integration to streamline processes and stay ahead in the evolving AI landscape."
       imageSrc="/capabilities/gen-ai-agents/blog.png"
       button1Text = "Read Now"
