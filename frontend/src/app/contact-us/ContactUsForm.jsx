@@ -36,16 +36,15 @@ export default function ContactForm() {
       newErrors.email = "Email must not exceed 254 characters";
     }
 
-    // Phone validation: optional, but if provided must match common formats
-    if (formData.phone.trim()) {
-      // Accepts formats: +12345678901, 123-456-7890, (123) 456-7890, 1234567890
-      if (!/^(?:\+?\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/.test(formData.phone.trim())) {
-        newErrors.phone = "Please enter a valid phone number (e.g., 123-456-7890)";
-      } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
-        newErrors.phone = "Phone number must contain at least 10 digits";
-      } else if (formData.phone.replace(/[^0-9]/g, "").length > 15) {
-        newErrors.phone = "Phone number cannot exceed 15 digits";
-      }
+    // Phone validation: now mandatory, must match common formats
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^(?:\+?\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/.test(formData.phone.trim())) {
+      newErrors.phone = "Please enter a valid phone number (e.g., 123-456-7890)";
+    } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
+      newErrors.phone = "Phone number must contain at least 10 digits";
+    } else if (formData.phone.replace(/[^0-9]/g, "").length > 15) {
+      newErrors.phone = "Phone number cannot exceed 15 digits";
     }
 
     // Message validation: 10-1000 characters
@@ -76,34 +75,6 @@ export default function ContactForm() {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post("/api/contact-us", formData);
-  //     console.log("Response:", response.data);
-  //     setFormData({ name: "", email: "", phone: "", message: "" });
-  //   } catch (error) {
-  //     console.error("Error sending message:", error);
-  //   }
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post("/api/contact-us", formData);
-  //     console.log("Response:", response.data);
-  //     setFormData({ name: "", email: "", phone: "", message: "" });
-  //     setSnackbarMessage("Message sent successfully!");
-  //     setSnackbarSeverity("success");
-  //     setOpenSnackbar(true);
-  //   } catch (error) {
-  //     console.error("Error sending message:", error);
-  //     setSnackbarMessage("Failed to send message. Please try again.");
-  //     setSnackbarSeverity("error");
-  //     setOpenSnackbar(true);
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -124,7 +95,6 @@ export default function ContactForm() {
     }
   };
 
-  // Rest of the component (JSX) remains the same
   return (
     <section className={styles.container}>
       <div className={styles.contentWrapper}>
@@ -165,11 +135,12 @@ export default function ContactForm() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="Phone Number (Optional)"
+                placeholder="Phone Number *"
                 value={formData.phone}
                 onChange={handleChange}
                 className={styles.input}
                 aria-label="Phone Number"
+                required
               />
               {errors.phone && <span className={styles.errorMessage}>{errors.phone}</span>}
             </div>
@@ -197,6 +168,7 @@ export default function ContactForm() {
           </form>
         </div>
 
+        {/* SocialSection and ClientsSection remain unchanged */}
         <div className={styles.socialSection}>
           <div className={styles.socialLinks}>
             <h3 className={styles.socialHeading}>Connect With Us</h3>
@@ -227,13 +199,12 @@ export default function ContactForm() {
           <div className={styles.clientsSection}>
             <h2>Trusted by leading firms</h2>
             <div className={styles.clientLogos}>
-            <Image src="/clients/wolterskluwer.png" height={100} width={256} alt="logo"/>
+              <Image src="/clients/wolterskluwer.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/macquarie.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/dell.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/godaddy.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/gyansys.png" height={100} width={256} alt="logo"/>
               <Image src="/clients/maruti.png" height={100} width={256} alt="logo"/>
-
             </div>
           </div>
         </div>

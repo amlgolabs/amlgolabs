@@ -1,21 +1,23 @@
 .container {
-  max-width: 1240px;
+  max-width: 1400px; /* Slightly wider than contentWrapper for padding */
   margin: 0 auto;
   padding: 4rem 2rem;
-  /* background: #f8fafc; */
 }
 
 .contentWrapper {
+  max-width: 1240px; /* Updated as requested */
+  width: 100%; /* Updated as requested */
+  margin-inline: auto; /* Updated as requested */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   background: #ffffff;
   border-radius: 16px;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
   padding: 2rem;
 }
 
-.formSection, .socialSection {
+.formSection,
+.socialSection {
   padding: 1rem;
 }
 
@@ -30,7 +32,6 @@
   font-size: 2.25rem;
   font-weight: 800;
   color: var(--black);
-  /* margin-bottom: 1.5rem; */
 }
 
 .subtext {
@@ -72,7 +73,8 @@
   font-size: 1.25rem;
 }
 
-.input, .textarea {
+.input,
+.textarea {
   flex: 1;
   background: transparent;
   border: none;
@@ -81,7 +83,8 @@
   font-size: 1rem;
 }
 
-.input::placeholder, .textarea::placeholder {
+.input::placeholder,
+.textarea::placeholder {
   color: #a0aec0;
 }
 
@@ -98,22 +101,6 @@
   font-size: 0.75rem;
   color: #e53e3e;
 }
-
-/* .button {
-  background: var(--blue);
-  color: black;
-  border: none;
-  padding: 0.875rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.button:hover {
-  background: #00c8e5;
-} */
 
 .button {
   background-color: #00e5ff;
@@ -132,13 +119,13 @@
 }
 
 .button:disabled {
-  background-color: #b7f3fa; /* lighter indigo */
+  background-color: #b7f3fa;
   cursor: not-allowed;
 }
 
 .loader {
   border: 3px solid #ffffff;
-  border-top: 3px solid var(--blue); /* Indigo-500 */
+  border-top: 3px solid var(--blue);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -149,12 +136,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
- /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
- /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-
-
-padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
 }
 
 .socialLink {
@@ -200,35 +183,26 @@ padding: 20px;
   color: white;
 }
 
-.clientsSection{
- margin-top: 3rem;
- display: flex;
- flex-direction: column;
- padding: 20px;
- /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
- /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
- /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.05); */
- /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 16px 32px rgba(0, 0, 0, 0.04); */
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-
-
-
-
- /* background: #a0aec0; */
+.clientsSection {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .clientsSection h2 {
-  font-size: 1rem; /* smaller (14px) - deliberate modern minimalism */
-  font-weight: 800; /* strong boldness */
-  color: #0f0f0f; /* deep modern black */
-  text-transform: uppercase; /* modern clean style */
-  letter-spacing: 0.05em; /* slight space to breathe */
-  line-height: 1.1; /* tight line height, modern look */
-  opacity: 0.9; /* softer black, not harsh */
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  opacity: 0.9;
   margin-bottom: 0.75rem;
 }
 
-.clientLogos{
+.clientLogos {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -236,31 +210,216 @@ padding: 20px;
   gap: 0.5rem;
 }
 
-.clientLogos img{
+.clientLogos img {
   width: 40%;
   object-fit: contain;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .contentWrapper {
+    max-width: 900px;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .heading,
+  .socialHeading {
+    font-size: 2rem;
+  }
+
+  .clientLogos img {
+    width: 38%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr; /* Stack earlier for better form usability */
+    max-width: 800px;
+  }
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .formSection,
+  .socialSection {
+    padding: 0.75rem;
+  }
+
+  .clientLogos img {
+    width: 45%;
+  }
 }
 
 @media (max-width: 768px) {
-  .contentWrapper {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-  }
-  
   .container {
+    max-width: 600px;
     padding: 2rem 1rem;
   }
-  
-  .heading {
+
+  .contentWrapper {
+    max-width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .heading,
+  .socialHeading {
     font-size: 1.875rem;
   }
-  
+
+  .subtext {
+    font-size: 0.95rem;
+  }
+
+  .inputGroup {
+    padding: 0.65rem 0.9rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .socialLink {
+    font-size: 1.2rem;
+  }
+
+  .socialIconLink {
+    width: 44px;
+    height: 44px;
+  }
+
+  .socialIcon {
+    font-size: 1.4rem;
+  }
+
+  .clientsSection {
+    margin-top: 2rem;
+  }
+
+  .clientLogos img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 1.5rem 0.75rem;
+  }
+
+  .contentWrapper {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .formSection,
+  .socialSection {
+    padding: 0.5rem;
+  }
+
+  .heading,
   .socialHeading {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .inputGroup {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+
+  .errorMessage {
+    font-size: 0.7rem;
+    bottom: -1.1rem;
+  }
+
+  .button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .socialLinks {
+    padding: 15px;
+    gap: 1rem;
+  }
+
+  .socialLink {
+    font-size: 1.1rem;
+  }
+
+  .socialIconLink {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socialIcon {
+    font-size: 1.3rem;
+  }
+
+  .clientsSection {
+    padding: 15px;
+  }
+
+  .clientsSection h2 {
+    font-size: 0.9rem;
+  }
+
+  .clientLogos img {
+    width: 100%; /* Stack logos vertically */
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1500px;
+  }
+
+  .contentWrapper {
+    max-width: 1300px;
+    gap: 3.5rem;
+    padding: 2.5rem;
+  }
+
+  .heading,
+  .socialHeading {
+    font-size: 2.5rem;
+  }
+
+  .clientLogos img {
+    width: 35%;
   }
 }

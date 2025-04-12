@@ -106,13 +106,24 @@
         text-align: center;
         line-height: 1.4;
     }
+
+
 }
 
 @media (max-width: 480px) {
     .heading {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .numberItem {
         padding: 20px;
     }
+
+    .numberItem h4 {
+      font-size: 1rem;
+  }
+  .icon {
+    font-size: 2rem;
+   
+}
+
 }

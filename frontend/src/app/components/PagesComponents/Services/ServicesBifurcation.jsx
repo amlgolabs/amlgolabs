@@ -1,3 +1,4 @@
+// ServicesBifurcation.jsx
 "use client";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
@@ -9,64 +10,58 @@ const ServicesBifurcation = () => {
 
   const solutions = [
     {
-      title: "Connected Dealer and Assessment Management", description: "Streamline your supply chain and elevate service performance. Connect OEMs, equipment, and dealers seamlessly with Amlgo Labs.",
-      link: "/"
+      title: "Connected Dealer and Assessment Management",
+      description: "Streamline your supply chain and elevate service performance. Connect OEMs, equipment, and dealers seamlessly with Amlgo Labs.",
     },
     {
       title: "Parts Management",
       description: "Streamline your spare parts planning by connecting your data, processes, and people. Eliminate inefficiencies and improve spare parts availability. Amlgo Labs can help you synchronize your operations.",
-      link: "/"
     },
     {
       title: "Supply Chain Management",
-      description: "Achieve optimal supply and demand balance.  Integrated planning and predictive decisions drive efficiency and profitability.",
-      link: "/"
+      description: "Achieve optimal supply and demand balance. Integrated planning and predictive decisions drive efficiency and profitability.",
     },
     {
       title: "SAP S/4HANA Migration",
       description: "Migrate to SAP S/4HANA with confidence. Amlgo Labs expert guidance ensures a smooth transition, accelerating your digital transformation and unlocking innovation.",
-      link: "/"
     },
     {
       title: "ESG Compliance and Reporting",
-      description: "Enhance your ESG program maturity and achieve investor-grade reporting.  Amlgo Labs provides the expertise and solutions you need.",
-      link: "/"
+      description: "Enhance your ESG program maturity and achieve investor-grade reporting. Amlgo Labs provides the expertise and solutions you need.",
     },
     {
       title: "Generative AI for Change Management",
       description: "Empower your teams for the future. We leverage GenAI to drive smooth digital and organizational transformations.",
-      link: "/generative-ai"
     },
     {
       title: "Transforming Through Data, Technology, and AI",
-      description: "Drive your digital transformation forward.  Unlock innovation and smarter workflows with Amlgo Labs.",
-      link: "/data-analytics"
+      description: "Drive your digital transformation forward. Unlock innovation and smarter workflows with Amlgo Labs.",
     },
   ];
 
   const services = [
-    { 
-      title: "Computer Vision Services", 
-      description: "Amlgo Labs provides AI-powered computer vision solutions for image recognition, object detection, and automation. Enhance business intelligence with our cutting-edge models.", 
-      link: "/computer-vision" 
+    {
+      title: "Computer Vision Services",
+      description: "Amlgo Labs provides AI-powered computer vision solutions for image recognition, object detection, and automation. Enhance business intelligence with our cutting-edge models.",
+      link: "/computer-vision",
     },
-    { 
-      title: "Generative AI Services", 
-      description: "Unlock the potential of AI-driven creativity with Amlgo Labs. Our generative AI models enable content generation, personalization, and workflow automation.", 
-      link: "/generative-ai" 
+    {
+      title: "Generative AI Services",
+      description: "Unlock the potential of AI-driven creativity with Amlgo Labs. Our generative AI models enable content generation, personalization, and workflow automation.",
+      link: "/generative-ai",
     },
-    { 
-      title: "Data Analytics Services", 
-      description: "Amlgo Labs transforms raw data into actionable insights using advanced analytics. Improve decision-making with our AI-powered predictive and prescriptive analytics solutions.", 
-      link: "/data-analytics" 
+    {
+      title: "Data Analytics Services",
+      description: "Amlgo Labs transforms raw data into actionable insights using advanced analytics. Improve decision-making with our AI-powered predictive and prescriptive analytics solutions.",
+      link: "/data-analytics",
     },
-    { 
-      title: "Cloud Services", 
-      description: "Amlgo Labs offers end-to-end cloud solutions for seamless migration, management, and optimization. Ensure scalability, security, and efficiency with our managed cloud services.", 
-      link: "/cloud-services" 
-    }
+    {
+      title: "Cloud Services",
+      description: "Amlgo Labs offers end-to-end cloud solutions for seamless migration, management, and optimization. Ensure scalability, security, and efficiency with our managed cloud services.",
+      link: "/cloud-services",
+    },
   ];
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -86,28 +81,27 @@ const ServicesBifurcation = () => {
         </div>
 
         <div className={styles.cardGrid}>
-  {(activeTab === "solutions" ? solutions : services).map((item, index) => (
-    activeTab === "services" ? (
-      <Link key={index} href={item.link || "#"}>
-        <div className={styles.card}>
-          <div className={styles.cardContent}>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
-          <FaArrowRight className={styles.icon} />
+          {(activeTab === "solutions" ? solutions : services).map((item, index) =>
+            activeTab === "solutions" ? (
+              <div key={index} className={`${styles.card} ${styles.noIconCard}`}>
+                <div className={styles.cardContent}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ) : (
+              <Link key={index} href={item.link || "#"} className={styles.cardLink}>
+                <div className={styles.card}>
+                  <div className={styles.cardContent}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                  <FaArrowRight className={styles.icon} />
+                </div>
+              </Link>
+            )
+          )}
         </div>
-      </Link>
-    ) : (
-      <div key={index} className={styles.card}>
-        <div className={styles.cardContent}>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-        </div>
-      </div>
-    )
-  ))}
-</div>
-
       </div>
     </div>
   );
