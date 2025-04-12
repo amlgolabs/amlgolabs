@@ -1,47 +1,32 @@
 /* Container styling */
 .topCompaniesContainer {
   text-align: center;
-  max-width: 1240px;
+  max-width: clamp(20rem, 90vw, 77.5rem); /* 1240px max */
   width: 100%;
   margin-inline: auto;
-  padding: 20px;
-}
-
-/* Heading Styles */
-.heading {
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-  color: #333;
-}
-
-.heading span {
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #0070f3;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 /* Marquee Container */
 .marqueeContainer {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1rem, 2vw, 2rem);
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin-top: 30px;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
 }
 
 /* Marquee Animation */
 .marquee {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  animation: marquee 45s linear infinite;
+  gap: clamp(1rem, 2vw, 2rem);
+  animation: marquee 30s linear infinite;
   will-change: transform;
+  white-space: nowrap;
 }
-
 
 /* Each Logo Wrapper */
 .company {
@@ -49,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: clamp(6rem, 20vw, 12.5rem); /* 100px to 200px */
 }
 
 /* Logo Image Styling */
@@ -68,18 +53,9 @@
 }
 
 /* Smooth Marquee Animation */
-/* @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-} */
-
 @keyframes marquee {
-  to{
-    transform: translateX(calc(-100% - 30px) );
+  to {
+    transform: translateX(calc(-100% - clamp(1rem, 2vw, 2rem)));
   }
 }
 
@@ -88,19 +64,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
-  padding: 40px;
-  margin-top: 40px;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 /* Individual Testimonial Card */
 .testimonial {
-  flex: 1 1 calc(48% - 20px);
-  max-width: calc(48% - 20px);
-  padding: 30px;
+  flex: 1 1 clamp(15rem, 45%, 48%);
+  max-width: clamp(15rem, 45%, 48%);
+  padding: clamp(1.25rem, 3vw, 2rem);
   background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -110,10 +86,10 @@
 .testimonial::before {
   content: "";
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
+  top: -3.125rem;
+  right: -3.125rem;
+  width: clamp(6rem, 20vw, 9.375rem);
+  height: clamp(6rem, 20vw, 9.375rem);
   background: rgba(0, 112, 243, 0.1);
   border-radius: 50%;
   z-index: 0;
@@ -121,16 +97,16 @@
 
 /* Hover Effect for Testimonial */
 .testimonial:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.625rem);
+  box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.15);
 }
 
 /* Testimonial Text */
 .testimonial p {
-  font-size: 1.1rem;
+  font-size: clamp(0.875rem, 2vw, 1.1rem);
   line-height: 1.8;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
   font-style: italic;
   position: relative;
   z-index: 1;
@@ -139,17 +115,17 @@
 /* Decorative Quote Symbol */
 .testimonial p::before {
   content: "“";
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   color: #0070f3;
   position: absolute;
-  top: -20px;
-  left: -10px;
+  top: -1.25rem;
+  left: -0.625rem;
   opacity: 0.1;
 }
 
 /* Testimonial Author */
 .testimonial h3 {
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
   font-weight: 700;
   color: #333;
   text-align: right;
@@ -157,66 +133,116 @@
   z-index: 1;
 }
 
-/* 📌 RESPONSIVE DESIGN */
-/* Tablets */
-@media (max-width: 1024px) {
-  .heading {
-    font-size: 1.8rem;
-  }
+/* Responsive Design */
 
+/* Large Tablets (769px to 1024px) */
+@media (max-width: 1024px) {
   .marquee {
-    animation: marquee 40s linear infinite;
+    animation: marquee 25s linear infinite; /* Faster on smaller screens */
   }
 
   .company {
-    width: 150px;
+    width: clamp(5rem, 15vw, 9.375rem); /* 80px to 150px */
   }
 
   .testimonial {
-    flex: 1 1 calc(100% - 20px);
-    max-width: calc(100% - 20px);
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
-/* Smaller Screens */
+/* Small Tablets and Large Phones (481px to 768px) */
 @media (max-width: 768px) {
-  .heading {
-    font-size: 1.6rem;
+  .marqueeContainer {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+  }
+
+  .marquee {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    animation: marquee 20s linear infinite;
   }
 
   .company {
-    width: 120px;
+    width: clamp(4rem, 12vw, 7.5rem); /* 64px to 120px */
   }
 
   .testimonialContainer {
-    padding: 20px;
+    padding: clamp(1rem, 3vw, 1.5rem);
   }
 
   .testimonial {
-    padding: 20px;
+    padding: clamp(0.75rem, 2vw, 1.25rem);
   }
 
   .testimonial p {
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1.8vw, 1rem);
   }
 
   .testimonial h3 {
-    font-size: 0.9rem;
+    font-size: clamp(0.625rem, 1.2vw, 0.875rem);
+  }
+
+  .testimonial::before {
+    width: clamp(4rem, 15vw, 6rem);
+    height: clamp(4rem, 15vw, 6rem);
+    top: -2rem;
+    right: -2rem;
   }
 }
 
-/* Mobile Devices */
+/* Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
-  .heading {
-    font-size: 1.4rem;
+  .topCompaniesContainer {
+    padding: clamp(0.5rem, 2vw, 1rem);
   }
 
-  .company {
-    width: 100px;
-    margin-right: 5px;
+  .marqueeContainer {
+    margin-top: clamp(1rem, 2vw, 1.5rem);
   }
 
   .marquee {
-    gap: 10px;
+    gap: clamp(0.3rem, 1vw, 0.625rem);
+    animation: marquee 15s linear infinite;
+  }
+
+  .company {
+    width: clamp(3rem, 10vw, 6rem); /* 48px to 96px */
+  }
+
+  .testimonialContainer {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .testimonial {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: clamp(0.5rem, 1.5vw, 1rem);
+  }
+
+  .testimonial p {
+    font-size: clamp(0.625rem, 1.5vw, 0.875rem);
+    line-height: 1.6;
+  }
+
+  .testimonial h3 {
+    font-size: clamp(0.5rem, 1vw, 0.75rem);
+  }
+
+  .testimonial p::before {
+    font-size: clamp(1rem, 3vw, 2rem);
+    top: -0.75rem;
+    left: -0.5rem;
+  }
+}
+
+/* Ultra-small screens (up to 320px) */
+@media (max-width: 320px) {
+  .company {
+    width: clamp(2.5rem, 8vw, 5rem); /* 40px to 80px */
+  }
+
+  .marquee {
+    animation: marquee 12s linear infinite;
   }
 }
