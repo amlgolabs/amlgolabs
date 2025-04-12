@@ -5,6 +5,7 @@ import Footer1 from "./components/Footer/Footer1";
 import RebrandingMarquee from "./components/RebrandingMessage";
 import RebrandingMessage from "./components/RebrandingMessage";
 import { Toaster } from "react-hot-toast";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,8 @@ export const metadata = {
     icon: "/favicon.ico", // <- ADD THIS LINE
   },
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
