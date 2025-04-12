@@ -142,7 +142,7 @@ const JobDescription = ({ job }) => {
     submitData.append("name", formData.name);
     submitData.append("email", formData.email);
     submitData.append("phone", formData.phone);
-    submitData.append("coverLetter", formData.coverLetter || "");
+    submitData.append("coverLetter", formData.coverLetter || ""); // Optional, empty string if not provided
     submitData.append("cv", formData.cv);
     submitData.append("id", formData.id);
     submitData.append("title", formData.title);    
@@ -263,13 +263,13 @@ const JobDescription = ({ job }) => {
           </div>
 
           <div className={`${styles.inputGroup} ${errors.coverLetter ? styles.error : ""}`}>
-            <label className={styles.label}>Cover Letter:</label>
+            <label className={styles.label}>Cover Letter: (Optional)</label> {/* Updated label */}
             <textarea
               name="coverLetter"
               value={formData.coverLetter}
               onChange={handleChange}
               className={styles.textarea}
-              aria-label="Cover Letter"
+              aria-label="Cover Letter (Optional)"
             />
             {errors.coverLetter && <span className={styles.errorMessage}>{errors.coverLetter}</span>}
           </div>

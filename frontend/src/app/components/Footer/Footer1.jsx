@@ -36,7 +36,7 @@ const Footer1 = () => {
           <div className={styles.footerContact}>
             <div className={styles.footerAddress}>
               <MdLocationOn size={20} />
-              <p>Amlgo Labs Inc, 16192, Delaware, 19958</p>
+              <p>Amlgo Labs Inc, 16192, Delaware, USA, 19958</p>
             </div>
             <div className={styles.footerAddress}>
               <MdLocationOn size={20} />

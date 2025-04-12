@@ -272,7 +272,7 @@
 
 
    /* TechnicalArchitecture.module.css */
-.mainContainer {
+/* .mainContainer {
   padding: 0.5rem;
   
 }
@@ -282,13 +282,97 @@
 }
 
 .imageContainer {
-  width: 100%; /* Ensures the container is responsive */
-  max-width: 100%; /* Prevents the image from growing beyond its container */
-  overflow: hidden; /* Optional: To crop the image if it exceeds its bounds */
+  width: 100%; 
+  max-width: 100%; 
+  overflow: hidden; 
 }
 
 .imageContainer img{
   border-radius: 20px;
+} */
+
+
+.mainContainer {
+  padding: 0.5rem;
+}
+
+.contentContainer {
+  max-width: 1240px; /* Updated as requested */
+  width: 100%; /* Updated as requested */
+  margin-inline: auto; /* Updated as requested */
+  text-align: center;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures image maintains aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contentContainer {
+    max-width: 1000px;
+  }
+
+  .imageContainer img {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentContainer {
+    max-width: 800px;
+  }
+
+  .mainContainer {
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    max-width: 600px;
+  }
+
+  .mainContainer {
+    padding: 0.3rem;
+  }
+
+  .imageContainer img {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentContainer {
+    max-width: 100%;
+  }
+
+  .mainContainer {
+    padding: 0.2rem;
+  }
+
+  .imageContainer img {
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contentContainer {
+    max-width: 1300px;
+  }
+
+  .imageContainer img {
+    border-radius: 22px;
+  }
 }
 
 

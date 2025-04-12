@@ -1,105 +1,52 @@
+"use client";
 import React from "react";
 import styles from "../styles/Components/Clients.module.css";
 import Image from "next/image";
 
 const Clients = () => {
+  const clients = [
+    { src: "/client1.png", alt: "client 1" },
+    { src: "/client2.png", alt: "client 2" },
+    { src: "/client3.png", alt: "client 3" },
+    { src: "/client4.png", alt: "client 4" },
+    { src: "/client5.png", alt: "client 5" },
+    { src: "/client7.png", alt: "client 7" },
+    { src: "/client8.png", alt: "client 8" },
+    { src: "/client9.png", alt: "client 9" },
+    { src: "/client10.png", alt: "client 10" },
+    { src: "/client11.png", alt: "client 11" },
+    { src: "/client14.png", alt: "client 14" },
+  ];
+
   return (
     <div className={styles.topCompaniesContainer}>
       <div className={styles.marqueeContainer}>
         <div className={styles.marquee}>
-          <span className={styles.company}>
-            <Image src="/client1.png" height={100} width={256} alt="client 1" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client2.png" height={100} width={256} alt="client 2" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client3.png" height={100} width={256} alt="client 3" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client4.png" height={100} width={256} alt="client 4" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client5.png" height={100} width={256} alt="client 5" />
-          </span>
-          {/* <span className={styles.company}>
-            <Image src="/client6.png" height={100} width={256} alt="client 6" />
-          </span> */}
-          <span className={styles.company}>
-            <Image src="/client7.png" height={100} width={256} alt="client 7" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client8.png" height={100} width={256} alt="client 8" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client9.png" height={100} width={256} alt="client 9" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client10.png" height={100} width={256} alt="client 10" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client11.png" height={100} width={256} alt="client 11" />
-          </span>
-          {/* <span className={styles.company}>
-            <Image src="/client12.png" height={100} width={256} alt="client 12" />
-          </span> */}
-          {/* <span className={styles.company}>
-            <Image src="/client13.png" height={100} width={256} alt="client 13" />
-          </span> */}
-          <span className={styles.company}>
-            <Image src="/client14.png" height={100} width={256} alt="client 14" />
-          </span>
-
-          {/* Duplicate the logos again for smooth scrolling */}
-         
+          {clients.map((client, index) => (
+            <span key={`client-${index}`} className={styles.company}>
+              <Image
+                src={client.src}
+                height={100}
+                width={256}
+                alt={client.alt}
+                style={{ objectFit: "contain" }}
+              />
+            </span>
+          ))}
         </div>
-
-        <div  className={styles.marquee}>
-          <span className={styles.company}>
-            <Image src="/client1.png" height={100} width={256} alt="client 1" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client2.png" height={100} width={256} alt="client 2" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client3.png" height={100} width={256} alt="client 3" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client4.png" height={100} width={256} alt="client 4" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client5.png" height={100} width={256} alt="client 5" />
-          </span>
-          {/* <span className={styles.company}>
-            <Image src="/client6.png" height={100} width={256} alt="client 6" />
-          </span> */}
-          <span className={styles.company}>
-            <Image src="/client7.png" height={100} width={256} alt="client 7" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client8.png" height={100} width={256} alt="client 8" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client9.png" height={100} width={256} alt="client 9" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client10.png" height={100} width={256} alt="client 10" />
-          </span>
-          <span className={styles.company}>
-            <Image src="/client11.png" height={100} width={256} alt="client 11" />
-          </span>
-          {/* <span className={styles.company}>
-            <Image src="/client12.png" height={100} width={256} alt="client 12" />
-          </span> */}
-          {/* <span className={styles.company}>
-            <Image src="/client13.png" height={100} width={256} alt="client 13" />
-          </span> */}
-          <span className={styles.company}>
-            <Image src="/client14.png" height={100} width={256} alt="client 14" />
-          </span>
-
-          {/* Duplicate the logos again for smooth scrolling */}
-         
+        {/* Duplicate for seamless looping */}
+        <div className={styles.marquee}>
+          {clients.map((client, index) => (
+            <span key={`client-duplicate-${index}`} className={styles.company}>
+              <Image
+                src={client.src}
+                height={100}
+                width={256}
+                alt={client.alt}
+                style={{ objectFit: "contain" }}
+              />
+            </span>
+          ))}
         </div>
       </div>
 

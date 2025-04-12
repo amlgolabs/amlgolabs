@@ -20,7 +20,7 @@ export const metadata = {
   title: "Welcome to Amlgo Labs",
   description: "Amlgo Labs empowers businesses with AI, GenAI, Machine Learning, and Data Analytics solutions. Unlock data-driven growth with Amlgo Labs today.",
   keywords: `
-    AI solutions, generative AI, machine learning, AI innovation,
+    Amlgo Labs, Amlgo, Labs, AI solutions, generative AI, machine learning, AI innovation,
     next-gen AI solutions for businesses, cutting-edge machine learning and AI services, AI-driven analytics for enterprises,
     generative ai, predictive ai, ai generative, ai data analytics, ai for data analytics, ai software, use ai,
     ai and data analytics, data analytics ai, data analytics and ai, ai learning, ai solutions for business,
@@ -50,7 +50,6 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* <RebrandingMarquee/> */}
         <Header1 />
-        
         {children}
         <RebrandingMessage />
         <Footer1 />

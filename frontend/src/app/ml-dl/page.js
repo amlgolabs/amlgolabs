@@ -62,7 +62,8 @@ const page = () => {
     <div>
          <IndustryHero2
         title="Engine for a Visually Driven World"
-        description="Leverage Machine Learning (ML) and Deep Learning (DL) to optimize operations, automate processes, and drive innovation. Amlgo Labs empowers your business with data-driven insights and intelligent decision-making for enhanced efficiency and personalized experiences."
+        // description="Leverage Machine Learning (ML) and Deep Learning (DL) to optimize operations, automate processes, and drive innovation. Amlgo Labs empowers your business with data-driven insights and intelligent decision-making for enhanced efficiency and personalized experiences."
+         description="Smarter operations. Faster automation. Bigger innovations. Amlgo Labs powers your business with ML, DL, and data-driven intelligence."
         buttonText="Let's Talk"
         buttonLink="/contact-us"
         backgroundImage="/capabilities/mldlbanner.png" // Provide the correct image path

@@ -222,7 +222,9 @@ const Header1 = () => {
                         </div>
                         <div className={styles.headerBlogLink}>
                           <h3>Featured Resource</h3>
-                          <Image height={200} width={350} src="/header/headerPartner.png" alt="casestudy" />
+                          {/* <Image height={200} width={350} src="/header/headerPartner.png" alt="casestudy" /> */}
+                    <Image height={200} width={350} src="/Header/headerPartner.png" alt="casestudy" />
+
                           <h4>Partnering with Leaders empowering success.</h4>
                           {/* <Link href="/partners">Read More</Link> */}
                           <Link href="/about-us" onClick={closeDropdown}>
