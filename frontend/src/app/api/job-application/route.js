@@ -68,7 +68,7 @@ export const POST = asyncHandler(async (req) => {
     'jobs@amlgolabs.com',
     name,
     'jobApplicationToAmlgoLabs',
-    'jobs@amlgolabs.com',
+    'krishna.singh@amlgolabs.com',
     null,
     email,
     phone,

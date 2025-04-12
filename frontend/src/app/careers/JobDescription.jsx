@@ -5,14 +5,18 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
 const JobDescription = ({ job }) => {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     coverLetter: "",
     cv: null,
+    id: job.id,
+    title: job.title,
     agreement: false,
   });
+
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [snackbar, setSnackbar] = useState({
@@ -140,6 +144,8 @@ const JobDescription = ({ job }) => {
     submitData.append("phone", formData.phone);
     submitData.append("coverLetter", formData.coverLetter || "");
     submitData.append("cv", formData.cv);
+    submitData.append("id", formData.id);
+    submitData.append("title", formData.title);
 
     try {
       const response = await axios.post("/api/job-application", submitData, {
@@ -152,7 +158,10 @@ const JobDescription = ({ job }) => {
         message: "Application Submitted Successfully!",
         severity: "success",
       });
-      setFormData({ name: "", email: "", phone: "", coverLetter: "", cv: null, agreement: false });
+      setFormData({
+        name: "", email: "", phone: "", coverLetter: "", cv: null, agreement: false, id: job.id,
+        title: job.title,
+      });
       setErrors({});
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
