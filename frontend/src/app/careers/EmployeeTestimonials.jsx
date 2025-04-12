@@ -94,15 +94,6 @@ const testimonials = [
 
   },
 
-
-
-
-
-
-
-
-
-
 ];
 
 const EmployeeTestimonials = () => {

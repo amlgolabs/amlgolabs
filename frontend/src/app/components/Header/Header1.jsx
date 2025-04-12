@@ -780,6 +780,15 @@ const Header1 = () => {
               </div>
             </Link>
           </ListItem>
+
+          <ListItem className={styles.mobileParentLink}>
+            <Link href="/founder-message" onClick={toggleDrawer(false)}>
+              <div className={styles.textWithIcon}>
+                Founder's Message
+              </div>
+            </Link>
+          </ListItem>
+
           {/* NEXTGEN AI LAB - MAIN SECTION */}
           <ListItem className={styles.mobileParentLink} button onClick={() => handleDropdownToggle("NextGen AI Lab")}>
             <div className={styles.textWithIcon}>
@@ -870,6 +879,14 @@ const Header1 = () => {
             <Link href="/careers" onClick={toggleDrawer(false)}>
               <div className={styles.textWithIcon}>
                 Careers
+              </div>
+            </Link>
+          </ListItem>
+
+          <ListItem className={styles.mobileParentLink}>
+            <Link href="/contact-us" onClick={toggleDrawer(false)}>
+              <div className={styles.textWithIcon}>
+                Contact Us
               </div>
             </Link>
           </ListItem>

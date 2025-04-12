@@ -1,57 +1,53 @@
-/* Main container: full height and centered */
 .mainContainer {
-    min-height: 80vh;
+    /* min-height: 80vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
     background-color: #f8fafc; /* Light background */
-}
-
-/* Content container: centers and adds spacing */
-.contentContainer {
-    max-width: 1200px;
+  }
+  
+  .contentContainer {
+    max-width: 1400px; /* Increased for larger screens */
     width: 100%;
-    /* background-color: #fff; */
-    border-radius: 12px; /* Slightly more rounded */
+    border-radius: 12px;
     padding: 40px;
     box-sizing: border-box;
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); Softer shadow for depth */
-}
-
-/* Heading: centralize and emphasize */
-.heading {
+  }
+  
+  /* Heading: centralize and emphasize */
+  .heading {
     text-align: center;
     margin-bottom: 40px;
-}
-
-.heading h2 {
+  }
+  
+  .heading h2 {
     font-size: 3rem;
     color: var(--black);
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
-}
-
-/* Tabs container: flex for responsive alignment */
-.tabsContainer {
+  }
+  
+  /* Tabs container: flex for responsive alignment */
+  .tabsContainer {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 40px;
     flex-wrap: wrap;
-}
-
-/* Tab group styles */
-.tabGroup {
+  }
+  
+  /* Tab group styles */
+  .tabGroup {
     flex: 1;
     min-width: 200px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.tabGroup h3 {
+  }
+  
+  .tabGroup h3 {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--light-gray);
@@ -61,74 +57,265 @@
     border-radius: 8px;
     background-color: var(--dark);
     margin: 0;
-}
-
-.tabGroup h3:hover,
-.tabGroup h3.activeTab {
-    /* background-color: #0073e6; */
+  }
+  
+  .tabGroup h3:hover,
+  .tabGroup h3.activeTab {
     border-left: 5px solid var(--blue);
     color: var(--light);
     font-weight: 700;
-}
-
-/* Tab content styling */
-.tabContent {
+  }
+  
+  /* Tab content styling */
+  .tabContent {
     flex: 3;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding-left: 20px;
-}
-
-.tabContent p {
+  }
+  
+  .tabContent p {
     font-size: 1.5rem;
     line-height: 1.75;
     color: #555;
     margin: 0;
     padding: 0;
-}
-
-.tabContent ul {
+  }
+  
+  .tabContent ul {
     padding-left: 20px;
     margin: 0;
-}
-
-.tabContent li {
+  }
+  
+  .tabContent li {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 20px;
-}
-
-.tabContent li span {
+  }
+  
+  .tabContent li span {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
-}
-
-.tabContent li p {
+  }
+  
+  .tabContent li p {
     font-size: 1rem;
     color: #666;
     line-height: 1.7;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    .tabsContainer {
-        flex-direction: column;
-        align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .contentContainer {
+      max-width: 1000px;
+      padding: 30px;
     }
-
-    .tabGroup {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .tabContent {
-        padding-left: 0;
-    }
-
+  
     .heading h2 {
-        font-size: 2.5rem;
+      font-size: 2.8rem;
     }
-}
+  
+    .tabsContainer {
+      gap: 15px;
+    }
+  
+    .tabGroup h3 {
+      font-size: 1.3rem;
+      padding: 10px 15px;
+    }
+  
+    .tabContent p {
+      font-size: 1.4rem;
+    }
+  
+    .tabContent li span {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .mainContainer {
+      padding: 30px 15px;
+    }
+  
+    .contentContainer {
+      padding: 25px;
+    }
+  
+    .tabsContainer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .tabGroup {
+      min-width: 100%;
+      gap: 15px;
+    }
+  
+    .tabContent {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  
+    .tabContent p {
+      font-size: 1.3rem;
+    }
+  
+    .tabContent li span {
+      font-size: 1.3rem;
+    }
+  
+    .tabContent li p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      padding: 25px 10px;
+      min-height: auto; /* Allow content-driven height */
+    }
+  
+    .contentContainer {
+      padding: 20px;
+    }
+  
+    .heading h2 {
+      font-size: 2.2rem;
+      letter-spacing: 1.5px;
+    }
+  
+    .tabsContainer {
+      margin-bottom: 30px;
+    }
+  
+    .tabGroup h3 {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+    }
+  
+    .tabGroup {
+      gap: 10px;
+    }
+  
+    .tabContent {
+      gap: 25px;
+      padding-top: 15px;
+    }
+  
+    .tabContent p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  
+    .tabContent li span {
+      font-size: 1.2rem;
+    }
+  
+    .tabContent li p {
+      font-size: 0.9rem;
+    }
+  
+    .tabContent ul {
+      padding-left: 15px;
+    }
+  
+    .tabContent li {
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContainer {
+      padding: 20px 10px;
+    }
+  
+    .contentContainer {
+      padding: 15px;
+    }
+  
+    .heading h2 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+  
+    .tabsContainer {
+      margin-bottom: 20px;
+    }
+  
+    .tabGroup h3 {
+      font-size: 1.1rem;
+      padding: 8px 10px;
+    }
+  
+    .tabGroup {
+      gap: 8px;
+    }
+  
+    .tabContent {
+      gap: 20px;
+      padding-top: 10px;
+    }
+  
+    .tabContent p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  
+    .tabContent li span {
+      font-size: 1.1rem;
+    }
+  
+    .tabContent li p {
+      font-size: 0.85rem;
+    }
+  
+    .tabContent ul {
+      padding-left: 10px;
+    }
+  
+    .tabContent li {
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .contentContainer {
+      max-width: 1600px;
+      padding: 50px;
+    }
+  
+    .heading h2 {
+      font-size: 3.2rem;
+    }
+  
+    .tabsContainer {
+      gap: 30px;
+    }
+  
+    .tabGroup h3 {
+      font-size: 1.5rem;
+      padding: 15px 25px;
+    }
+  
+    .tabContent {
+      padding-left: 30px;
+    }
+  
+    .tabContent p {
+      font-size: 1.6rem;
+    }
+  
+    .tabContent li span {
+      font-size: 1.6rem;
+    }
+  
+    .tabContent li p {
+      font-size: 1.1rem;
+    }
+  }

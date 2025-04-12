@@ -1,66 +1,171 @@
+/* Container Style */
 .parentContainer {
-    min-height: 90vh;
-    padding: 40px 20px;
+  min-height: 90vh;
+  padding: 20px 10px; /* Mobile-first padding */
 }
 
+/* Offerings Container Style */
 .offeringsContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px; /* Mobile-first padding */
 }
 
+/* Heading Style */
 .heading h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--dark); 
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive heading */
+  font-weight: 700;
+  color: #1a2e44; /* Professional dark tone */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Cards Grid Style */
 .cardsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic grid */
+  gap: 20px; /* Mobile-first gap */
+  place-items: stretch; /* Ensure cards stretch to fill space */
+  width: 100%;
 }
 
+/* Card Style */
 .card {
-    padding: 20px;
-    height: 370px;
-    width: 380px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    border: 1px solid gray;
-    border-radius: 40px;
-    /* background: linear-gradient(542deg, rgb(210, 248, 253) 30%, rgba(252, 236, 251, 1) 80%); */
-    background: linear-gradient(135deg, #fff, #e9ecef);
-
+  padding: 15px; /* Mobile-first padding */
+  min-height: 300px; /* Minimum height for consistency */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #e9ecef); /* Subtle gradient */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
-
-
-
-
-
-
-
-
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: var(--dark);
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* Responsive heading */
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #1a2e44;
 }
 
 .card p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive text */
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1; /* Allow text to fill space */
 }
 
+/* Color Variants */
+
+/* Responsive Design */
+@media (min-width: 576px) {
+  .parentContainer {
+    padding: 30px 15px;
+  }
+
+  .offeringsContainer {
+    padding: 15px;
+  }
+
+  .cardsGrid {
+    gap: 25px;
+  }
+
+  .card {
+    padding: 20px;
+    min-height: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .parentContainer {
+    padding: 40px 20px;
+  }
+
+  .offeringsContainer {
+    padding: 20px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    padding: 25px;
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 992px) {
+  .parentContainer {
+    padding: 50px 30px;
+  }
+
+  .offeringsContainer {
+    padding: 25px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+  }
+
+  .card {
+    padding: 30px;
+    min-height: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .parentContainer {
+    padding: 60px 40px;
+  }
+
+  .offeringsContainer {
+    padding: 30px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+  }
+
+  .card {
+    padding: 35px;
+    min-height: 370px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility and Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cardsGrid {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.card:focus-within {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}

@@ -16,7 +16,7 @@ const CompanyAchievements = () => {
             </div> 
             <div className={styles.achievementCard}>
                 <Image src="/achievements/2.png" height={200} width={200} alt='achievement'/>
-                <h3>Investment by Maruti Suzuki</h3>
+                <h3>Unsolicited Investment by Maruti Suzuki</h3>
             </div> 
             <div className={styles.achievementCard}>
                 <Image src="/achievements/3.png" height={200} width={200} alt='achievement'/>

@@ -1,178 +1,232 @@
-.container{
-    min-height: 70vh;
-}
-
-.innerContainer{
+/* Main container to center and add spacing */
+.container {
+    padding: 15px 10px; /* Mobile-first padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Light, accessible background */
+  }
+  
+  /* Inner container */
+  .innerContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 1240px;
     width: 100%;
     margin-inline: auto;
-    min-height: 70vh;
-    padding-block: 20px;
-}
-
-.upperContainer{
+    padding-block: 20px; /* Mobile-first padding */
+    gap: 24px; /* Mobile-first gap */
+  }
+  
+  /* Upper container for title */
+  .upperContainer {
     text-align: center;
     width: 100%;
-}
-
-.upperContainer h2{
-    padding-block: 50px;
-    padding-inline: 20px;
-    font-size: 3rem;
+  }
+  
+  .upperContainer h2 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Fluid typography */
     font-weight: 800;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-.lowerContainer {
+    color: var(--black); /* Professional dark tone */
+    padding-block: 30px; /* Mobile-first padding */
+    padding-inline: 10px; /* Mobile-first padding */
+    border-top: 1px solid #ccc; /* Lighter border */
+    border-bottom: 1px solid #ccc; /* Lighter border */
+    line-height: 1.3;
+  }
+  
+  /* Lower container for subtitle and challenges */
+  .lowerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    padding: 24px 16px;
+    gap: 16px; /* Mobile-first gap */
+    padding: 16px; /* Mobile-first padding */
     border-radius: 12px;
-}
-
-.lowerContainer h4 {
-    font-size: 2rem;
-    font-weight: bold;
+  }
+  
+  .lowerContainer h4 {
+    font-size: clamp(1.5rem, 3vw, 2rem); /* Fluid typography */
+    font-weight: 700;
     color: #333;
-    margin-bottom: 16px;
+    margin-bottom: 12px; /* Mobile-first margin */
     text-transform: uppercase;
-}
-
-.challengesPoint {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
+  }
+  
+  /* Challenges grid */
+  .challengesPoint {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 16px; /* Mobile-first gap */
     width: 100%;
-}
-
-.challengeCard {
+    padding: 0 8px; /* Mobile-first padding */
+  }
+  
+  /* Challenge card styling */
+  .challengeCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    padding: 16px;
-    border-radius: 12px;
-    width: 280px;
-    text-align: center;
-}
-
-
-.challengeCard svg {
-    font-size: 5rem;
-    color: var(--blue); /* Adjust color for modern feel */
-    margin-bottom: 12px;
-    background-color: rgba(0, 255, 255, 0.1);
-    padding: 20px;
+    justify-content: center;
+    padding: 12px; /* Mobile-first padding */
+    border-radius: 8px; /* Modern rounding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .challengeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Fluid icon size */
+    color: #1976d2; /* Professional blue */
+    margin-bottom: 10px; /* Mobile-first margin */
+    background-color: rgba(25, 118, 210, 0.1); /* Subtle blue background */
+    padding: 16px; /* Mobile-first padding */
     border-radius: 50%;
-}
-
-.challengeCard p {
-    font-size: 1rem;
-    color: var(--dark);
+    transition: color 0.3s ease;
+  }
+  
+  .challengeCard:hover .icon {
+    color: #1565c0; /* Darker blue on hover */
+  }
+  
+  .challengeCard p {
+    font-size: clamp(0.85rem, 2vw, 1rem); /* Fluid typography */
+    color: #1a2e44;
     font-weight: 700;
     margin: 0;
     text-transform: uppercase;
-}
-
-@media (max-width: 1024px) {
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  /* Responsive Design with Modern Breakpoints */
+  @media (min-width: 576px) {
+    .container {
+      padding: 20px 15px;
+    }
+  
     .innerContainer {
-        padding-inline: 16px;
+      padding-block: 25px;
+      gap: 28px;
     }
-
+  
     .upperContainer h2 {
-        font-size: 2.8rem;
-        padding-block: 40px;
-        padding-inline: 16px;
+      padding-block: 40px;
+      padding-inline: 15px;
     }
-
-    .lowerContainer h4 {
-        font-size: 1.8rem;
-    }
-
-    .challengeCard {
-        width: 240px;
-        padding: 12px;
-    }
-
-    .challengeCard svg {
-        font-size: 4rem;
-        padding: 16px;
-    }
-
-    .challengeCard p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Responsiveness for small screens */
-@media (max-width: 768px) {
-    .innerContainer {
-        flex-direction: column;
-    }
-
-    .upperContainer h2 {
-        font-size: 2.5rem;
-        padding-block: 30px;
-        padding-inline: 12px;
-    }
-
+  
     .lowerContainer {
-        padding: 16px 12px;
-        gap: 20px;
+      padding: 20px;
+      gap: 20px;
     }
-
+  
     .challengesPoint {
-        flex-direction: column;
-        align-items: center;
+      padding: 0 12px;
+      gap: 20px;
     }
-
+  
     .challengeCard {
-        width: 100%;
-        max-width: 320px;
-        padding: 12px;
+      padding: 16px;
     }
-
-    .challengeCard svg {
-        font-size: 3.5rem;
-        padding: 12px;
+  
+    .icon {
+      padding: 18px;
     }
-
-    .challengeCard p {
-        font-size: 0.85rem;
+  }
+  
+  @media (min-width: 768px) {
+    .challengesPoint {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
     }
-}
-
-/* Responsiveness for extra-small screens */
-@media (max-width: 480px) {
-    .upperContainer h2 {
-        font-size: 2rem;
-        padding-block: 20px;
-        padding-inline: 8px;
-    }
-
+  
     .lowerContainer {
-        padding: 12px 8px;
-        gap: 16px;
+      padding: 24px;
+      gap: 24px;
     }
-
+  
+    .challengesPoint {
+      gap: 24px;
+      padding: 0 16px;
+    }
+  
     .challengeCard {
-        width: 100%;
-        padding: 8px;
+      padding: 20px;
     }
-
-    .challengeCard svg {
-        font-size: 3rem;
-        padding: 8px;
+  
+    .icon {
+      padding: 20px;
     }
-
-    .challengeCard p {
-        font-size: 0.75rem;
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      padding: 40px 20px;
     }
-}
+  
+    .innerContainer {
+      padding-block: 30px;
+      gap: 32px;
+    }
+  
+    .upperContainer h2 {
+      padding-block: 50px;
+      padding-inline: 20px;
+    }
+  
+    .challengesPoint {
+      grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
+      gap: 28px;
+      padding: 0 20px;
+    }
+  
+    .challengeCard {
+      padding: 24px;
+    }
+  
+    .icon {
+      padding: 24px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      padding: 60px 30px;
+    }
+  
+    .innerContainer {
+      padding-block: 40px;
+    }
+  
+    .challengesPoint {
+      grid-template-columns: repeat(4, 1fr); /* Four columns on large screens */
+      gap: 32px;
+      padding: 0 24px;
+    }
+  
+    .challengeCard {
+      padding: 28px;
+    }
+  
+    .icon {
+      padding: 28px;
+    }
+  }
+  
+  /* Accessibility and Animation */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .challengesPoint {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .challengeCard:focus-within {
+    outline: 2px solid #1976d2;
+    outline-offset: 2px;
+  }

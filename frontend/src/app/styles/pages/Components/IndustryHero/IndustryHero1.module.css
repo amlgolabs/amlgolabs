@@ -1,149 +1,162 @@
 /* Parent container */
 .parent {
-    min-height: 65vh;
+    /* min-height: 65vh; */
     display: flex;
     flex-direction: column;
-}
-
-/* Hero container */
-.heroContainer {
+    width: 100%;
+  }
+  
+  /* Hero container */
+  .heroContainer {
     position: relative;
     max-width: 1240px;
-    margin-block: 30px;
-    margin-inline: auto;
+    margin: 30px auto;
     width: 100%;
-    min-height: 80vh; /* 90% of the viewport height */
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* border-bottom-right-radius: 70px; */
-    /* border-bottom-left-radius: 70px; */
-    /* border-radius: 70px; */
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
-    background-color: #fff; /* Optional: add a fallback background */
-}
-
-/* Overlay */
-.overlay {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Overlay */
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black overlay */
-    z-index: 2; /* Sits above hero image, below content */
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);  */
+    z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: center; /* Align content to the left */
-}
-
-/* Hero image */
-.heroImage {
+    justify-content: flex-start; 
+  }
+  
+  /* Hero image */
+  .heroImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Below both overlay and content */
-}
-
-.heroImage img {
-    width: 100%;
-    height: 100%; /* Ensure it covers the entire container */
-    object-fit: cover; /* Maintain aspect ratio while covering the area */
-}
-
-/* Content */
-.content {
-    width: 53%;
-    position: absolute; /* Layered above the overlay */
-    color: var(--light); /* Fallback to default color if custom property not defined */
+    z-index: 1;
+  }
+  
+  /* Content */
+  .content {
+    width: 50%; /* Slightly reduced for better balance */
+    padding: 40px 30px;
+    color: #fff; /* Consistent light text color */
     text-align: left;
-    z-index: 3; /* Top-most layer */
-    padding: 60px 40px; /* Combined shorthand for padding */
-    /* bottom: 0; */
-left: 0;
-    /* background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 1px );
--webkit-backdrop-filter: blur( 1px ); */
-border-radius: 10px;
-/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-}
-
-/* Content headline */
-.content h1 {
-    font-size: 3rem;
+    z-index: 3;
+    position: relative;
+    /* background: rgba(255, 255, 255, 0.1);  */
+    /* backdrop-filter: blur(2px); */
+    /* -webkit-backdrop-filter: blur(2px); */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .content:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  /* Content headline */
+  .heading {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
-}
-
-/* Content paragraph */
-.content h3 {
+    color: #e0f7fa; /* Soft white with a hint of blue */
+  }
+  
+  /* Content subheading */
+  .subHeading {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font size */
     line-height: 1.6;
-    margin: 0; /* Ensure no unintended spacing */
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    /* Adjust Hero container and content for smaller screens */
+    color: #b0bec5; /* Lighter shade for contrast */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
     .heroContainer {
-        min-height: 60vh; /* Reduce height on medium screens */
-        padding: 0 20px; /* Add some padding for better spacing */
+      min-height: 60vh;
+      padding: 0 15px;
+      border-radius: 50px; /* Slightly reduced radius */
     }
-
+  
     .content {
-        padding: 15px 30px; /* Adjust padding for smaller screens */
+      width: 60%;
+      padding: 30px 20px;
     }
-
-    .content h1 {
-        font-size: 2.5rem; /* Reduce headline size on smaller screens */
+  
+    .heading {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
     }
-
-    .content p {
-        font-size: 1.3rem; /* Reduce paragraph text size on smaller screens */
+  
+    .subHeading {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .heroContainer {
-        min-height: 50vh; /* Further reduce height for mobile */
+      min-height: 50vh;
+      border-radius: 40px;
     }
-
+  
     .content {
-        padding: 10px 20px; /* Adjust padding for mobile */
+      width: 70%;
+      padding: 20px 15px;
     }
-
-    .content h1 {
-        font-size: 2rem; /* Make headline size smaller for mobile */
+  
+    .heading {
+      font-size: clamp(1.5rem, 4vw, 2rem);
     }
-
-    .content p {
-        font-size: 1.2rem; /* Adjust paragraph text for mobile */
+  
+    .subHeading {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .heroContainer {
-        min-height: 40vh; /* Further reduce height for very small screens */
+      min-height: 40vh;
+      border-radius: 30px;
     }
-
+  
     .content {
-        padding: 10px 15px; /* Adjust for very small screens */
+      width: 85%;
+      padding: 15px 10px;
     }
-
-    .content h1 {
-        font-size: 1.8rem; /* Make headline much smaller */
+  
+    .heading {
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
     }
-
-    .content p {
-        font-size: 1rem; /* Make paragraph text smaller for small screens */
+  
+    .subHeading {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
     }
-}
+  }
+  
+  /* Accessibility and animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .heroContainer {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .content:focus-within {
+    outline: 2px solid #00bcd4; /* Accessible focus outline */
+    outline-offset: 2px;
+  }
