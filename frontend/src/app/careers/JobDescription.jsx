@@ -145,9 +145,8 @@ const JobDescription = ({ job }) => {
     submitData.append("coverLetter", formData.coverLetter || "");
     submitData.append("cv", formData.cv);
     submitData.append("id", formData.id);
-    submitData.append("title", formData.title);
-
-    try {
+    submitData.append("title", formData.title);    
+        try {
       const response = await axios.post("/api/job-application", submitData, {
         headers: {
           "Content-Type": "multipart/form-data",

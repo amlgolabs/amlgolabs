@@ -22,7 +22,7 @@ export const POST = asyncHandler(async (req) => {
     };
   }
 
-  // Save contact details to database
+  // Save contact details to database 
   const newContact = new ContactUs({ name, email, message, phone });
   await newContact.save();
 
@@ -32,10 +32,10 @@ export const POST = asyncHandler(async (req) => {
     name,                    // userName
     'contactDetailsToAdmin', // templateName
     null,                    // Source (uses template default)
-    'info@amlgolabs.com',                 //     CC
-    email,                // For template
-    phone,                // For template
-    message               // For template
+    'info@amlgolabs.com',    // CC
+    email,                   // For template
+    phone,                   // For template
+    message                  // For template
   );
   await sesClient.send(new SendEmailCommand(adminParams));
 
