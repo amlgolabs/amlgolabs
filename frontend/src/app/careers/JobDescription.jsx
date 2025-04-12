@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import styles from "../styles/pages/Components/Careers/JobDescription.module.css";
-import toast from "react-hot-toast";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 const JobDescription = ({ job }) => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,11 @@ const JobDescription = ({ job }) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
   const fileInputRef = useRef(null);
 
   const validateForm = () => {
@@ -57,7 +63,11 @@ const JobDescription = ({ job }) => {
     if (!formData.cv) {
       newErrors.cv = "CV is required";
     } else {
-      const allowedTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+      const allowedTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ];
       if (!allowedTypes.includes(formData.cv.type)) {
         newErrors.cv = "CV must be a .pdf, .doc, or .docx file";
       } else if (formData.cv.size > 5 * 1024 * 1024) {
@@ -107,11 +117,19 @@ const JobDescription = ({ job }) => {
     }
   };
 
+  const handleSnackbarClose = () => {
+    setSnackbar((prev) => ({ ...prev, open: false }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
-      toast.error("Please fix the errors in the form");
+      setSnackbar({
+        open: true,
+        message: "Please fix the errors in the form",
+        severity: "error",
+      });
       return;
     }
 
@@ -129,14 +147,22 @@ const JobDescription = ({ job }) => {
           "Content-Type": "multipart/form-data",
         },
       });
-      toast.success("Application Submitted Successfully!");
+      setSnackbar({
+        open: true,
+        message: "Application Submitted Successfully!",
+        severity: "success",
+      });
       setFormData({ name: "", email: "", phone: "", coverLetter: "", cv: null, agreement: false });
       setErrors({});
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
     } catch (err) {
-      toast.error("Failed to submit application. Please try again later.");
+      setSnackbar({
+        open: true,
+        message: "Failed to submit application. Please try again later.",
+        severity: "error",
+      });
       console.error("Error submitting application:", err);
     } finally {
       setIsSubmitting(false);
@@ -276,6 +302,23 @@ const JobDescription = ({ job }) => {
           </button>
         </form>
       </div>
+
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={handleSnackbarClose}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity={snackbar.severity}
+          sx={{ width: "100%" }}
+          elevation={6}
+          variant="filled"
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

@@ -4,7 +4,6 @@ import Header1 from "./components/Header/Header1";
 import Footer1 from "./components/Footer/Footer1";
 import RebrandingMarquee from "./components/RebrandingMessage";
 import RebrandingMessage from "./components/RebrandingMessage";
-import { Toaster } from "react-hot-toast";
 import Head from "next/head";
 
 const geistSans = Geist({
@@ -51,7 +50,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* <RebrandingMarquee/> */}
         <Header1 />
-        <Toaster position="top-right" />
+        
         {children}
         <RebrandingMessage />
         <Footer1 />
