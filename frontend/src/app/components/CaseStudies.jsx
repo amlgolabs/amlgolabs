@@ -8,7 +8,7 @@ const CaseStudies = ({ caseStudies }) => {
     <div className={styles.backContainer}>
       <div className={styles.parentContainer}>
         <div className={styles.heading}>
-          <h1>Insights</h1>
+          <h2>Insights</h2>
         </div>
         <div className={styles.cardsContainer}>
           {caseStudies.map((caseStudy) => (
