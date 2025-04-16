@@ -3,7 +3,7 @@ import config from "@/app/config/config";
 const templates = {
     contactDetailsToAdmin: {
         source: "noreply@amlgolabs.com",
-        subject: "New Contact Form Submission",
+        subject: (name) => `Thank You for Contacting Amlgo Labs, ${name}!`,
         body: (name, email, phone, message) =>
             `Dear ${name},\n\n` +
             `Thank you for reaching out to Amlgo Labs.\n\n` +
