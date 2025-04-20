@@ -602,7 +602,7 @@
 }
 
 .desktopCloseButton {
-  color: #e2e8f0;
+  color: #e2e8f0 !important;
   padding: 10px;
   border-radius: 8px;
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -760,6 +760,7 @@
   font-size: 1rem;
   letter-spacing: 0.5px;
   margin-top: 2px;
+  color: var(--light) !important;
 }
 
 .mobileBlog a{
@@ -851,6 +852,7 @@
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
+  color: var(--light) !important;
 }
 
 .textWithIcon svg {

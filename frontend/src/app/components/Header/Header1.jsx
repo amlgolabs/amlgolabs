@@ -565,12 +565,11 @@ const Header1 = () => {
     {/* Get in Touch Button */}
     <ListItem className={styles.desktopButtonWrapper}>
       <Link href="/contact-us" onClick={toggledesktopDrawer(false)}>
-        <Button
-          variant="contained"
+        <button
           className="globalButtonBlack"
         >
           Get in Touch
-        </Button>
+        </button>
       </Link>
     </ListItem>
   </List>
