@@ -20,7 +20,7 @@ const WhitePaper = () => {
           {/* <button onClick={openPopup} className={styles.button}>Learn More</button> */}
         {/* </Link> */}
 
-        <button onClick={() => openPopup("BusinessPotential_GenAI")} className={styles.button}>Learn More</button>
+        <button onClick={() => openPopup("Business-Potential-GenAI")} className={styles.button}>Learn More</button>
 
       </div>
       <div className={styles.imageContainer}>
