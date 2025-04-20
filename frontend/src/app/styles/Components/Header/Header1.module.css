@@ -583,14 +583,13 @@
   width: 340px;
   /* background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
   backdrop-filter: blur(20px); */
-  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%) !important;
   backdrop-filter: blur(12px);
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   box-shadow: -8px 0 20px rgba(0, 0, 0, 0.2);
   color: #f8fafc;
   padding: 32px 24px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-y: auto;
 }
 
@@ -725,7 +724,7 @@
   width: 320px;
   top: 60px !important;
   height: calc(100vh - 60px) !important;
-  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%) !important;
   backdrop-filter: blur(12px);
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
