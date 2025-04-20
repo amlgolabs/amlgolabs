@@ -1,162 +1,166 @@
 /* Parent container */
 .parent {
-    /* min-height: 65vh; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* Hero container */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hero container */
+.heroContainer {
+  position: relative;
+  max-width: 1240px;
+  margin: 30px auto;
+  width: 100%;
+  /* height: 80vh; */
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Hero image */
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  width: 50%;
+  padding: 40px 30px;
+  color: #fff;
+  text-align: left;
+  z-index: 3;
+  position: relative;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+}
+
+/* Content headline */
+.heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* Content subheading */
+.subHeading {
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .heroContainer {
-    position: relative;
-    max-width: 1240px;
-    margin: 30px auto;
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-top-right-radius: 70px;
-    border-bottom-left-radius: 70px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    height: 60vh;
+    min-height: 400px;
+    padding: 0 15px;
+    border-radius: 50px;
   }
-  
-  /* Overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);  */
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-  }
-  
-  /* Hero image */
-  .heroImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  /* Content */
+
   .content {
-    width: 50%; /* Slightly reduced for better balance */
-    padding: 40px 30px;
-    color: #fff; /* Consistent light text color */
-    text-align: left;
-    z-index: 3;
-    position: relative;
-    /* background: rgba(255, 255, 255, 0.1);  */
-    /* backdrop-filter: blur(2px); */
-    /* -webkit-backdrop-filter: blur(2px); */
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    width: 60%;
+    padding: 30px 20px;
   }
-  
-  .content:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-  }
-  
-  /* Content headline */
+
   .heading {
-    font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
-    font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    color: #e0f7fa; /* Soft white with a hint of blue */
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
-  
-  /* Content subheading */
+
   .subHeading {
-    font-weight: 600;
-    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font size */
-    line-height: 1.6;
-    color: #b0bec5; /* Lighter shade for contrast */
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1200px) {
-    .heroContainer {
-      min-height: 60vh;
-      padding: 0 15px;
-      border-radius: 50px; /* Slightly reduced radius */
-    }
-  
-    .content {
-      width: 60%;
-      padding: 30px 20px;
-    }
-  
-    .heading {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-    }
-  
-    .subHeading {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .heroContainer {
-      min-height: 50vh;
-      border-radius: 40px;
-    }
-  
-    .content {
-      width: 70%;
-      padding: 20px 15px;
-    }
-  
-    .heading {
-      font-size: clamp(1.5rem, 4vw, 2rem);
-    }
-  
-    .subHeading {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .heroContainer {
-      min-height: 40vh;
-      border-radius: 30px;
-    }
-  
-    .content {
-      width: 85%;
-      padding: 15px 10px;
-    }
-  
-    .heading {
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
-    }
-  
-    .subHeading {
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-    }
-  }
-  
-  /* Accessibility and animation */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
+}
+
+@media (max-width: 768px) {
   .heroContainer {
-    animation: fadeIn 1s ease-in-out;
+    height: 50vh;
+    min-height: 300px;
+    border-radius: 40px;
   }
-  
-  .content:focus-within {
-    outline: 2px solid #00bcd4; /* Accessible focus outline */
-    outline-offset: 2px;
+
+  .content {
+    width: 70%;
+    padding: 20px 15px;
   }
+
+  .heading {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .subHeading {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    height: 40vh;
+    min-height: 250px;
+    border-radius: 30px;
+  }
+
+  .content {
+    width: 85%;
+    padding: 15px 10px;
+  }
+
+  .heading {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .subHeading {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+}
+
+/* Accessibility and animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.heroContainer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.content:focus-within {
+  outline: 2px solid #00bcd4;
+  outline-offset: 2px;
+}

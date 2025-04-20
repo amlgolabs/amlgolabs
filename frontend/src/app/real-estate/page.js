@@ -1,5 +1,5 @@
 import React from 'react'
-import IndustryHero from '../components/PagesComponents/Hero/IndustryHero1'
+
 import IndustryHero2 from '../components/PagesComponents/Hero/IndustryHero2';
 import Introduction2 from '../components/PagesComponents/Introduction/Introduction2';
 import SolutionsSteps from '../components/PagesComponents/SolutionsSteps';

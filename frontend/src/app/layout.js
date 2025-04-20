@@ -5,6 +5,10 @@ import Footer1 from "./components/Footer/Footer1";
 import RebrandingMarquee from "./components/RebrandingMessage";
 import RebrandingMessage from "./components/RebrandingMessage";
 import Head from "next/head";
+// import { PopupProvider } from "../context/PopupContext";
+// import PopupForm from "../components/PopupForm";
+import { PopupProvider } from "./context/PopupContext";
+import PopupForm from "./components/PopupForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,27 +36,28 @@ export const metadata = {
     best...
   `,
   icons: {
-    icon: "/favicon.ico", // <- ADD THIS LINE
+    icon: "/favicon.ico",
   },
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* <RebrandingMarquee/> */}
-        <Header1 />
-        {children}
-        <RebrandingMessage />
-        <Footer1 />
+        <PopupProvider>
+          {/* <RebrandingMarquee/> */}
+          <Header1 />
+          {children}
+          <RebrandingMessage />
+          <Footer1 />
+          <PopupForm />
+        </PopupProvider>
       </body>
     </html>
   );

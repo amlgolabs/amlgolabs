@@ -12,13 +12,18 @@
   text-align: center;
 }
 
-.heading h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: var(--black); /* Dark gray for contrast */
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.heading h2 {
+  text-align: center;
+    font-size: 3rem; /* Adjusted for responsiveness */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 30px; /* Adjusted for smaller screens */
+    color: #fff;
+    background: linear-gradient(90deg, #121212, #333, #121212);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 /* Cards Container */

@@ -1,6 +1,6 @@
 /* Modern and Spacious TabsGrid Styles */
 .mainContainer{
-  min-height: 100vh;
+  ;
   background: var(--black);
   display: flex;
   align-items: center;

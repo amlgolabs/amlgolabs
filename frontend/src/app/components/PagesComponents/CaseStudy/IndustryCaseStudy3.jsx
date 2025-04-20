@@ -24,7 +24,6 @@ const caseStudies = [
         date: "Feb 15, 2024",
         parentTitle: "White Paper",
         link: "/documents/generativeaivspredictiveai.pdf"
-
     },
     {
         id: 3,
@@ -34,7 +33,6 @@ const caseStudies = [
         date: "Mar 5, 2024",
         parentTitle: "Blog",
         link: "/documents/ROI_GenAI.pdf"
-
     },
     {
         id: 4,
@@ -74,7 +72,6 @@ const caseStudies = [
     }
 ];
 
-
 const IndustryCaseStudy3 = () => {
     const scrollRef = useRef(null);
 
@@ -88,7 +85,6 @@ const IndustryCaseStudy3 = () => {
 
     return (
         <div className={styles.container}>
-            {/* Top Section */}
             <div className={styles.header}>
                 <div className={styles.text}>
                     <h2>Providing genuine value for our clients.</h2>
@@ -114,7 +110,6 @@ const IndustryCaseStudy3 = () => {
                 </div>
             </div>
 
-            {/* Scrollable Case Study Cards */}
             <motion.div
                 className={styles.scroller}
                 ref={scrollRef}
@@ -123,39 +118,30 @@ const IndustryCaseStudy3 = () => {
                 transition={{ duration: 0.5 }}
             >
                 {caseStudies.map((study) => (
-                    <Link  key={study.id} href={study.link} target="_blank">
-                    <motion.div
-                        key={study.id}
-                        className={styles.card}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        {/* <img   /> */}
-                        {/* <Image src={study.image} 
-            width={320} // Matches min-width of card
-            height={200} // Matches fixed height in CSS
-            layout="responsive" // Makes it scale responsively
-            objectFit="cover" // Ensures the image fills without distortion 
-            alt={study.title}/> */}
-                        <Image
-                            src={study.image}
-                            alt={study.title}
-                            width={240}  // Smaller width
-                            height={300} // Increased height
-                            layout="intrinsic" // Keeps aspect ratio while allowing responsiveness
-                            objectFit="contain"
-                        />
-                        <div className={styles.content}>
-
-                        <h3>{study.title}</h3>
-                        <p>{study.description}</p>
-                        <div className={styles.parentTitle}>
-                        <span>{study.parentTitle}</span>
-                        <span className={styles.seperator}></span>
-                        <span>{study.date}</span>
-                        </div>
-                        </div>
-                    </motion.div>
+                    <Link key={study.id} href={study.link} target="_blank">
+                        <motion.div
+                            className={styles.card}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <Image
+                                src={study.image}
+                                alt={study.title}
+                                width={300}
+                                height={200}
+                                layout="fixed"
+                                objectFit="cover"
+                            />
+                            <div className={styles.content}>
+                                <h3>{study.title}</h3>
+                                <p>{study.description}</p>
+                                <div className={styles.parentTitle}>
+                                    <span>{study.parentTitle}</span>
+                                    <span className={styles.seperator}></span>
+                                    <span>{study.date}</span>
+                                </div>
+                            </div>
+                        </motion.div>
                     </Link>
                 ))}
             </motion.div>

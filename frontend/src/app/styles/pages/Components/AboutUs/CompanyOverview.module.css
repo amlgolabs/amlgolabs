@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
-    min-height: 100vh;
+    ;
   }
   
   .overview {
@@ -17,13 +17,17 @@
   }
   
   .overview h2 {
-    font-size: 3rem;
+    text-align: center;
+    font-size: 3rem; /* Adjusted for responsiveness */
     font-weight: 800;
-    color: var(--dark);
-    margin-bottom: 50px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.2rem;
+    margin-bottom: 30px; /* Adjusted for smaller screens */
+    color: #fff;
+    background: linear-gradient(90deg, #121212, #333, #121212);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
   }
   
   .overview p {
