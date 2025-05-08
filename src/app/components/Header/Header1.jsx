@@ -498,83 +498,83 @@ const Header1 = () => {
         {/* Desktop Drawer */}
 
         <Drawer
-  anchor="right"
-  open={desktopdrawerOpen}
-  onClose={toggledesktopDrawer(false)}
-  classes={{ paper: styles.desktopDrawerContainer }}
->
-  <div className={styles.desktopDrawerHeader}>
-    <IconButton
-      className={styles.desktopCloseButton}
-      onClick={toggledesktopDrawer(false)}
-    >
-      <Close />
-    </IconButton>
-  </div>
-  <List className={styles.desktopList}>
-    {/* About Us Section */}
-    <ListItem className={styles.desktopListItem} onClick={handleAboutToggle}>
-      <ListItemText primary="About Us" />
-      {aboutOpen ? (
-        <ExpandLess className={styles.desktopExpandIcon} />
-      ) : (
-        <ExpandMore className={styles.desktopExpandIcon} />
-      )}
-    </ListItem>
-    <Collapse in={aboutOpen} timeout="auto" unmountOnExit>
-      <List component="div" disablePadding>
-        <ListItem className={styles.desktopSubListItem}>
-          <Link href="/about-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-            Overview
-          </Link>
-        </ListItem>
-        <ListItem className={styles.desktopSubListItem}>
-          <Link href="/about-us#values" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-            Our Values
-          </Link>
-        </ListItem>
-        <ListItem className={styles.desktopSubListItem}>
-          <Link href="/founder-message" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-            Founder Message
-          </Link>
-        </ListItem>
-      </List>
-    </Collapse>
-
-    {/* Blogs Section */}
-    <ListItem className={styles.desktopListItem}>
-      <Link href="/resources" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-      Resources
-      </Link>
-    </ListItem>
-
-    {/* Contact Section */}
-    <ListItem className={styles.desktopListItem}>
-      <Link href="/contact-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-        Contact
-      </Link>
-    </ListItem>
-
-    {/* Careers Section */}
-    <ListItem className={styles.desktopListItem}>
-      <Link href="/careers" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-        Careers
-      </Link>
-    </ListItem>
-
-    {/* Get in Touch Button */}
-    <ListItem className={styles.desktopButtonWrapper}>
-      <Link href="/contact-us" onClick={toggledesktopDrawer(false)}>
-        <Button
-          variant="contained"
-          className="globalButtonBlack"
+          anchor="right"
+          open={desktopdrawerOpen}
+          onClose={toggledesktopDrawer(false)}
+          classes={{ paper: styles.desktopDrawerContainer }}
         >
-          Get in Touch
-        </Button>
-      </Link>
-    </ListItem>
-  </List>
-</Drawer>
+          <div className={styles.desktopDrawerHeader}>
+            <IconButton
+              className={styles.desktopCloseButton}
+              onClick={toggledesktopDrawer(false)}
+            >
+              <Close />
+            </IconButton>
+          </div>
+          <List className={styles.desktopList}>
+            {/* About Us Section */}
+            <ListItem className={styles.desktopListItem} onClick={handleAboutToggle}>
+              <ListItemText primary="About Us" />
+              {aboutOpen ? (
+                <ExpandLess className={styles.desktopExpandIcon} />
+              ) : (
+                <ExpandMore className={styles.desktopExpandIcon} />
+              )}
+            </ListItem>
+            <Collapse in={aboutOpen} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={styles.desktopSubListItem}>
+                  <Link href="/about-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                    Overview
+                  </Link>
+                </ListItem>
+                <ListItem className={styles.desktopSubListItem}>
+                  <Link href="/about-us#values" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                    Our Values
+                  </Link>
+                </ListItem>
+                <ListItem className={styles.desktopSubListItem}>
+                  <Link href="/founder-message" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                    Founder Message
+                  </Link>
+                </ListItem>
+              </List>
+            </Collapse>
+
+            {/* Blogs Section */}
+            <ListItem className={styles.desktopListItem}>
+              <Link href="/resources" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                Resources
+              </Link>
+            </ListItem>
+
+            {/* Contact Section */}
+            <ListItem className={styles.desktopListItem}>
+              <Link href="/contact-us" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                Contact
+              </Link>
+            </ListItem>
+
+            {/* Careers Section */}
+            <ListItem className={styles.desktopListItem}>
+              <Link href="/careers" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+                Careers
+              </Link>
+            </ListItem>
+
+            {/* Get in Touch Button */}
+            <ListItem className={styles.desktopButtonWrapper}>
+              <Link href="/contact-us" onClick={toggledesktopDrawer(false)}>
+                <Button
+                  variant="contained"
+                  className="globalButtonBlack"
+                >
+                  Get in Touch
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Drawer>
 
         {/* Hamburger Menu */}
         <IconButton
@@ -818,7 +818,7 @@ const Header1 = () => {
             <Collapse in={activeDropdown === "Partners"} timeout="auto" unmountOnExit>
               <div className={styles.mobileDropdown}>
                 <div className={styles.subLinks}>
-                <Link href="/partners/azure" onClick={toggleDrawer(false)}>
+                  <Link href="/partners/azure" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <VscAzure style={{ fontSize: 20, marginRight: 8 }} />
                       Azure
@@ -854,7 +854,7 @@ const Header1 = () => {
                       Cloudera
                     </div>
                   </Link>
-                {/* <Link href="/partners/azure" onClick={toggleDrawer(false)}>Azure</Link>
+                  {/* <Link href="/partners/azure" onClick={toggleDrawer(false)}>Azure</Link>
                 <Link href="/partners/aws" onClick={toggleDrawer(false)}>AWS</Link>
                 <Link href="/partners/databricks" onClick={toggleDrawer(false)}>Databricks</Link>
                 <Link href="/partners/google-cloud" onClick={toggleDrawer(false)}>Google Cloud</Link>
