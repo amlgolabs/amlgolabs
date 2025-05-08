@@ -1,0 +1,100 @@
+.ctaSection {
+  width: 100%;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+
+.ctaContainer {
+  max-width: 1240px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .ctaContainer {
+    flex-direction: row;
+    padding: 4rem 2rem;
+  }
+}
+
+.leftSection {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .leftSection {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--blue);
+}
+
+@media (min-width: 640px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+.ctaButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #000;
+  border: 1px solid var(--blue);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--blue);
+  color: #000;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}

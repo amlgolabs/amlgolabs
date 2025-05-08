@@ -1,0 +1,222 @@
+/* IndustrySectors2.module.css */
+.mainContainer {
+  /* ; */
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f4f7fc; */
+}
+
+.sectorsContainer {
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 2rem;
+  letter-spacing: 0.5px;
+}
+
+.sectorsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.sector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  /* cursor: pointer; */
+}
+
+.sector:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sectorName {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.sectorName h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem;
+}
+
+.sectorName p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sector svg {
+  font-size: 2rem;
+  color: #007bff;
+  flex-shrink: 0;
+}
+
+/* Large screens (up to 1200px) */
+@media (max-width: 1200px) {
+  .sectorsContainer {
+    max-width: 960px;
+  }
+
+  .heading h2 {
+    font-size: 2.75rem;
+  }
+
+  .sectorsGrid {
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .sector {
+    padding: 1.25rem;
+  }
+}
+
+/* Medium screens (up to 992px) */
+@media (max-width: 992px) {
+  .sectorsContainer {
+    max-width: 720px;
+  }
+
+  .heading h2 {
+    font-size: 2.25rem;
+  }
+
+  .sectorsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sector {
+    padding: 1rem;
+  }
+
+  .sectorName h3 {
+    font-size: 1.4rem;
+  }
+
+  .sectorName p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 2rem 0.75rem;
+    min-height: auto;
+  }
+
+  .sectorsContainer {
+    max-width: 100%;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .sectorsGrid {
+    padding: 1rem 0.5rem;
+  }
+
+  .sector {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sectorName h3 {
+    font-size: 1.3rem;
+  }
+
+  .sectorName p {
+    font-size: 0.9rem;
+  }
+
+  .sector svg {
+    font-size: 1.8rem;
+  }
+}
+
+/* Extra small screens (up to 576px) */
+@media (max-width: 576px) {
+  .mainContainer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .heading h2 {
+    font-size: 1.75rem;
+  }
+
+  .sectorsGrid {
+    gap: 0.75rem;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .sector {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .sectorName h3 {
+    font-size: 1.2rem;
+  }
+
+  .sectorName p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .sector svg {
+    font-size: 1.5rem;
+  }
+}
+
+/* Ultra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .sector {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  .sectorName h3 {
+    font-size: 1.1rem;
+  }
+
+  .sectorName p {
+    font-size: 0.8rem;
+  }
+
+  .sector svg {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+}

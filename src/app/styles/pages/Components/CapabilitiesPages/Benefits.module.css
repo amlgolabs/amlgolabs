@@ -1,0 +1,169 @@
+.container {
+  /* ; */
+  background: var(--black);
+  padding: 40px 16px; /* Reduced padding for smaller screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2rem; /* Smaller base font size for mobile */
+  color: var(--light);
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min width */
+  gap: 20px; /* Smaller gap for smaller screens */
+  max-width: 1200px; /* Increased max-width for larger screens */
+  width: 100%;
+  padding: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid transparent;
+  animation: glowingBorder 2s infinite alternate;
+}
+
+@keyframes glowingBorder {
+  0% {
+    border-color: rgba(128, 128, 128, 0.3);
+  }
+  100% {
+    border-color: rgba(128, 128, 128, 0.8);
+  }
+}
+
+.iconWrapper {
+  background: var(--blue);
+  width: 40px; /* Smaller icon wrapper for mobile */
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 1.5rem; /* Smaller icon size */
+}
+
+.text {
+  color: #f0f0f0;
+  font-size: 1rem; /* Smaller base font size */
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+  .container {
+    padding: 60px 24px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: 2.5px;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 14px;
+  }
+
+  .iconWrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon {
+    font-size: 1.7rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 80px 32px;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 48px;
+    letter-spacing: 3px;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 229, 255, 0.2);
+  }
+
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large Desktop (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .container {
+    padding: 100px 40px;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 36px;
+  }
+
+  .card {
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+}

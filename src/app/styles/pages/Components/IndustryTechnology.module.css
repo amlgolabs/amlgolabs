@@ -1,0 +1,182 @@
+/* Main container to center and add spacing */
+.container {
+  ;
+  padding: 15px 10px; /* Mobile-first padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Technology container */
+.technologyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1240px;
+  width: 100%;
+  margin-inline: auto;
+  gap: 24px; /* Mobile-first gap */
+  padding: 20px; /* Mobile-first padding */
+}
+
+/* Content section */
+.content h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Fluid typography */
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1f2937;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0; /* Remove default margin */
+}
+
+/* Technology grid */
+.technologyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fixed 4-column layout on desktop */
+  gap: 0; /* No gap to ensure continuous borders */
+  width: 100%;
+  border: 1px solid #ccc; /* Outer border for the grid */
+  border-radius: 8px; /* Modern rounding */
+  overflow: hidden; /* Ensure borders stay within container */
+}
+
+/* Grid item styling */
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px; /* Mobile-first padding */
+  border-right: 1px solid #ccc; /* Default right border */
+  border-bottom: 1px solid #ccc; /* Default bottom border */
+  aspect-ratio: 1; /* Maintain square aspect ratio */
+  position: relative; /* For image positioning if needed */
+}
+
+/* Remove right border for the last item in each row */
+.gridItem:nth-child(4n) {
+  border-right: none; /* For 4-column layout */
+}
+
+/* Responsive Design with Modern Breakpoints */
+@media (min-width: 576px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .technologyContainer {
+    padding: 25px;
+    gap: 28px;
+  }
+
+  .gridItem {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .technologyContainer {
+    padding: 30px;
+    gap: 32px;
+  }
+
+  .gridItem {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .technologyContainer {
+    padding: 40px;
+  }
+
+  .gridItem {
+    padding: 24px;
+  }
+}
+
+/* Adjust grid and borders for smaller screens */
+@media (max-width: 991px) {
+  .technologyGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+  }
+
+  /* Remove right border for the last item in 3-column layout */
+  .gridItem:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .technologyGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+
+  /* Remove right border for the last item in 2-column layout */
+  .gridItem:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .technologyGrid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  /* Remove right border (not needed in single column) */
+  .gridItem {
+    border-right: none;
+  }
+
+  /* Remove bottom border for mobile views as requested */
+  .gridItem {
+    border-bottom: none;
+  }
+
+  .technologyContainer {
+    gap: 16px;
+  }
+
+  .gridItem {
+    padding: 12px;
+  }
+
+  .content h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .gridItem h4 {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  }
+}
+
+.gridItem h4 {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Fluid typography */
+  font-weight: 600;
+  color: #374151;
+  margin-top: 12px; /* Mobile-first margin */
+  text-align: center;
+  word-break: break-word; /* Prevent overflow */
+}
+
+/* Accessibility and Animation */
+@keyframes fadeInGrid {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.technologyGrid {
+  animation: fadeInGrid 0.6s ease-out forwards;
+}
+
+.gridItem:focus-within {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}

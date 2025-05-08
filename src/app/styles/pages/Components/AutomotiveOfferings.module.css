@@ -1,0 +1,192 @@
+.offeringsContainer {
+    text-align: center;
+    padding: 50px;
+    background-color: #101010;
+    position: relative;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.scrollDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* Allow arrows to be seen */
+    max-width: 1240px;
+    margin-inline: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0 40px; /* Reduced padding */
+}
+
+.offeringContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.offeringText {
+    flex: 1;
+    color: #ffffff;
+    text-align: left;
+}
+
+.offeringText h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.offeringText p {
+    font-size: 1rem;
+    color: #bbbbbb;
+    margin-bottom: 15px;
+}
+
+.offeringButton {
+    background-color: #00e5ff;
+    color: var(--dark);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.offeringButton:hover {
+    background-color: #00c4e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.4);
+}
+
+.offeringImage {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+/* Arrows */
+.arrowLeft, .arrowRight {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Keep arrows above content */
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.arrowLeft {
+    left: 10px; /* Adjusted for visibility */
+}
+
+.arrowRight {
+    right: 10px;
+}
+
+.arrowLeft:hover, .arrowRight:hover {
+    color: var(--blue);
+    
+}
+
+/* Pagination Dots */
+.paginationDots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activeDot {
+    background-color: #00e5ff;
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .scrollDiv {
+        padding: 0 20px; /* Adjust padding for tablets */
+    }
+
+    .arrowLeft {
+        left: 5px;
+    }
+
+    .arrowRight {
+        right: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .offeringContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .scrollDiv {
+        padding: 0 15px;
+    }
+
+    .arrowLeft, .arrowRight {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrowLeft {
+        left: 5px;
+    }
+
+    .arrowRight {
+        right: 5px;
+    }
+}

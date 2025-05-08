@@ -1,0 +1,211 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1240px; /* Updated as requested */
+    width: 100%; /* Updated as requested */
+    margin-inline: auto; /* Updated as requested */
+    padding: 40px 20px;
+    gap: 40px;
+  }
+  
+  .content {
+    flex: 1;
+    max-width: 620px; /* Adjusted to fit within 1240px */
+    text-align: left;
+    color: #333;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .content h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .signature {
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  .signature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    margin-left: auto;
+  }
+  
+  .signature h4 {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    max-width: 520px; /* Adjusted to fit within 1240px */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .container {
+      max-width: 1000px;
+      gap: 30px;
+    }
+  
+    .content {
+      max-width: 500px;
+    }
+  
+    .imageContainer {
+      max-width: 450px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 800px;
+      padding: 30px 15px;
+    }
+  
+    .content {
+      max-width: 100%;
+    }
+  
+    .imageContainer {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 600px;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .heading {
+      font-size: 1.4rem;
+    }
+  
+    .content p {
+      font-size: 1.05rem;
+    }
+  
+    .content h3 {
+      font-size: 1.4rem;
+    }
+  
+    .signature h2 {
+      font-size: 1.4rem;
+    }
+  
+    .signature h4 {
+      font-size: 0.95rem;
+    }
+  
+    .imageContainer img {
+      border-radius: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 15px;
+      gap: 15px;
+    }
+  
+    .heading {
+      font-size: 1.3rem;
+    }
+  
+    .content p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  
+    .content h3 {
+      font-size: 1.3rem;
+    }
+  
+    .signature {
+      margin-top: 20px;
+    }
+  
+    .signature h2 {
+      font-size: 1.3rem;
+    }
+  
+    .signature h4 {
+      font-size: 0.9rem;
+    }
+  
+    .imageContainer img {
+      border-radius: 12px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1300px;
+      padding: 50px 25px;
+      gap: 50px;
+    }
+  
+    .content {
+      max-width: 650px;
+    }
+  
+    .imageContainer {
+      max-width: 550px;
+    }
+  
+    .heading {
+      font-size: 1.6rem;
+    }
+  
+    .content p {
+      font-size: 1.15rem;
+    }
+  
+    .content h3 {
+      font-size: 1.6rem;
+    }
+  
+    .signature h2 {
+      font-size: 1.6rem;
+    }
+  
+    .signature h4 {
+      font-size: 1.1rem;
+    }
+  }

@@ -1,0 +1,164 @@
+/* Main container */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ;
+    /* background: radial-gradient(circle, #141e30, #243b55); */
+    color: #ffffff;
+    overflow: hidden; /* Prevent overflow */
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='rgba(0%2c 0%2c 0%2c 1)'%3e%3c/rect%3e%3cpath d='M3 250L253 0L356.5 0L106.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1004%26quot%3b)'%3e%3c/path%3e%3cpath d='M259.6 250L509.6 0L848.6 0L598.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1004%26quot%3b)'%3e%3c/path%3e%3cpath d='M498.20000000000005 250L748.2 0L961.2 0L711.2 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1004%26quot%3b)'%3e%3c/path%3e%3cpath d='M747.8000000000001 250L997.8000000000001 0L1273.8000000000002 0L1023.8000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1004%26quot%3b)'%3e%3c/path%3e%3cpath d='M1426 250L1176 0L874.5 0L1124.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1005%26quot%3b)'%3e%3c/path%3e%3cpath d='M1183.4 250L933.4000000000001 0L828.4000000000001 0L1078.4 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1005%26quot%3b)'%3e%3c/path%3e%3cpath d='M946.8 250L696.8 0L462.79999999999995 0L712.8 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1005%26quot%3b)'%3e%3c/path%3e%3cpath d='M713.1999999999999 250L463.19999999999993 0L298.19999999999993 0L548.1999999999999 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1005%26quot%3b)'%3e%3c/path%3e%3cpath d='M1302.8055124550115 250L1440 112.8055124550115L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1004%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L137.1944875449885 250L 0 112.8055124550115z' fill='url(%26quot%3b%23SvgjsLinearGradient1005%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1004'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1005'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+  
+  /* Animated background effects */
+  .mainContainer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 180deg,
+      #0f2027,
+      #203a43,
+      #2c5364,
+      #0f2027
+    );
+    z-index: -1;
+    animation: spin 15s linear infinite;
+    filter: blur(200px);
+    opacity: 0.5;
+  }
+  
+  /* Fix for overflow issue */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Header section */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    color: var(--blue);
+    text-shadow: 0 0 10px var(--blue), 0 0 30px var(--blue);
+  }
+  
+  .header p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  
+  /* Stats container */
+  .statsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* Individual stats card */
+  .statsCard {
+    position: relative;
+    /* background: linear-gradient(145deg, #1f2833, #0f2027); */
+    background: url("/darkgradient4.jpg");
+    background-size: cover;
+    /* border-radius: 15px; */
+    border: 2px solid var(--blue);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .statsCard:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 50px rgba(0, 255, 221, 0.6);
+  }
+  
+  /* Icon styling */
+  .icon {
+    margin-bottom: 1.5rem;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .icon svg {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px var(--blue));
+  }
+  
+  /* Percentage text */
+  .statsCard h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--blue);
+    text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue);
+  }
+  
+  /* Description text */
+  .statsCard h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .statsCard p {
+    font-size: 1rem;
+    color: #d1d1d1;
+    opacity: 0.9;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+    .header p {
+      font-size: 1.25rem;
+    }
+    .statsCard {
+      padding: 1.5rem;
+    }
+    .statsCard h2 {
+      font-size: 2.5rem;
+    }
+    .statsCard h3 {
+      font-size: 1.25rem;
+    }
+  }
+  

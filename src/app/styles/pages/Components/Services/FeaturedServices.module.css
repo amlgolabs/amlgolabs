@@ -1,0 +1,203 @@
+/* FeaturedServices.module.css */
+:where(.mainContainer, .servicesContainer, .FeaturedService, .serviceContent, .serviceImage) {
+    box-sizing: border-box;
+  }
+  
+  .mainContainer {
+    ;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  
+  .servicesContainer {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .heading h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 0.05em;
+  }
+  
+  .FeaturedService {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    /* background-color: #f9fafb; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .leftAlign {
+    flex-direction: row;
+  }
+  
+  .rightAlign {
+    flex-direction: row-reverse;
+  }
+  
+  .serviceContent {
+    flex: 1;
+    max-width: 50%;
+    padding: 1rem;
+  }
+  
+  .serviceImage {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .serviceImage img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+  .serviceContent h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+  
+  .serviceContent p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.75;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+  }
+  
+  .buttonDiv {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .globalButton {
+    background: none;
+    border: 2px solid #1a1a1a;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    border-radius: 6px;
+    color: #1a1a1a;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .globalButton:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .button2 {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    border-radius: 6px;
+    border: 2px solid #1a1a1a;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button2:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .mainContainer {
+      padding: 2rem 1rem;
+    }
+  
+    .FeaturedService {
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .serviceContent {
+      max-width: 45%;
+    }
+  
+    .serviceImage {
+      max-width: 55%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .FeaturedService {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .leftAlign,
+    .rightAlign {
+      flex-direction: column;
+    }
+  
+    .serviceContent {
+      max-width: 100%;
+      padding: 0;
+      text-align: center;
+    }
+  
+    .serviceImage {
+      max-width: 100%;
+    }
+  
+    .buttonDiv {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContainer {
+      padding: 1rem;
+    }
+  
+    .heading h2 {
+      font-size: clamp(1.75rem, 6vw, 2.25rem);
+    }
+  
+    .serviceContent h2 {
+      font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+  
+    .serviceContent p {
+      font-size: clamp(0.875rem, 4vw, 1rem);
+    }
+  
+    .globalButton,
+    .button2 {
+      padding: 0.5rem 1rem;
+      font-size: clamp(0.75rem, 3vw, 0.875rem);
+    }
+  }

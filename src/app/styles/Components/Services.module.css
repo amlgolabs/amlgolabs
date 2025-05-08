@@ -1,0 +1,160 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left panel (services list) and right panel (sub-services) */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    /* height: 100vh; */
+    place-items: center;
+  }
+  
+  .leftPanel {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 20px;
+    place-items: start;
+    width: 100%;
+  }
+  
+  .heading {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #a9a9a9;
+    margin-bottom: 20px;
+    text-align: right;
+    text-transform: uppercase ;
+  }
+  
+  .servicesList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .serviceItem {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    padding: 14px 10px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+  
+  .serviceItem:hover {
+    color: #007bff; /* Tech-oriented highlight color */
+    background-color: rgba(0, 123, 255, 0.1); /* Subtle background hover effect */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .serviceItem:hover {
+    color: #000;
+    transform: translateX(5px);
+  }
+  
+  .active {
+    color: #111;  /* Darker, more refined shade */
+    font-weight: 600;  /* Bold and modern */
+    position: relative;
+    transition: color 0.3s ease, font-weight 0.3s ease;  /* Smooth transition */
+  }
+  
+  .active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;  /* Slightly deeper positioning */
+    width: 6px;  /* Slightly wider for a more striking accent */
+    height: 60%;  /* Reduced height to look more balanced */
+    background: var(--blue);  /* Bright, tech-inspired accent color */
+    transform: translateY(-50%);
+    border-radius: 2px;  /* Smooth edges for a more modern appearance */
+    transition: left 0.3s ease, width 0.3s ease;  /* Smooth transition for the accent line */
+  }
+  
+  .active:hover {
+    color: var(--blue);  /* Accent color for hover */
+  }
+  
+  .active:hover::before {
+    left: -18px;  /* Moves accent to the left when hovered */
+    width: 8px;  /* Expands the accent line on hover */
+  }
+  
+  .rightPanel {
+    padding-left: 20px;
+    place-items: start;
+    /* height: 70vh; */
+    /* border-left: 1px solid #e0e0e0; */
+  }
+  
+  .subheading {
+    font-size: 2.5rem;
+    color: #232023;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .cardGrid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Title, description, and arrow */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardTitle {
+    display: flex;
+    align-items: center; /* Aligns the icon and title vertically */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .cardTitle svg { /* Assuming the icon is an SVG, adjust this selector if needed */
+    margin-right: 8px; /* Adds some space between the icon and the title */
+  }
+  
+  .cardDescription {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .arrow {
+    justify-self: end; 
+    font-size: 1.5rem;
+    color: var(--blue); 
+    transition: color 0.2s ease;
+  }
+  
+  .arrow:hover {
+    color: #000;
+  }
+  

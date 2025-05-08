@@ -1,0 +1,180 @@
+/* Main container setup */
+.container {
+  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Steps container */
+.stepsContainer {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Heading styles */
+.stepsContainer h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.stepsContainer h4 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* Step styles */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+/* Step Heading */
+.stepHeading {
+  flex: 1;
+  width: 40%;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  border-right: 1px solid #e0e0e0;
+  padding-right: 20px; /* Fixed: space from vertical line */
+  box-sizing: border-box;
+}
+
+.stepHeading h1 {
+  font-size: 8rem;
+  color: #66666631;
+  height: 100%;
+  line-height: 1;
+}
+
+.stepHeading h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 800;
+  margin-top: 30px;
+  word-break: break-word; /* Fixed: prevent overflow issues */
+  line-height: 1.5;
+}
+
+/* Step Content */
+.stepContent {
+  flex: 2;
+  font-size: 1rem;
+  color: #666;
+  width: 60%;
+  padding-block: 30px;
+  text-align: left;
+  padding-inline: 30px;
+  box-sizing: border-box;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+  .stepsContainer {
+    padding: 20px;
+  }
+
+  .stepsContainer h2 {
+    font-size: 2rem;
+  }
+
+  .stepsContainer h4 {
+    font-size: 1rem;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .stepHeading {
+    width: 100%;
+    text-align: left;
+    gap: 1rem;
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .stepHeading h1 {
+    font-size: 6rem;
+  }
+
+  .stepHeading h3 {
+    font-size: 1rem;
+  }
+
+  .stepContent {
+    width: 100%;
+    padding-inline: 20px;
+    padding-block: 15px;
+  }
+}
+
+/* For screens smaller than 480px (small mobile devices) */
+@media (max-width: 480px) {
+  .stepsContainer {
+    padding: 15px;
+  }
+
+  .stepsContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .stepsContainer h4 {
+    font-size: 0.9rem;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stepHeading {
+    width: 100%;
+    gap: 0.5rem;
+    padding-bottom: 10px;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .stepHeading h1 {
+    font-size: 4rem;
+  }
+
+  .stepHeading h3 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .stepContent {
+    width: 100%;
+    padding-inline: 10px;
+    padding-block: 10px;
+  }
+}

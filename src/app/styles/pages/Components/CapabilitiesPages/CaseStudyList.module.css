@@ -1,0 +1,140 @@
+/* CaseStudy.module.css */
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* ; */
+    padding: 40px 20px;
+    background-color: var(--light-bg);
+}
+
+.heading {
+    padding-block: 30px;
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.leftSection {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caseItem {
+    padding: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+}
+
+.caseItem:hover,
+.caseItem.active {
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    color: var(--light);
+    box-shadow: 0 4px 8px rgba(0, 112, 243, 0.3);
+    transform: translateY(-2px);
+}
+
+.rightSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.image {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.description {
+    max-width: 720px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* .readMore {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+} */
+
+.readMore:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 20px;
+    }
+
+    .leftSection, 
+    .rightSection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .caseItem {
+        padding: 14px;
+        text-align: left;
+    }
+
+    .readMore {
+        width: 100%;
+    }
+}
