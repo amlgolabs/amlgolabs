@@ -13,7 +13,13 @@
 # testing
 /coverage
 
+# dotenv environment variables file
+.env.*
+.env
+
 # next.js
+.next/
+
 /.next/
 /out/
 

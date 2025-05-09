@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Achievements = () => {
     return (
         <div className={styles.mainContainer}>
-            <h1 className={styles.heading}>Achievements</h1>
+            <h2 className={styles.heading}>Achievements</h2>
             <div className={styles.innerContainer}>
                 <div className={styles.achievementCard}>
                     <div className={styles.imageWrapper}>

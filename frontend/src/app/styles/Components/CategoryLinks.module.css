@@ -1,0 +1,34 @@
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center */
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.categoryLink:visited {
+  color: #0070f3;
+}
+
+
+
+.categoryLink:active {
+  color: #0056b3;
+}
+
+.categoryBadge {
+  background-color: black;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.5rem;
+  /* font-weight: bold; */
+  margin-right: 0.5rem;
+}
+.categoryBadge:hover {
+  background-color: var(--blue) !important;
+  color: #000;
+}

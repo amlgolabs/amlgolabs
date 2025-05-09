@@ -1,0 +1,38 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding:  10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 9999px;
+    background-color: #dbeafe;
+    color: var(--gray);
+  }
+  
+  .badge.outline {
+    border: 1px solid #d1d5db;
+    background-color: var(--black);
+    padding: 4px 8px;
+    color: #fff;
+    margin: 4px;
+    font-size: 14px;
+  }
+  
+  .badge.unpublished {
+    background-color: #fefce8;
+    color: #b45309;
+    border-color: #fde68a;
+  }
+  
+  .badge.category {
+    cursor: pointer;
+  }
+  
+  .badge.category:hover {
+    background-color: #bfdbfe;
+  }
+  
+  .badge.count {
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+  }

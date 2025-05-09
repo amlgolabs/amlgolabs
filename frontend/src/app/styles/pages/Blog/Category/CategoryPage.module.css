@@ -1,0 +1,322 @@
+/* CategoryPage.module.css */
+
+ .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .paddingVerticalLarge {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .paddingVerticalMedium {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .paddingVerticalExtraLarge {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  
+  /* Flexbox */
+  .flexContainer {
+    display: flex;
+  }
+  
+  .flexColumn {
+    flex-direction: column;
+  }
+  
+  .alignItemsCenter {
+    align-items: center;
+  }
+  
+  .justifyContentCenter {
+    justify-content: center;
+  }
+  
+  .justifyContentBetween {
+    justify-content: space-between;
+  }
+  
+  .gapSmall {
+    gap: 16px;
+  }
+  
+  .gapMedium {
+    gap: 24px;
+  }
+  
+  .gapLarge {
+    gap: 32px;
+  }
+  
+  /* Grid */
+  .gridContainer {
+    display: grid;
+  }
+  
+  /* Spacing */
+  .marginBottomSmall {
+    margin-bottom: 16px;
+  }
+  
+  .marginBottomMedium {
+    margin-bottom: 24px;
+  }
+  
+  .marginRightSmall {
+    margin-right: 8px;
+  }
+  
+  .marginRightMedium {
+    margin-right: 16px;
+  }
+  
+  .marginTopSmall {
+    margin-top: 8px;
+  }
+  
+  .marginTopMedium {
+    margin-top: 12px;
+  }
+  
+  .marginTopLarge {
+    margin-top: 16px;
+  }
+  
+  .paddingNone {
+    padding: 0;
+  }
+  
+  .paddingMedium {
+    padding: 24px;
+  }
+  
+  .paddingBottomSmall {
+    padding-bottom: 8px;
+  }
+  
+  .paddingTopSmall {
+    padding-top: 8px;
+  }
+  
+  /* Typography */
+  .textBody {
+    font-size: 16px;
+  }
+  
+  .textBodyLarge {
+    font-size: 18px;
+  }
+  
+  .textHeadingSmall {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .textHeadingMedium {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .textHeadingLarge {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .textBodySmall {
+    font-size: 14px;
+  }
+  
+  .fontBold {
+    font-weight: 700;
+  }
+  
+  .fontSemibold {
+    font-weight: 600;
+  }
+  
+  .textMuted {
+    color: #6b7280;
+    padding-bottom: 1rem;
+  }
+  
+  /* Card Component */
+  .cardWrapper {
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cardWrapper:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image Preview */
+  .imagePreview {
+    width: 33.333%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+  }
+  
+  .heightLarge {
+    height: 192px;
+  }
+  
+  /* Responsive Layouts */
+  .lgFlexRow {
+    flex-direction: row;
+  }
+  
+  .lgWidthThreeQuarters {
+    width: 75%;
+  }
+  
+  .lgWidthOneQuarter {
+    width: 25%;
+  }
+  
+  .mdFlexRow {
+    flex-direction: row;
+  }
+  
+  .mdWidthThird {
+    width: 33.333%;
+  }
+  
+  .mdWidthTwoThirds {
+    width: 66.667%;
+  }
+  
+  .mdHeightAuto {
+    height: auto;
+  }
+  
+  /* Buttons */
+  .buttonGhost {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .buttonOutline {
+    background: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buttonOutline:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Badges */
+  .badgeUnpublished {
+    background-color: #fefce8;
+    color: #b45309;
+    border: 1px solid #fef3c7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .badgeCategory {
+    background-color: #2563eb;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .badgeCategoryOutline {
+    background: none;
+    border: 1px solid #d1d5db;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .badgeHover:hover {
+    background-color: rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Icons */
+  .iconSmall {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .iconMedium {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .iconLarge {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Links */
+  .noUnderline {
+    text-decoration: none;
+  }
+  
+  /* Sidebar */
+  .stickySidebar {
+    position: sticky;
+    top: 32px;
+  }
+  
+  /* Empty State */
+  .textAlignCenter {
+    text-align: center;
+  }
+  
+  .borderSubtle {
+    border: 1px solid #e5e7eb;
+  }
+  
+  .borderRadiusLarge {
+    border-radius: 8px;
+  }
+  
+  .backgroundSubtle {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Hover Effects */
+  .textHoverPrimary:hover {
+    color: #2563eb;
+  }
+  
+  .transitionColors {
+    transition: color 0.3s ease;
+  }
+  
+  .transitionShadow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .blogGrid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+@media (min-width: 1024px) {
+      .blogGrid {
+        gap: 2.5rem;
+      }
+    }

@@ -93,7 +93,8 @@ const sectorsHeadingText = "Our Industry Focus";
     <IndustryTechnology heading={manufacturingHeading} technologies={technologies} />
     <IndustryCaseStudy1 caseStudyHeading="IoT-enabled AC temperature controller system (IoT Data,and ML/AI)" 
                                 CaseStudyImageSrc="/businesses/manufacturing/casestudy.jpg"
-                                link="/documents/IotCaseStudy.pdf"/>
+                                link="/documents/IotCaseStudy.pdf"
+                                pdfName="IotCaseStudy"/>
 
     </>
   )

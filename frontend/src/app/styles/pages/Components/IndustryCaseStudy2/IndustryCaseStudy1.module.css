@@ -1,6 +1,6 @@
 /* Main container to center and add spacing */
 .mainContainer {
-    /* min-height: 100vh; */
+    /* ; */
     padding: 15px 10px; /* Mobile-first minimal padding */
     display: flex;
     justify-content: center;

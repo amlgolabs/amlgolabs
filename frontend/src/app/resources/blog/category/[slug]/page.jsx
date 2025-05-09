@@ -1,0 +1,142 @@
+"use client"
+
+import { use } from "react"
+import { Badge } from "@/app/components/ui/Badge"
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { Button } from "@/app/components/ui/Button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/Card"
+import { Clock, ArrowLeft, Tag, EyeOff } from "lucide-react"
+import { CategoryList } from "@/app/components/CategoryList"
+import config from "@/app/config/config"
+import styles from "../../../../styles/pages/Blog/Category/CategoryPage.module.css"
+import LongBlogCard from "@/app/components/LongBlogCard"
+import BlogBanner from "@/app/components/BlogBanner"
+
+export default function CategoryPage({ params }) {
+    const router = useRouter()
+    const { slug } = use(params)
+    const [blogs, setBlogs] = useState([])
+    const [loading, setLoading] = useState(true)
+    const categorySlug = slug
+
+    // Format category name for display
+    const formatCategoryName = (slug) => {
+        return slug
+            .split("-")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ")
+    }
+
+    const categoryName = formatCategoryName(categorySlug)
+
+    useEffect(() => {
+        async function fetchBlogsByCategory() {
+            try {
+                setLoading(true)
+                const url = `${config.blogEndpoint}/api/blogs/category/${categorySlug}`
+                const response = await fetch(url)
+                if (!response.ok) {
+                    throw new Error("Failed to fetch blog posts")
+                }
+                const data = await response.json()
+                setBlogs(data)
+            } catch (error) {
+                console.error("Error fetching blog posts:", error)
+            } finally {
+                setLoading(false)
+            }
+        }
+        fetchBlogsByCategory()
+    }, [categorySlug])
+
+    // Function to get the URL for a blog post
+    const getBlogUrl = (blog) => {
+        if (blog.slug && blog.blogIdUID) {
+            return `/blog/${blog.slug}-${blog.blogIdUID}`
+        }
+    }
+
+    // Function to truncate text for summaries
+    const truncateText = (text, maxLength) => {
+        const cleanText = text.replace(/<[^>]*>/g, "")
+        if (cleanText.length <= maxLength) return cleanText
+        return cleanText.substring(0, maxLength) + "..."
+    }
+
+    if (loading) {
+        return (
+            <div className={`${styles.container} ${styles.paddingVerticalExtraLarge}`}>
+                <div className={`${styles.flexContainer} ${styles.justifyContentCenter} ${styles.alignItemsCenter} ${styles.heightLarge}`}>
+                    <p className={styles.textBodyLarge}>Loading blog posts...</p>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <div>
+            <BlogBanner  title={categoryName} />
+            <div className={`${styles.container} ${styles.paddingVerticalLarge}`}>
+                <div className={`${styles.flexContainer} ${styles.alignItemsCenter} ${styles.marginBottomMedium}`}>
+                    {/* <Button
+                    variant="ghost"
+                    onClick={() => router.back()}
+                    className={`${styles.buttonGhost} ${styles.marginRightMedium}`}
+                >
+                    <ArrowLeft className={`${styles.marginRightSmall} ${styles.iconMedium}`} /> Back
+                </Button> */}
+                    {/* <h1 className={`${styles.textHeadingLarge} ${styles.fontBold} ${styles.flexContainer} ${styles.alignItemsCenter}`}>
+                        <Tag className={`${styles.marginRightSmall} ${styles.iconLarge}`} />
+                        {categoryName}
+                    </h1> */}
+                </div>
+
+                <div className={`${styles.flexContainer} ${styles.flexColumn} ${styles.lgFlexRow} ${styles.gapLarge}`}>
+                    <div className={styles.lgWidthThreeQuarters}>
+
+                        {blogs.length > 0 ? (
+                            <div className={styles.blogGrid}>
+                                {blogs.length > 0 ? (
+                                    blogs.map((blog) => (
+                                        <LongBlogCard key={blog._id} blog={blog} variant="featured" />
+                                    ))
+                                ) : (
+                                    <div className={styles.noBlogs}>
+                                        <p>No featured blogs match your search.</p>
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <div
+                                className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}
+                            >
+                                <p className={styles.textMuted}>No blog posts found in this category.</p>
+                                <Button
+                                    variant="outline"
+                                    className="globalButton"
+                                    onClick={() => router.push("/blog")}
+                                >
+                                    Explore All Blogs
+                                </Button>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className={styles.lgWidthOneQuarter}>
+                        <div className={styles.stickySidebar}>
+                            <div className={styles.marginBottomMedium}>
+                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
+                                    All Categories
+                                </h2>
+                                <CategoryList showAll={true} selectedCategory={categorySlug} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+}

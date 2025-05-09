@@ -4,7 +4,10 @@
   justify-content: space-between;
   gap: 2rem;
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  max-width: 1240px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 /* Ensures the text content takes appropriate space */

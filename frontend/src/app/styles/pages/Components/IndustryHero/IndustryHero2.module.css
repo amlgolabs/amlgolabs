@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: clamp(60vh, 100vh, 90vh); /* Flexible height */
+
   display: flex;
   align-items: flex-start;
   justify-content: center;

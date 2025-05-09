@@ -129,12 +129,18 @@ const industryData = [
         industryData={industryData}
       />
 
-      <IndustryCaseStudy1 caseStudyHeading="Parts Inspection using Computer
+      {/* <IndustryCaseStudy1 caseStudyHeading="Parts Inspection using Computer
 Vision & AI by Comparing 3D
 Images with Actual Part Image"
         CaseStudyImageSrc="/capabilities/computer-vision/blog.jpg" 
-        link="/documents/mobile inspection ppt for computer vision case study.pdf"/>
+        link="/documents/mobile inspection ppt for computer vision case study.pdf"/> */}
 
+<IndustryCaseStudy1
+  caseStudyHeading="Parts Inspection using Computer Vision & AI by Comparing 3D Images with Actual Part Image"
+  CaseStudyImageSrc="/capabilities/computer-vision/blog.jpg"
+  link="/documents/mobile inspection ppt for computer vision case study.pdf"
+  pdfName="mobile inspection ppt for computer vision case study"
+/>
         <BlackCta heading = "Ready to see the future? Let’s build smarter, vision-driven success together and transform your business with cutting-edge computer vision solutions!"
          buttonText="Get in touch"/>
     </div>

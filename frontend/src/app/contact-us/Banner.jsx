@@ -12,7 +12,7 @@ const Banner = () => {
         <p className={styles.subtitle}>
           Have a question, need support, or curious about how Amlgo Labs can elevate your business? 
           Our team is here to collaborate with you.
-        </p>
+        </p>  
       </div>
     </section>
   );
