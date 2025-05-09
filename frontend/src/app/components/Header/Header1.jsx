@@ -544,8 +544,8 @@ const Header1 = () => {
 
     {/* Blogs Section */}
     <ListItem className={styles.desktopListItem}>
-      <Link href="/coming-soon" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
-        Blogs
+      <Link href="/resources" className={styles.desktopLink} onClick={toggledesktopDrawer(false)}>
+        Resources
       </Link>
     </ListItem>
 
@@ -851,6 +851,14 @@ const Header1 = () => {
                 </div>
               </div>
             </Collapse>
+
+             <ListItem className={styles.mobileParentLink}>
+              <Link href="/resources" onClick={toggleDrawer(false)}>
+                <div className={styles.textWithIcon}>
+                  Resources
+                </div>
+              </Link>
+            </ListItem>
 
             <ListItem className={styles.mobileParentLink}>
               <Link href="/careers" onClick={toggleDrawer(false)}>

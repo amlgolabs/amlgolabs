@@ -5,7 +5,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header1 from "./components/Header/Header1";
 import Footer1 from "./components/Footer/Footer1";
-import RebrandingMarquee from "./components/RebrandingMessage";
 import RebrandingMessage from "./components/RebrandingMessage";
 import Head from "next/head";
 import { PopupProvider } from "./context/PopupContext";

@@ -1,7 +1,6 @@
 .mainContainer {
   position: relative;
   width: 100%;
-
   display: flex;
   align-items: first baseline;
   justify-content: center;
