@@ -1,3 +1,6 @@
+
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header1 from "./components/Header/Header1";
@@ -5,10 +8,10 @@ import Footer1 from "./components/Footer/Footer1";
 import RebrandingMarquee from "./components/RebrandingMessage";
 import RebrandingMessage from "./components/RebrandingMessage";
 import Head from "next/head";
-// import { PopupProvider } from "../context/PopupContext";
-// import PopupForm from "../components/PopupForm";
 import { PopupProvider } from "./context/PopupContext";
 import PopupForm from "./components/PopupForm";
+import { ContactPopupProvider } from "./context/ContactPopupContext"; // Import new provider
+import ContactPopupForm from "./components/ContactPopupForm"; // Import new contact popup component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +24,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Welcome to Amlgo Labs",
-  description: "Amlgo Labs empowers businesses with AI, GenAI, Machine Learning, and Data Analytics solutions. Unlock data-driven growth with Amlgo Labs today.",
+  title: "Amlgo Labs - Business Solutions with Data and AI",
+  description: "Whizzes In Analytical Algorithms And Machine Learning. Bridging the gap between Data and Decisions. Risk Modelling and Regulatory Reporting. Recruitment and Training.",
   keywords: `
     Amlgo Labs, Amlgo, Labs, AI solutions, generative AI, machine learning, AI innovation,
     next-gen AI solutions for businesses, cutting-edge machine learning and AI services, AI-driven analytics for enterprises,
@@ -48,15 +51,42 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <meta name="robots" content="index, follow" />
+
+
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Amlgo Labs | AI, GenAI Agent & Data Innovation" />
+        <meta property="og:description" content="Amlgo Labs helps enterprises transform with AI, GenAI, Machine Learning, and Data Analytics solutions. Follow us for insights and innovation." />
+        <meta property="og:url" content="https://www.amlgolabs.com" />
+        <meta property="og:site_name" content="Amlgo Labs" />
+        <meta property="og:image" content="https://www.amlgolabs.com/logo/logo21March.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Amlgo Labs – AI, GenAI & Data Solutions" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Amlgo Labs on Twitter | AI, GenAI & Data Innovation" />
+        <meta name="twitter:description" content="Explore Amlgo Labs on Twitter for real-time updates in AI, GenAI, Machine Learning, and Data Engineering. Join the conversation on tech innovation and digital transformation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Amlgo Labs on LinkedIn | AI, GenAI & Data Solutions for Enterprises" />
+        <meta property="og:description" content="Amlgo Labs helps enterprises transform with AI, GenAI, Machine Learning, and Data Analytics solutions. Follow us for insights and innovation." />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+
+
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <PopupProvider>
-          {/* <RebrandingMarquee/> */}
-          <Header1 />
-          {children}
-          <RebrandingMessage />
-          <Footer1 />
-          <PopupForm />
+          <ContactPopupProvider>
+            {/* <RebrandingMarquee/> */}
+            <Header1 />
+            {children}
+            <RebrandingMessage />
+            <Footer1 />
+            <PopupForm />
+            <ContactPopupForm />
+          </ContactPopupProvider>
         </PopupProvider>
       </body>
     </html>

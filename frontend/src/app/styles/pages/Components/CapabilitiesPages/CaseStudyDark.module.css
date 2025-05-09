@@ -1,94 +1,125 @@
 .mainContainer {
-    ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--black); /* Dark background */
-    padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  padding: 4rem 1.5rem;
+  min-height: 100vh; /* Ensure full viewport height for better centering */
+}
+
+.contentContainer {
+  max-width: 1280px; /* Slightly increased for modern screens */
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+  font-weight: 700;
+  color: var(--light);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 1.2;
+}
+
+.caseStudyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly larger min-width for balance */
+  gap: 2rem; /* Consistent gap */
+  padding: 0 1rem; /* Prevent overflow on small screens */
+}
+
+.itemCard {
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure equal height */
+}
+
+.itemCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  width: 100%;
+  height: 350px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure images fill space without distortion */
+}
+
+.title {
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive font size */
+  color: var(--light);
+  padding: 1.5rem;
+  font-weight: 600;
+  flex-grow: 1; /* Allow title to fill space */
+  text-align: left; /* Center text for symmetry */
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Button container for consistent alignment */
+.buttonContainer {
+  padding: 0 1.5rem 1.5rem; /* Consistent padding */
+  display: flex;
+  justify-content: left; /* Center button */
+}
+
+/* Global button styles (assuming globalButtonBlack is defined elsewhere) */
+.globalButtonBlack {
+  width: 100%;
+  max-width: 200px; /* Limit button width for consistency */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 2rem 1rem;
   }
-  
-  .contentContainer {
-    max-width: 1240px;
-    width: 100%;
-    margin-inline: auto;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 2.75rem;
-    font-weight: 700;
-    color: var(--light);
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
+
   .caseStudyGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller cards on tablets */
+    gap: 1.5rem;
   }
-  
-  .itemCard {
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Stretch cards equally */
-  }
-  
-  .itemCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-  }
-  
+
   .image {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
+    height: 180px; /* Slightly smaller images */
   }
-  
+
+  .heading {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .caseStudyGrid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem;
+  }
+
+  .image {
+    height: 160px; /* Smaller images for mobile */
+  }
+
   .title {
-    font-size: 1.25rem;
-    color: var(--light);
-    padding: 20px;
-    font-weight: 600;
-    flex-grow: 1; /* Let title fill available space */
-    display: flex;
-    align-items: center; /* Center text vertically if it’s short */
-    justify-content: center;
-    text-align: left;
-    word-break: break-word;
+    padding: 1rem;
   }
-  
-  .link {
-    width: 100%;
-    padding: 0 20px 20px; 
-    display: flex;
+
+  .buttonContainer {
+    padding: 0 1rem 1rem;
   }
-  
-  .button {
-    /* width: 100%; */
-    background-color: var(--light);
-    padding: 12px 0;
-    color: var(--dark);
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 0;
-    padding-block: 10px;
-    padding-inline: 20px;
+
+  .globalButtonBlack {
+    max-width: 100%; /* Full-width buttons on small screens */
   }
-  
-  .button:hover {
-    background-color: var(--blue); 
-  }
-  
+}

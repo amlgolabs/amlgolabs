@@ -1,7 +1,7 @@
 .heroSection {
     position: relative;
     width: 100%;
-    ;
+    
     background-color: var(--black);
     color: #ffffff;
     display: flex;
@@ -104,7 +104,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 450px;
+    max-width: 600px;
 }
 
 .mainImageWrapper {

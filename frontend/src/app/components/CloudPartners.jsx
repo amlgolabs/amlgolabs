@@ -13,7 +13,7 @@ const partners = [
     "Amlgo Labs has a strong partnership with Microsoft, backed by 200+ certified professionals. Leveraging Microsoft Azure’s scalability, we deliver tailored analytics solutions as an Azure Analytics Advanced Specialization partner. Our expertise spans industries, including the public sector, finance, manufacturing, and SMEs.",
     details:
       "As a distinguished Analytics partner with Azure Analytics Advanced Specialization, we harness Azure's capabilities to develop tailored solutions.",
-    link: "/partners/azure",
+    link: "/partners/microsoft-azure",
   },
   {
     name: "Google Cloud",
@@ -22,7 +22,7 @@ const partners = [
       "Leveraging the immense power of Google Cloud, a comprehensive suite of cloud computing services, Amlgo Labs empowers organizations to achieve sustainable success in today's digital age. We help drive long-term growth, unlock the full potential of your data, and position your business for continued leadership in the market.",
     details:
       "We help drive long-term growth, unlock the full potential of your data, and position your business for continued leadership.",
-    link: "/partners/google-cloud",
+    link: "/partners/google-cloud-platform",
   },
   {
     name: "AWS",
@@ -31,7 +31,7 @@ const partners = [
       "We harnesses the full potential of AWS, extending its comprehensive suite of cloud computing services from core computing and storage to cutting-edge analytics, machine learning, and artificial intelligence. We empower businesses to unlock the transformative power of the cloud, fuel innovation, scale seamlessly, and accelerate their journey toward digital mastery.",
     details:
       "We empower businesses to unlock the transformative power of the cloud, fuel innovation, and scale seamlessly.",
-    link: "/partners/aws",
+    link: "/partners/amazon-web-services",
   },
   {
     name: "Databricks",

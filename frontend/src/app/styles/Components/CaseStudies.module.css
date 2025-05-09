@@ -87,6 +87,10 @@
   /* Removed ellipsis properties */
 }
 
+.cardContent>button{
+  margin-top: auto;
+}
+
 .cardContent>a{
   margin-top: auto;
 }

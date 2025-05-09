@@ -43,22 +43,22 @@ const ServicesBifurcation = () => {
     {
       title: "Computer Vision Services",
       description: "Amlgo Labs provides AI-powered computer vision solutions for image recognition, object detection, and automation. Enhance business intelligence with our cutting-edge models.",
-      link: "/computer-vision",
+      link: "/computer-vision-services",
     },
     {
       title: "Generative AI Services",
       description: "Unlock the potential of AI-driven creativity with Amlgo Labs. Our generative AI models enable content generation, personalization, and workflow automation.",
-      link: "/generative-ai",
+      link: "/generative-ai-services",
     },
     {
       title: "Data Analytics Services",
       description: "Amlgo Labs transforms raw data into actionable insights using advanced analytics. Improve decision-making with our AI-powered predictive and prescriptive analytics solutions.",
-      link: "/data-analytics",
+      link: "/data-analytics-services",
     },
     {
       title: "Cloud Services",
       description: "Amlgo Labs offers end-to-end cloud solutions for seamless migration, management, and optimization. Ensure scalability, security, and efficiency with our managed cloud services.",
-      link: "/cloud-services",
+      link: "/cloud-solutions-aws-azure-gcp",
     },
   ];
 

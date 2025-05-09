@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePopup } from '../context/PopupContext';
 import Image from 'next/image';
 import styles from "../styles/Components/PopupForm.module.css"
@@ -76,6 +76,14 @@ const PopupForm = () => {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (!isPopupOpen) {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '' });
+      setErrors({});
+    }
+  }, [isPopupOpen]);
   
 
   if (!isPopupOpen) return null;

@@ -1,9 +1,20 @@
+"use client";
+
 import React from 'react';
 import styles from "../styles/Components/CaseStudies.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePopup } from '@/app/context/PopupContext';
 
 const CaseStudies = ({ caseStudies }) => {
+  const { openPopup } = usePopup();
+
+  const handleReadMoreClick = (caseStudy) => {
+    if (caseStudy.requiresPopup && caseStudy.pdfName) {
+      openPopup(caseStudy.pdfName); // Trigger popup with pdfName
+    }
+  };
+
   return (
     <div className={styles.backContainer}>
       <div className={styles.parentContainer}>
@@ -26,14 +37,18 @@ const CaseStudies = ({ caseStudies }) => {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{caseStudy.title}</h2>
                 <div className={styles.cardDescription}>{caseStudy.description}</div>
-                {/* <a href={caseStudy.link} target="_blank" rel="noopener noreferrer">
-                  <button className={styles.cardButton}>Read More</button>
-                </a> */}
-
-                 <Link href={caseStudy.link} target="_blank" rel="noopener noreferrer">
-                  <button className="globalButton">Read More</button>
-                </Link>
-
+                {caseStudy.requiresPopup ? (
+                  <button
+                    className="globalButton"
+                    onClick={() => handleReadMoreClick(caseStudy)}
+                  >
+                    Read More
+                  </button>
+                ) : (
+                  <Link href={caseStudy.link} target="_blank" rel="noopener noreferrer">
+                    <button className="globalButton">Read More</button>
+                  </Link>
+                )}
               </div>
             </div>
           ))}

@@ -9,7 +9,6 @@ import NumberStats from '../components/PagesComponents/NumberStats';
 import CompanyStats from '../components/PagesComponents/AboutUs/CompanyStats';
 import CompanyAchievements from '../components/PagesComponents/AboutUs/CompanyAchievements';
 import ImageGallery from '../components/PagesComponents/AboutUs/ImageGallery';
-import PartnersStrip from '../components/PagesComponents/AboutUs/PartnersStrip';
 
 export const metadata = {
   title: "Amlgo Labs – Gen AI, Data Analytics & Digital Transformation Experts",
@@ -30,9 +29,6 @@ const page = () => {
         <CoreValues/>
         <ImageGallery/>
         <CompanyAchievements/>
-        {/* <ProcessFlow/> */}
-        {/* <NumberStats/> */}
-
         <PeoplePrinciples/>
         <CompanyStats/>
 

@@ -9,13 +9,13 @@ const Partners = () => {
       id: 1,
       src: "/aws.png",
       name: "Partner 1",
-      link: "/partners/aws"
+      link: "/partners/amazon-web-services"
     },
     {
       id: 2,
       src: "/azure.png",
       name: "Partner 2",
-      link: "/partners/azure"
+      link: "/partners/microsoft-azure"
     },
     {
       id: 3,

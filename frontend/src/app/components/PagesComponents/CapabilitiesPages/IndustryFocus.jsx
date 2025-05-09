@@ -5,25 +5,25 @@ import styles from "../../../styles/pages/Components/CapabilitiesPages/IndustryF
 const industries = [
   {
     name: "Automotive",
-    link: "/automotive",
+    link: "/automotive-industry",
     image: "/automotivecard.jpg",
     description: "Amlgo Labs uses LLMs for interactive, user-friendly vehicle diagnostics and manuals."
   },
   {
     name: "Banking and Finance",
-    link: "/banking-finance",
+    link: "/banking-and-finance",
     image: "/bankingcard.jpg",
     description: "Amlgo Labs uses LLMs to automate compliance, generate reports, and enhance support."
   },
   {
     name: "Real Estate",
-    link: "/real-estate",
+    link: "/real-estate-infrastructure",
     image: "/realestatecard.jpg",
     description: "Amlgo Labs uses LLMs to streamline real estate tasks with AI-powered insights."
   },
   {
     name: "Manufacturing",
-    link: "/manufacturing",
+    link: "/manufacturing-ai-industry",
     image: "/manufacturingcard.jpg",
     description: "Amlgo Labs LLMs transform sensor data into actionable insights for predictive maintenance."
   }

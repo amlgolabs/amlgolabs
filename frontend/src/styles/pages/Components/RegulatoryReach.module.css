@@ -1,0 +1,184 @@
+.section {
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, var(--paper-white) 0%, var(--blue-white) 100%);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .ampersand {
+    color: var(--blue);
+    font-weight: 400;
+  }
+  
+  /* Stats Grid */
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .statCard {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .statHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .statIcon {
+    font-size: 2rem;
+  }
+  
+  /* Progress Bar */
+  .progressBar {
+    height: 8px;
+    background: var(--light-gray);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 4px;
+  }
+  
+  .regionList {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  /* Big Number */
+  .bigNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 0.5rem 0;
+    line-height: 1;
+  }
+  
+  .subText {
+    color: var(--gray);
+    font-size: 1.1rem;
+  }
+  
+  /* Regulator Section */
+  .regulatorSection {
+    margin: 3rem 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .regionTabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .regionBlock {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .regionName {
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .regulatorBadges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .badge {
+    background: var(--pearl);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--light-gray);
+  }
+  
+  /* Reports Section */
+  .reportsSection {
+    margin-top: 3rem;
+  }
+  
+  .reportPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  
+  .pill {
+    background: var(--blue);
+    color: var(--black);
+    border: 1px solid var(--gray);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+    
+    .bigNumber {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 1.8rem;
+    }
+    
+    .regionList {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .badge, .pill {
+      font-size: 0.85rem;
+    }
+  }

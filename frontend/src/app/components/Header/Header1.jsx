@@ -54,6 +54,7 @@ import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import { LuDatabaseBackup } from "react-icons/lu";
 import CarCrashIcon from '@mui/icons-material/CarCrash';
 import { SiCloudera } from "react-icons/si";
+import GavelIcon from '@mui/icons-material/Gavel';
 
 
 
@@ -84,15 +85,15 @@ const Header1 = () => {
 
 
   const capabilities = [
-    { name: 'Generative AI', icon: <PsychologyIcon />, description: 'AI that can generate text, images, and more.', link: "/generative-ai" },
-    { name: 'LLMs', icon: <MenuBookIcon />, description: 'Large Language Models for natural language processing.', link: "/llms" },
-    { name: 'GenAI Agents', icon: <SmartToyIcon />, description: 'Intelligent agents powered by generative AI.', link: "/genai-agents" },
-    { name: 'Computer Vision', icon: <VisibilityIcon />, description: 'Enabling machines to interpret visual data.', link: "/computer-vision" },
-    { name: 'Machine Learning and Deep Learning', icon: <BrainIcon />, description: 'Techniques for data-driven predictions.', link: "/ml-dl" },
-    { name: 'Cloud : AWS, Azure, GCP', icon: <CloudIcon />, description: 'Cloud platforms for scalable solutions.', link: "/cloud-services" },
-    { name: 'Data Analytics', icon: <BarChartIcon />, description: 'Analyzing data to extract insights.', link: "/data-analytics" },
-    { name: 'Data Engineering', icon: <BuildIcon />, description: 'Building systems for data collection and processing.', link: "/data-engineering" },
-    { name: 'DataOps, DevOps, MLOps', icon: <SettingsIcon />, description: 'Practices for efficient data and model management.', link: "/devops-dataops-mlops" }
+    { name: 'Generative AI', icon: <PsychologyIcon />, description: 'AI that can generate text, images, and more.', link: "/generative-ai-services" },
+    { name: 'LLMs', icon: <MenuBookIcon />, description: 'Large Language Models for natural language processing.', link: "/large-language-models-llms" },
+    { name: 'GenAI Agents', icon: <SmartToyIcon />, description: 'Intelligent agents powered by generative AI.', link: "/genai-agents-development" },
+    { name: 'Computer Vision', icon: <VisibilityIcon />, description: 'Enabling machines to interpret visual data.', link: "/computer-vision-services" },
+    { name: 'Machine Learning and Deep Learning', icon: <BrainIcon />, description: 'Techniques for data-driven predictions.', link: "/machine-deep-learning-services" },
+    { name: 'Cloud : AWS, Azure, GCP', icon: <CloudIcon />, description: 'Cloud platforms for scalable solutions.', link: "/cloud-solutions-aws-azure-gcp" },
+    { name: 'Data Analytics', icon: <BarChartIcon />, description: 'Analyzing data to extract insights.', link: "/data-analytics-services" },
+    { name: 'Data Engineering', icon: <BuildIcon />, description: 'Building systems for data collection and processing.', link: "/data-engineering-services" },
+    { name: 'Operations and Security', icon: <SettingsIcon />, description: 'DataOps, DevOps, MLOps, SecurityOps Solutions', link: "/operations-and-security" }
   ];
 
 
@@ -110,7 +111,7 @@ const Header1 = () => {
       name: "Text to SQL",
       icon: <LuDatabaseBackup />,
       description: 'Use Natural Language Processing functionality to translate everyday language into SQL queries.',
-      link: "/text-to-sql",
+      link: "/text-to-sql-solution",
       image: "/Header/TextSQL.png",
       blogLine: "Speak your query, let AI write perfect SQL statements."
     },
@@ -118,7 +119,7 @@ const Header1 = () => {
       name: "Vehicle Quality AI",
       icon: <CarCrashIcon />,
       description: 'Use AI and predictive analytics to forecast failures and enhance defect prevention in automotive model development.',
-      link: "/vehicle-quality-ai",
+      link: "/vehicle-quality-ai-solutions",
       image: "/Header/VehicleQualityAI.png", // <-- Add your image path here
       blogLine: "Smarter rides ahead: AI models ensuring flawless vehicle performance."
     }
@@ -311,7 +312,7 @@ const Header1 = () => {
                 <div className={styles.subMenuArea}>
                   {/* Submenu Links */}
                   <div className={styles.subMenuAreaLinks}>
-                    <Link href="/consumer-goods" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/consumer-goods-retail" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <StoreIcon className={styles.icon} />
                       </div>
@@ -320,7 +321,7 @@ const Header1 = () => {
                         <p className={styles.description}>Elevate retail experiences with smart, connected solutions and insights.</p>
                       </div>
                     </Link>
-                    <Link href="/real-estate" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/real-estate-infrastructure" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <BungalowIcon className={styles.icon} />
                       </div>
@@ -329,7 +330,7 @@ const Header1 = () => {
                         <p className={styles.description}>Building the future with smart, sustainable infrastructure solutions.</p>
                       </div>
                     </Link>
-                    <Link href="/manufacturing" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/manufacturing-ai-industry" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <PrecisionManufacturingIcon className={styles.icon} />
                       </div>
@@ -343,7 +344,7 @@ const Header1 = () => {
 
                   <div className={styles.subMenuAreaLinks}>
 
-                    <Link href="/banking-finance" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/banking-and-finance" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <MonetizationOnIcon className={styles.icon} />
                       </div>
@@ -354,7 +355,7 @@ const Header1 = () => {
                     </Link>
 
 
-                    <Link href="/insurance" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/insurance-technology-industry" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <PolicyIcon className={styles.icon} />
                       </div>
@@ -375,7 +376,7 @@ const Header1 = () => {
 
                   </div>
                   <div className={styles.subMenuAreaLinks}>
-                    <Link href="/automotive" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/automotive-industry" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
                         <DirectionsCarIcon className={styles.icon} />
                       </div>
@@ -384,13 +385,13 @@ const Header1 = () => {
                         <p className={styles.description}>Driving automotive innovation with intelligent, connected solutions.</p>
                       </div>
                     </Link>
-                    <Link href="/renewable-energy" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="risk-regulatory-compliance" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}>
-                        <SolarPowerIcon className={styles.icon} />
+                      <GavelIcon className={styles.icon} />
                       </div>
                       <div className={styles.textWrapper}>
-                        <span className={styles.title}>Renewable Energy and Environmental Science</span>
-                        <p className={styles.description}>Powering a sustainable future with clean energy technology.</p>
+                        <span className={styles.title}>Risk and Regulatory Compliance</span>
+                        <p className={styles.description}>Ensuring compliance and managing risk.</p>
                       </div>
                     </Link>
                     <Link href="/communication-media" className={styles.linkWrapper} onClick={closeDropdown}>
@@ -426,21 +427,21 @@ const Header1 = () => {
               <div className={styles.dropdownContent}>
                 <div className={styles.subMenuArea}>
                   <div className={styles.subMenuAreaLinks}>
-                    <Link href="/partners/azure" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/partners/microsoft-azure" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}><VscAzure className={styles.icon} /></div>
                       <div className={styles.textWrapper}>
                         <span className={styles.title}>Azure</span>
                         <p className={styles.description}>Harness comprehensive capabilities to develop tailored solutions that integrate seamlessly with existing systems.</p>
                       </div>
                     </Link>
-                    <Link href="/partners/google-cloud" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/partners/google-cloud-platform" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}><SiGooglecloud className={styles.icon} /></div>
                       <div className={styles.textWrapper}>
                         <span className={styles.title}>Google Cloud</span>
                         <p className={styles.description}>Leveraging the immense power of Google Cloud, a comprehensive suite of cloud computing.</p>
                       </div>
                     </Link>
-                    <Link href="/partners/aws" className={styles.linkWrapper} onClick={closeDropdown}>
+                    <Link href="/partners/amazon-web-services" className={styles.linkWrapper} onClick={closeDropdown}>
                       <div className={styles.iconWrapper}><FaAws className={styles.icon} /></div>
                       <div className={styles.textWrapper}>
                         <span className={styles.title}>AWS</span>
@@ -636,58 +637,58 @@ const Header1 = () => {
                 <Collapse in={activeSubDropdown === "Capabilities"} timeout="auto" unmountOnExit>
                   <div className={styles.subLinks}>
 
-                    <Link href="/generative-ai" onClick={toggleDrawer(false)}>
+                    <Link href="/generative-ai-services" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <PsychologyIcon style={{ fontSize: 20, marginRight: 8 }} />
                         Generative-AI
                       </div>
                     </Link>
-                    <Link href="/llms" onClick={toggleDrawer(false)}>
+                    <Link href="/large-language-models-llms" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <MenuBookIcon style={{ fontSize: 20, marginRight: 8 }} />
                         LLMs
                       </div>
                     </Link>
-                    <Link href="/genai-agents" onClick={toggleDrawer(false)}>
+                    <Link href="/genai-agents-development" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <SmartToyIcon style={{ fontSize: 20, marginRight: 8 }} />
                         GenAI Agents
                       </div>
                     </Link>
-                    <Link href="/computer-vision" onClick={toggleDrawer(false)}>
+                    <Link href="/computer-vision-services" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <VisibilityIcon style={{ fontSize: 20, marginRight: 8 }} />
                         Computer Vision
                       </div>
                     </Link>
-                    <Link href="/ml-dl" onClick={toggleDrawer(false)}>
+                    <Link href="/machine-deep-learning-services" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <BrainIcon style={{ fontSize: 20, marginRight: 8 }} />
                         Machine Learning and Deep Learning
                       </div>
                     </Link>
-                    <Link href="/cloud-services" onClick={toggleDrawer(false)}>
+                    <Link href="/cloud-solutions-aws-azure-gcp" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <CloudIcon style={{ fontSize: 20, marginRight: 8 }} />
                         Cloud-AWS, Azure, GCP
                       </div>
                     </Link>
-                    <Link href="/data-analytics" onClick={toggleDrawer(false)}>
+                    <Link href="/data-analytics-services" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <BarChartIcon style={{ fontSize: 20, marginRight: 8 }} />
-                        Cloud-AWS, Azure, GCP
+                       Data Analytics
                       </div>
                     </Link>
-                    <Link href="/data-engineering" onClick={toggleDrawer(false)}>
+                    <Link href="/data-engineering-services" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <BuildIcon style={{ fontSize: 20, marginRight: 8 }} />
-                        Cloud-AWS, Azure, GCP
+                        Data Engineering
                       </div>
                     </Link>
-                    <Link href="/devops-dataops-mlops" onClick={toggleDrawer(false)}>
+                    <Link href="/operations-and-security" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <SettingsIcon style={{ fontSize: 20, marginRight: 8 }} />
-                        DataOps, DevOps, MLOps
+                        Operations and Security
                       </div>
                     </Link>
 
@@ -711,13 +712,13 @@ const Header1 = () => {
                         Conversational AI Chatbot
                       </div>
                     </Link>
-                    <Link href="/text-to-sql" onClick={toggleDrawer(false)}>
+                    <Link href="/vehicle-quality-ai-solutions" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <LuDatabaseBackup style={{ fontSize: 20, marginRight: 8 }} />
                         Text to SQL
                       </div>
                     </Link>
-                    <Link href="/vehicle-quality-ai" onClick={toggleDrawer(false)}>
+                    <Link href="/vehicle-quality-ai-solutions" onClick={toggleDrawer(false)}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <CarCrashIcon style={{ fontSize: 20, marginRight: 8 }} />
                         Vehicle Quality AI
@@ -744,43 +745,43 @@ const Header1 = () => {
               <div className={styles.mobileDropdown}>
                 <div className={styles.subLinks}>
 
-                  <Link href="/consumer-goods" onClick={toggleDrawer(false)}>
+                  <Link href="/consumer-goods-retail" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <StoreIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Consumer Goods
                     </div>
                   </Link>
-                  <Link href="/banking-finance" onClick={toggleDrawer(false)}>
+                  <Link href="/banking-and-finance" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <MonetizationOnIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Banking & Finance
                     </div>
                   </Link>
-                  <Link href="/automotive" onClick={toggleDrawer(false)}>
+                  <Link href="/automotive-industry" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <DirectionsCarIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Automotive
                     </div>
                   </Link>
-                  <Link href="/real-estate" onClick={toggleDrawer(false)}>
+                  <Link href="/real-estate-infrastructure" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <BungalowIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Real Estate
                     </div>
                   </Link>
-                  <Link href="/insurance" onClick={toggleDrawer(false)}>
+                  <Link href="/insurance-technology-industry" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <PolicyIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Insurance
                     </div>
                   </Link>
-                  <Link href="/renewable-energy" onClick={toggleDrawer(false)}>
+                  <Link href="/risk-regulatory-compliance" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      <SolarPowerIcon style={{ fontSize: 20, marginRight: 8 }} />
-                      Renewable Energy
+                      <GavelIcon style={{ fontSize: 20, marginRight: 8 }} />
+                      Risk and Regulatory Compliance
                     </div>
                   </Link>
-                  <Link href="/renewable-energy" onClick={toggleDrawer(false)}>
+                  <Link href="/manufacturing-ai-industry" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <PrecisionManufacturingIcon style={{ fontSize: 20, marginRight: 8 }} />
                       Manufacturing
@@ -798,14 +799,7 @@ const Header1 = () => {
                       Communication and Media
                     </div>
                   </Link>
-                  {/* <Link href="/banking-finance" onClick={toggleDrawer(false)}>Banking & Finance</Link> */}
-                  {/* <Link href="/automotive" onClick={toggleDrawer(false)}>Automotive</Link>
-                  <Link href="/real-estate" onClick={toggleDrawer(false)}>Real Estate</Link>
-                  <Link href="/insurance" onClick={toggleDrawer(false)}>Insurance</Link>
-                  <Link href="/renewable-energy" onClick={toggleDrawer(false)}>Renewable Energy</Link>
-                  <Link href="/manufacturing" onClick={toggleDrawer(false)}>Manufacturing</Link>
-                  <Link href="/pharma-life-sciences" onClick={toggleDrawer(false)}>Pharma and Life Sciences</Link>
-                  <Link href="/communication-media" onClick={toggleDrawer(false)}>Communication and Media</Link> */}
+                 
                 </div>
 
               </div>
@@ -817,13 +811,13 @@ const Header1 = () => {
             <Collapse in={activeDropdown === "Partners"} timeout="auto" unmountOnExit>
               <div className={styles.mobileDropdown}>
                 <div className={styles.subLinks}>
-                <Link href="/partners/azure" onClick={toggleDrawer(false)}>
+                <Link href="/partners/microsoft-azure" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <VscAzure style={{ fontSize: 20, marginRight: 8 }} />
                       Azure
                     </div>
                   </Link>
-                  <Link href="/partners/aws" onClick={toggleDrawer(false)}>
+                  <Link href="/partners/amazon-web-services" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <FaAws style={{ fontSize: 20, marginRight: 8 }} />
                       AWS
@@ -835,7 +829,7 @@ const Header1 = () => {
                       Databricks
                     </div>
                   </Link>
-                  <Link href="/partners/google-cloud" onClick={toggleDrawer(false)}>
+                  <Link href="/partners/google-cloud-platform" onClick={toggleDrawer(false)}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <SiGooglecloud style={{ fontSize: 20, marginRight: 8 }} />
                       Google Cloud
@@ -853,12 +847,7 @@ const Header1 = () => {
                       Cloudera
                     </div>
                   </Link>
-                {/* <Link href="/partners/azure" onClick={toggleDrawer(false)}>Azure</Link>
-                <Link href="/partners/aws" onClick={toggleDrawer(false)}>AWS</Link>
-                <Link href="/partners/databricks" onClick={toggleDrawer(false)}>Databricks</Link>
-                <Link href="/partners/google-cloud" onClick={toggleDrawer(false)}>Google Cloud</Link>
-                <Link href="/partners/dell-technologies" onClick={toggleDrawer(false)}>Dell Technologies</Link>
-                <Link href="/partners/cloudera" onClick={toggleDrawer(false)}>Cloudera</Link> */}
+        
                 </div>
               </div>
             </Collapse>
@@ -889,7 +878,7 @@ const Header1 = () => {
               layout="responsive" // Makes the image scale naturally
               quality={85} // Adjust quality (default is 75)
             />
-            <h3>Helping Banks with Regulatory Reporting Solutions.</h3>
+            <h3>Overcome GenAI Fears: Get your Live GEN-AI Agent in days.</h3>
             <Link href="/documents/mas610casestudy.pdf">
               Learn More
             </Link>

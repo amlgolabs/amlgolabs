@@ -1,5 +1,5 @@
 .container {
-  /* ; */
+  
   background: var(--black);
   padding: 40px 16px; /* Reduced padding for smaller screens */
   display: flex;

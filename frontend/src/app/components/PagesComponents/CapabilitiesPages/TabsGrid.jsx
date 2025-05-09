@@ -14,7 +14,6 @@ const tabs = [
   {
     id: 'dataops',
     title: 'DataOps',
-    // description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     description: 'In DataOps, Amlgo Labs enhances data management by automating workflows, ensuring seamless integration, and improving data quality. This empowers businesses to accelerate analytics, optimize decision-making, and maintain operational agility.',
 
     image: '/capabilities/data-ops/DataOps.png',
@@ -23,10 +22,17 @@ const tabs = [
   {
     id: 'mlops',
     title: 'MLOps',
-    // description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     description: ' Amlgo Labs transforms MLOps by automating machine learning workflows, accelerating model deployment, and ensuring scalability. We enable businesses to harness AI-driven insights with efficiency, reliability, and innovation.',
 
     image: '/capabilities/data-ops/MlOps.png',
+
+  },
+  {
+    id: 'securityops',
+    title: 'SecurityOps',
+    description: 'In SecurityOps, Amlgo Labs embeds security across your infrastructure with proactive monitoring, threat detection, and Identity and Access Management (IAM). Our approach reduces risk, ensures compliance, and safeguards data—enabling leaders to drive innovation confidently while maintaining full control over access and security posture.',
+
+    image: '/capabilities/data-ops/SecurityOps.png',
 
   },
 ];

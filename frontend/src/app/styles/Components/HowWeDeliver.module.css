@@ -1,0 +1,136 @@
+.deliverSection {
+    background-color: var(--black);
+    padding: 80px 20px;
+  }
+  
+  .container {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  
+  .headerWrapper {
+    margin-bottom: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--light);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sectionIntro {
+    font-size: 1.125rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .partitionWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .stepsWrapper {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    max-width: 700px;
+    display: none;
+  }
+  
+  .deliverImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    /* box-shadow: 0 4px 20px rgba(0, 229, 255, 0.2); */
+  }
+  
+  .stepsList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .stepItem {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .stepNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+  }
+  
+  .stepContent {
+    flex: 1;
+  }
+  
+  .stepTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--light);
+    margin-bottom: 12px;
+  }
+  
+  .stepDescription {
+    font-size: 1rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .imageWrapper {
+      display: block;
+    }
+  
+    .partitionWrapper {
+      flex-direction: row;
+    }
+  
+    .stepsWrapper {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .partitionWrapper {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .stepsWrapper {
+      max-width: 100%;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .sectionIntro {
+      font-size: 1rem;
+    }
+  
+    .stepItem {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .stepNumber {
+      font-size: 2.5rem;
+    }
+  }

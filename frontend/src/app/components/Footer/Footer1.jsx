@@ -15,7 +15,7 @@ const Footer1 = () => {
           {/* <Image height={80} width={200}  className={styles.logo} src="/logo/logowhite2.png" alt="Logo" /> */}
           <div className={styles.logo}>
 <Link href="/">
-                      <Image src="/logo/logowhite2.png" alt="Logo" width={200} height={200} />
+                      <Image src="/logo/logowhite.png" alt="Logo" width={200} height={200} />
 </Link>
           </div>
           
@@ -64,32 +64,29 @@ const Footer1 = () => {
 
         <div className={styles.footerColumn}>
           <h3>Offerings</h3>
-         <Link className={styles.footerLink} href="/generative-ai">Generative AI</Link>
-              <Link className={styles.footerLink} href="/llms">LLMs</Link>
-              <Link className={styles.footerLink} href="/genai-agents">GenAI Agents</Link>
-              <Link className={styles.footerLink} href="/computer-vision">Computer Vision</Link>
-              <Link className={styles.footerLink} href="/banking-finance">Risk and Regulatory</Link>
-              <Link className={styles.footerLink} href="/ml-dl">Machine Learning</Link>
-              <Link className={styles.footerLink} href="/cloud-services">Cloud Services</Link>
-              <Link className={styles.footerLink} href="/data-analytics">Data Analytics</Link>
-              <Link className={styles.footerLink} href="/data-engineering">Data Engineering</Link>
-              <Link className={styles.footerLink} href="/devops-dataops-mlops">DataOps, DevOps, MLOps</Link>
+         <Link className={styles.footerLink} href="/generative-ai-services">Generative AI</Link>
+              <Link className={styles.footerLink} href="/large-language-models-llms ">LLMs</Link>
+              <Link className={styles.footerLink} href="/genai-agents-development">GenAI Agents</Link>
+              <Link className={styles.footerLink} href="/computer-vision-services">Computer Vision</Link>
+              <Link className={styles.footerLink} href="/risk-regulatory-compliance">Risk and Regulatory</Link>
+              <Link className={styles.footerLink} href="/machine-deep-learning-services">Machine Learning</Link>
+              <Link className={styles.footerLink} href="/cloud-solutions-aws-azure-gcp">Cloud Services</Link>
+              <Link className={styles.footerLink} href="/data-analytics-services">Data Analytics</Link>
+              <Link className={styles.footerLink} href="/data-engineering-services">Data Engineering</Link>
+              <Link className={styles.footerLink} href="/operations-and-security">DataOps, DevOps, MLOps</Link>
         </div>
         
         {/* Column 3: Industries */}
         <div className={styles.footerColumn}>
           <h3>Industries</h3>
-          {/* <a className={styles.footerLink} href="/tech">Technology</a>
-          <a className={styles.footerLink} href="/finance">Finance</a>
-          <a className={styles.footerLink} href="/healthcare">Healthcare</a>
-          <a className={styles.footerLink} href="/education">Education</a> */}
-          <Link className={styles.footerLink} href="/consumer-goods">Consumer Goods</Link>
-              <Link className={styles.footerLink} href="/banking-finance">Banking & Finance</Link>
-              <Link className={styles.footerLink} href="/automotive">Automotive</Link>
-              <Link className={styles.footerLink} href="/real-estate">Real Estate</Link>
+         
+          <Link className={styles.footerLink} href="/consumer-goods-retail">Consumer Goods</Link>
+              <Link className={styles.footerLink} href="/banking-and-finance">Banking & Finance</Link>
+              <Link className={styles.footerLink} href="/automotive-industry">Automotive</Link>
+              <Link className={styles.footerLink} href="/real-estate-infrastructure">Real Estate</Link>
               <Link className={styles.footerLink} href="/insurance">Insurance</Link>
               <Link className={styles.footerLink} href="/renewable-energy">Renewable Energy</Link>
-              <Link className={styles.footerLink} href="/manufacturing">Manufacturing</Link>
+              <Link className={styles.footerLink} href="/manufacturing-ai-industry">Manufacturing</Link>
               <Link className={styles.footerLink} href="/pharma-life-sciences">Pharma and Life Sciences</Link>
               <Link className={styles.footerLink} href="/communication-media">Communication and Media</Link>
         </div>

@@ -9,7 +9,7 @@ import DemoVideo from '../components/PagesComponents/Solutions/ai-chatbot/DemoVi
 
 export const metadata = {
   title: "Conversational AI Chatbot Solutions - Amlgo Labs",
-  description: "Enhance customer engagement with Conversational AI Chatbots by Amlgo Labs. Build intelligent, custom AI chatbots powered by LLMs, generative AI, and secure cloud-based solutions for seamless communication and business growth.",
+  description: "Enhance customer experience with AI-powered chatbots by Amlgo Labs. Automate support, improve interactions & drive conversions with smart AI solutions.",
   keywords: "conversational ai, custom ai chatbot, ai conversational chatbot, gen ai, using ai, chat bots ai, conversational ai bot, chatbot with ai, generative ai, advanced ai chatbot, ai for document processing, ai talkbot, advanced ai, ai based chatbot, intelligent ai chatbot, ai for documents, ai training, llm ai, ai for data, ai system, conversational ai demo, ai generated chat bot, ai tool, ai generative, ai solutions for business, chat bot ai free, security for ai, ai for free, ai and data security, train your own ai, use ai chatbot, ai chat api, web based ai, conversational ai free, conversational ai tools, ai for search, customer chatbot, all about ai, tools ai, advanced ai chat, i chat bot, cloud for ai, custom ai models, ai in it security, generate with ai, talkbot ai, chatterbot ai, llms ai, ai how to use, security with ai, ai chatbot demo, conversational ai analytics, ai security solutions, ai chat it, ai of ai, expert in ai, internet ai chatbot, ai privacy and security, through ai, data processing ai, search by ai, tool ai, ai bot chatbot, business with ai, advanced ai bot, information ai, ai as api, ai for services, ai user, business and ai, analytics with ai, intelligent ai chat, network security ai, business ai solutions, ai trained, business in ai, by using ai, ai react js, ai trained model, ai advanced, chatterbot api, ai trained models, chatbot customer, conversational ai agents, ai web services, knowledge of ai"
 };
 
@@ -58,8 +58,8 @@ const page = () => {
         <DemoVideo 
         
   src="/solutions/ai-chatbot/demo.mp4"
-  heading="Amlgo Labs' Custom AI Chatbot"
-  description="Experience the power of Amlgo Labs' cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
+  heading="Amlgo Labs Custom AI Chatbot"
+  description="Experience the power of Amlgo Labs cutting-edge AI Chatbot, designed to enhance and streamline your customer interactions. Watch this quick demo to see how our intelligent solution offers real-time engagement, seamless communication, and unmatched flexibility."
   poster="/images/video-poster.jpg" // optional
 />
         <SolutionsSteps

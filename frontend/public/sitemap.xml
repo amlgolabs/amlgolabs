@@ -23,7 +23,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/generative-ai</loc>
+  <loc>https://amlgolabs.com/generative-ai-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -33,12 +33,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/partners/aws</loc>
+  <loc>https://amlgolabs.com/partners/amazon-web-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/partners/azure</loc>
+  <loc>https://amlgolabs.com/partners/microsoft-azure</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -53,7 +53,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/partners/google-cloud</loc>
+  <loc>https://amlgolabs.com/partners/google-cloud-platform</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -63,7 +63,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/genai-agents</loc>
+  <loc>https://amlgolabs.com/genai-agents-development</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -98,62 +98,62 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/llms</loc>
+  <loc>https://amlgolabs.com/large-language-models-llms </loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/computer-vision</loc>
+  <loc>https://amlgolabs.com/computer-vision-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/banking-finance</loc>
+  <loc>https://amlgolabs.com/banking-and-finance</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/ml-dl</loc>
+  <loc>https://amlgolabs.com/machine-deep-learning-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/cloud-services</loc>
+  <loc>https://amlgolabs.com/cloud-solutions-aws-azure-gcp</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/data-analytics</loc>
+  <loc>https://amlgolabs.com/data-analytics-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/data-engineering</loc>
+  <loc>https://amlgolabs.com/data-engineering-services</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/devops-dataops-mlops</loc>
+  <loc>https://amlgolabs.com/operations-and-security</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/consumer-goods</loc>
+  <loc>https://amlgolabs.com/consumer-goods-retail</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/automotive</loc>
+  <loc>https://amlgolabs.com/automotive-industry</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/real-estate</loc>
+  <loc>https://amlgolabs.com/real-estate-infrastructure</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/insurance</loc>
+  <loc>https://amlgolabs.com/insurance-technology-industry</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -163,7 +163,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/manufacturing</loc>
+  <loc>https://amlgolabs.com/manufacturing-ai-industry</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -263,7 +263,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://amlgolabs.com/text-to-sql</loc>
+  <loc>https://amlgolabs.com/text-to-sql-solution</loc>
   <lastmod>2025-04-13T07:35:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>

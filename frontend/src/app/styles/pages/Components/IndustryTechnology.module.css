@@ -1,6 +1,6 @@
 /* Main container to center and add spacing */
 .container {
-  ;
+  
   padding: 15px 10px; /* Mobile-first padding */
   display: flex;
   align-items: center;

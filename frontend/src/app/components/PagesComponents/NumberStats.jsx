@@ -4,10 +4,7 @@ import styles from "../../styles/pages/Components/NumberStats.module.css";
 const NumberStats = () => {
   return (
     <div className={styles.mainContainer}>
-      {/* <div className={styles.header}>
-        <h1>🚀 Tech Insights Dashboard</h1>
-        <p>Unlock the power of data-driven decisions with futuristic analytics.</p>
-      </div> */}
+      
       <div className={styles.statsContainer}>
         <div className={styles.statsCard}>
           <div className={styles.icon}>
