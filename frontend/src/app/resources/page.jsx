@@ -94,12 +94,12 @@ export default function Home() {
             </div>
 
             <div className={styles.viewAll}>
-              <Button variant="outline" size="sm" asChild>
-                <Link href="/all-blogs">
+              <Link href="/all-blogs">
+                <Button variant="outline" size="sm" asChild>
                   View All
                   <ChevronRight className={styles.clockIcon} />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
 

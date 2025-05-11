@@ -172,15 +172,18 @@
   
   /* Responsive Layouts */
   .lgFlexRow {
-    flex-direction: row;
+    flex-direction: column;
   }
   
   .lgWidthThreeQuarters {
-    width: 75%;
+    width: 100%;
+    order: 2;
   }
   
   .lgWidthOneQuarter {
-    width: 25%;
+    width: 100%;
+    margin-bottom: 2rem;
+    order: 1;
   }
   
   .mdFlexRow {
@@ -315,8 +318,97 @@
     gap: 1rem;
   }
   
-@media (min-width: 1024px) {
-      .blogGrid {
-        gap: 2.5rem;
-      }
+@media (min-width: 768px) {
+    .blogGrid {
+        gap: 1.5rem;
     }
+}
+
+@media (min-width: 1024px) {
+    .blogGrid {
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lgFlexRow {
+        flex-direction: row;
+    }
+
+    .lgWidthThreeQuarters {
+        width: 75%;
+        order: 1;
+    }
+
+    .lgWidthOneQuarter {
+        width: 25%;
+        margin-bottom: 0;
+        order: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+}
+
+/* Mobile and Tablet Categories */
+.categoriesMobile {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 1023px) {
+    .stickySidebar {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lgFlexRow {
+        flex-direction: row;
+    }
+
+    .lgWidthThreeQuarters {
+        width: 75%;
+        order: 1;
+    }
+
+    .lgWidthOneQuarter {
+        width: 25%;
+        margin-bottom: 0;
+        order: 2;
+    }
+
+    .categoriesMobile {
+        position: sticky;
+        top: 32px;
+        border: none;
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+}

@@ -37,8 +37,6 @@ const LongBlogCard = ({
                     <div className={`${isFeatured ? styles.cardContent : isRecent ? styles.recentCardContent : styles.popularContent}`}>
                         <CardContent>
                             {/* Meta Information */}
-                            
-
                             {/* Title */}
                             <h3
                                 className={`${isFeatured ? styles.cardTitle : isRecent ? styles.recentCardTitle : styles.popularCardTitle}`}
@@ -53,6 +51,7 @@ const LongBlogCard = ({
                                 {truncateText(blog.content, isFeatured ? 200 : 120)}
                             </p>
 
+                            <div className={styles.metaInfo}>
                             {/* Date */}
                             <div
                                 className={`${isFeatured ? styles.cardMeta : isRecent ? styles.recentCardDate : styles.popularCardDate}`}
@@ -60,6 +59,14 @@ const LongBlogCard = ({
                                 {isFeatured && <Clock className={styles.iconSmall} />}
                                 <span>{new Date(blog.updatedAt).toLocaleDateString()}</span>
                             </div>
+                            {/* content type for featured blogs */}
+                            {isFeatured && (
+                                <div className={styles.contentType}>
+                                    <span>{blog.contentType}</span>
+                                </div>
+                            )}
+                            </div>
+
                         </CardContent>
 
                         {/* Footer (Read More Button) */}
