@@ -99,12 +99,12 @@
   /* Description Section */
   .description {
     padding-top: 15px;
-    border-bottom: 1px solid var(--light-gray);
+    /* border-bottom: 1px solid var(--light-gray); */
   }
   
   .descriptionText {
     margin-bottom: 15px;
-    color: #555;
+    color: var(--black);
     line-height: 1.6;
   }
   
