@@ -1,4 +1,4 @@
-// components/LongBlogCard.jsx
+// components/LongBlogCard.jsx  
 import Link from 'next/link';
 import { Button } from '@/app/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/app/components/ui/Card';
@@ -52,19 +52,22 @@ const LongBlogCard = ({
                             </p>
 
                             <div className={styles.metaInfo}>
-                            {/* Date */}
-                            <div
-                                className={`${isFeatured ? styles.cardMeta : isRecent ? styles.recentCardDate : styles.popularCardDate}`}
-                            >
-                                {isFeatured && <Clock className={styles.iconSmall} />}
-                                <span>{new Date(blog.updatedAt).toLocaleDateString()}</span>
-                            </div>
-                            {/* content type for featured blogs */}
-                            {isFeatured && (
-                                <div className={styles.contentType}>
-                                    <span>{blog.contentType}</span>
+                                {/* Date */}
+                                <div
+                                    className={`${isFeatured ? styles.cardMeta : isRecent ? styles.recentCardDate : styles.popularCardDate}`}
+                                >
+                                    {isFeatured && <Clock className={styles.iconSmall} />}
+                                    <span>{new Date(blog.updatedAt).toLocaleDateString()}</span>
+
                                 </div>
-                            )}
+                                {/* content type for featured blogs */}
+                                {isFeatured && (
+                                    <div className={styles.contentType}>
+                                        <div className={styles.contentType}>
+                                            <span>{blog.contentType}</span>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                         </CardContent>
