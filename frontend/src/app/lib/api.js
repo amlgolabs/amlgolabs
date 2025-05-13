@@ -13,6 +13,28 @@ export async function fetchBlogs({ page = 1, limit = 5 } = {}) {
   }
 }
 
+
+export async function fetchJobs() {
+  try {
+    const response = await axios.get(`${config.blogEndpoint}/api/jobs`);
+    return response.data;
+  } catch (error) {
+    console.log('Error fetching jobs :' , error);
+    return [];
+  }
+}
+
+export async function fetchSingleJob({id}) {
+  try {
+    const response = await axios.get(`${config.blogEndpoint}/api/jobs/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log('Error fetching jobs :' , error);
+    return [];
+  }
+}
+
+
 export async function fetchBlogsCount() {
   try {
     const response = await axios.get(`${config.blogEndpoint}/api/blogs/count`);

@@ -7,7 +7,6 @@ import Image from "next/image";
 const TechStack = ({ title, techStack }) => {
   const shouldReduceMotion = useReducedMotion();
 
-  // Image hover animation
   const imageVariants = {
     hover: shouldReduceMotion
       ? {}

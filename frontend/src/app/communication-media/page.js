@@ -15,12 +15,12 @@ const page = () => {
     {
         name: "Data & Analytics Services",
         description: "Redefine how you work with artificial intelligence, machine learning, and generative AI.",
-        link: "/data-analytics"
+        link: "/data-analytics-services"
     },
     {
         name: "Finance & Accounting",
         description: "Build a future of sustainable growth, agility, and financial resilience.",
-        link: "/banking-finance"
+        link: "/banking-and-finance"
     },
     {
         name: "Innovation and R&D Intelligence",

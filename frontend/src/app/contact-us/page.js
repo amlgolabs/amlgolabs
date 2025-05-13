@@ -3,7 +3,6 @@ import OfficeLocationMap from './OfficeLocation'
 import ContactUsForm from './ContactUsForm'
 import styles from "../styles/pages/Contact-Us/ContactUs.module.css"
 import Banner from './Banner';
-import Socials from './Socials';
 import Locations from './Locations';
 import CompanyAchievements from '../components/PagesComponents/AboutUs/CompanyAchievements';
 import Achievements from '../components/Achievements';

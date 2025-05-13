@@ -15,16 +15,7 @@ const ProblemStatement = () => {
             <p><strong>Defect Recurrence :</strong> Lack of proactive tracking allows defects to resurface in new models, hampering efforts to achieve zero defects.</p>
           </div>
         </section>
-        {/* <section className={styles.section}>
-          <h2 className={styles.heading}>Existing Challenges</h2>
-          <div className={styles.card}>
-            <p><strong>Data Siloes:</strong> Dispersed QA data across different sources limits cross-functional collaboration and comprehensive analysis.</p>
-            <p><strong>Time-Consuming Processes:</strong> Manual data collection, compilation, and defect analysis slow down decision-making and impact efficiency.</p>
-            <p><strong>High Manual Effort:</strong> Quality teams rely on manual methodologies that are labor-intensive and prone to human errors.</p>
-            <p><strong>Limited Accuracy:</strong> Conventional defect detection techniques often miss critical defect trends, reducing the ability to implement preventive measures.</p>
-            <p><strong>Risk of Data Loss:</strong> Important defect data may be overlooked or omitted due to lack of centralized systems, affecting quality assessments.</p>
-          </div>
-        </section> */}
+       
 
 <section className={styles.challengesSection}>
   <h2>Challenges</h2>

@@ -1,20 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../styles/pages/Components/Careers/JobList.module.css";
-import { jobs } from "./data/jobs";
+import { fetchJobs } from "../lib/api";
+// import { jobs } from "./data/jobs";
 
 const JobList = () => {
+  const [jobs, setJobs] = useState([]);
   const [visibleJobs, setVisibleJobs] = useState(10);
   const router = useRouter();
+
+ useEffect(() => {
+    const getJobs = async () => {
+      const data = await fetchJobs();
+      console.log(data)
+      setJobs(data);
+      setLoading(false);
+    };
+
+    getJobs();
+  }, []);
 
   const loadMoreJobs = () => {
     setVisibleJobs((prevVisibleJobs) => prevVisibleJobs + 10);
   };
 
   const handleViewDetails = (job) => {
+    // const slug = job.title.toLowerCase().replace(/\s+/g, "-");
+    // router.push(`/careers/${slug}`);
     const slug = job.title.toLowerCase().replace(/\s+/g, "-");
-    router.push(`/careers/${slug}`);
+router.push(`/careers/${job._id}`);
   };
 
   return (

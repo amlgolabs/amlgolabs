@@ -16,11 +16,9 @@ const WhitePaper = () => {
           <br />
           Integrating Generative AI for Faster Workflows
         </h1>
-        {/* <Link href="/documents/BusinessPotential_GenAI.pdf" target="_blank"> */}
-          {/* <button onClick={openPopup} className={styles.button}>Learn More</button> */}
-        {/* </Link> */}
+        
 
-        <button onClick={() => openPopup("MAS610-Case-Study")} className={styles.button}>Learn More</button>
+        <button onClick={() => openPopup("Business-Potential-GenAI")} className={styles.button}>Learn More</button>
 
       </div>
       <div className={styles.imageContainer}>

@@ -1,5 +1,5 @@
 .mainContainer {
-    ;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,10 +18,10 @@
   
   .upperContent {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    gap: 40px;
+    gap: 3rem;
   }
   
   .upperLeft {
@@ -39,7 +39,7 @@
   }
   
   .video {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
     border-radius: 1.5rem;
@@ -56,13 +56,22 @@
     align-items: flex-start;
     text-align: left;
   }
+
+  .upperRight h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    font-weight: 800;
+  }
   
   .upperRight p {
-    font-size: 1.8rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--gray);
     letter-spacing: 1.5px;
+    line-height: 1.8;
     margin-bottom: 2rem;
   }
   

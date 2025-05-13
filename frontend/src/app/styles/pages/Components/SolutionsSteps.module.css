@@ -1,6 +1,6 @@
 /* Main container setup */
 .container {
-  ;
+  
   display: flex;
   justify-content: center;
   align-items: center;

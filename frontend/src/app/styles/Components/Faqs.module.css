@@ -1,0 +1,139 @@
+.faqsSection {
+    background-color: var(--light);
+    padding: 80px 20px;
+  }
+  
+  .container {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    max-width: 500px;
+    display: none;
+  }
+  
+  .faqImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .faqsWrapper {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .faqsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .faqItem {
+    background-color: var(--light);
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faqItem.active {
+    border-color: var(--blue);
+    box-shadow: 0 2px 8px rgba(0, 229, 255, 0.2);
+  }
+  
+  .faqQuestion {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--black);
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .faqQuestion:hover {
+    color: var(--blue);
+  }
+  
+  .toggleIcon {
+    font-size: 1.5rem;
+    color: var(--gray);
+    transition: transform 0.3HAIN
+  }
+  
+  .faqItem.active .toggleIcon {
+    color: var(--blue);
+    transform: rotate(180deg);
+  }
+  
+  .faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+  }
+  
+  .faqItem.active .faqAnswer {
+    max-height: 300px;
+    padding: 0 20px 20px;
+  }
+  
+  .faqAnswer p {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .imageWrapper {
+      display: block;
+    }
+  
+    .container {
+      flex-direction: row;
+    }
+  
+    .faqsWrapper {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .faqsWrapper {
+      max-width: 100%;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }

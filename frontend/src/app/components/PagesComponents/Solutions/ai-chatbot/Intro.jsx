@@ -1,10 +1,19 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useRef } from 'react';
 import styles from "../../../../styles/pages/Components/Solutions/ai-chatbot/Intro.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
 
 
 const Intro = () => {
+  //   const videoRef = useRef(null);
+  
+  //  useEffect(() => {
+  //     if (videoRef.current) {
+  //       videoRef.current.currentTime = 0;
+  //       videoRef.current.play();
+  //     }
+  //   }, []);
   return (
     <section className={styles.heroSection}>
       <div className={styles.overlay}></div>
@@ -27,11 +36,22 @@ const Intro = () => {
         </div>
         <div className={styles.rightContent}>
           <div className={styles.mainImageWrapper}>
-            <Image src="/solutions/ai-chatbot/aiIllustration.png" alt="AI Illustration" className={styles.aiImage} width={450} height={450} />
+            <Image src="/solutions/ai-chatbot/demoGIF.gif" alt="AI Illustration" className={styles.aiImage} width={600} height={600} />
+            {/* <video
+                        ref={videoRef}
+                        className={styles.video}
+                        src="/solutions/ai-chatbot/demo.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster={poster}
+                        
+                      /> */}
           </div>
-          <div className={styles.secureImageWrapper}>
+          {/* <div className={styles.secureImageWrapper}>
             <Image src="/solutions/ai-chatbot/secure-ai.png" alt="Secure AI" className={styles.secureImage} width={180} height={180} />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

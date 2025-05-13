@@ -208,11 +208,16 @@ const JobDescription = ({ job }) => {
           <h2 className={styles.sectionTitle}>Job Description</h2>
           <p className={styles.descriptionText}>{job.about}</p>
           <h3 className={styles.subTitle}>Roles and Responsibilities:</h3>
-          <ul className={styles.responsibilitiesList}>
+          {/* <ul className={styles.responsibilitiesList}>
             {job.responsibilities.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
-          </ul>
+          </ul> */}
+
+          <div
+  className="blog-content"
+  dangerouslySetInnerHTML={{ __html: job.responsibilities }}
+/>
         </div>
       </div>
 

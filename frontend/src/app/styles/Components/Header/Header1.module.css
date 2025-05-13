@@ -331,25 +331,6 @@
   color: var(--gray); /* Slightly softer text for readability */
 }
 
-/* .researchContent button {
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  border: 2px solid var(--dark);
-  border-radius: 50px;
-  color: var(--dark);
-  background-color: transparent;
-  transition: all 0.3s ease-in-out;
-  width: 200px; 
-}
-
-.researchContent button:hover {
-  background-color: var(--dark);
-  color: white;
-  transform: translateY(-2px); 
-} */
-
 
 
 
@@ -423,24 +404,6 @@
   object-fit: contain;
 }
 
-/* .headerBlogLink a {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border: 2px solid var(--blue);
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  background-color: #333;
-}
-
-.headerBlogLink a:hover {
-  background-color: var(--blue);
-  color: #333;
-  border-color: var(--blue);
-} */
-
 
 .subMenuArea {
   display: flex;
@@ -464,13 +427,7 @@
   width: 100%;
 }
 
-/* Wrapper for each link item */
-/* .subMenuAreaLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-} */
+
 
 .linkWrapper {
   display: flex;
@@ -581,16 +538,14 @@
 
 .desktopDrawerContainer {
   width: 340px;
-  /* background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
-  backdrop-filter: blur(20px); */
-  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%);
+
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%) !important;
   backdrop-filter: blur(12px);
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   box-shadow: -8px 0 20px rgba(0, 0, 0, 0.2);
   color: #f8fafc;
   padding: 32px 24px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-y: auto;
 }
 
@@ -603,7 +558,7 @@
 }
 
 .desktopCloseButton {
-  color: #e2e8f0;
+  color: #e2e8f0 !important;
   padding: 10px;
   border-radius: 8px;
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -725,7 +680,7 @@
   width: 320px;
   top: 60px !important;
   height: calc(100vh - 60px) !important;
-  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.95) 0%, rgba(10, 10, 20, 0.95) 100%) !important;
   backdrop-filter: blur(12px);
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -761,6 +716,7 @@
   font-size: 1rem;
   letter-spacing: 0.5px;
   margin-top: 2px;
+  color: var(--light) !important;
 }
 
 .mobileBlog a{
@@ -852,6 +808,7 @@
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
+  color: var(--light) !important;
 }
 
 .textWithIcon svg {

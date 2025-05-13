@@ -12,6 +12,8 @@ import CTA from "./components/CTA";
 import CaseStudies from "./components/CaseStudies";
 import CTASection from "./components/CTA";
 import RebrandingMarquee from "./components/RebrandingMessage";
+import Faqs from "./components/Faqs";
+import HowWeDeliver from "./components/HowWeDeliver";
 
 export default function Home() {
 
@@ -21,14 +23,17 @@ export default function Home() {
       title: "Disrupting Industries with GenAI : Amlgo Labs at the Helm",
       image: "/Home/casestudy1.jpg",
       description: "As Generative AI redefines industries, Amlgo Labs stands at the forefront, helping businesses unlock new levels of innovation and growth.",
-      link : "/documents/how_generative_ai_is_disrupting_entindustries_and_how_amlgo_labs_is_leading_the_charge.pdf"
+      link : "/documents/how_generative_ai_is_disrupting_entindustries_and_how_amlgo_labs_is_leading_the_charge.pdf",
+      
     },
     {
       id: 2,
       title: "Helping Banks with Regulatory Reporting Solutions",
       image: "/Home/casestudy2.jpg",
       description: "Empowering banks with seamless regulatory reporting and compliance through robust solutions.",
-      link : "/documents/mas610casestudy.pdf"
+      link : "/documents/mas610casestudy.pdf",
+      requiresPopup: true, // Triggers popup form
+      pdfName: "mas610casestudy",
     },
     {
       id: 3,
@@ -50,7 +55,10 @@ export default function Home() {
    
       <Achievements/>
       {/* <CaseStudies/> */}
+      <HowWeDeliver/>
       <CaseStudies caseStudies={caseStudiesData} />
+
+      <Faqs/>
       
       <CTASection
       heading="Empower Your Business with Data Driven Solution & Generative AI"

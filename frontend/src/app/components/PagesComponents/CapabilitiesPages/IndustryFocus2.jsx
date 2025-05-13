@@ -28,28 +28,28 @@ const IndustryFocus2 = () => {
         <div className={styles.industryContainer}>
           {[
             {
-              href: "/banking-finance",
+              href: "/banking-and-finance",
               src: "/capabilities/gen-ai-agents/Banking.jpg",
               alt: "Banking industry",
               title: "Banking",
               text: "Automate complex financial analysis and personalize client interactions with intelligent, autonomous agents.",
             },
             {
-              href: "/automotive",
+              href: "/automotive-industry",
               src: "/capabilities/gen-ai-agents/Automotive.jpg",
               alt: "Automotive industry",
               title: "Automotive",
               text: "Optimize supply chains and enhance vehicle diagnostics through proactive, AI-driven agent systems.",
             },
             {
-              href: "/manufacturing",
+              href: "/manufacturing-ai-industry",
               src: "/capabilities/gen-ai-agents/Manufacturing.jpg",
               alt: "Manufacturing industry",
               title: "Manufacturing",
               text: "Streamline production processes and predict equipment failures with intelligent, adaptive agent workflows.",
             },
             {
-              href: "/consumer-goods",
+              href: "/consumer-goods-retail",
               src: "/capabilities/gen-ai-agents/ConsumerGoods.jpg",
               alt: "Consumer Goods industry",
               title: "Consumer Goods",

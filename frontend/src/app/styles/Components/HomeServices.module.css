@@ -1,6 +1,6 @@
 .parentContainer {
     max-width: 1240px;
-    /* ; */
+    
     margin: 0 auto;
     padding: 40px 40px; /* Original padding */
     display: flex;

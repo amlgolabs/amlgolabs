@@ -16,7 +16,7 @@ const HomeServices = () => {
       imageSrc: '/Home/service1.png',
       partnerAlt: 'casestudy',
       caseStudyTitle: 'Gen AI Agents',
-      link:"/genai-agents"
+      link:"/genai-agents-development"
     },
     {
       title: 'Streamline AI & Software Delivery with Integrated Ops',
@@ -25,7 +25,7 @@ const HomeServices = () => {
       partnerImage: '/partner2.png',
       partnerAlt: 'casestudy2',
       caseStudyTitle: 'Optimize Efficiency & Innovation with Unified AI & DevOps.',
-      link:"/devops-dataops-mlops"
+      link:"/operations-and-security"
     },
     {
       title: 'Power Intelligent Systems with Cutting-Edge ML & DL',
@@ -34,7 +34,7 @@ const HomeServices = () => {
       partnerImage: '/partner3.png',
       partnerAlt: 'casestudy3',
       caseStudyTitle: 'Enhance intelligent systems using state-of-the-art ML and DL solutions.',
-       link:"/ml-dl"
+       link:"/machine-deep-learning-services"
     }
   ];
 
@@ -72,10 +72,7 @@ const HomeServices = () => {
       </div>
 
       <div className={styles.rightContent}>
-        {/* Content dynamically changes based on active case study */}
-        {/* <div className={styles.content}>
-          <h1 className={styles.heading}>{caseStudies[activeCaseStudy].title}</h1>
-        </div> */}
+        
 
         <div className={styles.imageContainer}>
           <Image
