@@ -62,6 +62,36 @@
     pointer-events: none;
   }
   
+  /* Add styles for buttons in BlogBanner */
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 0.6rem;
+    flex-wrap: wrap;
+  }
+  
+  .navButton {
+    background-color: var(--blue); /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .navButton:active {
+    background-color: #003f7f; /* Even darker blue on click */
+    transform: translateY(0); /* Reset lift on click */
+  }
+  
   /* Responsive Design */
   @media (max-width: 1024px) {
     .bannerContainer {
@@ -140,5 +170,30 @@
     .subtitle {
       font-size: clamp(1.1rem, 2vw, 1.4rem);
       max-width: 800px;
+    }
+  }
+
+  .activeButton {
+    background-color: var(--blue) !important;
+    color: white !important;
+  }
+
+  @media (min-width: 768px) {
+    .contentWrapper {
+        padding: 0 24px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contentWrapper {
+        padding: 0 32px;
+    }
+
+    .title {
+        font-size: 48px;
     }
   }

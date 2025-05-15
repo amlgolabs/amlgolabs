@@ -2,13 +2,13 @@
 import Link from 'next/link';
 import { Button } from '@/app/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/app/components/ui/Card';
-import { Clock, EyeOff } from 'lucide-react';
+import { Clock, File } from 'lucide-react';
 import { extractPreviewImage, truncateText, getBlogUrl } from '@/app/utils/blog/blogUtils';
 import styles from '@/app/styles/Components/LongBlogCard.module.css';
 
 const LongBlogCard = ({
     blog,
-    variant = 'featured',
+    variant = 'recent',
     customPlaceholderUrl = 'https://via.placeholder.com/300x200',
 }) => {
     const isFeatured = variant === 'featured';
@@ -48,26 +48,21 @@ const LongBlogCard = ({
                             <p
                                 className={`${isFeatured ? styles.cardText : isRecent ? styles.recentCardText : styles.popularCardText}`}
                             >
-                                {truncateText(blog.content, isFeatured ? 200 : 120)}
+                                {truncateText(blog.content, isFeatured ? 150 : 110)}
                             </p>
 
                             <div className={styles.metaInfo}>
-                                {/* Date */}
-                                <div
-                                    className={`${isFeatured ? styles.cardMeta : isRecent ? styles.recentCardDate : styles.popularCardDate}`}
-                                >
-                                    {isFeatured && <Clock className={styles.iconSmall} />}
+                                {/* Date with Clock Icon */}
+                                <div className={styles.recentCardDate}>
+                                    <Clock className={styles.iconSmall} />
                                     <span>{new Date(blog.updatedAt).toLocaleDateString()}</span>
-
                                 </div>
-                                {/* content type for featured blogs */}
-                                {isFeatured && (
-                                    <div className={styles.contentType}>
-                                        <div className={styles.contentType}>
-                                            <span>{blog.contentType}</span>
-                                        </div>
-                                    </div>
-                                )}
+
+                                {/* Content Type with File Icon on the right side */}
+                                <div className={styles.contentTypeIconRecentBlog}>
+                                    <File className={styles.iconSmall} />
+                                    <span>{blog.contentType}</span>
+                                </div>
                             </div>
 
                         </CardContent>

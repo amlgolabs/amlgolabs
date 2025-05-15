@@ -1,3 +1,37 @@
+.categoriesHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .categoriesHeader {
+    margin-bottom: 1rem;
+  }
+}
+
+.categoriesTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+@media (min-width: 1024px) {
+  .categoriesTitle {
+    font-size: 1.25rem;
+  }
+}
+.tagIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  color: #6b7280;
+}
+
+.categoriesList {
+  margin-top: 0.5rem;
+}
+
 .loading{
     display: flex;
     justify-content: center;
@@ -10,7 +44,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
+    padding: 0rem 1rem;
   }
   
   @media (min-width: 1024px) {
@@ -21,7 +55,7 @@
   
   .mainContent {
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
     margin-bottom: 2rem;
   }
   
@@ -31,8 +65,20 @@
   }
   
   .relatedSection {
-    flex: 1;
-    max-width: 25%;
+    /* position: sticky; */
+    top: 20%; /* Adjusted to ensure it sticks below the categoriesSection */
+    z-index: 9;
+    max-width: 30%;
+    /* background-color: #f9f9f9; */
+  }
+  .categoriesSection {
+    position: sticky;
+    top: 11.3%; /* Stick to the top of the viewport while scrolling */
+    margin-bottom: 2rem;
+    background-color: #f9f9f9;
+    /* padding: 0.5rem; */
+    border-radius: 0.5rem;
+    z-index: 10;
   }
   
   .contactSection {

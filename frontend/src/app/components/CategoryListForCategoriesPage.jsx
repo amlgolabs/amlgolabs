@@ -1,42 +1,52 @@
-import Link from 'next/link';
-import { Badge } from './ui/Badge';
-import styles from '../styles/Components/CategoryLinks.module.css';
+import Link from "next/link";
+import { Badge } from "./ui/Badge";
+import { usePathname } from "next/navigation";
+import styles from "../styles/Components/CategoryLinks.module.css";
 
-export function CategoryListForCategoriesPage({ className, categories = [
-  "Artificial Intelligence",
-  "Case-Study",
-  "Computer Vision",
-  "Data Analytics",
-  "Data Engineering",
-  "Data Visualization",
-  "Deep Learning",
-  "Featured",
-  "Generative AI",
-  "Identity and Access Management (IAM)",
-  "Language Processing",
-  "Machine Learning",
-  "Regulatory Reporting",
-  "Uncategorized",
-] }) {
+export function CategoryListForCategoriesPage({
+  className,
+  selectedCategory,
+  categories = [
+    "Artificial Intelligence",
+    // "Case-Study",
+    "Computer Vision",
+    "Data Analytics",
+    "Data Engineering",
+    "Data Visualization",
+    "Deep Learning",
+    "Featured",
+    "Generative AI",
+    "Identity and Access Management (IAM)",
+    "Language Processing",
+    "Machine Learning",
+    "Regulatory Reporting",
+    "Uncategorized",
+  ],
+}) {
+  const pathname = usePathname();
+  const isBlogCategoryPath = pathname.split('/').slice(-3, -1).join('/') === 'blog/category';
 
-  console.log('Categories:', categories); // Debugging line to check categories
   return (
     <div className={styles.categoryList}>
       {categories.length > 0 ? (
-        categories.map((category) => (
-          <Link
-            key={category}
-            href={`${encodeURIComponent(category.split(' ').join('-').toLowerCase())}`}
-            className={styles.categoryLink}
-          >
-            <Badge
-              variant="outline"
-              className={styles.categoryBadge}
+        categories.map((category) => {
+          const categoryPath = encodeURIComponent(category.split(" ").join("-").toLowerCase());
+          const href = isBlogCategoryPath 
+            ? `/resources/blog/category/${categoryPath}`
+            : `/${categoryPath}`;
+            
+          return (
+            <Link 
+              key={category} 
+              href={href}
+              className={styles.categoryLink}
             >
-              {category}
-            </Badge>
-          </Link>
-        ))
+              <Badge variant="outline" className={styles.categoryBadge}>
+                {category}
+              </Badge>
+            </Link>
+          );
+        })
       ) : (
         <p>No categories available.</p>
       )}

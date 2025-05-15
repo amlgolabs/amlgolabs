@@ -1,21 +1,22 @@
 "use client";
 
-import Link from 'next/link';
-import { Button } from '@/app/components/ui/Button';
-import { Card, CardContent } from '@/app/components/ui/Card';
-import { Separator } from '@/app/components/ui/Separator';
-import { CategoryList } from '@/app/components/CategoryList';
-import { fetchBlogs } from '@/app/lib/api';
-import styles from '@/app/styles/pages/Blog.module.css';
-import { Clock, Tag, TrendingUp, ChevronRight, Search } from 'lucide-react';
-import LongBlogCard from '../components/LongBlogCard';
-import BlogCard from '../components/BlogCard';
-import { useState, useEffect } from 'react';
-import BlogBanner from '../components/BlogBanner';
+import Link from "next/link";
+import { Button } from "@/app/components/ui/Button";
+import { Card, CardContent } from "@/app/components/ui/Card";
+import { Separator } from "@/app/components/ui/Separator";
+import { CategoryList } from "@/app/components/CategoryList";
+import { fetchBlogs } from "@/app/lib/api";
+import styles from "@/app/styles/pages/Blog.module.css";
+import { Clock, Tag, TrendingUp, ChevronRight, Search } from "lucide-react";
+import LongBlogCard from "../components/LongBlogCard";
+import BlogCard from "../components/BlogCard";
+import { useState, useEffect } from "react";
+import BlogBanner from "../components/BlogBanner";
+import RecentBlogs from "../components/RecentBlogs";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Home() {
         const fetchedBlogs = await fetchBlogs();
         setBlogs(fetchedBlogs);
       } catch (error) {
-        console.error('Failed to fetch blogs:', error);
+        console.error("Failed to fetch blogs:", error);
       } finally {
         setIsLoading(false);
       }
@@ -39,15 +40,13 @@ export default function Home() {
         ? blog.title.toLowerCase().includes(searchTerm.toLowerCase())
         : true
     )
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    .sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
 
   const featuredBlogs = filteredBlogs;
-  const recentBlogs = blogs
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-    .slice(0, 3);
-  const popularBlogs = blogs
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
+  const popularBlogs = blogs.sort(() => Math.random() - 0.5).slice(0, 3);
 
   return (
     <div>
@@ -60,7 +59,7 @@ export default function Home() {
               <Search className={styles.searchIcon} />
               <input
                 type="text"
-                placeholder="Search blogs..."
+                placeholder="Search..."
                 className={styles.searchInput}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -113,43 +112,23 @@ export default function Home() {
                     <Search className={styles.searchIcon} />
                     <input
                       type="text"
-                      placeholder="Search blogs..."
+                      placeholder="Search ..."
                       className={styles.searchInput}
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                     />
                   </div>
                 </div>
-                <div className={styles.categoriesHeader}>
-                  <h2 className={styles.categoriesTitle}>Categories</h2>
-                  <Tag className={styles.tagIcon} />
+                <div className={styles.categoriesSectionInternal}>
+                  <div className={styles.categoriesHeader}>
+                    <h2 className={styles.categoriesTitle}>Categories</h2>
+                    <Tag className={styles.tagIcon} />
+                  </div>
+                  <CategoryList className={styles.categoriesList} />
                 </div>
-                <CategoryList className={styles.categoriesList} />
               </div>
 
-              <div className={styles.recentHeader}>
-                <h2 className={styles.recentTitle}>Recent Blogs</h2>
-                <Clock className={styles.clockIcon} />
-              </div>
-              <div className={styles.recentList}>
-                {isLoading ? (
-                  <Card className={styles.noRecentCard}>
-                    <CardContent>
-                      <p>Loading...</p>
-                    </CardContent>
-                  </Card>
-                ) : recentBlogs.length > 0 ? (
-                  recentBlogs.map((blog) => (
-                    <LongBlogCard key={blog._id} blog={blog} variant="recent" />
-                  ))
-                ) : (
-                  <Card className={styles.noRecentCard}>
-                    <CardContent>
-                      <p>No recent blogs available.</p>
-                    </CardContent>
-                  </Card>
-                )}
-              </div>
+              <RecentBlogs />
             </div>
           </div>
         </div>

@@ -1,16 +1,12 @@
-
-
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header1 from "./components/Header/Header1";
 import Footer1 from "./components/Footer/Footer1";
 import RebrandingMessage from "./components/RebrandingMessage";
-import Head from "next/head";
 import { PopupProvider } from "./context/PopupContext";
 import PopupForm from "./components/PopupForm";
-import { ContactPopupProvider } from "./context/ContactPopupContext"; // Import new provider
-import ContactPopupForm from "./components/ContactPopupForm"; // Import new contact popup component
+import { ContactPopupProvider } from "./context/ContactPopupContext";
+import ContactPopupForm from "./components/ContactPopupForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,15 +42,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CFNF6J3K86"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CFNF6J3K86');
+            `,
+          }}
+        />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-
         <meta name="robots" content="index, follow" />
-
-
-
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Amlgo Labs | AI, GenAI Agent & Data Innovation" />
         <meta property="og:description" content="Amlgo Labs helps enterprises transform with AI, GenAI, Machine Learning, and Data Analytics solutions. Follow us for insights and innovation." />
@@ -70,15 +77,12 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Amlgo Labs on LinkedIn | AI, GenAI & Data Solutions for Enterprises" />
         <meta property="og:description" content="Amlgo Labs helps enterprises transform with AI, GenAI, Machine Learning, and Data Analytics solutions. Follow us for insights and innovation." />
-        <meta property="og:url" content="" />
-        <meta property="og:site_name" content="" />
-
-
+        <meta property="og:url" content="https://www.amlgolabs.com" />
+        <meta property="og:site_name" content="Amlgo Labs" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <PopupProvider>
           <ContactPopupProvider>
-            {/* <RebrandingMarquee/> */}
             <Header1 />
             {children}
             <RebrandingMessage />

@@ -1,0 +1,164 @@
+/* FilterPage.module.css */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.paddingVerticalLarge {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.paddingVerticalExtraLarge {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/* Flexbox */
+.flexContainer {
+    display: flex;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.lgFlexRow {
+    flex-direction: column;
+}
+
+.lgWidthThreeQuarters {
+    width: 100%;
+    order: 2;
+}
+
+.lgWidthOneQuarter {
+    width: 100%;
+    margin-bottom: 2rem;
+    order: 1;
+}
+
+.gapLarge {
+    gap: 32px;
+}
+
+/* Grid */
+.blogGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Categories */
+.categoriesMobile {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.stickySidebar {
+    position: relative;
+    top: 0;
+}
+
+/* Typography */
+.textHeadingSmall {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.fontSemibold {
+    font-weight: 600;
+}
+
+.textMuted {
+    color: #6b7280;
+}
+
+.marginBottomSmall {
+    margin-bottom: 16px;
+}
+
+.marginBottomMedium {
+    margin-bottom: 24px;
+}
+
+/* Utility Classes */
+.textAlignCenter {
+    text-align: center;
+}
+
+.borderSubtle {
+    border: 1px solid #e5e7eb;
+}
+
+.borderRadiusLarge {
+    border-radius: 8px;
+}
+
+.backgroundSubtle {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .blogGrid {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .lgFlexRow {
+        flex-direction: row;
+    }
+
+    .lgWidthThreeQuarters {
+        width: 75%;
+        order: 1;
+    }
+
+    .lgWidthOneQuarter {
+        width: 25%;
+        margin-bottom: 0;
+        order: 2;
+    }
+
+    .stickySidebar {
+        position: sticky;
+        top: 32px;
+    }
+
+    .categoriesMobile {
+        position: sticky;
+        top: 32px;
+        border: none;
+        padding: 0;
+    }
+
+    .blogGrid {
+        gap: 2.5rem;
+    }
+} 
