@@ -27,9 +27,9 @@ const BlogBanner = ({
   return (
     <section className={`${styles.bannerContainer}`}>
       <div className={styles.contentWrapper}>
-        <Link href="/resources">
-          <h5 className={`${styles.title} ${titleClass}`}>Resources</h5>
-        </Link>
+        <h5 className={`${styles.title} ${titleClass}`}>
+          <Link href="/resources">Resources</Link>
+        </h5>
         <div className={styles.buttonGroup}>
           <button
             className={`globalButton ${isActive("Case Study")}`}
