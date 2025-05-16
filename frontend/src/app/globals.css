@@ -416,3 +416,79 @@ transform: translateY(-2px) scale(1.05);
   margin: 1rem auto;
   border-radius: 0.375rem;
 }
+
+/* --------------------------------------------table */
+
+/* Table styles for Tiptap editor */
+.tiptap {
+  /* Ensure the editor container is styled appropriately */
+  @apply prose prose-sm max-w-none;
+}
+
+.tiptap table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem; /* Matches prose-sm */
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+}
+
+/* Table header */
+.tiptap th {
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+  color: #1f2937; /* Tailwind's gray-800 */
+}
+
+/* Table cell */
+.tiptap td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+  color: #374151; /* Tailwind's gray-700 */
+}
+
+/* Table row */
+.tiptap tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for rows */
+.tiptap tr:hover {
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+}
+
+/* Handle resizable tables */
+.tiptap table.resizable {
+  table-layout: auto;
+}
+
+/* Ensure table cells are resizable */
+.tiptap th[style*="width"],
+.tiptap td[style*="width"] {
+  min-width: 50px; /* Prevent cells from becoming too narrow */
+}
+
+/* Responsive table behavior */
+@media (max-width: 640px) {
+  .tiptap table {
+    display: block;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    white-space: nowrap;
+  }
+}
+
+/* Optional: Style for selected table cells */
+.tiptap .selectedCell {
+  background-color: #e0f2fe; /* Tailwind's sky-100 */
+}
+
+/* Ensure table content respects prose typography */
+.tiptap table p {
+  margin: 0;
+  line-height: 1.5;
+}

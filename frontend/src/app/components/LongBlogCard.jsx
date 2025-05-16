@@ -14,7 +14,6 @@ import {
   truncateText,
   getBlogUrl,
 } from "@/app/utils/blog/blogUtils";
-import Image from "next/image";
 import styles from "@/app/styles/Components/LongBlogCard.module.css";
 
 const LongBlogCard = ({

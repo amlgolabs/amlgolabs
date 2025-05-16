@@ -80,6 +80,10 @@
     color: #6b7280;
 }
 
+.viewAll {
+  padding: 1rem;
+}
+
 .marginBottomSmall {
     margin-bottom: 16px;
 }
