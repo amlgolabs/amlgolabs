@@ -13,6 +13,7 @@ import BlogCard from "../components/BlogCard";
 import { useState, useEffect } from "react";
 import BlogBanner from "../components/BlogBanner";
 import RecentBlogs from "../components/RecentBlogs";
+import Loader from "@/app/components/Loader";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -79,7 +80,7 @@ export default function Home() {
             <div className={styles.blogGrid}>
               {isLoading ? (
                 <div className={styles.noBlogs}>
-                  <p>Loading...</p>
+                  <Loader size="medium" />
                 </div>
               ) : featuredBlogs.length > 0 ? (
                 featuredBlogs.map((blog) => (
@@ -144,7 +145,7 @@ export default function Home() {
           <div className={styles.popularGrid}>
             {isLoading ? (
               <div className={styles.noBlogsFull}>
-                <p>Loading...</p>
+                <Loader size="medium" />
               </div>
             ) : popularBlogs.length > 0 ? (
               popularBlogs.map((blog, index) => (

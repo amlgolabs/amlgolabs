@@ -9,6 +9,7 @@ import styles from "../../../styles/pages/Blog/URLSingleBlog.module.css";
 import Head from "next/head";
 import { Tag } from "lucide-react";
 import { CategoryForSingleBlog } from "@/app/components/CategoryForSingleBlog";
+import Loader from "@/app/components/Loader";
 
 export default function BlogPage({ params }) {
   const [blog, setBlog] = useState(null);
@@ -35,7 +36,7 @@ export default function BlogPage({ params }) {
   }
 
   if (!blog) {
-    return <div className={styles.loading}>Loading...</div>;
+    return <Loader size="large" />;
   }
 
   return (

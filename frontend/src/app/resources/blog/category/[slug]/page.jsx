@@ -13,6 +13,8 @@ import config from "@/app/config/config"
 import styles from "../../../../styles/pages/Blog/Category/CategoryPage.module.css"
 import LongBlogCard from "@/app/components/LongBlogCard"
 import BlogBanner from "@/app/components/BlogBanner"
+import RecentBlogs from "@/app/components/RecentBlogs"
+import Loader from "@/app/components/Loader"
 
 export default function CategoryPage({ params }) {
     const router = useRouter()
@@ -73,9 +75,7 @@ export default function CategoryPage({ params }) {
     if (loading) {
         return (
             <div className={`${styles.container} ${styles.paddingVerticalExtraLarge}`}>
-                <div className={`${styles.flexContainer} ${styles.justifyContentCenter} ${styles.alignItemsCenter} ${styles.heightLarge}`}>
-                    <p className={styles.textBodyLarge}>Loading blog posts...</p>
-                </div>
+                <Loader size="large" />
             </div>
         )
     }
@@ -107,6 +107,10 @@ export default function CategoryPage({ params }) {
                                     All Categories
                                 </h2>
                                 <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
+                            </div>
+                            <div className={styles.relatedResources}>
+                                <h2 className={styles.textHeadingSmall}>Recent Blogs</h2>
+                                <RecentBlogs />
                             </div>
                         </div>
                     </div>

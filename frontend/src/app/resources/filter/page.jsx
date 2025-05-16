@@ -11,6 +11,7 @@ import { Button } from "@/app/components/ui/Button";
 import RecentBlogs from "@/app/components/RecentBlogs";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Loader from "@/app/components/Loader";
 
 export default function FilterPage() {
   const searchParams = useSearchParams();
@@ -49,15 +50,8 @@ export default function FilterPage() {
   }, [contentType, selectedCategory]);
 
   const handleCategoryClick = (category) => {
-    // Convert category from URL format to display format
-    const displayCategory = category
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-
-    setSelectedCategory(
-      displayCategory === selectedCategory ? "" : displayCategory
-    );
+    // Simply use the category as is, since it's already in display format
+    setSelectedCategory(category === selectedCategory ? "" : category);
   };
 
   if (loading) {
@@ -67,7 +61,7 @@ export default function FilterPage() {
           title={`${contentType} Resources`}
           selectedContentType={contentType}
         />
-        <div className={styles.loading}>Loading...</div>
+        <Loader size="large" />
       </div>
     );
   }
@@ -113,10 +107,8 @@ export default function FilterPage() {
 
           {/* Categories section */}
           <div className={styles.lgWidthOneQuarter}>
-            <div
-              className={`${styles.stickySidebar} ${styles.categoriesMobile}`}
-            >
-              <div className={styles.marginBottomMedium}>
+            <div className={styles.stickySidebar}>
+              <div className={styles.categoriesMobile}>
                 <h2
                   className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}
                 >
@@ -129,6 +121,10 @@ export default function FilterPage() {
                     .replace(/\s+/g, "-")}
                   onCategoryClick={handleCategoryClick}
                 />
+              </div>
+              <div className={styles.relatedResources}>
+                <h2 className={styles.textHeadingSmall}>Related Resources</h2>
+                <RecentBlogs />
               </div>
             </div>
           </div>

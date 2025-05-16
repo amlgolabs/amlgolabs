@@ -4,6 +4,7 @@ import LongBlogCard from "./LongBlogCard";
 import styles from "@/app/styles/components/RecentBlogs.module.css";
 import { useState, useEffect } from "react";
 import config from "@/app/config/config";
+import Loader from './Loader';
 
 export default function RecentBlogs() {
   const [blogs, setBlogs] = useState([]);
@@ -47,7 +48,7 @@ export default function RecentBlogs() {
         {isLoading ? (
           <Card className={styles.noRecentCard}>
             <CardContent>
-              <p>Loading...</p>
+              <Loader size="small" />
             </CardContent>
           </Card>
         ) : recentBlogs.length > 0 ? (

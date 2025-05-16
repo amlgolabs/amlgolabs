@@ -8,6 +8,7 @@ import { fetchBlogs, fetchBlogsCount } from '@/app/lib/api';
 import BlogCard from '@/app/components/BlogCard';
 import styles from '../styles/pages/AllBlogs.module.css';
 import { Tag } from 'lucide-react';
+import Loader from '@/app/components/Loader';
 
 const BLOGS_PER_PAGE = 6;
 
@@ -64,7 +65,7 @@ export default function Home() {
               ))
             ) : (
               <div className={styles.noBlogs}>
-                <p>Loading...</p>
+                <Loader size="medium" />
               </div>
             )}
           </div>
