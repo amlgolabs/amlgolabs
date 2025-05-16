@@ -1,0 +1,57 @@
+.filterCategoryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filterCategoryButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.filterCategoryButton:hover {
+    transform: translateY(-2px);
+}
+
+.filterCategoryButton:active {
+    transform: translateY(0);
+}
+
+.filterCategoryBadge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.filterCategoryButton:hover .filterCategoryBadge {
+    border-color: #2563eb;
+    color: #2563eb;
+    background-color: #f8fafc;
+}
+
+.selectedFilterCategory .filterCategoryBadge {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .filterCategoryList {
+        gap: 0.5rem;
+    }
+
+    .filterCategoryBadge {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
+    }
+} 

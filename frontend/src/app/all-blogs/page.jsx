@@ -48,9 +48,9 @@ export default function Home() {
               <h2 className={styles.categoriesTitle}>Categories</h2>
               <Tag className={styles.tagIcon} />
             </div>
-            <div className={styles.categoriesWrapper}>
-              <CategoryList className={styles.categoriesList} />
-            </div>
+            {/* <div className={styles.categoriesWrapper}> */}
+              <CategoryList />
+            {/* </div> */}
           </div>
 
           <div className={styles.blogGrid}>

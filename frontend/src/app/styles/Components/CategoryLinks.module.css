@@ -1,7 +1,6 @@
 .categoryList {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center */
 }
 
 .categoryLink {
@@ -13,22 +12,58 @@
   color: #0070f3;
 }
 
-
-
 .categoryLink:active {
   color: #0056b3;
 }
 
-.categoryBadge {
-  background-color: black;
-  color: #000;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.5rem;
-  /* font-weight: bold; */
-  margin-right: 0.5rem;
+.categoryButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-.categoryBadge:hover {
-  background-color: var(--blue) !important;
-  color: #000;
+
+.categoryButton:hover {
+  transform: translateY(-2px);
+}
+
+.categoryButton:active {
+  transform: translateY(0);
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  transition: all 0.2s ease;
+}
+
+.categoryButton:hover .categoryBadge {
+  border-color: var(--blue);
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.selectedCategory .categoryBadge {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .categoryList {
+    gap: 0.5rem;
+  }
+
+  .categoryBadge {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
 }

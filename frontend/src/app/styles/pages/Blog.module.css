@@ -10,6 +10,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+
+  }
+}
+
 .mainLayout {
   display: flex;
   flex-direction: column;
@@ -31,7 +38,16 @@
 .blogGrid {
   display: grid;
   gap: 1rem;
+
 }
+@media (max-width: 768px) {
+  .blogGrid {
+    padding: 0 1rem;
+  gap: 3rem;
+
+  }
+}
+
 
 @media (min-width: 1024px) {
   .blogGrid {
@@ -63,6 +79,9 @@
 .sticky {
   position: sticky;
   top: 1.5rem;
+  /* background-color: var(--extra-light-gray); */
+  padding: 0.2rem;
+  border-radius:1rem;
 }
 
 @media (min-width: 1024px) {
@@ -132,6 +151,13 @@
   .categoriesSectionDesktop {
     display: block; /* Show categories in sidebar on desktop */
   }
+}
+
+.categoriesSectionInternal {
+  background-color: var(--extra-light-gray);
+  padding:  1rem 0.1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 .categoriesHeader {

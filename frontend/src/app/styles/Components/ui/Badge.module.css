@@ -12,12 +12,16 @@
   .badge.outline {
     border: 1px solid #d1d5db;
     background-color: var(--black);
+    border-radius: 20px;
     padding: 4px 8px;
     color: #fff;
     margin: 4px;
     font-size: 14px;
   }
-  
+  .badge.outline:hover {
+    background-color: var(--blue);
+    color: #000;
+  }
   .badge.unpublished {
     background-color: #fefce8;
     color: #b45309;

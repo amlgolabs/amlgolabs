@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/app/components/ui/Button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/Card"
 import { Clock, ArrowLeft, Tag, EyeOff } from "lucide-react"
-import { CategoryList } from "@/app/components/CategoryList"
+import { CategoryListForCategoriesPage } from "@/app/components/CategoryListForCategoriesPage"
 import config from "@/app/config/config"
 import styles from "../../../../styles/pages/Blog/Category/CategoryPage.module.css"
 import LongBlogCard from "@/app/components/LongBlogCard"
@@ -23,10 +23,15 @@ export default function CategoryPage({ params }) {
 
     // Format category name for display
     const formatCategoryName = (slug) => {
-        return slug
+        const slugParts = slug
             .split("-")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")
+            .join(" ");
+
+        if (slugParts === "Uncategorized") {
+            return "Resources"
+        }
+        return "Resources / " + slugParts;
     }
 
     const categoryName = formatCategoryName(categorySlug)
@@ -77,7 +82,7 @@ export default function CategoryPage({ params }) {
 
     return (
         <div>
-            <BlogBanner  title={categoryName} />
+            <BlogBanner title={categoryName} />
             <div className={`${styles.container} ${styles.paddingVerticalLarge}`}>
                 <div className={`${styles.flexContainer} ${styles.alignItemsCenter} ${styles.marginBottomMedium}`}>
                     {/* <Button
@@ -94,8 +99,20 @@ export default function CategoryPage({ params }) {
                 </div>
 
                 <div className={`${styles.flexContainer} ${styles.flexColumn} ${styles.lgFlexRow} ${styles.gapLarge}`}>
-                    <div className={styles.lgWidthThreeQuarters}>
+                    {/* Categories section - will appear first on mobile/tablet, right side on desktop */}
+                    <div className={styles.lgWidthOneQuarter}>
+                        <div className={`${styles.stickySidebar} ${styles.categoriesMobile}`}>
+                            <div className={styles.marginBottomMedium}>
+                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
+                                    All Categories
+                                </h2>
+                                <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
+                            </div>
+                        </div>
+                    </div>
 
+                    {/* Blog posts section - will appear second on mobile/tablet, left side on desktop */}
+                    <div className={styles.lgWidthThreeQuarters}>
                         {blogs.length > 0 ? (
                             <div className={styles.blogGrid}>
                                 {blogs.length > 0 ? (
@@ -116,23 +133,12 @@ export default function CategoryPage({ params }) {
                                 <Button
                                     variant="outline"
                                     className="globalButton"
-                                    onClick={() => router.push("/blog")}
+                                    onClick={() => router.push("/resources")}
                                 >
-                                    Explore All Blogs
+                                    Explore All Resources
                                 </Button>
                             </div>
                         )}
-                    </div>
-
-                    <div className={styles.lgWidthOneQuarter}>
-                        <div className={styles.stickySidebar}>
-                            <div className={styles.marginBottomMedium}>
-                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
-                                    All Categories
-                                </h2>
-                                <CategoryList showAll={true} selectedCategory={categorySlug} />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
