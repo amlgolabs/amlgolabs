@@ -29,16 +29,58 @@ const ContactPopupForm = () => {
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
+  // const validateForm = () => {
+  //   const newErrors = {};
+  //   if (!formData.name.trim()) newErrors.name = "Name is required";
+  //   if (!formData.email.trim()) newErrors.email = "Email is required";
+  //   else if (!/\S+@\S+\.\S+/.test(formData.email))
+  //     newErrors.email = "Invalid email format";
+  //   if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+  //   if (!formData.message.trim()) newErrors.message = "Message is required";
+  //   return newErrors;
+  // };
+
   const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Invalid email format";
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-    return newErrors;
-  };
+  const newErrors = {};
+
+  // Name validation: 2-50 characters, letters and spaces only
+  if (!formData.name.trim()) {
+    newErrors.name = "Name is required";
+  } else if (!/^[a-zA-Z\s]{2,50}$/.test(formData.name.trim())) {
+    newErrors.name = "Name must be 2-50 characters and contain only letters and spaces";
+  }
+
+  // Email validation: standard email format, max 254 characters
+  if (!formData.email.trim()) {
+    newErrors.email = "Email is required";
+  } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+    newErrors.email = "Please enter a valid email address";
+  } else if (formData.email.length > 254) {
+    newErrors.email = "Email must not exceed 254 characters";
+  }
+
+  // Phone validation: mandatory, must match common formats
+  if (!formData.phone.trim()) {
+    newErrors.phone = "Phone number is required";
+  } else if (!/^(?:\+?\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/.test(formData.phone.trim())) {
+    newErrors.phone = "Please enter a valid phone number (e.g., 123-456-7890)";
+  } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
+    newErrors.phone = "Phone number must contain at least 10 digits";
+  } else if (formData.phone.replace(/[^0-9]/g, "").length > 15) {
+    newErrors.phone = "Phone number cannot exceed 15 digits";
+  }
+
+  // Message validation: 10-1000 characters
+  if (!formData.message.trim()) {
+    newErrors.message = "Message is required";
+  } else if (formData.message.trim().length < 10) {
+    newErrors.message = "Message must be at least 10 characters long";
+  } else if (formData.message.trim().length > 1000) {
+    newErrors.message = "Message cannot exceed 1000 characters";
+  }
+
+  return newErrors;
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,7 +98,7 @@ const ContactPopupForm = () => {
       setFormData({ name: "", email: "", phone: "", message: "" });
       setSnackbar({
         open: true,
-        message: "Thank you for your message! We'll respond within 24 hours.",
+        message: "Thank you for your message! We'll respond you shortly.",
         severity: "success",
       });
     } catch (error) {

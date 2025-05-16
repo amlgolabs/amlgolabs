@@ -68,7 +68,6 @@ const Footer1 = () => {
               <Link className={styles.footerLink} href="/large-language-models-llms ">LLMs</Link>
               <Link className={styles.footerLink} href="/genai-agents-development">GenAI Agents</Link>
               <Link className={styles.footerLink} href="/computer-vision-services">Computer Vision</Link>
-              <Link className={styles.footerLink} href="/risk-regulatory-compliance">Risk and Regulatory</Link>
               <Link className={styles.footerLink} href="/machine-deep-learning-services">Machine Learning</Link>
               <Link className={styles.footerLink} href="/cloud-solutions-aws-azure-gcp">Cloud Services</Link>
               <Link className={styles.footerLink} href="/data-analytics-services">Data Analytics</Link>
@@ -85,7 +84,9 @@ const Footer1 = () => {
               <Link className={styles.footerLink} href="/automotive-industry">Automotive</Link>
               <Link className={styles.footerLink} href="/real-estate-infrastructure">Real Estate</Link>
               <Link className={styles.footerLink} href="/insurance">Insurance</Link>
-              <Link className={styles.footerLink} href="/renewable-energy">Renewable Energy</Link>
+              <Link className={styles.footerLink} href="/risk-regulatory-compliance">Risk and Regulatory</Link>
+
+              {/* <Link className={styles.footerLink} href="/renewable-energy">Renewable Energy</Link> */}
               <Link className={styles.footerLink} href="/manufacturing-ai-industry">Manufacturing</Link>
               <Link className={styles.footerLink} href="/pharma-life-sciences">Pharma and Life Sciences</Link>
               <Link className={styles.footerLink} href="/communication-media">Communication and Media</Link>

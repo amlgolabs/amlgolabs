@@ -309,21 +309,5 @@ export const jobs = [
           "Maintain detailed documentation of solutions and provide support for production systems when required."
         ]
       }
-      
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    
-    // Similarly add for all 12 jobs
   ];
   

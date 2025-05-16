@@ -5,6 +5,9 @@ import SolutionsBoxes from '../components/PagesComponents/CapabilitiesPages/Solu
 import AmlgoDifference from '../components/PagesComponents/AmlgoDifference';
 import ToolsTechnologies from '../components/ToolsTechnologies';
 import RegulatoryReach from '../components/RegulatoryReach';
+import CTASection from '../components/CTA';
+import SingleBlog from '../components/PagesComponents/Blogs/SingleBlog'
+
 
 const page = () => {
 
@@ -41,7 +44,7 @@ const page = () => {
       text: "We go beyond basic compliance by proactively maintaining systems, ensuring operational excellence, and driving innovation to meet evolving business needs."
     }
   ];
-  
+
 
   return (
     <>
@@ -59,9 +62,25 @@ const page = () => {
         description="We provide tailored solutions that simplify regulatory compliance, reduce operational risk, and ensure your business meets evolving industry standards with confidence."
         solutions={solutionsData}
       />
-      <AmlgoDifference/>
-      <ToolsTechnologies/>
-      <RegulatoryReach/>
+      <AmlgoDifference />
+      <ToolsTechnologies />
+      <SingleBlog
+        title="Resistance to adaptations makes you bound by legacy."
+        description="Manual adjustments, report corrections, and data delays were trapped by a legacy system. We redesigned the process from the inside out, giving users a simpler way to post bulk adjustments, flag missing data, and reduce time spent on repetitive tasks. The result? Less manual effort, faster reporting, and a smoother path to leaving legacy systems behind."
+        imageSrc="/businesses/risk-regulatory/caseStudy.png"
+        button1Link="/contact-us" // Update with actual blog route
+        button1Text="Learn More"
+        usePopupForButton1={true} // Enable popup for this button
+        pdfName="Resistance to adaptations makes you bound by legacy"
+
+      />
+      <RegulatoryReach />
+      <CTASection
+        heading="Let's Talk Compliance That Moves You Forward"
+        description="Explore how Amlgo Labs can modernize your risk and regulatory reporting with AxiomSL, OneSumX, and Moody's. Whether you're optimizing an existing system or preparing for regulatory changes, we're ready to help."
+        buttonText="Get Started Today"
+        imageSrc="/cta.png"
+      />
     </>
   )
 }
