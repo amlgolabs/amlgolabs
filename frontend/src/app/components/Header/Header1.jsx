@@ -574,6 +574,16 @@ const Header1 = () => {
       </Link>
     </ListItem>
   </List>
+
+  <div className={styles.sideBarBlog}>
+      <Image width={300} height={150} src="/Header/desktopBlog.png" alt="blog"/>
+      <h2>Disrupting Industries with GenAI : Amlgo Labs at the Helm</h2>
+      {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, placeat cum? Earum ex officiis adipisci?</p> */}
+      <Link href="/documents/how_generative_ai_is_disrupting_entindustries_and_how_amlgo_labs_is_leading_the_charge.pdf">
+        Learn More
+      </Link>
+  </div>
+
 </Drawer>
 
         {/* Hamburger Menu */}

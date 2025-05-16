@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content="Amlgo Labs helps enterprises transform with AI, GenAI, Machine Learning, and Data Analytics solutions. Follow us for insights and innovation." />
         <meta property="og:url" content="https://www.amlgolabs.com" />
         <meta property="og:site_name" content="Amlgo Labs" />
-        <meta property="og:image" content="https://www.amlgolabs.com/logo/logo21March.png" />
+        <meta property="og:image" content="https://www.amlgolabs.com/socialCard.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Amlgo Labs – AI, GenAI & Data Solutions" />

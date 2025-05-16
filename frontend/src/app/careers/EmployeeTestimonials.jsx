@@ -67,7 +67,7 @@ const testimonials = [
   {
     name: "Shivani Gupta",
     text: "I've had the opportunity to work with a talented team in a supportive and growth-driven environment. The company truly values its people, making every day both challenging and rewarding. I'm proud to be part of this amazing organization!",
-    position: "HR Executive",
+    position: "HR Specialist",
     image: "/employees/shivani.jpeg",
   },
 
