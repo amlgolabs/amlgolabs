@@ -48,7 +48,7 @@ export default function BlogCard({ blog, isLast }) {
         <div className={styles.cardTextWrapper}>
           <div>
             <CardTitle className={styles.cardTitle}>
-              <Link href={getBlogUrl(blog)}>{blog.title}</Link>
+              <Link href={getBlogUrl(blog)}>{truncateText(blog.title,50)}</Link>
             </CardTitle>
             <p className={styles.textMuted}>{truncateText(blog.content, 60)}</p>
           </div>

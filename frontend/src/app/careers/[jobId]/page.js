@@ -59,6 +59,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import JobDescription from "../JobDescription";
 import {  fetchSingleJob } from "@/app/lib/api";
+import Loader from "@/app/components/Loader";
 
 const JobDetails = () => {
   const { jobId } = useParams();
@@ -89,7 +90,7 @@ const JobDetails = () => {
     if (jobId) getJob();
   }, [jobId]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div><Loader/></div>;
   if (!job) return <div>Job not found!</div>;
 
   return (

@@ -441,3 +441,35 @@
 .pageButton {
   display: none;
 }
+
+.viewAllContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.viewAllButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.viewAllButton:hover {
+  transform: translateX(4px);
+}
+
+.chevronIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.viewAllButton:hover .chevronIcon {
+  transform: translateX(2px);
+}
+
+.marginLeftSmall {
+  margin-left: 8px;
+}

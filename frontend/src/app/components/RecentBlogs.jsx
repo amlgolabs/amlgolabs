@@ -4,7 +4,7 @@ import LongBlogCard from "./LongBlogCard";
 import styles from "@/app/styles/components/RecentBlogs.module.css";
 import { useState, useEffect } from "react";
 import config from "@/app/config/config";
-import Loader from './Loader';
+import Loader from "./Loader";
 
 export default function RecentBlogs() {
   const [blogs, setBlogs] = useState([]);
@@ -42,7 +42,7 @@ export default function RecentBlogs() {
     <div className={styles.recentBlogsContainer}>
       <div className={styles.recentHeader}>
         <h2 className={styles.recentTitle}>Recent Resources</h2>
-        {/* <Clock className={styles.clockIcon} /> */}
+        <Clock className={styles.clockIcon} />
       </div>
       <div className={styles.recentList}>
         {isLoading ? (

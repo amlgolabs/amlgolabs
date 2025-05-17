@@ -10,11 +10,11 @@ import CategoryForFilter from "@/app/components/CategoryForFilter";
 import { Button } from "@/app/components/ui/Button";
 import RecentBlogs from "@/app/components/RecentBlogs";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Tag } from "lucide-react";
 import Loader from "@/app/components/Loader";
-import { Pagination, PaginationItem } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Pagination, PaginationItem } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function FilterPage() {
   const searchParams = useSearchParams();
@@ -67,17 +67,19 @@ export default function FilterPage() {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   if (loading) {
     return (
-      <div className={styles.container}>
+      <div>
         <BlogBanner
           title={`${contentType} Resources`}
           selectedContentType={contentType}
         />
-        <Loader size="large" />
+        <div className={styles.container}>
+          <Loader size="large" />
+        </div>
       </div>
     );
   }
@@ -89,14 +91,20 @@ export default function FilterPage() {
         selectedContentType={contentType}
       />
       <div className={styles.container}>
-        <div className={`${styles.flexContainer} ${styles.flexColumn} ${styles.lgFlexRow} ${styles.gapLarge}`}>
+        <div
+          className={`${styles.flexContainer} ${styles.flexColumn} ${styles.lgFlexRow} ${styles.gapLarge}`}
+        >
           {/* Blog posts section */}
           <div className={styles.lgWidthThreeQuarters}>
             {blogs.length > 0 ? (
               <>
                 <div className={styles.blogGrid}>
                   {currentBlogs.map((blog) => (
-                    <LongBlogCard key={blog._id} blog={blog} variant="featured" />
+                    <LongBlogCard
+                      key={blog._id}
+                      blog={blog}
+                      variant="featured"
+                    />
                   ))}
                 </div>
 
@@ -113,21 +121,24 @@ export default function FilterPage() {
                       showLastButton
                       renderItem={(item) => (
                         <PaginationItem
-                          slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                          slots={{
+                            previous: ArrowBackIcon,
+                            next: ArrowForwardIcon,
+                          }}
                           {...item}
                         />
                       )}
                       sx={{
-                        '& .MuiPaginationItem-root': {
-                          fontSize: '1rem',
+                        "& .MuiPaginationItem-root": {
+                          fontSize: "1rem",
                           fontWeight: 500,
                         },
-                        '& .Mui-selected': {
-                          backgroundColor: 'var(--primary) !important',
-                          color: 'white !important',
+                        "& .Mui-selected": {
+                          backgroundColor: "var(--primary) !important",
+                          color: "white !important",
                         },
-                        '& .MuiPaginationItem-root:hover': {
-                          backgroundColor: 'var(--primary-hover)',
+                        "& .MuiPaginationItem-root:hover": {
+                          backgroundColor: "var(--primary-hover)",
                         },
                       }}
                     />
@@ -135,7 +146,9 @@ export default function FilterPage() {
                 )}
               </>
             ) : (
-              <div className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}>
+              <div
+                className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}
+              >
                 <p className={styles.textMuted}>
                   {selectedCategory
                     ? `No ${contentType.toLowerCase()} posts found in ${selectedCategory}.`
@@ -149,17 +162,26 @@ export default function FilterPage() {
           <div className={styles.lgWidthOneQuarter}>
             <div className={styles.stickySidebar}>
               <div className={styles.categoriesMobile}>
-                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
-                  Filter by Category
-                </h2>
+                <div className={styles.parentCategory}>
+                  <h2
+                    className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall} ${styles.flexContainer} ${styles.alignItemsCenter}`}
+                  >
+                    Categories
+                  </h2>
+                  <Tag
+                    className={`${styles.marginLeftSmall} ${styles.iconMedium}`}
+                  />
+                </div>
                 <CategoryForFilter
                   showAll={true}
-                  selectedCategory={selectedCategory.toLowerCase().replace(/\s+/g, "-")}
+                  selectedCategory={selectedCategory
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}
                   onCategoryClick={handleCategoryClick}
                 />
               </div>
               <div className={styles.relatedResources}>
-                <h2 className={styles.textHeadingSmall}>Related Resources</h2>
+                {/* <h2 className={styles.textHeadingSmall}>Related Resources</h2> */}
                 <RecentBlogs />
               </div>
             </div>

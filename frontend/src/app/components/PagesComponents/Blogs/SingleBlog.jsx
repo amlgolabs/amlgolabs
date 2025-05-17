@@ -14,8 +14,8 @@ const SingleBlog = ({
   button2Link,
   button1Text,
   button2Text,
-  usePopupForButton1 = false, // New prop to control popup behavior
-  pdfName, // New prop for popup PDF
+  usePopupForButton1 = false, 
+  pdfName, 
 }) => {
   const { openPopup } = usePopup();
 

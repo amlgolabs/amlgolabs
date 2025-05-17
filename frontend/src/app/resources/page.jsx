@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { Button } from "@/app/components/ui/Button";
-import { Card, CardContent } from "@/app/components/ui/Card";
 import { Separator } from "@/app/components/ui/Separator";
 import { CategoryList } from "@/app/components/CategoryList";
 import { fetchBlogs } from "@/app/lib/api";
 import styles from "@/app/styles/pages/Blog.module.css";
-import { Clock, Tag, TrendingUp, ChevronRight, Search } from "lucide-react";
+import { Tag, TrendingUp, ChevronRight, Search } from "lucide-react";
 import LongBlogCard from "../components/LongBlogCard";
 import BlogCard from "../components/BlogCard";
 import { useState, useEffect } from "react";
@@ -94,7 +93,7 @@ export default function Home() {
             </div>
 
             <div className={styles.viewAll}>
-              <Link href="/all-blogs">
+              <Link href="/all-resources">
                 <Button variant="outline" size="sm" asChild>
                   View All
                   <ChevronRight className={styles.clockIcon} />
@@ -137,7 +136,7 @@ export default function Home() {
         {/* More Blogs */}
         <div className={styles.popularSection}>
           <div className={styles.popularHeader}>
-            <h2 className={styles.popularTitle}>More Blogs</h2>
+            <h2 className={styles.popularTitle}>More Resources</h2>
             <TrendingUp className={styles.trendingIcon} />
             <Separator className={styles.popularSeparator} />
           </div>

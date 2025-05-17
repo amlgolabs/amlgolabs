@@ -66,7 +66,6 @@ const PopupForm = () => {
         throw new Error(errorData?.error || 'Failed to send PDF');
       }
   
-      console.log('PDF email sent successfully');
       setFormData({ name: '', email: '' });
       setIsSubmitted(true);
     } catch (error) {

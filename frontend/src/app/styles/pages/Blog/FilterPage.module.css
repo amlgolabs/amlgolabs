@@ -2,8 +2,8 @@
 
 .container {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin: 1rem;
+  padding: 16px;
 }
 
 .paddingVerticalLarge {
@@ -55,6 +55,11 @@
   display: grid;
   gap: 1rem;
 }
+.parentCategory {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 /* Categories */
 .categoriesMobile {
@@ -88,10 +93,6 @@
 
 .viewAll {
   padding: 1rem;
-}
-
-.marginBottomSmall {
-  margin-bottom: 16px;
 }
 
 .marginBottomMedium {
@@ -175,7 +176,9 @@
 
   .relatedResources {
     position: sticky;
-    top: calc(32px + 200px); /* Adjust this value based on your categories height */
+    top: calc(
+      32px + 200px
+    ); /* Adjust this value based on your categories height */
     order: 2;
   }
 
@@ -198,4 +201,14 @@
 .pageNumbers,
 .pageButton {
   display: none;
+}
+
+.marginLeftSmall {
+  margin-left: 8px;
+}
+
+.iconMedium {
+  width: 1rem;
+  height: 1rem;
+  color: #6b7280;
 }

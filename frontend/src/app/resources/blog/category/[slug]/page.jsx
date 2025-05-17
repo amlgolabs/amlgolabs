@@ -7,7 +7,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/app/components/ui/Button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/Card"
-import { Clock, ArrowLeft, Tag, EyeOff } from "lucide-react"
+import { Clock, ArrowLeft, Tag, EyeOff, ChevronRight } from "lucide-react"
 import { CategoryListForCategoriesPage } from "@/app/components/CategoryListForCategoriesPage"
 import config from "@/app/config/config"
 import styles from "../../../../styles/pages/Blog/Category/CategoryPage.module.css"
@@ -119,13 +119,14 @@ export default function CategoryPage({ params }) {
                     <div className={styles.lgWidthOneQuarter}>
                         <div className={`${styles.stickySidebar} ${styles.categoriesMobile}`}>
                             <div className={styles.marginBottomMedium}>
-                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
-                                    All Categories
+                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall} ${styles.flexContainer} ${styles.alignItemsCenter}`}>
+                                    Categories
+                                    <Tag className={`${styles.marginLeftSmall} ${styles.iconMedium}`} />
                                 </h2>
                                 <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
                             </div>
                             <div className={styles.relatedResources}>
-                                <h2 className={styles.textHeadingSmall}>Recent Resource</h2>
+                                {/* <h2 className={styles.textHeadingSmall}>Recent Resource</h2> */}
                                 <RecentBlogs />
                             </div>
                         </div>
@@ -141,6 +142,15 @@ export default function CategoryPage({ params }) {
                                     ))}
                                 </div>
                                 
+                                <div className={styles.viewAllContainer}>
+                                    <Link href="/resources">
+                                        <Button variant="outline" size="sm" className="globalButton">
+                                            View All
+                                            <ChevronRight className={styles.chevronIcon} />
+                                        </Button>
+                                    </Link>
+                                </div>
+
                                 {/* MUI Text Pagination */}
                                 {totalPages > 1 && (
                                     <div className={styles.pagination}>
