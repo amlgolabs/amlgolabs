@@ -425,3 +425,19 @@
     ); /* Adjust this value based on your categories height */
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Remove old pagination styles */
+.paginationButton,
+.pageNumbers,
+.pageButton {
+  display: none;
+}

@@ -1,5 +1,6 @@
 // components/LongBlogCard.jsx
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/app/components/ui/Button";
 import {
   Card,
@@ -15,6 +16,8 @@ import {
   getBlogUrl,
 } from "@/app/utils/blog/blogUtils";
 import styles from "@/app/styles/Components/LongBlogCard.module.css";
+import { useState } from "react";
+import config from "../config/config";
 
 const LongBlogCard = ({
   blog,
@@ -24,6 +27,22 @@ const LongBlogCard = ({
   const isFeatured = variant === "featured";
   const isRecent = variant === "recent";
   const isPopular = variant === "popular";
+  const [imageError, setImageError] = useState(false);
+  const imageUrl = extractPreviewImage(blog.content, customPlaceholderUrl);
+
+  // Function to handle image loading errors
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  // Get the final image URL
+  const getImageUrl = () => {
+    if (imageError) return customPlaceholderUrl;
+    if (imageUrl.startsWith("/uploads/")) {
+      return `${config.blogEndpoint}/${imageUrl}`;
+    }
+    return imageUrl;
+  };
 
   return (
     <Card className={`${styles.card}`}>
@@ -36,18 +55,21 @@ const LongBlogCard = ({
           {/* Image Section */}
           {(isFeatured || isPopular) && (
             <div
-              className={`${
+              className={`${styles.imageContainer} ${
                 isFeatured ? styles.cardImage : styles.popularImage
               }`}
-              style={{
-                backgroundImage: `url(${extractPreviewImage(
-                  blog.content,
-                  customPlaceholderUrl
-                )})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
+            >
+              <Image
+                src={getImageUrl()}
+                alt={blog.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 400px"
+                className={styles.image}
+                priority={isFeatured}
+                onError={handleImageError}
+                quality={85}
+              />
+            </div>
           )}
 
           {/* Content Section */}

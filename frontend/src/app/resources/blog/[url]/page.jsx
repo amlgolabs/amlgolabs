@@ -56,7 +56,7 @@ export default function BlogPage({ params }) {
               <Tag className={styles.tagIcon} />
             </div>
             <CategoryForSingleBlog showAll={true} />
-          <RecentBlogs />
+            <RecentBlogs />
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import 'leaflet/dist/leaflet.css';
-
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "leaflet/dist/leaflet.css";
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -23,15 +22,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 } */
 
-:root{
+:root {
   --dark: #333;
   --light: #fff;
- 
+
   --blue: #00e5ff;
   --medium-gray: #ebebec;
-  
+
   --gray: #808080;
-  --light-gray: #D3D3D3;
+  --light-gray: #d3d3d3;
   --extra-light-gray: #f1f1f1;
   --black: #080008;
   --pearl: #fbfcf8;
@@ -51,7 +50,7 @@ body {
   font-family: "Mulish", serif;
 }
 
- a {
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -60,7 +59,7 @@ html {
   scroll-behavior: smooth;
 }
 
- /* @media (prefers-color-scheme: dark) { 
+/* @media (prefers-color-scheme: dark) { 
   html {
     color-scheme: dark;
   }
@@ -119,26 +118,26 @@ color: #000;
   color: #000;
 }
 
-.globalButtonBlack{
-align-self: flex-start;
-background-color: transparent;
-color: var(--light); 
-font-size: 0.8rem;
-font-weight: 600;
-padding: 12px 20px;
-border: 2px solid var(--blue); 
-border-radius: 30px;
-cursor: pointer;
-text-transform: uppercase;
-letter-spacing: 1px;
-transition: all 0.3s ease;
-background: transparent;
+.globalButtonBlack {
+  align-self: flex-start;
+  background-color: transparent;
+  color: var(--light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: 2px solid var(--blue);
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: transparent;
 }
 
 .globalButtonBlack:hover {
-background-color: var(--blue);
-color: #1e1e2f;
-transform: translateY(-2px) scale(1.05); 
+  background-color: var(--blue);
+  color: #1e1e2f;
+  transform: translateY(-2px) scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -168,6 +167,7 @@ transform: translateY(-2px) scale(1.05);
 }
 
 /* ------------------------------------------------------------blog */
+
 /* TipTap Editor Styles */
 .ProseMirror:focus {
   outline: none;
@@ -189,7 +189,6 @@ transform: translateY(-2px) scale(1.05);
   vertical-align: top;
   box-sizing: border-box;
   position: relative;
-  line-height: 1.5; /* Increased line height for better readability in table cells */
 }
 
 .ProseMirror th {
@@ -236,7 +235,6 @@ transform: translateY(-2px) scale(1.05);
 .blog-content td {
   border: 1px solid #e2e8f0;
   padding: 0.5rem;
-  line-height: 1.5; /* Increased line height for better readability in blog content table cells */
 }
 
 .blog-content th {
@@ -245,10 +243,6 @@ transform: translateY(-2px) scale(1.05);
 }
 
 /* Enhanced TipTap Editor Styles */
-.ProseMirror p {
-  line-height: 1.6; /* Increased line height for paragraphs to improve readability */
-}
-
 .ProseMirror p.is-editor-empty:first-child::before {
   content: attr(data-placeholder);
   float: left;
@@ -263,7 +257,6 @@ transform: translateY(-2px) scale(1.05);
   margin-left: 0;
   margin-right: 0;
   font-style: italic;
-  line-height: 1.6; /* Increased line height for blockquotes to enhance readability */
 }
 
 .ProseMirror pre {
@@ -295,7 +288,6 @@ transform: translateY(-2px) scale(1.05);
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for h1 to improve heading readability */
 }
 
 .ProseMirror h2 {
@@ -303,7 +295,6 @@ transform: translateY(-2px) scale(1.05);
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for h2 to improve heading readability */
 }
 
 .ProseMirror h3 {
@@ -311,23 +302,20 @@ transform: translateY(-2px) scale(1.05);
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for h3 to improve heading readability */
 }
 
-.ProseMirror ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.6; /* Increased line height for unordered lists to improve readability */
+.ProseMirror h4 {
+  font-size: 1.1em;
+  margin-top: 0.875em;
+  margin-bottom: 0.375em;
+  font-weight: 600;
 }
 
-.ProseMirror ol {
-  list-style-type: decimal;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.6; /* Increased line height for ordered lists to improve readability */
+.ProseMirror h5 {
+  font-size: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+  font-weight: 600;
 }
 
 /* Enhanced Blog Content Styles */
@@ -337,7 +325,6 @@ transform: translateY(-2px) scale(1.05);
   margin-left: 0;
   margin-right: 0;
   font-style: italic;
-  line-height: 1.6; /* Increased line height for blog content blockquotes to enhance readability */
 }
 
 .blog-content pre {
@@ -365,49 +352,57 @@ transform: translateY(-2px) scale(1.05);
 }
 
 .blog-content h1 {
-  font-size: 2em;
+  font-size: 48px;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for blog content h1 to improve heading readability */
 }
 
 .blog-content h2 {
-  font-size: 1.5em;
+  font-size: 36px;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for blog content h2 to improve heading readability */
 }
 
 .blog-content h3 {
-  font-size: 1.25em;
+  font-size: 30px;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
-  line-height: 1.3; /* Increased line height for blog content h3 to improve heading readability */
+}
+
+.blog-content h4 {
+  font-size: 24px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.blog-content h5 {
+  font-size: 20px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 .blog-content ul {
   list-style-type: disc;
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.6; /* Increased line height for blog content unordered lists to improve readability */
 }
 
 .blog-content ol {
   list-style-type: decimal;
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: 1.6; /* Increased line height for blog content ordered lists to improve readability */
 }
 
 .blog-content p {
-  line-height: 1.6; /* Increased line height for blog content paragraphs to improve readability */
+  padding-bottom: 0.6rem;
 }
-
 /* Image size styles */
 .blog-image {
   display: block;
@@ -420,12 +415,12 @@ transform: translateY(-2px) scale(1.05);
 /* --------------------------------------------table */
 
 /* Table styles for Tiptap editor */
-.tiptap {
+.blog-content {
   /* Ensure the editor container is styled appropriately */
   @apply prose prose-sm max-w-none;
 }
 
-.tiptap table {
+.blog-content table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
@@ -436,7 +431,7 @@ transform: translateY(-2px) scale(1.05);
 }
 
 /* Table header */
-.tiptap th {
+.blog-content th {
   background-color: #f3f4f6; /* Tailwind's gray-100 */
   font-weight: 600;
   text-align: left;
@@ -446,30 +441,30 @@ transform: translateY(-2px) scale(1.05);
 }
 
 /* Table cell */
-.tiptap td {
+.blog-content td {
   padding: 0.75rem 1rem;
   border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
   color: #374151; /* Tailwind's gray-700 */
 }
 
 /* Table row */
-.tiptap tr {
+.blog-content tr {
   transition: background-color 0.2s ease;
 }
 
 /* Hover effect for rows */
-.tiptap tr:hover {
+.blog-content tr:hover {
   background-color: #f9fafb; /* Tailwind's gray-50 */
 }
 
 /* Handle resizable tables */
-.tiptap table.resizable {
+.blog-content table.resizable {
   table-layout: auto;
 }
 
 /* Ensure table cells are resizable */
-.tiptap th[style*="width"],
-.tiptap td[style*="width"] {
+.blog-content th[style*="width"],
+.blog-content td[style*="width"] {
   min-width: 50px; /* Prevent cells from becoming too narrow */
 }
 
@@ -483,12 +478,12 @@ transform: translateY(-2px) scale(1.05);
 }
 
 /* Optional: Style for selected table cells */
-.tiptap .selectedCell {
+.blog-content .selectedCell {
   background-color: #e0f2fe; /* Tailwind's sky-100 */
 }
 
 /* Ensure table content respects prose typography */
-.tiptap table p {
+.blog-content table p {
   margin: 0;
   line-height: 1.5;
 }

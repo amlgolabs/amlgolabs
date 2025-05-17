@@ -40,10 +40,10 @@ export default function RecentBlogs() {
 
   return (
     <div className={styles.recentBlogsContainer}>
-      {/* <div className={styles.recentHeader}>
+      <div className={styles.recentHeader}>
         <h2 className={styles.recentTitle}>Recent Resources</h2>
-        <Clock className={styles.clockIcon} />
-      </div> */}
+        {/* <Clock className={styles.clockIcon} /> */}
+      </div>
       <div className={styles.recentList}>
         {isLoading ? (
           <Card className={styles.noRecentCard}>
@@ -58,7 +58,7 @@ export default function RecentBlogs() {
         ) : (
           <Card className={styles.noRecentCard}>
             <CardContent>
-              <p>No recent blogs available.</p>
+              <p>No recent resources available.</p>
             </CardContent>
           </Card>
         )}

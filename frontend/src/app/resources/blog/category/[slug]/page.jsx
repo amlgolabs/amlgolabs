@@ -15,12 +15,17 @@ import LongBlogCard from "@/app/components/LongBlogCard"
 import BlogBanner from "@/app/components/BlogBanner"
 import RecentBlogs from "@/app/components/RecentBlogs"
 import Loader from "@/app/components/Loader"
+import { Pagination, PaginationItem } from '@mui/material'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 export default function CategoryPage({ params }) {
     const router = useRouter()
     const { slug } = use(params)
     const [blogs, setBlogs] = useState([])
     const [loading, setLoading] = useState(true)
+    const [currentPage, setCurrentPage] = useState(1)
+    const blogsPerPage = 5
     const categorySlug = slug
 
     // Format category name for display
@@ -57,6 +62,17 @@ export default function CategoryPage({ params }) {
         }
         fetchBlogsByCategory()
     }, [categorySlug])
+
+    // Calculate pagination
+    const indexOfLastBlog = currentPage * blogsPerPage
+    const indexOfFirstBlog = indexOfLastBlog - blogsPerPage
+    const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog)
+    const totalPages = Math.ceil(blogs.length / blogsPerPage)
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
     // Function to get the URL for a blog post
     const getBlogUrl = (blog) => {
@@ -109,7 +125,7 @@ export default function CategoryPage({ params }) {
                                 <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
                             </div>
                             <div className={styles.relatedResources}>
-                                <h2 className={styles.textHeadingSmall}>Recent Blogs</h2>
+                                <h2 className={styles.textHeadingSmall}>Recent Resource</h2>
                                 <RecentBlogs />
                             </div>
                         </div>
@@ -118,17 +134,47 @@ export default function CategoryPage({ params }) {
                     {/* Blog posts section - will appear second on mobile/tablet, left side on desktop */}
                     <div className={styles.lgWidthThreeQuarters}>
                         {blogs.length > 0 ? (
-                            <div className={styles.blogGrid}>
-                                {blogs.length > 0 ? (
-                                    blogs.map((blog) => (
+                            <>
+                                <div className={styles.blogGrid}>
+                                    {currentBlogs.map((blog) => (
                                         <LongBlogCard key={blog._id} blog={blog} variant="featured" />
-                                    ))
-                                ) : (
-                                    <div className={styles.noBlogs}>
-                                        <p>No featured blogs match your search.</p>
+                                    ))}
+                                </div>
+                                
+                                {/* MUI Text Pagination */}
+                                {totalPages > 1 && (
+                                    <div className={styles.pagination}>
+                                        <Pagination
+                                            count={totalPages}
+                                            page={currentPage}
+                                            onChange={(event, value) => handlePageChange(value)}
+                                            color="primary"
+                                            size="large"
+                                            showFirstButton
+                                            showLastButton
+                                            renderItem={(item) => (
+                                                <PaginationItem
+                                                    slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                                                    {...item}
+                                                />
+                                            )}
+                                            sx={{
+                                                '& .MuiPaginationItem-root': {
+                                                    fontSize: '1rem',
+                                                    fontWeight: 500,
+                                                },
+                                                '& .Mui-selected': {
+                                                    backgroundColor: 'var(--primary) !important',
+                                                    color: 'white !important',
+                                                },
+                                                '& .MuiPaginationItem-root:hover': {
+                                                    backgroundColor: 'var(--primary-hover)',
+                                                },
+                                            }}
+                                        />
                                     </div>
                                 )}
-                            </div>
+                            </>
                         ) : (
                             <div
                                 className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}
@@ -147,6 +193,5 @@ export default function CategoryPage({ params }) {
                 </div>
             </div>
         </div>
-
     )
 }
