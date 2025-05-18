@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/app/components/ui/Card";
 import { Clock } from "lucide-react";
 import LongBlogCard from "./LongBlogCard";
-import styles from "@/app/styles/components/RecentBlogs.module.css";
+import styles from "@/app/styles/Components/RecentBlogs.module.css";
 import { useState, useEffect } from "react";
 import config from "@/app/config/config";
 import Loader from "./Loader";

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from './ui/Button';
 import { Card, CardContent, CardTitle } from '@/app/components/ui/Card';
 import { extractPreviewImage, getBlogUrl, truncateText } from '@/app/utils/blog/blogUtils';
-import styles from '../styles/components/BlogCard.module.css';
+import styles from '../styles/Components/BlogCard.module.css';
 import { Clock, File } from 'lucide-react';
 import { useState } from 'react';
 import config from '@/app/config/config';

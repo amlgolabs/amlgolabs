@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkHeroSection from '../components/PagesComponents/Hero/DArkHeroSection'
+import DarkHeroSection from '../Components/PagesComponents/Hero/DArkHeroSection'
 
 const page = () => {
   return (
