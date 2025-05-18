@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Pagination } from "@/app/components/Pagination";
 import { CategoryList } from "@/app/components/CategoryList";
@@ -13,7 +13,7 @@ import BlogBanner from "../components/BlogBanner";
 
 const BLOGS_PER_PAGE = 6;
 
-export default function Home() {
+function AllResourcesContent() {
   const searchParams = useSearchParams();
   const page = parseInt(searchParams.get("page")) || 1;
   const [blogs, setBlogs] = useState([]);
@@ -51,9 +51,7 @@ export default function Home() {
                 <h2 className={styles.categoriesTitle}>Categories</h2>
                 <Tag className={styles.tagIcon} />
               </div>
-              {/* <div className={styles.categoriesWrapper}> */}
               <CategoryList />
-              {/* </div> */}
             </div>
 
             <div className={styles.blogGrid}>
@@ -83,5 +81,13 @@ export default function Home() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<Loader size="large" />}>
+      <AllResourcesContent />
+    </Suspense>
   );
 }

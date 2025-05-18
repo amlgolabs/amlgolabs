@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import BlogBanner from "@/app/components/BlogBanner";
 import LongBlogCard from "@/app/components/LongBlogCard";
@@ -16,7 +16,7 @@ import { Pagination, PaginationItem } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-export default function FilterPage() {
+function FilterPageContent() {
   const searchParams = useSearchParams();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -189,5 +189,13 @@ export default function FilterPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function FilterPage() {
+  return (
+    <Suspense fallback={<Loader size="large" />}>
+      <FilterPageContent />
+    </Suspense>
   );
 }
