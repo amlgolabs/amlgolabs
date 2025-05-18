@@ -149,11 +149,23 @@ function FilterPageContent() {
               <div
                 className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}
               >
-                <p className={styles.textMuted}>
-                  {selectedCategory
-                    ? `No ${contentType.toLowerCase()} posts found in ${selectedCategory}.`
-                    : `No ${contentType.toLowerCase()} posts found.`}
-                </p>
+                <div className={styles.marginBottomMedium}>
+                  <p className={`${styles.textMuted} ${styles.textLarge}`}>
+                    {selectedCategory
+                      ? `No ${contentType.toLowerCase()} posts found in ${selectedCategory}.`
+                      : `No ${contentType.toLowerCase()} posts found.`}
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  className="globalButton"
+                  onClick={() => (window.location.href = "/resources")}
+                >
+                  Explore All Resources
+                  <ChevronRight
+                    className={`${styles.marginLeftSmall} ${styles.iconMedium}`}
+                  />
+                </Button>
               </div>
             )}
           </div>

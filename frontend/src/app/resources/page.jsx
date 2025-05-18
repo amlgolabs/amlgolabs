@@ -18,12 +18,13 @@ export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [displayLimit, setDisplayLimit] = useState(5);
 
   useEffect(() => {
     async function loadBlogs() {
       setIsLoading(true);
       try {
-        const fetchedBlogs = await fetchBlogs();
+        const fetchedBlogs = await fetchBlogs({ limit: 500 });
         setBlogs(fetchedBlogs);
       } catch (error) {
         console.error("Failed to fetch blogs:", error);
@@ -45,8 +46,15 @@ export default function Home() {
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
 
-  const featuredBlogs = filteredBlogs;
+  // Only take first 5 blogs for display if not searching
+  const displayedBlogs = searchTerm ? filteredBlogs : filteredBlogs.slice(0, displayLimit);
+  const featuredBlogs = displayedBlogs;
   const popularBlogs = blogs.sort(() => Math.random() - 0.5).slice(0, 3);
+
+  // Update display limit when search term changes
+  useEffect(() => {
+    setDisplayLimit(searchTerm ? 20 : 5);
+  }, [searchTerm]);
 
   return (
     <div>
@@ -87,19 +95,21 @@ export default function Home() {
                 ))
               ) : (
                 <div className={styles.noBlogs}>
-                  <p>No blogs found.</p>
+                  <p>No Resource Found</p>
                 </div>
               )}
             </div>
 
-            <div className={styles.viewAll}>
-              <Link href="/all-resources">
-                <Button variant="outline" size="sm" asChild>
-                  View All
-                  <ChevronRight className={styles.clockIcon} />
-                </Button>
-              </Link>
-            </div>
+            {!searchTerm && blogs.length > displayLimit && (
+              <div className={styles.viewAll}>
+                <Link href="/all-resources">
+                  <Button variant="outline" size="sm" asChild>
+                    View All
+                    <ChevronRight className={styles.clockIcon} />
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Sidebar - Recent Blogs only on mobile, includes Categories on desktop */}

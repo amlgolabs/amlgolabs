@@ -16,7 +16,6 @@ export function extractPreviewImage(content, placeholderUrl = "/placeholder.svg?
   }
   
   const finalUrl = `${baseUrl}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
-  console.log("Final constructed URL:", finalUrl);
   return finalUrl;
 }
 
