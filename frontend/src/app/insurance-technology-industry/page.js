@@ -114,6 +114,7 @@ const page = () => {
   <Introduction1 {...IntroductionData} />
 
   <SingleBlog
+  category="BLOG"
       title="The Role of Big Data in Crafting Hyper-Personalized Insurance Policies"
       description="Discover how Big Data is transforming the insurance sector by enabling hyper-personalized policies. From analyzing customer behavior to predicting risks, learn how data-driven insights are crafting tailored solutions that enhance customer satisfaction, improve retention, and drive innovation in the evolving world of insurance."
       imageSrc="/businesses/insurance/Insurance.jpg"

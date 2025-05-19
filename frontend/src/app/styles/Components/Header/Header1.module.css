@@ -649,6 +649,7 @@
 }
 
 .sideBarBlog h2{
+  color: var(--light) !important;
   font-size: 1.1rem;
   margin-bottom: 10px;
 }

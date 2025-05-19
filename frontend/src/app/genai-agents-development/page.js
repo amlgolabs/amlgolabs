@@ -75,6 +75,7 @@ const page = () => {
       <TechStack title="Tech Stack We are working on" techStack={techStackData} />
 
       <SingleBlog
+      category="WHITE PAPER"
       title="Overcome GenAI Fears: Get your Live GenAI Agent in days."
       description="Explore how Generative AI drives automation, innovation, and smarter decisions. Overcome challenges in scalability, data quality, and integration to streamline processes and stay ahead in the evolving AI landscape."
       imageSrc="/capabilities/gen-ai-agents/blog.png"

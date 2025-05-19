@@ -65,6 +65,7 @@ const page = () => {
       <AmlgoDifference />
       <ToolsTechnologies />
       <SingleBlog
+      category="CASE STUDY"
         title="Resistance to adaptations makes you bound by legacy."
         description="Manual adjustments, report corrections, and data delays were trapped by a legacy system. We redesigned the process from the inside out, giving users a simpler way to post bulk adjustments, flag missing data, and reduce time spent on repetitive tasks. The result? Less manual effort, faster reporting, and a smoother path to leaving legacy systems behind."
         imageSrc="/businesses/risk-regulatory/caseStudy.png"

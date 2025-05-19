@@ -1,15 +1,19 @@
 .bannerContainer {
-    /* background: linear-gradient(135deg, var(--black) 0%, rgba(4, 6, 12, 0.95) 100%); */
-    background-image: url("/darkGradient1.jpg");
-    padding: 1rem 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 1.5rem; /* Updated as requested */
-  }
+  background-image: url("/darkGradient1.jpg");
+  background-size: cover;        /* Ensures image covers the container */
+  background-repeat: no-repeat;  /* Prevents image repetition */
+  background-position: center;   /* Centers the image */
+  width: 100%;                   /* Ensures full width */
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
   
   .contentWrapper {
     max-width: 1240px; /* Updated as requested */

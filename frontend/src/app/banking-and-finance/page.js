@@ -5,10 +5,10 @@ import Challenges from '../components/PagesComponents/Challenges';
 import SolutionsSteps from '../components/PagesComponents/SolutionsSteps';
 import OfferingsCard from '../components/PagesComponents/OfferingsCard';
 import IndustryTechnology from '../components/PagesComponents/IndustryTechnology';
-import IndustryCaseStudy from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
 import { FaRegBuilding, FaRegCreditCard, FaRegMoneyBillAlt, FaChartLine } from 'react-icons/fa';
 import { PersonSearch, Speed, Lightbulb, Shield } from '@mui/icons-material';
 import SingleBlog from '../components/PagesComponents/Blogs/SingleBlog';
+import IndustryCaseStudy1 from '../components/PagesComponents/CaseStudy/IndustryCaseStudy1';
 
 export const metadata = {
     title: "Banking & Finance Solutions - AI & Analytics - Amlgo Labs",
@@ -106,6 +106,7 @@ const page = () => {
         />
 
         <SingleBlog
+        category="BLOG"
               title="Leveraging AI and Machine Learning to Combat Money Laundering"
               description="Discover how AI and machine learning are transforming the fight against money laundering. Learn how advanced technologies enhance detection, reduce false positives, and protect the global financial system."
               imageSrc="/businesses/banking/moneylaundering.png"
@@ -118,9 +119,16 @@ const page = () => {
 
             <IndustryTechnology heading={technologyHeading} technologies={technologies} />
 
-            <IndustryCaseStudy caseStudyHeading="Financial Regulatory Reporting" 
+            {/* <IndustryCaseStudy1 caseStudyHeading="Financial Regulatory Reporting" 
                                 CaseStudyImageSrc="/businesses/banking/casestudy.png"
-                                link="/documents/mas610casestudy.pdf"/>
+                                link="/documents/mas610casestudy.pdf"/> */}
+
+                                <IndustryCaseStudy1
+  caseStudyHeading="Financial Regulatory Reporting"
+  CaseStudyImageSrc="/businesses/banking/casestudy.png"
+  link="/documents/mas610casestudy.pdf"
+  pdfName="mas610casestudy"
+/>
 
 
         </>

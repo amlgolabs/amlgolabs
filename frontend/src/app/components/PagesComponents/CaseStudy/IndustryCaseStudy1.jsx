@@ -8,6 +8,7 @@ const IndustryCaseStudy1 = ({ caseStudyHeading, CaseStudyImageSrc, pdfName }) =>
   const { openPopup } = usePopup();
 
   const handleLearnMoreClick = () => {
+     console.log("Sending PDF:", pdfName);
     openPopup(pdfName); // Pass the correct pdf name to context
   };
 

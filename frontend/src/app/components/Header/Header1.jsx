@@ -897,7 +897,7 @@ const Header1 = () => {
               quality={85} // Adjust quality (default is 75)
             />
             <h3>Overcome GenAI Fears: Get your Live GEN-AI Agent in days.</h3>
-            <Link href="/documents/mas610casestudy.pdf">
+            <Link href="/documents/genaiagent_amlgolabs.pdf">
               Learn More
             </Link>
           </div>

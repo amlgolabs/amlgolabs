@@ -54,6 +54,7 @@ const page = () => {
     /> */}
 
 <SingleBlog
+category="CASE STUDY"
   title="Optimizing Machine Learning Workflows Through MLOps"
   description="Amlgo Labs bridges the gap between machine learning and production with MLOps. Discover how we simplify, automate, and scale your ML workflows."
   imageSrc="/capabilities/data-ops/blog.png"
