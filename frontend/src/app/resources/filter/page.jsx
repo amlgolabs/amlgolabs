@@ -108,6 +108,15 @@ function FilterPageContent() {
                   ))}
                 </div>
 
+                <div className={styles.viewAll}>
+                  <Link href="/all-resources">
+                    <Button variant="outline" size="sm" asChild>
+                      View All
+                      <ChevronRight className={styles.clockIcon} />
+                    </Button>
+                  </Link>
+                </div>
+
                 {/* MUI Text Pagination */}
                 {totalPages > 1 && (
                   <div className={styles.pagination}>

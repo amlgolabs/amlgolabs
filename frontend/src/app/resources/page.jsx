@@ -100,16 +100,14 @@ export default function Home() {
               )}
             </div>
 
-            {!searchTerm && blogs.length > displayLimit && (
-              <div className={styles.viewAll}>
-                <Link href="/all-resources">
-                  <Button variant="outline" size="sm" asChild>
-                    View All
-                    <ChevronRight className={styles.clockIcon} />
-                  </Button>
-                </Link>
-              </div>
-            )}
+            <div className={styles.viewAll}>
+              <Link href="/all-resources">
+                <Button variant="outline" size="sm" asChild>
+                  View All
+                  <ChevronRight className={styles.clockIcon} />
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Sidebar - Recent Blogs only on mobile, includes Categories on desktop */}

@@ -12,7 +12,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 2rem;
+    padding:  2rem;
 
   }
 }
@@ -154,7 +154,7 @@
 }
 
 .categoriesSectionInternal {
-  background-color: var(--extra-light-gray);
+  /* background-color: var(--extra-light-gray); */
   padding:  1rem 0.1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
