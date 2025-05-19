@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Pagination as MUITextPagination } from '@mui/material';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import styles from '../styles/components/Pagination.module.css';
+import styles from '../styles/Components/Pagination.module.css';
 
 export function Pagination({ currentPage, totalPages, onPageChange }) {
   const handlePageChange = (event, value) => {

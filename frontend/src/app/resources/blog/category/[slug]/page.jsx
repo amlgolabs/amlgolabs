@@ -7,18 +7,25 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/app/components/ui/Button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/Card"
-import { Clock, ArrowLeft, Tag, EyeOff } from "lucide-react"
+import { Clock, ArrowLeft, Tag, EyeOff, ChevronRight } from "lucide-react"
 import { CategoryListForCategoriesPage } from "@/app/components/CategoryListForCategoriesPage"
 import config from "@/app/config/config"
 import styles from "../../../../styles/pages/Blog/Category/CategoryPage.module.css"
 import LongBlogCard from "@/app/components/LongBlogCard"
 import BlogBanner from "@/app/components/BlogBanner"
+import RecentBlogs from "@/app/components/RecentBlogs"
+import Loader from "@/app/components/Loader"
+import { Pagination, PaginationItem } from '@mui/material'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 export default function CategoryPage({ params }) {
     const router = useRouter()
     const { slug } = use(params)
     const [blogs, setBlogs] = useState([])
     const [loading, setLoading] = useState(true)
+    const [currentPage, setCurrentPage] = useState(1)
+    const blogsPerPage = 5
     const categorySlug = slug
 
     // Format category name for display
@@ -56,6 +63,17 @@ export default function CategoryPage({ params }) {
         fetchBlogsByCategory()
     }, [categorySlug])
 
+    // Calculate pagination
+    const indexOfLastBlog = currentPage * blogsPerPage
+    const indexOfFirstBlog = indexOfLastBlog - blogsPerPage
+    const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog)
+    const totalPages = Math.ceil(blogs.length / blogsPerPage)
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
     // Function to get the URL for a blog post
     const getBlogUrl = (blog) => {
         if (blog.slug && blog.blogIdUID) {
@@ -73,9 +91,7 @@ export default function CategoryPage({ params }) {
     if (loading) {
         return (
             <div className={`${styles.container} ${styles.paddingVerticalExtraLarge}`}>
-                <div className={`${styles.flexContainer} ${styles.justifyContentCenter} ${styles.alignItemsCenter} ${styles.heightLarge}`}>
-                    <p className={styles.textBodyLarge}>Loading blog posts...</p>
-                </div>
+                <Loader size="large" />
             </div>
         )
     }
@@ -103,10 +119,15 @@ export default function CategoryPage({ params }) {
                     <div className={styles.lgWidthOneQuarter}>
                         <div className={`${styles.stickySidebar} ${styles.categoriesMobile}`}>
                             <div className={styles.marginBottomMedium}>
-                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall}`}>
-                                    All Categories
+                                <h2 className={`${styles.textHeadingSmall} ${styles.fontSemibold} ${styles.marginBottomSmall} ${styles.flexContainer} ${styles.alignItemsCenter}`}>
+                                    Categories
+                                    <Tag className={`${styles.marginLeftSmall} ${styles.iconMedium}`} />
                                 </h2>
                                 <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
+                            </div>
+                            <div className={styles.relatedResources}>
+                                {/* <h2 className={styles.textHeadingSmall}>Recent Resource</h2> */}
+                                <RecentBlogs />
                             </div>
                         </div>
                     </div>
@@ -114,17 +135,56 @@ export default function CategoryPage({ params }) {
                     {/* Blog posts section - will appear second on mobile/tablet, left side on desktop */}
                     <div className={styles.lgWidthThreeQuarters}>
                         {blogs.length > 0 ? (
-                            <div className={styles.blogGrid}>
-                                {blogs.length > 0 ? (
-                                    blogs.map((blog) => (
+                            <>
+                                <div className={styles.blogGrid}>
+                                    {currentBlogs.map((blog) => (
                                         <LongBlogCard key={blog._id} blog={blog} variant="featured" />
-                                    ))
-                                ) : (
-                                    <div className={styles.noBlogs}>
-                                        <p>No featured blogs match your search.</p>
+                                    ))}
+                                </div>
+                                
+                                <div className={styles.viewAllContainer}>
+                                    <Link href="/resources">
+                                        <Button variant="outline" size="sm" className="globalButton">
+                                            View All
+                                            <ChevronRight className={styles.chevronIcon} />
+                                        </Button>
+                                    </Link>
+                                </div>
+
+                                {/* MUI Text Pagination */}
+                                {totalPages > 1 && (
+                                    <div className={styles.pagination}>
+                                        <Pagination
+                                            count={totalPages}
+                                            page={currentPage}
+                                            onChange={(event, value) => handlePageChange(value)}
+                                            color="primary"
+                                            size="large"
+                                            showFirstButton
+                                            showLastButton
+                                            renderItem={(item) => (
+                                                <PaginationItem
+                                                    slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                                                    {...item}
+                                                />
+                                            )}
+                                            sx={{
+                                                '& .MuiPaginationItem-root': {
+                                                    fontSize: '1rem',
+                                                    fontWeight: 500,
+                                                },
+                                                '& .Mui-selected': {
+                                                    backgroundColor: 'var(--primary) !important',
+                                                    color: 'white !important',
+                                                },
+                                                '& .MuiPaginationItem-root:hover': {
+                                                    backgroundColor: 'var(--primary-hover)',
+                                                },
+                                            }}
+                                        />
                                     </div>
                                 )}
-                            </div>
+                            </>
                         ) : (
                             <div
                                 className={`${styles.textAlignCenter} ${styles.paddingVerticalExtraLarge} ${styles.borderSubtle} ${styles.borderRadiusLarge} ${styles.backgroundSubtle}`}
@@ -143,6 +203,5 @@ export default function CategoryPage({ params }) {
                 </div>
             </div>
         </div>
-
     )
 }

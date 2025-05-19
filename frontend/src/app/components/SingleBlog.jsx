@@ -5,7 +5,6 @@ import { User, Calendar, Clock, Tag } from 'lucide-react';
 import Link from 'next/link';
 import { Badge } from '@/app/components/ui/Badge';
 import { BlogRenderer } from './PagesComponents/Blogs/BlogRendrer';
-import RelatedBlogs from './RelatedBlogs';
 import styles from '../styles/Components/SingleBlog.module.css';
 
 export default function SingleBlog({ blog }) {
@@ -17,8 +16,8 @@ export default function SingleBlog({ blog }) {
     <div className={styles.container}>
       <div className={styles.layout}>
         {/* Main Blog Content */}
-        <article className={styles.proseArticle}>
-          <h2 className={styles.title}>{blog.title}</h2>
+        <article className={styles.prose}>
+          <h1 className={styles.title}>{blog.title}</h1>
           {blog.subtitle && <p className={styles.subtitle}>{blog.subtitle}</p>}
 
           <div className={styles.metaInfo}>

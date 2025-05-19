@@ -227,7 +227,7 @@ export async function POST(req) {
 
     try {
       await sesClient.send(new SendRawEmailCommand(adminEmailParams));
-      console.log('Admin email sent successfully');
+      // console.log('Admin email sent successfully');
     } catch (adminError) {
       console.error('Error sending admin email:', adminError);
       // Do not throw error to avoid affecting user response

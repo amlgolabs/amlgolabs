@@ -1,9 +1,10 @@
 import { Card, CardContent } from "@/app/components/ui/Card";
 import { Clock } from "lucide-react";
 import LongBlogCard from "./LongBlogCard";
-import styles from "@/app/styles/components/RecentBlogs.module.css";
+import styles from "@/app/styles/Components/RecentBlogs.module.css";
 import { useState, useEffect } from "react";
 import config from "@/app/config/config";
+import Loader from "./Loader";
 
 export default function RecentBlogs() {
   const [blogs, setBlogs] = useState([]);
@@ -39,15 +40,15 @@ export default function RecentBlogs() {
 
   return (
     <div className={styles.recentBlogsContainer}>
-      {/* <div className={styles.recentHeader}>
+      <div className={styles.recentHeader}>
         <h2 className={styles.recentTitle}>Recent Resources</h2>
         <Clock className={styles.clockIcon} />
-      </div> */}
+      </div>
       <div className={styles.recentList}>
         {isLoading ? (
           <Card className={styles.noRecentCard}>
             <CardContent>
-              <p>Loading...</p>
+              <Loader size="small" />
             </CardContent>
           </Card>
         ) : recentBlogs.length > 0 ? (
@@ -57,7 +58,7 @@ export default function RecentBlogs() {
         ) : (
           <Card className={styles.noRecentCard}>
             <CardContent>
-              <p>No recent blogs available.</p>
+              <p>No recent resources available.</p>
             </CardContent>
           </Card>
         )}

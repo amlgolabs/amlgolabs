@@ -2,28 +2,29 @@
 
 import Link from "next/link";
 import { Button } from "@/app/components/ui/Button";
-import { Card, CardContent } from "@/app/components/ui/Card";
 import { Separator } from "@/app/components/ui/Separator";
 import { CategoryList } from "@/app/components/CategoryList";
 import { fetchBlogs } from "@/app/lib/api";
 import styles from "@/app/styles/pages/Blog.module.css";
-import { Clock, Tag, TrendingUp, ChevronRight, Search } from "lucide-react";
+import { Tag, TrendingUp, ChevronRight, Search } from "lucide-react";
 import LongBlogCard from "../components/LongBlogCard";
 import BlogCard from "../components/BlogCard";
 import { useState, useEffect } from "react";
 import BlogBanner from "../components/BlogBanner";
 import RecentBlogs from "../components/RecentBlogs";
+import Loader from "@/app/components/Loader";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [displayLimit, setDisplayLimit] = useState(5);
 
   useEffect(() => {
     async function loadBlogs() {
       setIsLoading(true);
       try {
-        const fetchedBlogs = await fetchBlogs();
+        const fetchedBlogs = await fetchBlogs({ limit: 500 });
         setBlogs(fetchedBlogs);
       } catch (error) {
         console.error("Failed to fetch blogs:", error);
@@ -45,8 +46,15 @@ export default function Home() {
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
 
-  const featuredBlogs = filteredBlogs;
+  // Only take first 5 blogs for display if not searching
+  const displayedBlogs = searchTerm ? filteredBlogs : filteredBlogs.slice(0, displayLimit);
+  const featuredBlogs = displayedBlogs;
   const popularBlogs = blogs.sort(() => Math.random() - 0.5).slice(0, 3);
+
+  // Update display limit when search term changes
+  useEffect(() => {
+    setDisplayLimit(searchTerm ? 20 : 5);
+  }, [searchTerm]);
 
   return (
     <div>
@@ -79,7 +87,7 @@ export default function Home() {
             <div className={styles.blogGrid}>
               {isLoading ? (
                 <div className={styles.noBlogs}>
-                  <p>Loading...</p>
+                  <Loader size="medium" />
                 </div>
               ) : featuredBlogs.length > 0 ? (
                 featuredBlogs.map((blog) => (
@@ -87,13 +95,13 @@ export default function Home() {
                 ))
               ) : (
                 <div className={styles.noBlogs}>
-                  <p>No blogs found.</p>
+                  <p>No Resource Found</p>
                 </div>
               )}
             </div>
 
             <div className={styles.viewAll}>
-              <Link href="/all-blogs">
+              <Link href="/all-resources">
                 <Button variant="outline" size="sm" asChild>
                   View All
                   <ChevronRight className={styles.clockIcon} />
@@ -136,7 +144,7 @@ export default function Home() {
         {/* More Blogs */}
         <div className={styles.popularSection}>
           <div className={styles.popularHeader}>
-            <h2 className={styles.popularTitle}>More Blogs</h2>
+            <h2 className={styles.popularTitle}>More Resources</h2>
             <TrendingUp className={styles.trendingIcon} />
             <Separator className={styles.popularSeparator} />
           </div>
@@ -144,7 +152,7 @@ export default function Home() {
           <div className={styles.popularGrid}>
             {isLoading ? (
               <div className={styles.noBlogsFull}>
-                <p>Loading...</p>
+                <Loader size="medium" />
               </div>
             ) : popularBlogs.length > 0 ? (
               popularBlogs.map((blog, index) => (

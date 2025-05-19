@@ -85,9 +85,13 @@ const BlogBanner = ({
   const router = useRouter();
 
   const handleContentTypeClick = (contentType) => {
-    router.push(
-      `/resources/filter?contentType=${encodeURIComponent(contentType)}`
-    );
+    if (selectedContentType === contentType) {
+      router.push('/resources');
+    } else {
+      router.push(
+        `/resources/filter?contentType=${encodeURIComponent(contentType)}`
+      );
+    }
   };
 
   const isActive = (contentType) => {

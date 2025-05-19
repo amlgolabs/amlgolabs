@@ -32,76 +32,79 @@
   margin-top: 0.5rem;
 }
 
-.loading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 1rem;
-    color: #333;
-  }
-  
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1rem;
+  color: #333;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 2.5rem 2rem;
   }
-  
-  @media (min-width: 1024px) {
-    .container {
-      padding: 2.5rem 2rem;
-    }
-  }
-  
+}
+
+.mainContent {
+  display: flex;
+  /* gap: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.blogSection {
+  flex: 3;
+  max-width: 75%;
+}
+
+.relatedSection {
+  /* position: sticky; */
+  top: 20%; /* Adjusted to ensure it sticks below the categoriesSection */
+  z-index: 9;
+  max-width: 30%;
+}
+.categoriesSection {
+  position: sticky;
+  top: 11.3%; /* Stick to the top of the viewport while scrolling */
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.contactSection {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .mainContent {
-    display: flex;
-    /* gap: 2rem; */
-    margin-bottom: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  
+
   .blogSection {
-    flex: 3;
-    max-width: 75%;
+    max-width: 100%;
   }
-  
+
   .relatedSection {
-    /* position: sticky; */
-    top: 20%; /* Adjusted to ensure it sticks below the categoriesSection */
-    z-index: 9;
-    max-width: 30%;
-    /* background-color: #f9f9f9; */
+    max-width: 100%;
   }
-  .categoriesSection {
-    position: sticky;
-    top: 11.3%; /* Stick to the top of the viewport while scrolling */
-    margin-bottom: 2rem;
-    background-color: #f9f9f9;
-    /* padding: 0.5rem; */
-    border-radius: 0.5rem;
-    z-index: 10;
-  }
-  
+
   .contactSection {
-    width: 100%;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .mainContent {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-  
-    .blogSection {
-      max-width: 100%;
-    }
-  
-    .relatedSection {
-      max-width: 100%;
-    }
-  
-    .contactSection {
-      padding: 1.5rem 0;
-    }
+}
+
+@media (min-width: 480px) {
+  .mainContent {
+    padding: 1rem;
   }
+}

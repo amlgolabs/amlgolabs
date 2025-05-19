@@ -62,6 +62,13 @@ export default function CategoryForFilter({
   const categories =
     contentTypeCategories[contentType] || contentTypeCategories["Blog"];
 
+  // Normalize category for comparison
+  const normalizeCategory = (category) => {
+    return category.toLowerCase().replace(/\s+/g, "-");
+  };
+
+  const normalizedSelectedCategory = normalizeCategory(selectedCategory);
+
   return (
     <div className={`${styles.categoryList} ${className || ""}`}>
       {categories.length > 0 ? (
@@ -70,7 +77,7 @@ export default function CategoryForFilter({
             key={category}
             onClick={() => onCategoryClick(category)}
             className={`${styles.categoryButton} ${
-              selectedCategory === category ? styles.selectedCategory : ""
+              normalizeCategory(category) === normalizedSelectedCategory ? styles.selectedCategory : ""
             }`}
           >
             <Badge variant="outline" className={styles.categoryBadge}>
