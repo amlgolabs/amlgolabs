@@ -69,6 +69,7 @@ const page = () => {
       data={impactData} 
     />
    <SingleBlog
+   category="CASE STUDY"
       title="Optimizing Retail Supply Chains with Real-Time Data Pipelines"
       description="Enhance retail efficiency by leveraging real-time data pipelines for smarter inventory management and faster decision-making. Optimize supply chains with live insights into demand, stock levels, and logistics."
       imageSrc="/consumer-retail/Blog.png"

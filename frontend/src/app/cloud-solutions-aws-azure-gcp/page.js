@@ -75,6 +75,7 @@ const page = () => {
       />
         <CloudPartners />
         <SingleBlog
+        category="BLOG"
       title="Deploying Language Model Applications to AWS: An Open-Source Approach"
       description="In the ever-evolving landscape of cloud computing, deploying and managing language model (LLM) applications efficiently is crucial for developers and businesses alike. Amazon Web Services (AWS) provides a robust infrastructure for hosting applications."
       imageSrc="/capabilities/cloud-services/blog.png"

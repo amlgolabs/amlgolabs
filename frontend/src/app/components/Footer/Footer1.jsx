@@ -54,6 +54,7 @@ const Footer1 = () => {
           <h3>About Us</h3>
           <a className={styles.footerLink} href="/about-us">Company Info</a>
           <a className={styles.footerLink} href="/careers">Careers</a>
+          <a className={styles.footerLink} href="/resources">Resources</a>
           <a className={styles.footerLink} href="/contact-us">Contact Us</a>
 
           {/* <a className={styles.footerLink} href="/team">Our Team</a> */}

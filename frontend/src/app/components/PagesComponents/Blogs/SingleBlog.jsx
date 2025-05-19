@@ -7,6 +7,7 @@ import Image from "next/image";
 import { usePopup } from "@/app/context/PopupContext";
 
 const SingleBlog = ({
+  category,
   title,
   description,
   imageSrc,
@@ -29,6 +30,7 @@ const SingleBlog = ({
     <div className={styles.mainContainer}>
       <div className={styles.blogContainer}>
         <div className={styles.infoContainer}>
+          <h4>{category}</h4>
           <h2>{title}</h2>
           <p>{description}</p>
           <div className={styles.buttonDiv}>
