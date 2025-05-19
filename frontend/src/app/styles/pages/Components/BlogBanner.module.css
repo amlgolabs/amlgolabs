@@ -1,78 +1,82 @@
 .bannerContainer {
-    /* background: linear-gradient(135deg, var(--bl ack) 0%, rgba(4, 6, 12, 0.95) 100%); */
-    background-image: url("/bannerBackground.jpg");
-    padding: 1rem 0rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 1.5rem; 
-  }
-  
-  .contentWrapper {
-    max-width: 1240px; /* Updated as requested */
-    width: 100%; /* Updated as requested */
-    margin-inline: auto; /* Updated as requested */
-    text-align: center;
-    padding: 0 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .title {
-    color: var(--blue);
-    font-size: clamp(2rem, 3vw, 1rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 1.1;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .subtitle {
-    color: var(--light);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.7;
-    max-width: 700px;
-    margin: 0 auto;
-    opacity: 0.85;
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Hover animation for interactivity */
-  .bannerContainer:hover .title {
-    transform: translateY(-5px);
-  }
-  
-  .bannerContainer:hover .subtitle {
-    opacity: 1;
-  }
-  
-  /* Subtle background effect */
-  .bannerContainer::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    opacity: 0.3;
-    pointer-events: none;
-  }
-  
-  /* Add styles for buttons in BlogBanner */
-  .buttonGroup {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    padding-top: 0.6rem;
-    flex-wrap: wrap;
-  }
-  
-  .navButton {
+  /* background: linear-gradient(135deg, var(--bl ack) 0%, rgba(4, 6, 12, 0.95) 100%); */
+  background-image: url("/bannerBackground.jpg");
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.contentWrapper {
+  max-width: 1240px; /* Updated as requested */
+  width: 100%; /* Updated as requested */
+  margin-inline: auto; /* Updated as requested */
+  text-align: center;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  color: var(--blue);
+  font-size: clamp(2rem, 3vw, 1rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.subtitle {
+  color: var(--light);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover animation for interactivity */
+.bannerContainer:hover .title {
+  transform: translateY(-5px);
+}
+
+.bannerContainer:hover .subtitle {
+  opacity: 1;
+}
+
+/* Subtle background effect */
+.bannerContainer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Add styles for buttons in BlogBanner */
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.navButton {
   background-color: transparent;
   color: var(--light);
   border: 1.5px solid white;
@@ -102,109 +106,103 @@
   transform: translateY(0);
 }
 
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .bannerContainer {
-      /* padding: 4rem 1.75rem; */
-      /* min-height: 320px; */
-    }
-  
-    .contentWrapper {
-      max-width: 900px;
-    }
-  
-    .title {
-      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-      letter-spacing: 1.5px;
-    }
-  
-    .subtitle {
-      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-      max-width: 600px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .bannerContainer {
-      /* padding: 3.5rem 1.5rem; */
-      /* min-height: 280px; */
-    }
-  
-    .contentWrapper {
-      max-width: 700px;
-      padding: 0 1rem;
-    }
-  
-    .title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: 1px;
-    }
-  
-    .subtitle {
-      font-size: clamp(0.9rem, 1.7vw, 1.15rem);
-      max-width: 500px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .bannerContainer {
-      /* padding: 2.5rem 1rem; */
-      /* min-height: 240px; */
-    }
-  
-    .contentWrapper {
-      max-width: 100%;
-      padding: 0 0.75rem;
-    }
-  
-    .title {
-      font-size: clamp(1rem, 1vw, 0.5rem);
-      letter-spacing: 0.5px;
-    }
-  
-    .subtitle {
-      font-size: clamp(0.85rem, 1.6vw, 1.1rem);
-      max-width: 90%;
-    }
-  }
-  
-  @media (min-width: 1400px) {
-    .contentWrapper {
-      max-width: 1300px; /* Slightly wider for extra-large screens */
-    }
-  
-    .title {
-      font-size: clamp(2.75rem, 5vw, 4.5rem);
-    }
-  
-    .subtitle {
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      max-width: 800px;
-    }
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bannerContainer {
+    /* padding: 4rem 1.75rem; */
+    /* min-height: 320px; */
   }
 
-  /* .activeButton {
-    background-color: var(--blue) !important;
-    color: white !important;
-  } */
-
-  @media (min-width: 768px) {
-    .contentWrapper {
-        padding: 0 24px;
-    }
-
-    .title {
-        font-size: 42px;
-    }
+  .contentWrapper {
+    max-width: 900px;
   }
 
-  @media (min-width: 1024px) {
-    .contentWrapper {
-        padding: 0 32px;
-    }
-
-    .title {
-        font-size: 48px;
-    }
+  .title {
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    letter-spacing: 1.5px;
   }
+
+  .subtitle {
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    /* padding: 3.5rem 1.5rem; */
+    /* min-height: 280px; */
+  }
+
+  .contentWrapper {
+    max-width: 700px;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: clamp(0.9rem, 1.7vw, 1.15rem);
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContainer {
+    /* padding: 2.5rem 1rem; */
+    /* min-height: 240px; */
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+    padding: 0 0.75rem;
+  }
+
+  .title {
+    font-size: clamp(1rem, 1vw, 0.5rem);
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contentWrapper {
+    max-width: 1300px; /* Slightly wider for extra-large screens */
+  }
+
+  .title {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+  }
+
+  .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    padding: 0 24px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    padding: 0 32px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+}
