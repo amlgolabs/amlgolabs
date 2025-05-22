@@ -93,6 +93,7 @@ export default function CategoryPage({ params }) {
             router.push('/resources')
         }
     }
+    
 
     if (loading) {
         return (
