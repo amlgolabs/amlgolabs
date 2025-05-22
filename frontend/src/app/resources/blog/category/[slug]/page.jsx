@@ -88,6 +88,12 @@ export default function CategoryPage({ params }) {
         return cleanText.substring(0, maxLength) + "..."
     }
 
+    const handleCategoryClick = (clickedCategorySlug) => {
+        if (clickedCategorySlug === categorySlug) {
+            router.push('/resources')
+        }
+    }
+
     if (loading) {
         return (
             <div className={`${styles.container} ${styles.paddingVerticalExtraLarge}`}>
@@ -123,7 +129,11 @@ export default function CategoryPage({ params }) {
                                     Categories
                                     <Tag className={`${styles.marginLeftSmall} ${styles.iconMedium}`} />
                                 </h2>
-                                <CategoryListForCategoriesPage showAll={true} selectedCategory={categorySlug} />
+                                <CategoryListForCategoriesPage 
+                                    showAll={true} 
+                                    selectedCategory={categorySlug} 
+                                    onCategoryClick={handleCategoryClick}
+                                />
                             </div>
                             <div className={styles.relatedResources}>
                                 {/* <h2 className={styles.textHeadingSmall}>Recent Resource</h2> */}
@@ -143,7 +153,7 @@ export default function CategoryPage({ params }) {
                                 </div>
                                 
                                 <div className={styles.viewAllContainer}>
-                                    <Link href="/resources">
+                                    <Link href="/all-resources">
                                         <Button variant="outline" size="sm" className="globalButton">
                                             View All
                                             <ChevronRight className={styles.chevronIcon} />
